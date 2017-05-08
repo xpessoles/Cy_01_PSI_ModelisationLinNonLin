@@ -1,0 +1,230 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={SLCI : Modélisation des SLCI par transformée de Laplace et schémas blocs},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+\input{style/new_style}
+\input{style/macros_SII}
+
+\fichetrue
+%\fichefalse
+
+\proftrue
+%\proffalse
+
+%\tdtrue
+\tdfalse
+
+%\courstrue
+\coursfalse
+
+%%%%%%%%%%%%%%%%%%%
+\usepackage{numprint}
+\usetikzlibrary{calc}
+%definition style pour mettre un fond blanc dans un node sans avoir des marges énormes
+\tikzset{fondblanc/.style={ inner sep=2pt,fill=white,outer sep = 5pt}} 
+\tikzset{fondblanc2/.style={ inner sep=2pt,fill=white}} 
+\tikzset{fondblanc3/.style={ inner sep=1pt,fill=white,outer sep = 2pt}} 
+\usetikzlibrary{calc,circuits.ee.IEC}
+\usetikzlibrary{shapes}
+\usepackage[european resistor, european voltage, european current]{circuitikz}
+\usetikzlibrary{babel}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+
+% -------------------------------------
+% Déclaration des titres
+% -------------------------------------
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{Cy01 - R 01}
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Révions 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation par transformée de Laplace et par Schéma-blocs}
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{19}%16
+
+\def\xxonglet{Cycle 01 -- Rév 1}
+
+\def\xxactivite{Fiche}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+}}
+
+\def\xxfigures{
+%incgraphics[width=.8\textwidth]{}%images/prot_01}
+}%figues de la page de garde
+
+\def\xxpied{%
+Cycle 01 -- Modélisation des systèmes linéaires et non linéaires\\
+Révision 1 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{2cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\section{Définitions}
+
+
+
+\begin{defi}[Informations analogiques et numériques] ~\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item Une information analogique peut prendre, de manière continue, toutes les valeurs
+possibles dans un intervalle donné. Un signal analogique peut être représenté
+par une courbe continue. Les grandeurs physiques (température, vitesse,
+position, tension, ...) sont des informations analogiques.
+
+\item Une information numérique sous la forme d'un mot binaire est constituée de
+plusieurs bits (variables binaires 0/1). Cette information numérique est en
+général issue d'un traitement (échantillonnage et codage) d'une information
+analogique. On parle de conversion analogique numérique (CAN).
+\end{itemize}
+\end{defi}
+
+\begin{defi}[Systèmes automatiques ou asservis]
+
+Un système asservi est commandé par \textbf{une (ou des) entrée(s)} qu'il
+transforme en \textbf{grandeur(s) de sortie}.
+Les entrées sont de deux types : 
+\begin{itemize}
+ \item la loi de consigne $e(t)$ est une grandeur de commande qui est
+modifiable;
+\item la perturbation : c'est une entrée parasite qui nuit au bon
+fonctionnement du système. On ne peut pas modifier les perturbations.
+\end{itemize}
+
+La sortie $s(t)$ est une grandeur \textbf{observable} (par des capteurs) qui
+permet de juger de la qualité de la tâche accomplie.
+\end{defi} 
+
+
+\begin{defi}[Systèmes suiveurs et régulateurs] ~\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item Pour un système suiveur la consigne $e(t)$ fluctue au cours du temps. Le système doit faire son possible pour qu'à chaque instant la cible soit suivie.
+\item Pour un système régulateur la consigne $e(t)$ est constante. Les perturbations font varier la position du système. Il doit donc de façon automatique revenir à la position commandée.
+\end{itemize}
+\end{defi}
+
+
+
+\subsection*{Performance des systèmes -- Critères graphiques}
+\begin{defi}[Écart statique $\varepsilon_S$ -- Écart dynamique $\varepsilon_V$]
+
+Le système est piloté par une valeur constante. On définit alors l'écart statique $\varepsilon_S$ comme l'écart entre la consigne fixe et la réponse $s(t)$ en régime permanent.
+\end{defi}
+
+\begin{defi}[Précision -- Écart dynamique  $\varepsilon_V$]
+
+Encore appelé écart de traînage ou écart de poursuite, il représente la différence entre la consigne variable et la réponse en régime permanent. 
+\end{defi}
+
+\begin{defi}[Rapidité]
+
+La rapidité est caractérisée par le temps que met le système à réagir à une
+variation brusque de la grandeur d'entrée (temps de réponse). Cette notion est
+fortement liée à la notion de précision dynamique.
+\end{defi}
+
+\begin{methode}
+[Détermination du temps de réponse à $n\%$] (En pratique $n=5$).\\
+
+\begin{enumerate}
+ \item Tracer sur le même graphe la consigne $e(t)$ et la réponse du système
+$s(t)$.
+\item Tracer la droite correspondant à la valeur asymptotique de $s(t)$.
+\item Tracer la bande correspondant à une variation de $\pm n\%$ de la valeur
+asymptotique.
+\item Relever la dernière valeur à partir de laquelle $s(t)$ coupe la bande et
+n'en sort plus.
+\end{enumerate}
+\end{methode}
+
+\begin{defi}[Stabilité]
+
+La stabilité traduit la propriété de convergence temporelle asymptotique vers
+un état d'équilibre. 
+\end{defi}
+
+
+\begin{defi}[Transformée de Laplace] 
+
+\end{defi}
+
+
+\begin{theorem}[Théorèmes généraux] ~\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item Théorème de la valeur initiale :
+\item Théorème de la valeur finale
+\end{itemize}
+\end{theorem}
+
+
+\begin{prop}
+\textbf{Propriétés des sections droites}
+On considère une poutre de section droite $S$ et d'axe $\left(G,\vect{x} \right)$. On note :
+\begin{itemize}
+\item moment quadratique de $S$ par rapport à $\left(G,\vect{y} \right)$ : $I_{Gy} = \iint\limits_S z^2 \text{d}S$;
+\item moment quadratique de $S$ par rapport à $\left(G,\vect{z} \right)$ : $I_{Gz} = \iint\limits_S y^2 \text{d}S$;
+\item moment polaire de $S$ par rapport à $\left(G,\vect{x} \right)$ : $I_{Gx} = \iint\limits_S \left( y^2 + z^2 \right) \text{d}S$;
+\item $I_{Gx}=I_{Gy}+I_{Gz}$.
+\end{itemize}
+\end{prop}
+
+\begin{theorem}
+\textbf{Théorème de Huygens} ~\\
+On a, avec $\vect{AG}=\left(a,b,c \right)$ :
+$$
+I_{Ay}=I_{Gy} + Sc^2 
+\quad 
+I_{Az}=I_{Gz} + Sb^2 
+\quad 
+I_{Ax}=I_{Gx} + S\left(b^2+c^2 \right). 
+$$
+\end{theorem}
+
+\subsection*{Cas du cisaillement}
+
+\begin{defi} -- 
+\textbf{Contrainte et déformations} ~\\
+
+Pour une section cisaillée, la contrainte tangentielle est de la forme : 
+$$
+\tau = \dfrac{T_y}{S} \quad \text{avec } S \text{ section cisaillée.}
+$$
+\end{defi}
+
+
+\begin{resultat}
+\textbf{Dimensionnement d'une pièce cisaillée} ~\\
+On a : $|\tau| < \dfrac{Rg}{s}$ avec $s$ coefficient de sécurité et $Rg$ limite au glissement tel que $Rg = \xi Re$ :
+\begin{itemize}
+\item acier doux (\% C < 0,2) : $\xi =0,5$;
+\item acier mi-doux (\% C compris entre 0,2 et 0,32) : $\xi =0,6$;
+\item acier mi-durs (\% C compris entre 0,32 et 0,45) : $\xi =0,7$;
+\item acier durs (\% C>0,45) : $\xi =0,8$;
+\item fontes (\% C>1,7) : $\xi \in [0,77;1]$.
+\end{itemize}
+
+\end{resultat}
+
+\includestandalone{images/image_13}
+\end{document}
+
+
