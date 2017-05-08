@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  11 APR 2017 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  8 MAY 2017 21:27
 entering extended mode
-**Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.tex
-(Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.tex
+**Cy_01_02_Modelisation_Laplace_Fiche.tex
+(Cy_01_02_Modelisation_Laplace_Fiche.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9l> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -1233,7 +1233,7 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 \@indexfile=\write5
 
-Writing index file Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.idx
+Writing index file Cy_01_02_Modelisation_Laplace_Fiche.idx
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
 Package: titletoc 2011/12/15 v1.6 TOC entries
 \ttl@leftsep=\dimen195
@@ -1872,76 +1872,6 @@ No configuration file `numprint.cfg' found.)
 tendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen268
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip181
-\LTright=\skip182
-\LTpre=\skip183
-\LTpost=\skip184
-\LTchunksize=\count384
-\LTcapwidth=\dimen269
-\LT@head=\box96
-\LT@firsthead=\box97
-\LT@foot=\box98
-\LT@lastfoot=\box99
-\LT@cols=\count385
-\LT@rows=\count386
-\c@LT@tables=\count387
-\c@LT@chunks=\count388
-\LT@p@ftn=\toks49
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\picins\picins.sty"
-Option `picins' Version 3.0 Sep. 1992, TH Darmstadt/HRZ
-\@BILD=\box100
-\@TEXT=\box101
-\d@breite=\dimen270
-\d@hoehe=\dimen271
-\d@xoff=\dimen272
-\d@yoff=\dimen273
-\d@shad=\dimen274
-\d@dash=\dimen275
-\d@boxl=\dimen276
-\d@pichskip=\dimen277
-\d@tmp=\dimen278
-\d@tmpa=\dimen279
-\d@bskip=\dimen280
-\hsiz@=\dimen281
-\p@getot@l=\dimen282
-\c@breite=\count389
-\c@hoehe=\count390
-\c@xoff=\count391
-\c@yoff=\count392
-\c@pos=\count393
-\c@shad=\count394
-\c@dash=\count395
-\c@boxl=\count396
-\c@zeilen=\count397
-\@changemode=\count398
-\c@piccaption=\count399
-\c@piccaptionpos=\count400
-\c@picpos=\count401
-\c@whole=\count402
-\c@half=\count403
-\c@tmp=\count404
-\c@tmpa=\count405
-\c@tmpb=\count406
-\c@tmpc=\count407
-\c@tmpd=\count408
-\d@leftskip=\skip185
-\ptoti=\dimen283
-\ptotii=\dimen284
-\env@box=\box102
-\d@envdp=\dimen285
-\c@hsize=\count409
-\c@envdp=\count410
-\d@envb=\dimen286
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
-Package: placeins 2005/04/18  v 2.2
-)
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\fron
 tendlayer\tikz\libraries\circuits\tikzlibrarycircuits.ee.IEC.code.tex
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\fron
@@ -1954,21 +1884,21 @@ tendlayer\tikz\libraries\tikzlibrarydecorations.markings.code.tex
 tendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\modu
 les\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen287
-\pgfdecoratedremainingdistance=\dimen288
-\pgfdecoratedinputsegmentcompleteddistance=\dimen289
-\pgfdecoratedinputsegmentremainingdistance=\dimen290
-\pgf@decorate@distancetomove=\dimen291
-\pgf@decorate@repeatstate=\count411
-\pgfdecorationsegmentamplitude=\dimen292
-\pgfdecorationsegmentlength=\dimen293
+\pgfdecoratedcompleteddistance=\dimen268
+\pgfdecoratedremainingdistance=\dimen269
+\pgfdecoratedinputsegmentcompleteddistance=\dimen270
+\pgfdecoratedinputsegmentremainingdistance=\dimen271
+\pgf@decorate@distancetomove=\dimen272
+\pgf@decorate@repeatstate=\count384
+\pgfdecorationsegmentamplitude=\dimen273
+\pgfdecorationsegmentlength=\dimen274
 )
-\tikz@lib@dec@box=\box103
+\tikz@lib@dec@box=\box96
 )
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\libr
 aries\decorations\pgflibrarydecorations.markings.code.tex))
-\tikz@lib@circ@count=\count412
-\tikzcircuitssizeunit=\dimen294
+\tikz@lib@circ@count=\count385
+\tikzcircuitssizeunit=\dimen275
 )
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\libr
 aries\shapes\circuits\pgflibraryshapes.gates.ee.code.tex))
@@ -1979,7 +1909,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\libr
 aries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen295
+\arrowsize=\dimen276
 ))
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\libr
 aries\shapes\circuits\pgflibraryshapes.gates.ee.IEC.code.tex))
@@ -2032,33 +1962,33 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\libr
 aries\shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.0 (rcs-revision 1.2)
-\pgfnodepartlowerbox=\box104
-\pgfnodeparttwobox=\box105
-\pgfnodepartthreebox=\box106
-\pgfnodepartfourbox=\box107
-\pgfnodeparttwentybox=\box108
-\pgfnodepartnineteenbox=\box109
-\pgfnodeparteighteenbox=\box110
-\pgfnodepartseventeenbox=\box111
-\pgfnodepartsixteenbox=\box112
-\pgfnodepartfifteenbox=\box113
-\pgfnodepartfourteenbox=\box114
-\pgfnodepartthirteenbox=\box115
-\pgfnodeparttwelvebox=\box116
-\pgfnodepartelevenbox=\box117
-\pgfnodeparttenbox=\box118
-\pgfnodepartninebox=\box119
-\pgfnodeparteightbox=\box120
-\pgfnodepartsevenbox=\box121
-\pgfnodepartsixbox=\box122
-\pgfnodepartfivebox=\box123
+\pgfnodepartlowerbox=\box97
+\pgfnodeparttwobox=\box98
+\pgfnodepartthreebox=\box99
+\pgfnodepartfourbox=\box100
+\pgfnodeparttwentybox=\box101
+\pgfnodepartnineteenbox=\box102
+\pgfnodeparteighteenbox=\box103
+\pgfnodepartseventeenbox=\box104
+\pgfnodepartsixteenbox=\box105
+\pgfnodepartfifteenbox=\box106
+\pgfnodepartfourteenbox=\box107
+\pgfnodepartthirteenbox=\box108
+\pgfnodeparttwelvebox=\box109
+\pgfnodepartelevenbox=\box110
+\pgfnodeparttenbox=\box111
+\pgfnodepartninebox=\box112
+\pgfnodeparteightbox=\box113
+\pgfnodepartsevenbox=\box114
+\pgfnodepartsixbox=\box115
+\pgfnodepartfivebox=\box116
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\circuitikz\circuitikz.sty"
 Package: circuitikz 2016/04/24{} The CircuiTikz circuit drawing package version
  0.5
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcirc.defines.tex"
-\pgf@circ@Rlen=\dimen296
+\pgf@circ@Rlen=\dimen277
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircutils.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircmath.tex")
@@ -2071,15 +2001,15 @@ Package: circuitikz 2016/04/24{} The CircuiTikz circuit drawing package version
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircvoltage.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcirccurrent.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\circuitikz\pgfcircbasic.tex"
-\pgf@circ@res@up=\dimen297
-\pgf@circ@res@down=\dimen298
-\pgf@circ@res@zero=\dimen299
-\pgf@circ@res@left=\dimen300
-\pgf@circ@res@right=\dimen301
-\pgf@circ@res@other=\dimen302
-\pgf@circ@res@step=\dimen303
-\pgf@circ@res@temp=\dimen304
-\pgfstartlinewidth=\dimen305
+\pgf@circ@res@up=\dimen278
+\pgf@circ@res@down=\dimen279
+\pgf@circ@res@zero=\dimen280
+\pgf@circ@res@left=\dimen281
+\pgf@circ@res@right=\dimen282
+\pgf@circ@res@other=\dimen283
+\pgf@circ@res@step=\dimen284
+\pgf@circ@res@temp=\dimen285
+\pgfstartlinewidth=\dimen286
 ))
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\TIKZ\texmf\tex\generic\pgf\fron
 tendlayer\tikz\libraries\tikzlibrarybabel.code.tex
@@ -2094,10 +2024,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks50
-\XKV@tempa@toks=\toks51
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
 )
-\XKV@depth=\count413
+\XKV@depth=\count386
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\currfile\currfile.sty"
@@ -2107,7 +2037,7 @@ nt input file
 ("C:\Program Files\MiKTeX 2.9\tex\latex\filehook\filehook.sty"
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )
-\c@currfiledepth=\count414
+\c@currfiledepth=\count387
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\gincltex\gincltex.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\svn-prov\svn-prov.sty"
@@ -2127,39 +2057,85 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box124
+\collectedbox=\box117
 )
-\tc@llx=\dimen306
-\tc@lly=\dimen307
-\tc@urx=\dimen308
-\tc@ury=\dimen309
+\tc@llx=\dimen287
+\tc@lly=\dimen288
+\tc@urx=\dimen289
+\tc@ury=\dimen290
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen310
-\adjbox@Height=\dimen311
-\adjbox@Depth=\dimen312
-\adjbox@Totalheight=\dimen313
+\adjbox@Width=\dimen291
+\adjbox@Height=\dimen292
+\adjbox@Depth=\dimen293
+\adjbox@Totalheight=\dimen294
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count415
+\c@checkoddpage=\count388
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box125
-\sift@deathcycles=\count416
-\@vwid@loff=\dimen314
-\@vwid@roff=\dimen315
+\@vwid@box=\box118
+\sift@deathcycles=\count389
+\@vwid@loff=\dimen295
+\@vwid@roff=\dimen296
 ))
-\gincltex@box=\box126
+\gincltex@box=\box119
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\filemod\filemod-expmin.sty"
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
  (expandable; minimal)
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\picins\picins.sty"
+Option `picins' Version 3.0 Sep. 1992, TH Darmstadt/HRZ
+\@BILD=\box120
+\@TEXT=\box121
+\d@breite=\dimen297
+\d@hoehe=\dimen298
+\d@xoff=\dimen299
+\d@yoff=\dimen300
+\d@shad=\dimen301
+\d@dash=\dimen302
+\d@boxl=\dimen303
+\d@pichskip=\dimen304
+\d@tmp=\dimen305
+\d@tmpa=\dimen306
+\d@bskip=\dimen307
+\hsiz@=\dimen308
+\p@getot@l=\dimen309
+\c@breite=\count390
+\c@hoehe=\count391
+\c@xoff=\count392
+\c@yoff=\count393
+\c@pos=\count394
+\c@shad=\count395
+\c@dash=\count396
+\c@boxl=\count397
+\c@zeilen=\count398
+\@changemode=\count399
+\c@piccaption=\count400
+\c@piccaptionpos=\count401
+\c@picpos=\count402
+\c@whole=\count403
+\c@half=\count404
+\c@tmp=\count405
+\c@tmpa=\count406
+\c@tmpb=\count407
+\c@tmpc=\count408
+\c@tmpd=\count409
+\d@leftskip=\skip181
+\ptoti=\dimen310
+\ptotii=\dimen311
+\env@box=\box122
+\d@envdp=\dimen312
+\c@hsize=\count410
+\c@envdp=\count411
+\d@envb=\dimen313
+)
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
 
@@ -2170,47 +2146,47 @@ File: french.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count417
-\@quotereset=\count418
-(Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 82.
+\@quotelevel=\count412
+\@quotereset=\count413
+(Cy_01_02_Modelisation_Laplace_Fiche.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 78.
 
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\MATHDESIGN\texmf\tex\latex\math
 design\mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 82.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 78.
 
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\MATHDESIGN\texmf\tex\latex\math
 design\mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 82.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 82.
-\AtBeginShipoutBox=\box127
-Package hyperref Info: Link coloring OFF on input line 82.
+LaTeX Font Info:    ... okay on input line 78.
+\AtBeginShipoutBox=\box123
+Package hyperref Info: Link coloring OFF on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -2218,11 +2194,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count419
+\c@section@level=\count414
 )
-LaTeX Info: Redefining \ref on input line 82.
-LaTeX Info: Redefining \pageref on input line 82.
-LaTeX Info: Redefining \nameref on input line 82.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2260,22 +2236,22 @@ LaTeX Info: Redefining \nameref on input line 82.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count420
-\scratchdimen=\dimen316
-\scratchbox=\box128
-\nofMPsegments=\count421
-\nofMParguments=\count422
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count423
-\MPscratchDim=\dimen317
-\MPnumerator=\count424
-\makeMPintoPDFobject=\count425
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count415
+\scratchdimen=\dimen314
+\scratchbox=\box124
+\nofMPsegments=\count416
+\nofMParguments=\count417
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count418
+\MPscratchDim=\dimen315
+\MPnumerator=\count419
+\makeMPintoPDFobject=\count420
+\everyMPtoPDFconversion=\toks52
 ) ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \degres on input line 82.
-LaTeX Info: Redefining \dots on input line 82.
-LaTeX Info: Redefining \up on input line 82.
-LaTeX Info: Redefining \microtypecontext on input line 82.
+LaTeX Info: Redefining \degres on input line 78.
+LaTeX Info: Redefining \dots on input line 78.
+LaTeX Info: Redefining \up on input line 78.
+LaTeX Info: Redefining \microtypecontext on input line 78.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2293,13 +2269,13 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Cy_01_Modelisation_Revisions_Laplace_Blocs_Fic
-he.bbl' not found.
+Package biblatex Info: ... file 'Cy_01_02_Modelisation_Laplace_Fiche.bbl' not f
+ound.
 
-No file Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bbl.
-Package biblatex Info: Reference section=0 on input line 82.
-Package biblatex Info: Reference segment=0 on input line 82.
-\c@lstlisting=\count426
+No file Cy_01_02_Modelisation_Laplace_Fiche.bbl.
+Package biblatex Info: Reference section=0 on input line 78.
+Package biblatex Info: Reference segment=0 on input line 78.
+\c@lstlisting=\count421
 (style/new_pagegarde.tex
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
 (Font)              scaled to size 19.08076pt on input line 192.
@@ -2452,217 +2428,187 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 93.
+(mdframed)              on input line 92.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 94.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 105.
+ mdframed uses option nobreak mdframed on input line 101.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 107.
+(mdframed)              on input line 103.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 106.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 106.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 117.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 120.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/mdput/b/n' will be
+(Font)              scaled to size 9.19998pt on input line 130.
+LaTeX Font Info:    Font shape `OT1/mdput/b/n' will be
+(Font)              scaled to size 6.43999pt on input line 130.
+LaTeX Font Info:    Font shape `OT1/mdput/b/n' will be
+(Font)              scaled to size 4.59999pt on input line 130.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <10> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 109.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 9.19998pt on input line 109.
-LaTeX Font Info:    Try loading font information for TS1+mdput on input line 11
-3.
-
-(C:\Enseignement\Livre_Exo_Vuibert\Installation\MATHDESIGN\texmf\tex\latex\math
-design\mdput\ts1mdput.fd
-File: ts1mdput.fd 2006/01/29 Fontinst v1.928 font definitions for TS1/mdput.
-)
-LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `mdput' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+(Font)              scaled to size 9.19998pt on input line 130.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 9.19998pt on input line 132.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/mdput/b/n' will be
+(Font)              scaled to size 7.35999pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/mdput/b/n' will be
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 113.
+(Font)              scaled to size 7.35999pt on input line 132.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 113.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 113.
+(Font)              scaled to size 5.51999pt on input line 132.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 121.
+ mdframed uses option nobreak mdframed on input line 135.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 124.
+(mdframed)              on input line 138.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 139.
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 129.
+ mdframed uses option nobreak mdframed on input line 179.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 134.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 134.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 134.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 137.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 139.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 142.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 144.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 149.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 151.
+(mdframed)              on input line 184.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 163.
+ mdframed uses option nobreak mdframed on input line 186.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 165.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 169.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 172.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 174.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 177.
+(mdframed)              on input line 188.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 182.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 182.
-LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.35999pt on input line 182.
-LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 182.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 182.
-[1
-
-{C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+ mdframed uses option nobreak mdframed on input line 190.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 185.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 189.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 189.
+(mdframed)              on input line 192.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
 Package mdframed Info: mdframed inside float 
  mdframed uses option nobreak mdframed on input line 194.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 196.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 206.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 210.
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 217.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 220.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 231.
-Package standalone Info: generated file images/image_13.pdf newer then source f
-ile images/image_13.tex on input line 233.
-<images/image_13.pdf, id=37, 305.62984pt x 129.32817pt>
-File: images/image_13.pdf Graphic file (type pdf)
+ mdframed uses option nobreak mdframed on input line 198.
+LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
+(Font)              scaled to size 7.35999pt on input line 198.
+LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 198.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 7.35999pt on input line 198.
+[1
 
-<use images/image_13.pdf>
-Package pdftex.def Info: images/image_13.pdf used on input line 233.
-(pdftex.def)             Requested size: 305.62907pt x 129.32784pt.
- <png/logo_lycee.png, id=38, 329.23pt x 265.99374pt>
+{C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<png/logo_lycee.png, id=29, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
-
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 234.
+ <use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 210.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 234.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 234.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 210.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2670,52 +2616,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./png/logo_lycee.png> <./images/image_13.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
-
-(Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 234.
+[2 <./png/logo_lycee.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+ (Cy_01_02_Modelisation_Laplace_Fiche.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 210.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package logreq Info: Writing requests to 'Cy_01_Modelisation_Revisions_Laplace_
-Blocs_Fiche.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
+Package logreq Info: Writing requests to 'Cy_01_02_Modelisation_Laplace_Fiche.r
+un.xml'.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 47402 strings out of 493675
- 970032 string characters out of 3143992
- 1676577 words of memory out of 3000000
- 49833 multiletter control sequences out of 15000+200000
- 175588 words of font info for 197 fonts, out of 3000000 for 9000
+ 47252 strings out of 493675
+ 967371 string characters out of 3143992
+ 1681239 words of memory out of 3000000
+ 49712 multiletter control sequences out of 15000+200000
+ 206956 words of font info for 204 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,17n,98p,10461b,1967s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,17n,98p,10448b,1967s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
-s/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/t
-ype1/mathdesign/mdput/md-utr7t.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installat
-ion/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7v.pfb><C:/Enseignement
-/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/m
-d-utr7y.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fo
-nts/type1/mathdesign/mdput/md-utr8t.pfb><C:/Enseignement/Livre_Exo_Vuibert/Inst
-allation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopi
-a/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.pdf (2 pages
-, 219103 bytes).
+s/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/Enseignement/Livre_Exo_V
+uibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7t.pfb>
+<C:/Enseignement/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/type1/ma
+thdesign/mdput/md-utr7v.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MAT
+HDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7y.pfb><C:/Enseignement/Livre_
+Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utri7
+m.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avan
+tgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.p
+fb>
+Output written on Cy_01_02_Modelisation_Laplace_Fiche.pdf (2 pages, 156795 byte
+s).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 56351 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 84 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 63522 words of extra memory for PDF output out of 74296 (max. 10000000)
 

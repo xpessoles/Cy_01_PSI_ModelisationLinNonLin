@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bcf</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bbl</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -64,19 +64,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche</infile>
+      <infile>Cy_01_02_Modelisation_Laplace_Fiche</infile>
     </cmdline>
     <input>
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bcf</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bcf</file>
     </input>
     <output>
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bbl</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bbl</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Cy_01_Modelisation_Revisions_Laplace_Blocs_Fiche.bcf</file>
+      <file>Cy_01_02_Modelisation_Laplace_Fiche.bcf</file>
     </requires>
     <requires type="editable">
       <file>bibliography.bib</file>
