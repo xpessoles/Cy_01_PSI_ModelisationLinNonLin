@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  8 MAY 2017 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  8 MAY 2017 20:16
 entering extended mode
 **Cy_01_01_Modelisation_Perf_Fiche.tex
 (Cy_01_01_Modelisation_Perf_Fiche.tex
@@ -2511,116 +2511,132 @@ LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
 File: images/Systeme_Asservi.png Graphic file (type png)
 
 <use images/Systeme_Asservi.png>
-Package pdftex.def Info: images/Systeme_Asservi.png used on input line 127.
+Package pdftex.def Info: images/Systeme_Asservi.png used on input line 124.
 (pdftex.def)             Requested size: 142.26378pt x 43.28279pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 130.
+ mdframed uses option nobreak mdframed on input line 132.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 133.
+(mdframed)              on input line 135.
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 138.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 143.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 143.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 143.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 146.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 148.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 151.
+ mdframed uses option nobreak mdframed on input line 140.
+Package standalone Info: generated file images/suiveur.pdf newer then source fi
+le images/suiveur.tex on input line 144.
+<images/suiveur.pdf, id=9, 138.04875pt x 90.24817pt>
+File: images/suiveur.pdf Graphic file (type pdf)
+ <use images/suiveur.pdf>
+Package pdftex.def Info: images/suiveur.pdf used on input line 144.
+(pdftex.def)             Requested size: 138.04842pt x 90.24794pt.
+Package standalone Info: generated file images/regulateur.pdf newer then source
+ file images/regulateur.tex on input line 146.
+
+<images/regulateur.pdf, id=10, 138.04875pt x 90.24515pt>
+File: images/regulateur.pdf Graphic file (type pdf)
+
+<use images/regulateur.pdf>
+Package pdftex.def Info: images/regulateur.pdf used on input line 146.
+(pdftex.def)             Requested size: 138.04842pt x 90.2449pt.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
+(Font)              scaled to size 7.35999pt on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 7.35999pt on input line 150.
+ [1
+
+{C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/C
+AN_CNA.png> <./images/Systeme_Asservi.png> <./images/suiveur.pdf> <./images/reg
+ulateur.pdf>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 153.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 153.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 153.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 158.
+ mdframed uses option nobreak mdframed on input line 156.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 160.
+(mdframed)              on input line 158.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 161.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 163.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 168.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 170.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 172.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 172.
-LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.35999pt on input line 172.
-LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 172.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 172.
-[1
-
-{C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/C
-AN_CNA.png> <./images/Systeme_Asservi.png>]
+ mdframed uses option nobreak mdframed on input line 182.
 Package standalone Info: generated file images/perf.pdf newer then source file 
-images/perf.tex on input line 176.
-
-<images/perf.pdf, id=34, 305.62984pt x 129.32817pt>
+images/perf.tex on input line 186.
+<images/perf.pdf, id=49, 305.62984pt x 129.32817pt>
 File: images/perf.pdf Graphic file (type pdf)
  <use images/perf.pdf>
-Package pdftex.def Info: images/perf.pdf used on input line 176.
+Package pdftex.def Info: images/perf.pdf used on input line 186.
 (pdftex.def)             Requested size: 305.62907pt x 129.32784pt.
 Package standalone Info: generated file images/rampe.pdf newer then source file
- images/rampe.tex on input line 178.
+ images/rampe.tex on input line 188.
 
-<images/rampe.pdf, id=35, 121.42966pt x 132.45886pt>
+<images/rampe.pdf, id=50, 121.42966pt x 132.45886pt>
 File: images/rampe.pdf Graphic file (type pdf)
  <use images/rampe.pdf>
-Package pdftex.def Info: images/rampe.pdf used on input line 178.
+Package pdftex.def Info: images/rampe.pdf used on input line 188.
 (pdftex.def)             Requested size: 121.42934pt x 132.45853pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 181.
+(mdframed)              on input line 191.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 185.
+ mdframed uses option nobreak mdframed on input line 195.
 
-<png/logo_lycee.png, id=36, 329.23pt x 265.99374pt>
+<png/logo_lycee.png, id=51, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 188.
+Package pdftex.def Info: png/logo_lycee.png used on input line 198.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 188.
+(Font)              scaled to size 7.35999pt on input line 198.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 188.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 198.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2629,26 +2645,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./png/logo_lycee.png> <./images/perf.pdf> <./images/rampe.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
 
 (Cy_01_01_Modelisation_Perf_Fiche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 188.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 198.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_01_Modelisation_Perf_Fiche.run.
 xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
  ) 
 Here is how much of TeX's memory you used:
- 47302 strings out of 493675
- 968411 string characters out of 3143992
- 1671218 words of memory out of 3000000
- 49741 multiletter control sequences out of 15000+200000
- 160083 words of font info for 199 fonts, out of 3000000 for 9000
+ 47305 strings out of 493675
+ 968558 string characters out of 3143992
+ 1666220 words of memory out of 3000000
+ 49750 multiletter control sequences out of 15000+200000
+ 159544 words of font info for 193 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,98p,10445b,1967s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2671,10 +2687,10 @@ iKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/a
 vantgar/uagko8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.
 pfb>
-Output written on Cy_01_01_Modelisation_Perf_Fiche.pdf (2 pages, 373478 bytes).
+Output written on Cy_01_01_Modelisation_Perf_Fiche.pdf (2 pages, 382628 bytes).
 
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 164 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
- 55342 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 55360 words of extra memory for PDF output out of 61914 (max. 10000000)
 

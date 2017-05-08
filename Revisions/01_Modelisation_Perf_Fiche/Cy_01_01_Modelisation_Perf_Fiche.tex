@@ -119,13 +119,15 @@ modifiable;
 \item la perturbation : c'est une entrée parasite qui nuit au bon
 fonctionnement du système. On ne peut pas modifier les perturbations.
 \end{itemize}
-
-La sortie $s(t)$ est une grandeur \textbf{observable} (par des capteurs) qui
-permet de juger de la qualité de la tâche accomplie.
 \end{minipage} \hfill
 \begin{minipage}[c]{5cm}
 \includegraphics[width=5cm]{images/Systeme_Asservi}
 \end{minipage}
+
+\noindent
+La sortie $s(t)$ est une grandeur \textbf{observable} (par des capteurs) qui
+permet de juger de la qualité de la tâche accomplie.
+
 
 \end{defi} 
 
@@ -138,8 +140,16 @@ permet de juger de la qualité de la tâche accomplie.
 \end{defi}
 
 
+\begin{center}
+\includestandalone{images/suiveur}
+\hspace{2cm}
+\includestandalone{images/regulateur}
+\end{center}
 
-\subsection*{Performance des systèmes -- Critères graphiques}
+
+\newpage
+
+\section{Performance des systèmes -- Critères graphiques}
 \begin{defi}[Précision en position -- Écart statique $\varepsilon_S$]
 
 Le système est piloté par un échelon. On définit alors l'écart statique $\varepsilon_S$ comme l'écart entre la consigne fixe et la réponse $s(t)$ en régime permanent.
