@@ -185,16 +185,111 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 \end{warn}
 
 \begin{resultat}[Blocs en série] ~\\
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbBloc{sys}{$H_1(p) $}{E}
+\sbRelier[$E(p)\quad $]{E}{sys}
+\sbBloc{sys2}{$ H_2(p) $}{sys}
+\sbRelier{sys}{sys2}
+\sbSortie{S}{sys2} 
+\sbRelier[$\quad S(p)$]{sys2}{S}
+
+\begin{scope}[xshift=6.25cm]
+\draw (0,0) node {$\Leftrightarrow$};
+\end{scope}
+
+\begin{scope}[xshift=7cm]
+\sbEntree{E}
+\sbBloc{sys}{$H_1(p) H_2(p) $}{E}
+\sbRelier[$E(p)\quad $]{E}{sys}
+\sbSortie{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+\end{scope}
+\end{tikzpicture} 
+
+\end{center}
 
 \end{resultat}
 
 
 \begin{resultat}[Blocs en parallèle] ~\\
 
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbBloc{sys}{$H_1(p) $}{E}
+\sbRelier[$E(p)\quad $]{E}{sys}
+\sbSumb{cp}{sys}
+\sbRelier{sys}{cp}
+
+\sbDecaleNoeudy[4]{E}{n}
+\sbBloc{sys2}{$H_2(p) $}{n}
+\sbRelieryx{E-sys}{sys2}
+\sbRelierxy{sys2}{cp}
+
+\sbSortie{S}{cp} 
+\sbRelier[$\quad S(p)$]{cp}{S}
+
+
+\begin{scope}[xshift=4cm]
+\draw (0,0) node {$\Leftrightarrow$};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\sbEntree{E}
+\sbBloc{sys}{$H_1(p) +H_2(p) $}{E}
+\sbRelier[$E(p)\quad $]{E}{sys}
+\sbSortie{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+\end{scope}
+\end{tikzpicture} 
+\end{center}
+
 \end{resultat}
 
 
 \begin{resultat}[Réduction de boucle] ~\\
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbComp{cp}{E}
+\sbRelier[$E(p)\quad $]{E}{cp}
+\sbBloc{sys}{$H_1(p) $}{cp}
+\sbRelier{cp}{sys}
+\sbSortie{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+
+\sbDecaleNoeudy[4]{cp}{n}
+\sbBloc{sys2}{$H_2(p) $}{n}
+\sbRelierxy{sys2}{cp}
+\sbRelieryx{sys-S}{sys2}
+%
+%\sbBloc{sys}{$H_1(p) $}{E}
+%\sbRelier{E}{sys}
+%
+%\sbDecaleNoeudy[4]{E}{n}
+%\sbBloc{sys2}{$H_2(p) $}{n}
+%\sbRelieryx{E-sys}{sys2}
+%\sbRelierxy{sys2}{cp}
+%
+%\sbSortie{S}{cp} 
+%\sbRelier[$\quad S(p)$]{cp}{S}
+
+
+\begin{scope}[xshift=5cm]
+\draw (0,0) node {$\Leftrightarrow$};
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\sbEntree{E}
+\sbBloc{sys}{$\dfrac{H_1(p)}{1+H_1(p)H_2(p)} $}{E}
+\sbRelier[$E(p)\quad $]{E}{sys}
+\sbSortie{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+\end{scope}
+\end{tikzpicture} 
+\end{center}
 
 \end{resultat}
 
