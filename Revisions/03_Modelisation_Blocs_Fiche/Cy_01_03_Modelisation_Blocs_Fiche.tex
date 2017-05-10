@@ -1,6 +1,6 @@
 \documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
 \usepackage[%
-    pdftitle={Modélisation systèmes multiphysiques : Modélisation de Laplace},
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation par fonction de transfert et schéma-blocs},
     pdfauthor={Xavier Pessoles}]{hyperref}
 
 \input{style/new_style}
@@ -41,18 +41,18 @@
 \def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
 \def\xxtete{Sciences Industrielles de l'Ingénieur}
 
-\def\classe{Cy01 - R 02}
+\def\classe{Cy01 - R 03}
 \def\xxnumpartie{Cycle 01}
-\def\xxpartie{Modéliser les systèmes asservis -- Transformée de Laplace}
+\def\xxpartie{Modéliser les systèmes asservis -- Modélisation par fonction de transfert et schéma-blocs}
 
-\def\xxnumchapitre{Révisions 2 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Modéliser les systèmes asservis -- Transformée de Laplace}
+\def\xxnumchapitre{Révisions 3 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modéliser les systèmes asservis -- Modélisation par fonction de transfert et schéma-blocs}
 
 \def\xxposongletx{2}
 \def\xxposonglettext{1.45}
 \def\xxposonglety{19}%16
 
-\def\xxonglet{Cycle 01 -- Rév 2}
+\def\xxonglet{Cycle 01 -- Rév 3}
 
 \def\xxactivite{Fiche}
 \def\xxauteur{\textsl{Xavier Pessoles}}
@@ -68,7 +68,7 @@
 
 \def\xxpied{%
 Cycle 01 -- Modélisation des systèmes linéaires et non linéaires\\
-Révision 2 -- \xxactivite%
+Révision 3 -- \xxactivite%
 }
 
 \setcounter{secnumdepth}{5}
@@ -89,121 +89,95 @@ Révision 2 -- \xxactivite%
 %\item Une
 %\end{itemize}
 
-\begin{defi}[Conditions de Heavisde -- Fonction causale -- Conditions initiales nulles] ~\\
+\begin{defi}[Fonction de transfert] ~\\
 
-Une fonction temporelle $f(t)$ vérifie les conditions de Heaviside lorsque les dérivées successives nécessaires à la résolution de l'équation différentielle sont nulles pour $t={0^{+}}$ :
-$$
-f({0^{+}})=0 \quad \dfrac{\d f({0^{+}})}{\d t} = 0 \quad \dfrac{\d^2f({0^{+}})}{\d t^2} = 0 ...
-$$
-
-On parle de conditions initiales nulles.
 
 \end{defi}
 
-\begin{defi}[Transformée de Laplace] ~\\
-À toute fonction du temps $f(t)$, nulle pour $t\leq0$ (fonction causale), on fait correspondre une fonction $F(p)$ de la variable complexe $p$ telle que :
-$$
-\mathcal{L}\left[f(t)\right] = F(p)=\int\limits_{0^{+}}^\infty f(t)e^{-pt}\text{d}t.
-$$
-On note $\mathcal{L}\left[f(t)\right]$ la transformée directe et $\mathcal{L}^{-1}\left[F(p)\right]$ la transformée inverse.
+\begin{defi}[Classe et ordre] ~\\
 
-\noindent De manière générale on note 
-$\mathcal{L}\left[f(t)\right] = F(p)$,
-$\mathcal{L}\left[e(t)\right] = E(p)$,
-$\mathcal{L}\left[s(t)\right] = S(p)$,
-$\mathcal{L}\left[\omega(t)\right] = \Omega(p)$,
-$\mathcal{L}\left[\theta(t)\right] = \Theta(p)$ ...
 
 \end{defi}
 
 
-\begin{resultat}[Dérivation] ~\\
+\begin{defi}[Pôles et Zéros] ~\\
 
-%La transformée de Laplace d'une dérivée seconde est donnée par : 
-%$\mathcal{L}\left[ \dfrac{\d^2f(t)}{\d t^2}\right] =p^2F(p)-pf(0^+)-\dfrac{\d f(0^+)}{\d t}$
 
-\noindent Dans les conditions de Heaviside :
-$\mathbf{\mathcal{L}\left[ \dfrac{\text{\textbf{d}} f(t)}{\text{\textbf{d}} t}\right] =pF(p) 
- \quad
-\mathcal{L}\left[ \dfrac{\text{\textbf{d}}^2f(t)}{\text{\textbf{d}} t^2}\right] =p^2F(p) 
- \quad
-\mathcal{L}\left[ \dfrac{\text{\textbf{d}}^nf(t)}{\text{\textbf{d}} t^n}\right] =p^nF(p) }.$
+\end{defi}
 
-\noindent\textit{\footnotesize{En dehors des conditions de Heaviside, la transformée de Laplace d'une dérivée première est donnée par $\mathcal{L}\left[ \dfrac{\d f(t)}{\d t}\right] =pF(p)-f(0^+)$.}}
 
+\begin{defi}[Modélisation d'un bloc] ~\\
+
+\end{defi}
+
+\begin{defi}[Modélisation d'un comparateur] ~\\
+
+\end{defi}
+
+
+\section{Algèbre de blocs}
+
+
+\begin{warn}~\\
+
+\end{warn}
+
+\begin{resultat}[Blocs en série] ~\\
 
 \end{resultat}
 
 
-\begin{defi}[Transformées usuelles] ~\\
-\footnotesize{
+\begin{resultat}[Blocs en parallèle] ~\\
 
-\begin{center}
-\begin{tabular}{|c|c||c|c|}
-\hline
-Domaine temporel $f(t)$ & Domaine de Laplace $F(p)$ & 
-Domaine temporel $f(t)$ & Domaine de Laplace $F(p)$ \\
-\hline
-\hline
-Dirac $\delta(t)$ &
-$\mathbf{F(p)=1}$ &
-Échelon $ u(t)=k $&
-$ \mathbf{U(p) = \dfrac{k}{p}}$
-\\
-\hline
-%Créneau $\forall t\in ]0,t_1 [ \quad f(t)= A$ & 
-Fonction carrée $f(t)=t^2$& 
-$\mathbf{F(p) =\dfrac{1}{p^2} }$ &
-Puissances
-$f(t) = t^n\cdot u(t)$ &
-$F(p)=\dfrac{n!}{p^{n+1}} $
-\\
-\hline
-$f(t) = \sin \left( \omega_0 t\right) \cdot u(t)$ &
-$F(p) = \dfrac{\omega_0}{p^2+\omega_0^2} $ &
-$f(t) = \cos \left( \omega_0 t\right) \cdot u(t)$ & 
-$F(p) = \dfrac{p}{p^2+\omega_0^2} $ \\
-\hline
-$f(t)= e^{-at}\cdot u(t)$ & 
-$F(p)= \dfrac{1}{p+a}$ &
-$f(t) = e^{-at}\sin\left( \omega_0 t\right) \cdot u(t)$ &
-$F(p)=\dfrac{\omega_0}{\left( p+a\right)^2 + \omega_0^2}$  \\
-\hline
-$f(t)$ est $T$ périodique &
-$F(p)= \dfrac{\mathcal{L} \left[f_0 (t)\right]}{1-e^{-Tp}} \cdot u(t)$ &
-$f(t)=t^ne^{-at}u(t)$ & $F(p)=\dfrac{n!}{\left( p+a\right)^{n+1}}$
-\\
-\hline
-\end{tabular}
-\end{center}}
+\end{resultat}
+
+
+\begin{resultat}[Réduction de boucle] ~\\
+
+\end{resultat}
+
+
+\begin{resultat}[Comparateurs en série] ~\\
+
+\end{resultat}
+
+
+\begin{resultat}[Point de prélèvement] ~\\
+
+\end{resultat}
+
+
+
+\section{Fonctions usuelles}
+
+
+\begin{defi}[Fonction de transfert en boucle fermée -- FTBF] ~\\
+
 \end{defi}
 
 
-\section{Théorèmes}
-\begin{multicols}{2}
-\begin{theorem}[Théorème de la valeur initiale] ~\\
-$$ \lim\limits_{t \to 0^+} f(t) = \lim\limits_{p \to \infty} pF(p)$$
-\end{theorem} 
 
-\begin{theorem}[Théorème de la valeur finale] ~\\
-$$\lim\limits_{t \to \infty} f(t) = \lim\limits_{p \to 0} pF(p)$$
-\end{theorem} 
+\begin{defi}[Fonction de transfert en boucle ouverte -- FTBO] ~\\
 
-\begin{theorem}[Théorème du retard] ~\\
-$$\mathcal{L}\left[ f\left(t-t_0\right) \right] = e^{-t_0 p}F(p)$$
-\end{theorem} 
-
-\begin{theorem}[Théorème de l'amortissement] ~\\
-$$\mathcal{L} \left[ e^{-a t} f\left(t\right) \right] = F(p+a)$$
-\end{theorem} 
-\end{multicols}
+\end{defi}
 
 
-%\begin{center}
-%\includestandalone{images/perf}
-%\hfill
-%\includestandalone{images/rampe}
-%\end{center}
+\begin{defi}[Chaîne directe] ~\\
+
+\end{defi}
+
+
+
+\begin{defi}[L'écart] ~\\
+
+\end{defi}
+
+
+\begin{defi}[Théorème de superposition] ~\\
+
+\end{defi}
+
+
 
 
 
