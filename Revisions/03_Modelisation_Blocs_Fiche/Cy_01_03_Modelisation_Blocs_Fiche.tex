@@ -43,10 +43,10 @@
 
 \def\classe{Cy01 - R 03}
 \def\xxnumpartie{Cycle 01}
-\def\xxpartie{Modéliser les systèmes asservis -- Modélisation par fonction de transfert et schéma-blocs}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
 
 \def\xxnumchapitre{Révisions 3 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Modéliser les systèmes asservis -- Modélisation par fonction de transfert et schéma-blocs}
+\def\xxchapitre{\hspace{.12cm} Modélisation par fonction de transfert et schéma-blocs}
 
 \def\xxposongletx{2}
 \def\xxposonglettext{1.45}
@@ -67,7 +67,7 @@
 }%figues de la page de garde
 
 \def\xxpied{%
-Cycle 01 -- Modélisation des systèmes linéaires et non linéaires\\
+Cycle 01 -- Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques\\
 Révision 3 -- \xxactivite%
 }
 
@@ -249,7 +249,7 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 \end{resultat}
 
 
-\begin{resultat}[Réduction de boucle] ~\\
+\begin{resultat}[Réduction de boucle -- À MAITRISER PARFAITEMENT] ~\\
 \begin{center}
 \begin{tikzpicture}
 \sbEntree{E}
@@ -295,7 +295,45 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Comparateurs en série] ~\\
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbComp{cp1}{E}
+\sbComph{cp2}{cp1}
+\sbSortie{S}{cp2} 
 
+\sbRelier[$E(p)\quad $]{E}{cp1}
+\sbRelier{cp1}{cp2}
+\sbRelier[$\quad S(p)$]{cp2}{S}
+
+\sbDecaleNoeudy[4]{E}{n1}
+\sbDecaleNoeudy[-4]{E}{n2}
+\sbRelierxy[$E_1(p)$]{n1}{cp1}
+\sbRelierxy[$E_2(p)$]{n2}{cp2}
+
+
+\begin{scope}[xshift=5cm]
+\draw (0,0) node {$\Leftrightarrow$};
+\end{scope}
+
+\begin{scope}[xshift=6cm]
+\sbEntree{E}
+\sbComph{cp1}{E}
+\sbComp{cp2}{cp1}
+\sbSortie{S}{cp2} 
+
+\sbRelier[$E(p)\quad $]{E}{cp1}
+\sbRelier{cp1}{cp2}
+\sbRelier[$\quad S(p)$]{cp2}{S}
+
+\sbDecaleNoeudy[4]{E}{n1}
+\sbDecaleNoeudy[-4]{E}{n2}
+\sbRelierxy[$E_1(p)$]{n1}{cp2}
+\sbRelierxy[$E_2(p)$]{n2}{cp1}
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
 \end{resultat}
 
 
