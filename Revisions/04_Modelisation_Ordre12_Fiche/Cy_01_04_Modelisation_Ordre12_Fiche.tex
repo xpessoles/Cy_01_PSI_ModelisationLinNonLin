@@ -83,9 +83,88 @@ Révision 4 -- \xxactivite%
 \thispagestyle{plain}
 
 \section{Systèmes d'ordre 1}
+
+
+
+
+\begin{defi}
+
+Les systèmes du premier ordre sont régis par une équation différentielle de la
+forme suivante :
+$$
+\tau \dfrac{ds(t)}{dt}+s(t) = Ke(t)
+$$
+
+\begin{minipage}[c]{.6\linewidth}
+Dans le domaine de Laplace, la fonction de transfert de ce système est donc
+donnée par :
+
+$$
+H(p)=\dfrac{S(p)}{E(p)} = \dfrac{K}{1+\tau p}
+$$
+
+On note :
+\begin{itemize}
+ \item $\tau$ la constante de temps ($\tau>0$);
+\item $K$ le gain statique du système ($K>0$).
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[c]{.35\linewidth}
+Schéma-bloc d'un système du premier ordre :
+
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbBloc[5]{B1}{$H(p)=\dfrac{K}{1+\tau p}$}{E}
+\sbSortie[5]{S}{B1}
+\sbRelier[$E(p)$]{E}{B1}
+\sbRelier[$S(p)$]{B1}{S}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{defi}
+
+
 Définition
 
 Réponse à un échelon 
+
+
+\begin{resultat}[Réponse à un échelon d'un système du premier ordre]~\\
+On appelle réponse à un échelon, l'expression de la sortie $s$ lorsque on soumet le système à un échelon d'amplitude $E_0$. Lorsque $E_0=1$ on parle de \textbf{réponse indicielle}.
+Ainsi, dans le domaine de Laplace :
+$$
+S(p)=E(p)H(p) = \dfrac{E_0}{p} \dfrac{K}{1+\tau p}.
+$$ 
+
+Analytiquement, on montre que $s(t)=K E_0 u(t) \left(1-e^{-\frac{t}{\tau}}\right)$. 
+
+Si la réponse indicielle d'un système est caractéristique d'un modèle du premier ordre (pente à l'origine non nulle, pas d'oscillation), on détermine :
+\begin{itemize}
+\item le gain à partir de l'asymptote $K E_0$;
+\item la constante de temps à partir de $t_{5\%}$ ou du temps pour $63~\%$ de la valeur finale.
+\end{itemize}
+
+\noindent \begin{minipage}[c]{.4\linewidth}
+
+	
+
+\begin{itemize}
+\item Valeur finale $s_{\infty}=K E_0$.
+\item Pente à l'origine \textbf{non nulle}.
+\item $t_{5\%}=3\tau$.
+\item Pour $t=\tau$, $s(\tau)=0,63~ s_{\infty}$.
+\item Plus $\tau$ est grand, plus le système est lent.
+\end{itemize}
+
+\end{minipage} \hfill
+\begin{minipage}[c]{.6\linewidth}
+\centering
+
+%\includestandalone{images/fig_01}
+
+\end{minipage}
+\end{resultat}
 
 Réponse à une rampe
 
