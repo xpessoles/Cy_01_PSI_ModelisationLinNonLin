@@ -92,7 +92,7 @@ Révision 4 -- \xxactivite%
 Les systèmes du premier ordre sont régis par une équation différentielle de la
 forme suivante :
 $$
-\tau \dfrac{ds(t)}{dt}+s(t) = Ke(t)
+\tau \dfrac{\dd s(t)}{\dd t}+s(t) = Ke(t)
 $$
 
 \begin{minipage}[c]{.6\linewidth}
@@ -105,7 +105,7 @@ $$
 
 On note :
 \begin{itemize}
- \item $\tau$ la constante de temps ($\tau>0$);
+ \item $\tau$ la constante de temps en secondes ($\tau>0$);
 \item $K$ le gain statique du système ($K>0$).
 \end{itemize}
 \end{minipage}\hfill
@@ -139,30 +139,26 @@ $$
 
 Analytiquement, on montre que $s(t)=K E_0 u(t) \left(1-e^{-\frac{t}{\tau}}\right)$. 
 
-Si la réponse indicielle d'un système est caractéristique d'un modèle du premier ordre (pente à l'origine non nulle, pas d'oscillation), on détermine :
+
+\noindent \begin{minipage}[c]{.65\linewidth}
+
+Si la réponse indicielle d'un système est caractéristique d'un modèle du premier ordre (pente à l'origine non nulle et pas d'oscillation), on détermine :
 \begin{itemize}
 \item le gain à partir de l'asymptote $K E_0$;
-\item la constante de temps à partir de $t_{5\%}$ ou du temps pour $63~\%$ de la valeur finale.
+\item la constante de temps à partir de $t_{5\%}$ ou du temps pour $63~\%$ de la valeur finale.% (ou $3\tau$ pour $95~\%$ de la valeur finale).
 \end{itemize}
-
-\noindent \begin{minipage}[c]{.4\linewidth}
-
-	
-
+Les caractéristiques de la courbe sont les suivantes : 
 \begin{itemize}
-\item Valeur finale $s_{\infty}=K E_0$.
-\item Pente à l'origine \textbf{non nulle}.
-\item $t_{5\%}=3\tau$.
-\item Pour $t=\tau$, $s(\tau)=0,63~ s_{\infty}$.
-\item Plus $\tau$ est grand, plus le système est lent.
+\item valeur finale $s_{\infty}=K E_0$;
+\item pente à l'origine \textbf{non nulle};
+\item $t_{5\%}=3\tau$;
+\item pour $t=\tau$, $s(\tau)=0,63~ s_{\infty}$.
+%\item Plus $\tau$ est grand, plus le système est lent.
 \end{itemize}
-
 \end{minipage} \hfill
-\begin{minipage}[c]{.6\linewidth}
+\begin{minipage}[c]{.32\linewidth}
 \centering
-
-%\includestandalone{images/fig_01}
-
+\includestandalone{images/fig_01}
 \end{minipage}
 \end{resultat}
 

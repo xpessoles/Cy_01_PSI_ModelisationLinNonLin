@@ -1,5 +1,7 @@
 \pdfminorversion=3
 \documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 \begin{document}
 
@@ -11,7 +13,7 @@ ytick={0,.1,...,1.1},
 %minor y tick num=1,
 %minor x tick num=4,
 xlabel = {Temps (s)},
-legend entries={Entrée, Sortie},
+legend entries={Entr\'ee, Sortie},
 legend style={at={(0.55,0.11)},anchor=south west},
 %legend columns=3,
 axis lines=left,
@@ -24,8 +26,8 @@ font=\footnotesize,/pgf/number format/use comma,
 
 \draw (axis cs:0,0.8) -> (axis cs:5,0.8);
 
-%\addplot [black!40!cyan!40,very thick] table[x index=0,y index =1]{images/Ordre1_ech.txt};
-%\addplot [cyan!100,very thick] table[x index=0,y index =2]{images/Ordre1_ech.txt};
+\addplot [gray,very thick] table[x index=0,y index =1]{images/Ordre1_ech.txt};
+\addplot [cyan!100,very thick] table[x index=0,y index =2]{images/Ordre1_ech.txt};
 
 
 \draw (axis cs:4,0.8) node[above] {$K E_0$};
