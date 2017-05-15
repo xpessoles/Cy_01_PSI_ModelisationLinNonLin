@@ -161,26 +161,32 @@ Les caractéristiques de la courbe sont les suivantes :
 
 
 \begin{resultat}[Réponse à un échelon d'un système du deuxième ordre]~\\
+
+\noindent \begin{minipage}[c]{.65\linewidth}
 On appelle réponse à une rampe, l'expression de la sortie $s$ lorsque on soumet le système à une fonction linéaire de pente $k$: 
 $$
 S(p)=E(p)H(p) = \dfrac{k}{p^2} \dfrac{K}{1+\tau p}.
 $$ 
 
-Analytiquement, on montre que $s(t)=K E_0 u(t) \left(1-e^{-\frac{t}{\tau}}\right)$. 
 
+Analytiquement, on montre que $s(t)=Kk \left(t-\tau+\tau e^{-\frac{t}{\tau}}\right)u(t)$. 
 
-\noindent \begin{minipage}[c]{.65\linewidth}
+Les caractéristiques de la courbe sont les suivantes : 
+\begin{itemize}
+\item pente de l'asymptote $K k$;
+%\item pente à l'origine \textbf{non nulle};
+\item $\varepsilon_{v}=kK\tau$;
+\item intersection de l'asymptote avec l'axe des abscisses : $t=\tau$.
+%\item Plus $\tau$ est grand, plus le système est lent.
+\end{itemize}
 
 
 \end{minipage} \hfill
 \begin{minipage}[c]{.32\linewidth}
 \centering
-\includestandalone{images/fig_01}
+\includestandalone{images/rampe}
 \end{minipage}
 \end{resultat}
-
-
-Réponse à une rampe
 
 Diagramme de Bode
 
