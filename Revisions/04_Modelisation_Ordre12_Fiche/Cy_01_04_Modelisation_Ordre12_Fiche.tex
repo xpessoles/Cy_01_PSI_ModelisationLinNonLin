@@ -125,13 +125,10 @@ Schéma-bloc d'un système du premier ordre :
 \end{defi}
 
 
-Définition
-
-Réponse à un échelon 
 
 
 \begin{resultat}[Réponse à un échelon d'un système du premier ordre]~\\
-On appelle réponse à un échelon, l'expression de la sortie $s$ lorsque on soumet le système à un échelon d'amplitude $E_0$. Lorsque $E_0=1$ on parle de \textbf{réponse indicielle}.
+On appelle réponse à un échelon, l'expression de la sortie $s$ lorsque on soumet le système à un échelon d'amplitude $E_0$. Lorsque $E_0=1$ ($1/p$ dans le domaine de Laplace) on parle de \textbf{réponse indicielle}.
 Ainsi, dans le domaine de Laplace :
 $$
 S(p)=E(p)H(p) = \dfrac{E_0}{p} \dfrac{K}{1+\tau p}.
@@ -161,6 +158,27 @@ Les caractéristiques de la courbe sont les suivantes :
 \includestandalone{images/fig_01}
 \end{minipage}
 \end{resultat}
+
+
+\begin{resultat}[Réponse à un échelon d'un système du deuxième ordre]~\\
+On appelle réponse à une rampe, l'expression de la sortie $s$ lorsque on soumet le système à une fonction linéaire de pente $k$: 
+$$
+S(p)=E(p)H(p) = \dfrac{k}{p^2} \dfrac{K}{1+\tau p}.
+$$ 
+
+Analytiquement, on montre que $s(t)=K E_0 u(t) \left(1-e^{-\frac{t}{\tau}}\right)$. 
+
+
+\noindent \begin{minipage}[c]{.65\linewidth}
+
+
+\end{minipage} \hfill
+\begin{minipage}[c]{.32\linewidth}
+\centering
+\includestandalone{images/fig_01}
+\end{minipage}
+\end{resultat}
+
 
 Réponse à une rampe
 
