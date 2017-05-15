@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  11 MAY 2017 08:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  15 MAY 2017 23:43
 entering extended mode
 **Cy_01_03_Modelisation_Blocs_Fiche.tex
 (Cy_01_03_Modelisation_Blocs_Fiche.tex
@@ -2663,7 +2663,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
 Here is how much of TeX's memory you used:
  47633 strings out of 493675
  973499 string characters out of 3143992
- 1694689 words of memory out of 3000000
+ 1694662 words of memory out of 3000000
  50081 multiletter control sequences out of 15000+200000
  149249 words of font info for 178 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -2681,7 +2681,7 @@ eX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avan
 tgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.p
 fb>
-Output written on Cy_01_03_Modelisation_Blocs_Fiche.pdf (2 pages, 161150 bytes)
+Output written on Cy_01_03_Modelisation_Blocs_Fiche.pdf (2 pages, 161125 bytes)
 .
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
