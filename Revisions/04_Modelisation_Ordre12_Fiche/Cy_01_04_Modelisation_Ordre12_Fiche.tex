@@ -228,9 +228,16 @@ On note :
 \item $\omega_0$ pulsation propre du système ($\text{rad/s}$ ou $s^{-1}$).
 \end{itemize}
 
+
 Suivant la valeur du coefficient d'amortissement, l'allure de la réponse temporelle est différente.
+\end{defi}
+
+\begin{resultat} ~\\
+
+\vspace*{-1.3cm}
+
 \begin{center}
-\begin{tabular}{p{.48\linewidth}p{.48\linewidth}}
+\begin{tabular}{p{.43\linewidth}p{.55\linewidth}}
 \begin{center}
 \textbf{$z\geq 1$ : système non oscillant et amorti}
 
@@ -247,11 +254,13 @@ Suivant la valeur du coefficient d'amortissement, l'allure de la réponse tempor
 \includestandalone{images/Ordre2_pseudo}
 \end{center} 
 \\
+\vspace*{-.8cm}
 \begin{itemize} 
 \item La fonction de transfert a deux pôles réels.
 \item La tangente à l'origine est nulle.
 \end{itemize}
 & 
+\vspace*{-.8cm}
 \begin{itemize} 
 \item La fonction de transfert a deux pôles réels.
 \item La tangente à l'origine est nulle.
@@ -260,70 +269,6 @@ Suivant la valeur du coefficient d'amortissement, l'allure de la réponse tempor
 \end{itemize}
 \end{tabular}
 \end{center}
-\end{defi}
-
-
-
-
-\begin{resultat}[Réponse à un échelon d'un système du second ordre]~\\
-On appelle réponse à un échelon, l'expression de la sortie $s$ lorsque on soumet le système à un échelon d'amplitude $E_0$. Lorsque $E_0=1$ ($1/p$ dans le domaine de Laplace) on parle de \textbf{réponse indicielle}.
-Ainsi, dans le domaine de Laplace :
-$$
-S(p)=E(p)H(p) = \dfrac{E_0}{p} \dfrac{K}{1+ \dfrac{2\xi}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}
-$$ 
-
-%Analytiquement, on montre que $s(t)=K E_0 u(t) \left(1-e^{-\frac{t}{\tau}}\right)$. 
-
-
-\noindent \begin{minipage}[c]{.65\linewidth}
-
-Si la réponse indicielle d'un système est caractéristique d'un modèle du premier ordre (pente à l'origine non nulle et pas d'oscillation), on détermine :
-\begin{itemize}
-\item le gain à partir de l'asymptote $K E_0$;
-\item la constante de temps à partir de $t_{5\%}$ ou du temps pour $63~\%$ de la valeur finale.% (ou $3\tau$ pour $95~\%$ de la valeur finale).
-\end{itemize}
-Les caractéristiques de la courbe sont les suivantes : 
-\begin{itemize}
-\item valeur finale $s_{\infty}=K E_0$;
-\item pente à l'origine \textbf{non nulle};
-\item $t_{5\%}=3\tau$;
-\item pour $t=\tau$, $s(\tau)=0,63~ s_{\infty}$.
-%\item Plus $\tau$ est grand, plus le système est lent.
-\end{itemize}
-\end{minipage} \hfill
-\begin{minipage}[c]{.32\linewidth}
-\centering
-\includestandalone{images/fig_01}
-\end{minipage}
-\end{resultat}
-
-
-\begin{resultat}[Réponse à un échelon d'un système du deuxième ordre]~\\
-
-\noindent \begin{minipage}[c]{.65\linewidth}
-On appelle réponse à une rampe, l'expression de la sortie $s$ lorsque on soumet le système à une fonction linéaire de pente $k$: 
-$$
-S(p)=E(p)H(p) = \dfrac{k}{p^2} \dfrac{K}{1+\tau p}.
-$$ 
-
-
-Analytiquement, on montre que $s(t)=Kk \left(t-\tau+\tau e^{-\frac{t}{\tau}}\right)u(t)$. 
-
-Les caractéristiques de la courbe sont les suivantes : 
-\begin{itemize}
-\item pente de l'asymptote $K k$;
-%\item pente à l'origine \textbf{non nulle};
-\item $\varepsilon_{v}=kK\tau$;
-\item intersection de l'asymptote avec l'axe des abscisses : $t=\tau$.
-%\item Plus $\tau$ est grand, plus le système est lent.
-\end{itemize}
-
-
-\end{minipage} \hfill
-\begin{minipage}[c]{.32\linewidth}
-\centering
-\includestandalone{images/rampe}
-\end{minipage}
 \end{resultat}
 
 

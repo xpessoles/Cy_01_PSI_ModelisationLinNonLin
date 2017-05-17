@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  16 MAY 2017 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  17 MAY 2017 21:40
 entering extended mode
 **Cy_01_04_Modelisation_Ordre12_Fiche.tex
 (Cy_01_04_Modelisation_Ordre12_Fiche.tex
@@ -2546,60 +2546,49 @@ LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 228.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
 (Font)              scaled to size 4.59999pt on input line 228.
-runsystem(pdflatex -interaction=batchmode -shell-escape -jobname "images/Ordre2
-_amorti" images/Ordre2_amorti)...executed.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 233.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 235.
 
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
-<images/Ordre2_amorti.pdf, id=65, 123.35585pt x 98.8764pt>
+ []
+
+Package standalone Info: generated file images/Ordre2_amorti.pdf newer then sou
+rce file images/Ordre2_amorti.tex on input line 246.
+<images/Ordre2_amorti.pdf, id=65, 126.06699pt x 98.8764pt>
 File: images/Ordre2_amorti.pdf Graphic file (type pdf)
 
 <use images/Ordre2_amorti.pdf>
-Package pdftex.def Info: images/Ordre2_amorti.pdf used on input line 239.
-(pdftex.def)             Requested size: 123.35553pt x 98.87616pt.
-runsystem(pdflatex -interaction=batchmode -shell-escape -jobname "images/Ordre2
-_pseudo" images/Ordre2_pseudo)...executed.
+Package pdftex.def Info: images/Ordre2_amorti.pdf used on input line 246.
+(pdftex.def)             Requested size: 126.06667pt x 98.87616pt.
+Package standalone Info: generated file images/Ordre2_pseudo.pdf newer then sou
+rce file images/Ordre2_pseudo.tex on input line 254.
 
-
-<images/Ordre2_pseudo.pdf, id=66, 126.06699pt x 100.07086pt>
+<images/Ordre2_pseudo.pdf, id=66, 126.06699pt x 98.87439pt>
 File: images/Ordre2_pseudo.pdf Graphic file (type pdf)
 
 <use images/Ordre2_pseudo.pdf>
-Package pdftex.def Info: images/Ordre2_pseudo.pdf used on input line 247.
-(pdftex.def)             Requested size: 126.06667pt x 100.0706pt.
+Package pdftex.def Info: images/Ordre2_pseudo.pdf used on input line 254.
+(pdftex.def)             Requested size: 126.06667pt x 98.87413pt.
 
-Underfull \hbox (badness 5533) in paragraph at lines 258--259
-[]\T1/mdput/m/n/10 (+20) La pseudo-période est de la forme $\OML/mdput/m/it/10 
-T[] \OT1/mdput/m/n/10 (+20) =$
- []
-
-
-Overfull \hbox (5.2081pt too wide) in paragraph at lines 233--262
+Overfull \hbox (14.54004pt too wide) in paragraph at lines 240--271
  [] 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 263.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 268.
-Package standalone Info: generated file images/fig_01.pdf newer then source fil
-e images/fig_01.tex on input line 296.
-File: images/fig_01.pdf Graphic file (type pdf)
-<use images/fig_01.pdf>
-Package pdftex.def Info: images/fig_01.pdf used on input line 296.
-(pdftex.def)             Requested size: 151.02786pt x 127.32738pt.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 298.
- <png/logo_lycee.png, id=67, 329.23pt x 265.99374pt>
+ mdframed uses option nobreak mdframed on input line 272.
+<png/logo_lycee.png, id=67, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
-
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 298.
+ <use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 275.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 298.
+(Font)              scaled to size 7.35999pt on input line 275.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 298.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 275.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2609,57 +2598,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2 <./png/logo_lycee.png> <./images/Ordre2_amorti.pdf> <./images/Ordre2_pseudo.
 pdf>]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 301.
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-Package standalone Info: generated file images/rampe.pdf newer then source file
- images/rampe.tex on input line 325.
-File: images/rampe.pdf Graphic file (type pdf)
-<use images/rampe.pdf>
-Package pdftex.def Info: images/rampe.pdf used on input line 325.
-(pdftex.def)             Requested size: 121.42934pt x 132.45853pt.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 327.
-File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 330.
-(pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 330.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 330.
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
  (Cy_01_04_Modelisation_Ordre12_Fiche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 275.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_04_Modelisation_Ordre12_Fiche.r
 un.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 47401 strings out of 493675
- 969815 string characters out of 3143992
- 1674398 words of memory out of 3000000
- 49870 multiletter control sequences out of 15000+200000
- 180330 words of font info for 169 fonts, out of 3000000 for 9000
+ 47391 strings out of 493675
+ 969681 string characters out of 3143992
+ 1674475 words of memory out of 3000000
+ 49864 multiletter control sequences out of 15000+200000
+ 172082 words of font info for 166 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,98p,10448b,1971s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2682,10 +2639,10 @@ be/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_04_Modelisation_Ordre12_Fiche.pdf (3 pages, 253985 byte
+Output written on Cy_01_04_Modelisation_Ordre12_Fiche.pdf (2 pages, 250156 byte
 s).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 56374 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 55862 words of extra memory for PDF output out of 61914 (max. 10000000)
 
