@@ -33,6 +33,7 @@
 \standaloneconfig{mode=buildnew}
 \usepackage{style/schemabloc}
 \usepackage{picins}
+\usepackage{style/bodegraph}
 
 % -------------------------------------
 % Déclaration des titres
@@ -83,10 +84,91 @@ Révision 5 -- \xxactivite%
 \thispagestyle{plain}
 
 \section{Définitions}
+
+\begin{tikzpicture}[xscale=7/4]
+\begin{scope}[yscale=3/40]
+\semilog{-2}{2}{-20}{20}
+\BodeAmp[cyan,thin,samples=100]{-2:2}
+{\POAmpAsymp{6}{0.3}}
+\BodeAmp[cyan,thick]{-2:2}{\POAmp{6}{0.3}}
+\end{scope}
+\begin{scope}[yshift=-2.5cm,yscale=3/90]
+\semilog{-2}{2}{-90}{0}
+\BodeArg[cyan,samples=100,thin]{-2:2}{\POArgAsymp{6}{0.3}}
+\BodeArg[cyan,thick]{-2:2}{\POArg{6}{0.3}}
+\end{scope}
+\end{tikzpicture}
+
 \section{Gain}
+\begin{resultat}[Diagramme de Bode d'un gain pur] ~\\
+
+\noindent\begin{minipage}[c]{.4\linewidth}
+\begin{itemize}
+\item Fonction de transfert : $H(p)=K$.
+\item Diagramme de gain : droite horizontale d'ordonnée $20 \log K$.
+\item Diagramme de phase: droite horizontale d'ordonnée 0\degre.
+\end{itemize}
+\end{minipage} \hfill
+\begin{minipage}[c]{.57\linewidth}
+\begin{tikzpicture}[xscale=7/4]
+\begin{scope}[yscale=3/40]
+\semilog{-2}{2}{-20}{20}
+\BodeAmp[cyan,thin,samples=100]{-2:2}
+{\POAmpAsymp{6}{0.3}}
+\BodeAmp[cyan,thick]{-2:2}{\POAmp{6}{0.3}}
+\end{scope}
+\begin{scope}[yshift=-2.5cm,yscale=3/90]
+\semilog{-2}{2}{-90}{0}
+\BodeArg[cyan,samples=100,thin]{-2:2}{\POArgAsymp{6}{0.3}}
+\BodeArg[cyan,thick]{-2:2}{\POArg{6}{0.3}}
+\end{scope}
+\end{tikzpicture}
+
+\end{minipage}
+\end{resultat}
 \section{Intégrateur}
 \section{Dérivateur}
 \section{Systèmes d'ordre 1}
+\begin{resultat}[Diagramme de Bode d'un système du premier ordre] ~\\
+
+\noindent\begin{minipage}[c]{.53\linewidth}
+\begin{itemize}
+\item Fonction de transfert : $H(p)=\dfrac{K}{1+\tau p}$.
+\item Diagramme de gain asymptotique : 
+\begin{itemize}
+\item pour $\omega<\dfrac{1}{\tau}$ : droite horizontale d'ordonnée $20 \log K$;
+\item pour $\omega>\dfrac{1}{\tau}$ : droite de pente $-{20}\text{dB/decade}$.
+\end{itemize}
+\item Diagramme de phase asymptotique : 
+\begin{itemize}
+\item pour $\omega<\dfrac{1}{\tau}$ : droite horizontale d'ordonnée 0 \degre;
+\item pour $\omega>\dfrac{1}{\tau}$ : droite horizontale d'ordonnée $-90$ \degre.
+\end{itemize}
+\end{itemize}
+\end{minipage} \hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{tikzpicture}[xscale=7/5]
+\begin{scope}[yscale=3/50]
+\semilog{-2}{2}{0}{30}
+\BodeAmp[cyan,thin,samples=100]{-2:2}{\POAmpAsymp{20}{0.2}}
+\BodeAmp[cyan,thick]{-2:2}{\POAmp{20}{0.2}}
+\draw (0,28) node {\footnotesize 0 dB/d\'ecade};
+\draw (1.7,20) node {\footnotesize $-$20 dB/d\'ecade};
+\draw [dashed,black] (.7,0) -- (.7,25);
+\draw (.7,0)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{\tau}$};
+\end{scope}
+\begin{scope}[yshift=-0.5cm,yscale=1/50]
+\UniteDegre
+\OrdBode{30}
+\semilog{-2}{2}{-90}{0}
+\BodeArg[cyan,samples=100,thin]{-2:2}{\POArgAsymp{20}{0.2}}
+\BodeArg[cyan,thick]{-2:2}{\POArg{20}{0.2}}
+\end{scope}
+\end{tikzpicture}
+
+\end{minipage}
+\end{resultat}
+
 \section{Systèmes d'ordre 2}
 %
 %\begin{defi}
