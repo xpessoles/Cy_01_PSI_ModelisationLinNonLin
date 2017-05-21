@@ -348,8 +348,55 @@ $A_{\text{max}} = \dfrac{K}{2\xi\sqrt{1-\xi^2}}.$
 \end{resultat}
 
 
+\section{Retard}
+\begin{resultat}[Diagramme de Bode d'un retard pur] ~\\
+
+\vspace{-.5cm}
+
+\noindent\begin{minipage}[c]{.53\linewidth}
+\begin{itemize}
+\item Fonction de transfert : $H(p)=e^{-Tp}$.
+\item Diagramme de gain asymptotique : 
+\item Diagramme de phase asymptotique : 
+\end{itemize}\end{minipage} \hfill
+\begin{minipage}[c]{.45\linewidth}
+
+\begin{tikzpicture}[xscale=7/3]
+\begin{scope}[yscale=4/50]
+\UnitedB
+\OrdBode{5}
+\semilog{0}{3}{-10}{10}
+\BodeAmp{0:3}{\RetAmp{.08}}
+\end{scope}
+\begin{scope}[yshift=-1.8cm,yscale=4/180]
+\UniteDegre
+\OrdBode{30}
+\semilog{0}{3}{-90}{0}
+%\BodeArg[samples=100]{0:3}{\RetArg{0.08}}%\RetArg{0.08}}
+\end{scope}
+\end{tikzpicture}
+
+
+\end{minipage}
+\end{resultat}
+
 \section{Tracé du diagramme de Bode}
-\begin{methode}
+
+\begin{methode}~\\
+
+\textbf{Méthode 1 : sommation dans le diagramme de Bode}
+\begin{enumerate}
+\item décomposer la fonction de transfert à tracer en fonction de transfert élémentaire (fonctions de transfert élémentaires vues ci-dessus);
+\item tracer chacune des fonctions de transfert;
+\item sommer les tracés dans le diagramme de gain et dans le diagramme des phases.
+\end{enumerate}
+\textbf{Méthode 2 : tableau de variation}
+\begin{enumerate}
+\item décomposer la fonction de transfert à tracer en fonction de transfert élémentaire (fonctions de transfert élémentaires vues ci-dessus);
+\item réaliser un tableau de variation : pour chacune des fonctions élémentaires, donner les pulsations de coupure et les pentes;
+\item sommer les pentes;
+\item tracer le diagramme de Bode.
+\end{enumerate}
 
 \end{methode}
 

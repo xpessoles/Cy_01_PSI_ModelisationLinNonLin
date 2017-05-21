@@ -1,2 +1,2 @@
 set table "gnuplot/15.table"; set format "%.5f"
-set samples 150.0; set parametric; plot [t=-2:2] [] [] log10(10**t),20*log10(abs(10/sqrt((1-(10**t/.9)**2)**2+(2*0.2*(10**t/.9))**2)))
+set samples 50.0; set parametric; plot [t=0:3] [] [] log10(10**t),-180/3.1415957*atan(0.08*10**t)+-180/3.1415957*0.08*10**t

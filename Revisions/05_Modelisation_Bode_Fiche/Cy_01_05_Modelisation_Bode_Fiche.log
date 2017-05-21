@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  20 MAY 2017 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  21 MAY 2017 22:18
 entering extended mode
 **Cy_01_05_Modelisation_Bode_Fiche.tex
 (Cy_01_05_Modelisation_Bode_Fiche.tex
@@ -2671,17 +2671,31 @@ Package mdframed Info: mdframed inside float
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 352.
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
+
+ []
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (18.43001pt too wide) in paragraph at lines 377--378
+[][] 
+ []
+
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 354.
+ mdframed uses option nobreak mdframed on input line 381.
 <png/logo_lycee.png, id=30, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 356.
+Package pdftex.def Info: png/logo_lycee.png used on input line 381.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 356.
+(Font)              scaled to size 7.35999pt on input line 381.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 356.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 381.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2690,9 +2704,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./png/logo_lycee.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 385.
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+
+ []
+
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 401.
 File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 356.
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 403.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2702,29 +2726,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 356.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 403.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 356.
+(Font)              scaled to size 11.03998pt on input line 403.
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
  (Cy_01_05_Modelisation_Bode_Fiche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 356.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 403.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 403.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_05_Modelisation_Bode_Fiche.run.
 xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 403.
  ) 
 Here is how much of TeX's memory you used:
- 48574 strings out of 493675
- 992809 string characters out of 3143992
- 1759433 words of memory out of 3000000
- 50990 multiletter control sequences out of 15000+200000
- 202243 words of font info for 216 fonts, out of 3000000 for 9000
+ 48646 strings out of 493675
+ 994065 string characters out of 3143992
+ 1766459 words of memory out of 3000000
+ 51047 multiletter control sequences out of 15000+200000
+ 202816 words of font info for 220 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,98p,10445b,1971s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2741,10 +2765,10 @@ a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_05_Modelisation_Bode_Fiche.pdf (3 pages, 179035 bytes).
+Output written on Cy_01_05_Modelisation_Bode_Fiche.pdf (3 pages, 184698 bytes).
 
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 56394 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 56402 words of extra memory for PDF output out of 61914 (max. 10000000)
 
