@@ -338,6 +338,42 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Point de prélèvement] ~\\
+\begin{center}
+\begin{tikzpicture}
+%\sbEntree{E}
+%\sbBloc[$H_1(p)$]{b1}{E}
+%%\sbSortie{S}{b1} 
+%
+%%\sbRelier[$E(p)\quad $]{E}{b1}
+%%\sbRelier[$S(p)\quad $]{S}{b1}
+%
+%%\sbDecaleNoeudy[4]{b1}{n1}
+%%\sbBlocr[$H_2(p)$]{b2}{n1}
+%%\sbRelieryx{b1-S}{b2}
+%
+%
+%\begin{scope}[xshift=5cm]
+%\draw (0,0) node {$\Leftrightarrow$};
+%\end{scope}
+%
+%\begin{scope}[xshift=6cm]
+%\sbEntree{E}
+%\sbComph{cp1}{E}
+%\sbComp{cp2}{cp1}
+%\sbSortie{S}{cp2} 
+%
+%\sbRelier[$E(p)\quad $]{E}{cp1}
+%\sbRelier{cp1}{cp2}
+%\sbRelier[$\quad S(p)$]{cp2}{S}
+%
+%\sbDecaleNoeudy[4]{E}{n1}
+%\sbDecaleNoeudy[-4]{E}{n2}
+%\sbRelierxy[$E_1(p)$]{n1}{cp2}
+%\sbRelierxy[$E_2(p)$]{n2}{cp1}
+%\end{scope}
+%
+\end{tikzpicture}
+\end{center}
 
 \end{resultat}
 
@@ -348,28 +384,72 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 \begin{defi}[Fonction de transfert en boucle fermée -- FTBF] ~\\
 
+\begin{minipage}[c]{.48\linewidth}
+$$H(p)=\dfrac{S(p)}{E(p)}$$
+\end{minipage}\hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbComp{cp}{E}
+\sbRelier[$E(p)\quad $]{E}{cp}
+\sbBloc[4]{sys}{$H_1(p) $}{cp}
+\sbRelier[$\varepsilon(p)$]{cp}{sys}
+\sbSortie[4]{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+
+\sbDecaleNoeudy[4]{cp}{n}
+\sbDecaleNoeudx[2]{n}{n2}
+\sbBloc{sys2}{$H_2(p) $}{n2}
+\sbRelierxy[$R(p)$]{sys2}{cp}
+\sbRelieryx{sys-S}{sys2}
+\end{tikzpicture}
+\end{center} 
+\end{minipage}
 \end{defi}
 
 
 
 \begin{defi}[Fonction de transfert en boucle ouverte -- FTBO] ~\\
+\begin{minipage}[c]{.48\linewidth}
+$$\text{FTBO}(p)=\dfrac{\varepsilon(p)}{R(p)}=H_1(p) H_2(p)$$
+\end{minipage}\hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+\sbComp{cp}{E}
+\sbRelier[$E(p)\quad $]{E}{cp}
+\sbBloc[4]{sys}{$H_1(p) $}{cp}
+\sbRelier[$\varepsilon(p)$]{cp}{sys}
+\sbSortie[4]{S}{sys} 
+\sbRelier[$\quad S(p)$]{sys}{S}
+
+\sbDecaleNoeudy[4]{cp}{n}
+\sbDecaleNoeudx[2]{n}{n2}
+\sbBloc{sys2}{$H_2(p) $}{n2}
+\sbRelierxy[$R(p)$]{sys2}{cp}
+\sbRelieryx{sys-S}{sys2}
+\end{tikzpicture}
+\end{center} 
+\end{minipage}
 
 \end{defi}
 
-
-\begin{defi}[Chaîne directe] ~\\
-
-\end{defi}
-
-
-
-\begin{defi}[L'écart] ~\\
-
-\end{defi}
-
+%
+%\begin{defi}[Chaîne directe] ~\\
+%
+%\end{defi}
+%
+%
+%
+%\begin{defi}[L'écart] ~\\
+%
+%\end{defi}
+%
 
 \begin{defi}[Théorème de superposition] ~\\
-
+Soit un système d'entrées $E_1$ et $E_2$ et de sortie $S$. On note $H_1=\dfrac{S}{E_1}$ lorsque $E_2$ est nulle et $H_2=\dfrac{S}{E_2}$ lorsque $E_1$ est nulle. En superposant, on a alors : $S=H_1 E_1 + H_2 E_2$.
 \end{defi}
 
 
