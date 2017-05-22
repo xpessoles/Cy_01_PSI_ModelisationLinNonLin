@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  21 MAY 2017 22:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  22 MAY 2017 14:17
 entering extended mode
 **Cy_01_03_Modelisation_Blocs_Fiche.tex
 (Cy_01_03_Modelisation_Blocs_Fiche.tex
@@ -2528,91 +2528,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 213.
+ mdframed uses option nobreak mdframed on input line 215.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 218.
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 253.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 216.
+(Font)              scaled to size 7.35999pt on input line 253.
 LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.35999pt on input line 216.
+(Font)              scaled to size 7.35999pt on input line 253.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 216.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 253.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 216.
+(Font)              scaled to size 7.35999pt on input line 253.
 [1
 
 {C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 216.
+(mdframed)              on input line 256.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 249.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 252.
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 294.
+ mdframed uses option nobreak mdframed on input line 301.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 297.
+(mdframed)              on input line 304.
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 337.
+ mdframed uses option nobreak mdframed on input line 347.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 340.
+(mdframed)              on input line 350.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 378.
+ mdframed uses option nobreak mdframed on input line 392.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 385.
+(mdframed)              on input line 400.
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 409.
+ mdframed uses option nobreak mdframed on input line 426.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 413.
+(mdframed)              on input line 430.
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 415.
+(Font)              scaled to size 6.43999pt on input line 435.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 415.
+(Font)              scaled to size 4.59999pt on input line 435.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 437.
+ mdframed uses option nobreak mdframed on input line 457.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 451.
+(mdframed)              on input line 471.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 453.
+ mdframed uses option nobreak mdframed on input line 473.
 <png/logo_lycee.png, id=28, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 459.
+Package pdftex.def Info: png/logo_lycee.png used on input line 479.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 459.
+(Font)              scaled to size 7.35999pt on input line 479.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 459.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 479.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2621,24 +2626,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./png/logo_lycee.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 459.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 459.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 479.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 479.
  (Cy_01_03_Modelisation_Blocs_Fiche.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 459.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 459.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 479.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 479.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_03_Modelisation_Blocs_Fiche.run
 .xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 459.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 479.
  ) 
 Here is how much of TeX's memory you used:
- 47639 strings out of 493675
- 973579 string characters out of 3143992
- 1704428 words of memory out of 3000000
- 50085 multiletter control sequences out of 15000+200000
+ 47705 strings out of 493675
+ 974575 string characters out of 3143992
+ 1711608 words of memory out of 3000000
+ 50151 multiletter control sequences out of 15000+200000
  164921 words of font info for 184 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,98p,10446b,1971s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2655,7 +2660,7 @@ eX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avan
 tgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.p
 fb>
-Output written on Cy_01_03_Modelisation_Blocs_Fiche.pdf (2 pages, 163211 bytes)
+Output written on Cy_01_03_Modelisation_Blocs_Fiche.pdf (2 pages, 163827 bytes)
 .
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)

@@ -185,6 +185,8 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 \end{warn}
 
 \begin{resultat}[Blocs en série] ~\\
+
+\vspace{-.6cm}
 \begin{center}
 \begin{tikzpicture}
 \sbEntree{E}
@@ -214,6 +216,8 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Blocs en parallèle] ~\\
+
+\vspace{-.6cm}
 
 \begin{center}
 \begin{tikzpicture}
@@ -250,6 +254,9 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Réduction de boucle -- À MAITRISER PARFAITEMENT] ~\\
+
+\vspace{-.6cm}
+
 \begin{center}
 \begin{tikzpicture}
 \sbEntree{E}
@@ -295,6 +302,9 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Comparateurs en série] ~\\
+
+\vspace{-.6cm}
+
 \begin{center}
 \begin{tikzpicture}
 \sbEntree{E}
@@ -338,40 +348,44 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 
 
 \begin{resultat}[Point de prélèvement] ~\\
+
+\vspace{-.6cm}
+
 \begin{center}
 \begin{tikzpicture}
-%\sbEntree{E}
-%\sbBloc[$H_1(p)$]{b1}{E}
-%%\sbSortie{S}{b1} 
-%
-%%\sbRelier[$E(p)\quad $]{E}{b1}
-%%\sbRelier[$S(p)\quad $]{S}{b1}
-%
-%%\sbDecaleNoeudy[4]{b1}{n1}
-%%\sbBlocr[$H_2(p)$]{b2}{n1}
-%%\sbRelieryx{b1-S}{b2}
-%
-%
-%\begin{scope}[xshift=5cm]
-%\draw (0,0) node {$\Leftrightarrow$};
-%\end{scope}
-%
-%\begin{scope}[xshift=6cm]
-%\sbEntree{E}
-%\sbComph{cp1}{E}
-%\sbComp{cp2}{cp1}
-%\sbSortie{S}{cp2} 
-%
-%\sbRelier[$E(p)\quad $]{E}{cp1}
-%\sbRelier{cp1}{cp2}
-%\sbRelier[$\quad S(p)$]{cp2}{S}
-%
-%\sbDecaleNoeudy[4]{E}{n1}
-%\sbDecaleNoeudy[-4]{E}{n2}
-%\sbRelierxy[$E_1(p)$]{n1}{cp2}
-%\sbRelierxy[$E_2(p)$]{n2}{cp1}
-%\end{scope}
-%
+\sbEntree{E}
+\sbBloc{b1}{$H_1(p) $}{E}
+\sbSortie{S}{b1} 
+
+\sbRelier[$E(p)\quad $]{E}{b1}
+\sbRelier[$\quad S(p)$]{b1}{S}
+
+\sbDecaleNoeudy[4]{S}{n1}
+\sbBlocr{b2}{$H_2(p)$}{n1}
+\sbRelieryx{b1-S}{b2}
+\sbDecaleNoeudx[-4]{b2}{n2}
+\sbRelier[$\quad R(p)\quad \quad $]{b2}{n2}
+
+\begin{scope}[xshift=4cm]
+\draw (0,0) node {$\Leftrightarrow$};
+\end{scope}
+
+\begin{scope}[xshift=8cm]
+\sbEntree{E}
+\sbBloc{b1}{$H_1(p)$}{E}
+\sbSortie{S}{b1} 
+
+\sbRelier[$E(p)\quad $]{E}{b1}
+\sbRelier[$\quad S(p)$]{b1}{S}
+
+\sbDecaleNoeudy[4]{E}{n1}
+\sbDecaleNoeudx[2]{n1}{n2}
+\sbBlocr{b2}{$H_2(p) H_1(p)$}{n2}
+\sbRelieryx{E-b1}{b2}
+\sbDecaleNoeudx[-6]{b2}{n3}
+\sbRelier[$\quad R(p)\quad \quad $]{b2}{n3}
+\end{scope}
+
 \end{tikzpicture}
 \end{center}
 
@@ -382,7 +396,10 @@ Pour modifier un schéma-blocs, il faut s'assurer que lorsque on modifie une par
 \section{Fonctions usuelles}
 
 
+
 \begin{defi}[Fonction de transfert en boucle fermée -- FTBF] ~\\
+
+\vspace{-.6cm}
 
 \begin{minipage}[c]{.48\linewidth}
 $$H(p)=\dfrac{S(p)}{E(p)}$$
@@ -411,6 +428,9 @@ $$H(p)=\dfrac{S(p)}{E(p)}$$
 
 
 \begin{defi}[Fonction de transfert en boucle ouverte -- FTBO] ~\\
+
+\vspace{-.6cm}
+
 \begin{minipage}[c]{.48\linewidth}
 $$\text{FTBO}(p)=\dfrac{\varepsilon(p)}{R(p)}=H_1(p) H_2(p)$$
 \end{minipage}\hfill
