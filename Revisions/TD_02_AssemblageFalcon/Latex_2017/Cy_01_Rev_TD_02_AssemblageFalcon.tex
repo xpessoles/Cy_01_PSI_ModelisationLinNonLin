@@ -88,6 +88,8 @@ Révisions %1 -- \xxactivite%
 \pagestyle{fancy}
 \thispagestyle{plain}
 
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
 \section*{Mise en situation}
 \subsection*{Présentation}
 Le tronçon central du fuselage du Falcon 7X est assemblé par rivetage grâce à un robot 6 axes. Les rivets sont stockés dans des cassettes rangées verticalement. Un chariot de sélection se déplace verticalement pour déplacer une buse d’aspiration qui permettra d’acheminer les rivets contenus dans la cassette vers l’effecteur (robot). Le chariot fait l’objet de cette étude.
@@ -99,6 +101,7 @@ Le tronçon central du fuselage du Falcon 7X est assemblé par rivetage grâce �
  
 L'objectif de cette partie est de valider les choix effectués par la société pour le sous ensemble de sélection des fixations de la cellule (exigence 1.1).
 
+\vfill
 
 \begin{center}
 \includegraphics[width=7cm]{images/image6}
@@ -173,39 +176,54 @@ erreur statique par rapport à une consigne de vitesse constante
 
 
 \subsection*{Choix d’une architecture de la chaine de transmission}
-Proposer sous la forme d’un schéma une autre solution permettant le déplacement du chariot. La conversion de l’énergie électrique en énergie mécanique par un moteur doit être conservée.
+\subparagraph{}
+\textit{Proposer sous la forme d’un schéma une autre solution permettant le déplacement du chariot. La conversion de l’énergie électrique en énergie mécanique par un moteur doit être conservée.}
+
 Compte tenu des vitesses de translation importantes, le système retenu est de type poulie-courroie.
 
 \subsection*{Détermination de l’inertie équivalente} 
 Les grandeurs caractéristiques (notations et valeurs) des éléments de l’axe du chariot sont données dans le tableau ci-dessous :
 \begin{center}
 \begin{tabular}{|p{3cm}|c|c|}
+\hline
 Moment d’inertie du rotor du moteur autour de son axe&	$J_m$ & $\num{140d-6}\si{kg.m^2}$ \\ \hline
-%Moment d’inertie du réducteur ramené à l’arbre moteur&	$J_{réd}$ & $\SI{60.10^{-4}}{kg.m^2}$ \\ \hline
-%Moment d’inertie de la poulie motrice autour de son axe&	$J_{PM}	&$ \SI{38.10^{-4}}{kg.m^2}$ \\ \hline
-%Moment d’inertie de la poulie réceptrice autour de son axe&	$J_{PR}$ & $\SI{38.10^(-4)}{kg.m^2}$ \\ \hline
-%Masse totale du chariot	&$M$ &$\SI{5}{kg}$ \\ \hline
-%Vitesse de rotation de l’arbre moteur $\omega_m$ &  \\ \hline
-%Vitesse de rotation de l’arbre de sortie du réducteur	$\omega_r$&  \\ \hline
-%Rayon d’une poulie motrice ou réceptrice	& $R_P$ &$\SI{45}{mm}$ \\ \hline
+Moment d’inertie du réducteur ramené à l’arbre moteur&	$J_{réd}$ & $\num{60d-4}\si{kg.m^2}$ \\ \hline
+Moment d’inertie de la poulie motrice autour de son axe&	$J_{PM}$	&$ \num{38d-4}\si{kg.m^2}$ \\ \hline
+Moment d’inertie de la poulie réceptrice autour de son axe&	$J_{PR}$ & $\num{38d-4}\si{kg.m^2}$ \\ \hline
+Masse totale du chariot	&$M$ &$\SI{5}{kg}$ \\ \hline
+Vitesse de rotation de l’arbre moteur &$\omega_m$ &  \\ \hline
+Vitesse de rotation de l’arbre de sortie du réducteur	&$\omega_r$&  \\ \hline
+Rayon d’une poulie motrice ou réceptrice	& $R_P$ &$\SI{45}{mm}$ \\ \hline
 Rapport de réduction réducteur ($\omega_r/\omega_m$)	& $\lambda$	&$1/5$ \\ \hline
 \end{tabular}
 \end{center}
-\end{document}
-À partir des grandeurs définies déterminer l’expression littérale de l’inertie équivalente J_eq de l’ensemble Σ={moteur+réducteur+poulies+chariot} ramenée sur l’arbre moteur. Cette inertie équivalente est définie par E_c (Σ)=1/2 J_eq ω_m^2.
-Déterminer la valeur numérique de l’expression précédente.
 
-Modèle de connaissance du moteur à courant continu
-Objectif : 
+\subparagraph{}
+\textit{À partir des grandeurs définies déterminer l’expression littérale de l’inertie équivalente $J_{eq}$ de l’ensemble $\Sigma=\{moteur+réducteur+poulies+chariot\}$ ramenée sur l’arbre moteur. Cette inertie équivalente est définie par $E_c (\Sigma)=1/2 J_{eq} \omega_m^2$.}
+
+\subparagraph{}
+\textit{Déterminer la valeur numérique de l’expression précédente.}
+
+\subsection*{Modèle de connaissance du moteur à courant continu}
+\begin{obj}
 L’objectif de cette partie est d’établir un modèle de la motorisation de l’axe afin de simuler un déplacement.
+\end{obj}
 
-À partir des équations du moteur à courant continu, réaliser le schéma bloc du moteur à courant continu.
-En considérant que C_R (p)=0, déterminer la fonction de transfert H_M (p)=(Ω_m (p))/(U(p)) sous sa forme canonique.
-Montrer que la fonction de transfert H_M (p) peut se mettre sous la forme H_M (p)=K_C/(K_C K_e+RJ_eq p+LJ_eq p^2 ). Justifier la réponse. Pour cette question, la valeur numérique de J_eq considérée sera J_eq=7⋅10^(-3)  kg m^2 indépendamment du résultat numérique calculé précédemment.
-Montrer qu’avec l’expression, H_M (p) peut s’écrire sous la forme H_M (p)=K_M/(1+T_E p)(1+T_M p)  avec T_E<T_M..
+\subparagraph{}
+\textit{À partir des équations du moteur à courant continu, réaliser le schéma bloc du moteur à courant continu.}
+
+\subparagraph{}
+\textit{En considérant que $C_R (p)=0$, déterminer la fonction de transfert $H_M (p)=\dfrac{\Omega_m (p)}{U(p)}$ sous sa forme canonique.}
+
+\subparagraph{}
+\textit{Montrer que la fonction de transfert $H_M (p)$ peut se mettre sous la forme $H_M (p)=\dfrac{K_C}{K_C K_e+RJ_{eq} p+LJ_{eq} p^2 }$. Justifier la réponse. Pour cette question, la valeur numérique de $J_{eq}$ considérée sera $J_{eq}=\num{7d-3}\si{kg.m^2}$ indépendamment du résultat numérique calculé précédemment.}
+\end{multicols}
+\end{document}
+\subparagraph{}
+\textit{Montrer qu’avec l’expression, H_M (p) peut s’écrire sous la forme H_M (p)=K_M/(1+T_E p)(1+T_M p)  avec T_E<T_M.}
 
 \section*{Étude de l’asservissement en position de l’axe}
-\subsection*Modélisation de l’asservissement en position}
+\subsection*{Modélisation de l’asservissement en position}
 La partie précédente a permis de déterminer un modèle du moteur. La suite de l’étude va permettre, par simulation, de déterminer les réglages nécessaires de l’axe vis-à-vis du cahier des charges. La figure suivante présente le principe de l’asservissement de l’axe du chariot.
  
 
