@@ -213,19 +213,20 @@ On note $H(p)=G_1(p)G_2(p)$. On a :
 \noindent\begin{minipage}[c]{.53\linewidth}
 \begin{itemize}
 \item Fonction de transfert : $H(p)={K}{p}$.
-\item Diagramme de gain asymptotique : droite de pente ${20}\text{dB/decade}$ passant par le point $(1,-20\log K)$.
-\item Diagramme de phase asymptotique : droite horizontale d'ordonnée $-90$ \degre.
+\item Diagramme de gain asymptotique : droite de pente ${20}\text{dB/decade}$ passant par le point $(1,20\log K)$.
+\item Diagramme de phase asymptotique : droite horizontale d'ordonnée $+90$ \degre.
 \end{itemize}
 \end{minipage} \hfill
 \begin{minipage}[c]{.45\linewidth}
 \begin{tikzpicture}[xscale=7/5]
 \begin{scope}[yscale=3/300]
 \OrdBode{30}
-\semilog{-2}{2}{-60}{60}
-\BodeAmp[cyan,thick]{-2:2}{-\IntAmp{10}}
+\semilog{-2}{2}{-30}{90}
+
+\BodeAmp[cyan,thick]{-2:2}{\KAmp{10}-\IntAmp{1}}
 %\draw (-1,28) node {\footnotesize $20\log K$, 0 dB/d\'ecade};
-\draw (0,-20) node [above left] {\footnotesize $(1,-20\log K)$};
-\draw (0,-20) node {\huge $\cdot$};
+\draw (0,20) node [above left] {\footnotesize $(1,20\log K)$};
+\draw (0,20) node {\huge $\cdot$};
 %\draw (.7,0)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{\tau}$};
 \end{scope}
 \begin{scope}[yshift=-2.5cm,yscale=1/70]
