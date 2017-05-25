@@ -91,6 +91,9 @@ Révisions %1 -- \xxactivite%
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
 \section*{Mise en situation}
+\ifprof
+\else
+
 \subsection*{Présentation}
 Le tronçon central du fuselage du Falcon 7X est assemblé par rivetage grâce à un robot 6 axes. Les rivets sont stockés dans des cassettes rangées verticalement. Un chariot de sélection se déplace verticalement pour déplacer une buse d'aspiration qui permettra d'acheminer les rivets contenus dans la cassette vers l'effecteur (robot). Le chariot fait l'objet de cette étude.
 
@@ -126,12 +129,14 @@ Le déplacement du chariot est assuré par un axe numérique asservi en vitesse 
 \end{center} 
 
 
-
+\fi
 
 
 
 
 \section*{Sélectionner les fixations – Exigence 1.1}
+\ifprof
+\else 
 Afin de sélectionner le type de fixation, la buse d'aspiration doit être déplacée en face de la cassette avec une erreur inférieure à $\SI{0,5}{mm}$ (voir exigences fonctionnelles). Cependant le fabricant du système poulie-courroie du rail indique déjà une erreur de $\pm \SI{0,25}{mm}$ due notamment à l'élasticité de la courroie. Par conséquent, l'erreur en position de la commande doit être nulle. De plus, afin de ne pas perdre de temps lors de la production, le temps maximal de déplacement lors de la sélection est imposé à une seconde.
 
 L'étude se fera dans le cas le plus défavorable c'est-à-dire un déplacement du chariot vers le haut entre les deux cassettes de rivets les plus éloignées. L'axe de déplacement est appelé $\vect{y_c}$
@@ -155,9 +160,11 @@ Avec :
 \item $C_M (t)$ : couple moteur ;
 \item $C_R (t)$: couple résistant modélisant l'action de pesanteur.
 \end{itemize}
+\fi
 
 \subsection*{Critères à respecter pour l'exigence 1.2}
-
+\ifprof
+\else
 \footnotesize{
 \begin{center}
 \begin{tabular}{|p{2cm}|p{2.5cm}|p{2cm}|}
@@ -175,14 +182,26 @@ erreur statique par rapport à une consigne de vitesse constante
 \end{tabular}
 \end{center}}
 
-
+\fi
 \subsection*{Choix d'une architecture de la chaine de transmission}
 \subparagraph{}
 \textit{Proposer sous la forme d'un schéma une autre solution permettant le déplacement du chariot. La conversion de l'énergie électrique en énergie mécanique par un moteur doit être conservée.}
 
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
 Compte tenu des vitesses de translation importantes, le système retenu est de type poulie-courroie.
+\fi
 
 \subsection*{Détermination de l'inertie équivalente} 
+\ifprof
+\else
+
 Les grandeurs caractéristiques (notations et valeurs) des éléments de l'axe du chariot sont données dans le tableau ci-dessous :
 \begin{center}
 \begin{tabular}{|p{3cm}|c|c|}
@@ -198,32 +217,67 @@ Rayon d'une poulie motrice ou réceptrice	& $R_P$ &$\SI{45}{mm}$ \\ \hline
 Rapport de réduction réducteur ($\omega_r/\omega_m$)	& $\lambda$	&$1/5$ \\ \hline
 \end{tabular}
 \end{center}
+\fi
 
 \subparagraph{}
 \textit{À partir des grandeurs définies déterminer l'expression littérale de l'inertie équivalente $J_{eq}$ de l'ensemble $\Sigma=$\{moteur+réducteur+poulies+chariot\} ramenée sur l'arbre moteur. Cette inertie équivalente est définie par $E_c (\Sigma)=1/2 J_{eq} \omega_m^2$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Déterminer la valeur numérique de l'expression précédente.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subsection*{Modèle de connaissance du moteur à courant continu}
+
 \begin{obj}
 L'objectif de cette partie est d'établir un modèle de la motorisation de l'axe afin de simuler un déplacement.
 \end{obj}
 
 \subparagraph{}
 \textit{À partir des équations du moteur à courant continu, réaliser le schéma bloc du moteur à courant continu.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{En considérant que $C_R (p)=0$, déterminer la fonction de transfert $H_M (p)=\dfrac{\Omega_m (p)}{U(p)}$ sous sa forme canonique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Montrer que la fonction de transfert $H_M (p)$ peut se mettre sous la forme $H_M (p)=\dfrac{K_C}{K_C K_e+RJ_{eq} p+LJ_{eq} p^2 }$. Justifier la réponse. Pour cette question, la valeur numérique de $J_{eq}$ considérée sera $J_{eq}=\num{7d-3}\si{kg.m^2}$ indépendamment du résultat numérique calculé précédemment.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Montrer qu'avec l'expression, $H_M (p)$ peut s'écrire sous la forme $H_M (p)=\dfrac{K_M}{(1+T_E p)(1+T_M p)}$  avec $T_E<T_M$.}
-
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 \section*{Étude de l'asservissement en position de l'axe}
 \subsection*{Modélisation de l'asservissement en position}
+\ifprof
+\else
+
+
 La partie précédente a permis de déterminer un modèle du moteur. La suite de l'étude va permettre, par simulation, de déterminer les réglages nécessaires de l'axe vis-à-vis du cahier des charges. La figure suivante présente le principe de l'asservissement de l'axe du chariot.
  
 \begin{center}
@@ -242,14 +296,27 @@ Correcteur amplificateur	 & $C(p)$ & Variable \\
 \hline
 \end{tabular}
 \end{center}
+\fi
 
 \subparagraph{}
 \textit{Quelle doit être la valeur de $K_G$ pour assurer un asservissement correct (c'est-à-dire l'écart $\varepsilon$ doit être nul si la position de l'axe est identique à la consigne) ?}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Donner le schéma bloc de l'asservissement.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subsection*{Étude du modèle simplifié}
+\ifprof
+\else
 Afin de faciliter les calculs, le schéma bloc à retour unitaire est donné figure suivante. Le couple résistant $C_R$ dû à l'action de pesanteur est supposé constant.
  
  \begin{center}
@@ -264,53 +331,121 @@ Avec :
 \item $C_R (p)=C_r/p$;
 \item $K_R=R_p \lambda$.
 \end{itemize}
+\fi
+
 \subparagraph{}
 \textit{Donner l'expression de $Y(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{On souhaite déterminer l'erreur en position du système. Calculer l'écart statique pour $C(p)=K_p$ puis $C(p)=\dfrac{K_i}{p}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{On souhaite que lorsque le système se déplace à vitesse constante, l'erreur sur la vitesse atteinte par le système soit nulle. Quelle sollicitation doit-on utiliser. Calculer l'écart statique pour $C(p)=K_p$ puis $C(p)=\dfrac{K_i}{p}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Conclure.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
 
 Afin de répondre totalement au cahier des charges, l'utilisation d'un correcteur proportionnel intégral dérivé est retenue. En effet, la commande de l'axe intègre directement ce type de correcteur. Dans la suite du problème, le correcteur $C(p)$ sera de la forme : $C(p)=K_I \left(1+\dfrac{1}{(T_I p}\right)\left(1+T_D p\right)$. Le réglage des coefficients a été fait par simulation numérique.
 Afin de vérifier maintenant le critère de rapidité, on donne la réponse temporelle (figure page suivante) de l'axe à un échelon de position de $\SI{1}{m}$.
 
+\fi
+
 \subparagraph{}
 \textit{Conclure sur la conformité au cahier des charges du système ainsi réglé.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
  
  \begin{center}
 \includegraphics[width=7cm]{images/image11}
 \end{center} 
 
-
+\fi
  
 
 \subparagraph{}
-\textit{Tracé de diagramme de Bode}
+\textit{Tracer de diagramme de Bode.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
 
 On considère $C_R (p)=0$. On prendra $K_M=\SI{0,8}{rad.s^{-1}.V^{-1}}$, $T_e=\SI{0,0051}{s}$,$T_m=\SI{0,0074}{s}$.
+\fi
 
 \subparagraph{}
 \textit{Tracer le diagramme de Bode de la fonction de transfert en boucle ouverte pour $C(p)=1$. Déterminer les marges de phase et les marges de gain.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
  
 \subparagraph{}
 \textit{Tracer le diagramme de Bode de la fonction de transfert en boucle ouverte pour $C(p)=\dfrac{1}{p}$. Déterminer les marges de phase et les marges de gain.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
 
 On donne ci-dessous les diagrammes de Bode avec les correcteurs optimisés. Déterminer les marges de gain et marges de phase. 
+\fi
 
 \section*{Vérification des performances de l'axe du magasin de rivets}
+\ifprof
+\else
 
 Afin de vérifier les réglages précédents, un essai sur le système réel est réalisé. Une consigne de \SI{2}{m} est donnée. L'absence de système d'acquisition dédié impose un système de mesure extérieur au système réel. C'est un dispositif d'analyse d'image qui est retenu pour ces mesures.
+\fi
 
 \subparagraph{}
 \textit{À partir des relevés ci-dessous, conclure sur le respect des exigences fonctionnelles de l'axe du magasin de stockage des rivets (Exigence 1.1).}
-
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
  
 \end{multicols}
+
+\ifprof
+\else
 
 \begin{center}
 \begin{tabular}{cc}
@@ -323,6 +458,7 @@ Afin de vérifier les réglages précédents, un essai sur le système réel est
  \begin{center}
 \includegraphics[width=\textwidth]{images/image12}
 \end{center} 
+\fi
 
 \end{document}
 
