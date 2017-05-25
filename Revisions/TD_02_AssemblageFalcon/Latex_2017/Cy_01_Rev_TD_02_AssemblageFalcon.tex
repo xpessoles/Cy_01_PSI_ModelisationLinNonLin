@@ -189,6 +189,7 @@ erreur statique par rapport à une consigne de vitesse constante
 
 \ifprof
 \begin{corrige}
+Utilisation d’un système vis-écrou.
 \end{corrige}
 \else
 \fi
@@ -223,6 +224,15 @@ Rapport de réduction réducteur ($\omega_r/\omega_m$)	& $\lambda$	&$1/5$ \\ \hl
 \textit{À partir des grandeurs définies déterminer l'expression littérale de l'inertie équivalente $J_{eq}$ de l'ensemble $\Sigma=$\{moteur+réducteur+poulies+chariot\} ramenée sur l'arbre moteur. Cette inertie équivalente est définie par $E_c (\Sigma)=1/2 J_{eq} \omega_m^2$.}
 \ifprof
 \begin{corrige}
+$\mathcal{E}_c(\Sigma)=\mathcal{E}_c (\text{moteur})+\mathcal{E}_c (\text{réducteur})+\mathcal{E}_c (\text{poulies})+\mathcal{E}_c (\text{chariot})$.
+\begin{itemize}
+	\item $\mathcal{E}_c (\text{moteur})=1/2 J_m \omega_m^2$;
+	\item $\mathcal{E}_c (\text{réducteur})=1/2 J_{\text{red}} \omega_m^2$;
+	\item $\mathcal{E}_c (\text{poulies})=1/2 (J_{\text{Pm}}+J_{\text{PR}}  ) \omega_{\text{red}}^2=1/2 (J_{\text{Pm}}+J_{\text{PR}}  ) \lambda^2 \omega_m^2$;
+	\item $\mathcal{E}_c (\text{chariot})=1/2 MV^2=1/2 MR_p^2 \lambda^2 \omega_m^2$.
+\end{itemize}
+On a donc $J_{\text{eq}}=MR_p^2 \lambda^2+(J_{\text{Pm}}+J_{\text{PR}}  ) \lambda^2+J_{\text{red}}+J_m$.
+
 \end{corrige}
 \else
 \fi
@@ -231,6 +241,7 @@ Rapport de réduction réducteur ($\omega_r/\omega_m$)	& $\lambda$	&$1/5$ \\ \hl
 \textit{Déterminer la valeur numérique de l'expression précédente.}
 \ifprof
 \begin{corrige}
+$J_{eq}=\SI{0,0068}{kg.m^2}$
 \end{corrige}
 \else
 \fi
