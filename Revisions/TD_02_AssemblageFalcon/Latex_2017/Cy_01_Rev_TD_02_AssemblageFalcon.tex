@@ -264,6 +264,7 @@ L'objectif de cette partie est d'établir un modèle de la motorisation de l'axe
 \textit{En considérant que $C_R (p)=0$, déterminer la fonction de transfert $H_M (p)=\dfrac{\Omega_m (p)}{U(p)}$ sous sa forme canonique.}
 \ifprof
 \begin{corrige}
+$H_m (p)=\dfrac{\dfrac{K_C}{K_c K_E+Rf}}{1+\dfrac{RJ_eq+Lf}{K_c K_E+Rf}p+\dfrac{LJ_eq}{K_c K_E+Rf} p^2}$
 \end{corrige}
 \else
 \fi
@@ -272,6 +273,9 @@ L'objectif de cette partie est d'établir un modèle de la motorisation de l'axe
 \textit{Montrer que la fonction de transfert $H_M (p)$ peut se mettre sous la forme $H_M (p)=\dfrac{K_C}{K_C K_e+RJ_{eq} p+LJ_{eq} p^2 }$. Justifier la réponse. Pour cette question, la valeur numérique de $J_{eq}$ considérée sera $J_{eq}=\num{7d-3}\si{kg.m^2}$ indépendamment du résultat numérique calculé précédemment.}
 \ifprof
 \begin{corrige}
+En faisant les applications numériques on montre que $Rf$ est négligeable devant $K_c K_E$ et que $Lf$ et négligeable devant $RJ_{eq}$. On a donc : 
+$H_m (p)=\dfrac{\dfrac{K_C}{K_c K_E}}{1+\dfrac{RJ_{eq}}{K_c K_E }p+\dfrac{LJ_{eq}}{K_c K_E }p^2 }=\dfrac{K_C}{K_c K_E+RJ_{eq} p+LJ_{eq} p^2 }$.
+
 \end{corrige}
 \else
 \fi
@@ -280,6 +284,19 @@ L'objectif de cette partie est d'établir un modèle de la motorisation de l'axe
 \textit{Montrer qu'avec l'expression, $H_M (p)$ peut s'écrire sous la forme $H_M (p)=\dfrac{K_M}{(1+T_E p)(1+T_M p)}$  avec $T_E<T_M$.}
 \ifprof
 \begin{corrige}
+$
+\left\{
+\begin{array}{l}
+T_e+T_m= \dfrac{RJ_{eq}}{K_c K_e}\\
+T_e T_m=\dfrac{LJ_{eq}}{K_C K_e}
+\end{array}
+\right.
+$
+On a (résolution d’une équation du second degré):
+
+$Te=\dfrac{\dfrac{RJ_{eq}}{K_c K_e}-\sqrt{\left(\dfrac{RJ_{eq}}{K_c K_e}\right)^2 - 4\dfrac{LJ_{eq}}{K_c K_e}}}{2}$. $T_e=\SI{0,0051}{s}$ et $T_m=\SI{0,0074}{s}$.
+
+
 \end{corrige}
 \else
 \fi
@@ -313,6 +330,7 @@ Correcteur amplificateur	 & $C(p)$ & Variable \\
 \textit{Quelle doit être la valeur de $K_G$ pour assurer un asservissement correct (c'est-à-dire l'écart $\varepsilon$ doit être nul si la position de l'axe est identique à la consigne) ?}
 \ifprof
 \begin{corrige}
+On doit avoir $K_G=K_{\text{capt}} \dfrac{1}{\lambda} \dfrac{1}{R_p}=\SI{0,556}{V.rad^{-1}.m^{-1}}$.
 \end{corrige}
 \else
 \fi
@@ -348,6 +366,30 @@ Avec :
 \textit{Donner l'expression de $Y(p)$.}
 \ifprof
 \begin{corrige}
+On raisonne par superposition :
+
+Si $C_r (p)=0$: 
+
+$$Y_1 (p)
+=Y_{\text{cons}}(p) \dfrac{\dfrac{K_G K_{\text{Capt}} C(p) H_m (p) K_r}{p}}{1+\dfrac{K_G K_{\text{Capt}} C(p) H_m (p) K_r}{p}}$$
+
+$$
+=Y_{\text{cons}} (p) \dfrac{K_G K_{\text{Capt}} C(p) H_m (p) K_r}{p+K_G K_{\text{Capt}} C(p) H_m (p) K_r } 
+$$
+
+$$
+=Y_{\text{cons}} (p) \dfrac{K_G K_{\text{Capt}} C(p) K_M  K_r}{(1+T_E p)(1+T_M p)p+K_G K_{\text{Capt}} C(p) K_M K_r )}$$.
+
+Si $Y_{\text{Cons}} (p)=0$ :
+
+$Y_2 (p)
+=C_r (p) \dfrac{\dfrac{H_c (p) K_r}{p}}{1+\dfrac{K_r K_G K_{\text{Capt}} C(p) H_m (p)}{p} }
+=C_r (p) \dfrac{H_c (p) K_r}{p+K_r K_G K_{\text{Capt}} C(p) H_m (p) }
+=C_r (p) \dfrac{\dfrac{(R+Lp) K_M  K_r}{K_C }}{(1+T_E p)(1+T_M p)p+K_r K_G K_{\text{Capt}} C(p) K_M }$.
+
+On a donc :
+$Y(p)=Y_1 (p)+Y_2 (p)$.
+
 \end{corrige}
 \else
 \fi
