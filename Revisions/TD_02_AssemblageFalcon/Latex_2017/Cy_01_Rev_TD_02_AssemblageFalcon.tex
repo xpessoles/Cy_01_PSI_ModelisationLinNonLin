@@ -255,7 +255,11 @@ L'objectif de cette partie est d'établir un modèle de la motorisation de l'axe
 \subparagraph{}
 \textit{À partir des équations du moteur à courant continu, réaliser le schéma bloc du moteur à courant continu.}
 \ifprof
-\begin{corrige}
+\begin{corrige} ~\\
+
+\begin{center}
+\includegraphics[width=7cm]{images/corr_01}
+\end{center} 
 \end{corrige}
 \else
 \fi
@@ -329,16 +333,22 @@ Correcteur amplificateur	 & $C(p)$ & Variable \\
 \subparagraph{}
 \textit{Quelle doit être la valeur de $K_G$ pour assurer un asservissement correct (c'est-à-dire l'écart $\varepsilon$ doit être nul si la position de l'axe est identique à la consigne) ?}
 \ifprof
-\begin{corrige}
+\begin{corrige} ~\\
+
 On doit avoir $K_G=K_{\text{capt}} \dfrac{1}{\lambda} \dfrac{1}{R_p}=\SI{0,556}{V.rad^{-1}.m^{-1}}$.
 \end{corrige}
 \else
 \fi
 
 \subparagraph{}
-\textit{Donner le schéma bloc de l'asservissement.}
+\textit{Donner le schéma-blocs de l'asservissement.}
 \ifprof
-\begin{corrige}
+\begin{corrige} ~\\
+
+\begin{center}
+\includegraphics[width=7cm]{images/corr_02}
+\end{center} 
+
 \end{corrige}
 \else
 \fi
@@ -365,7 +375,7 @@ Avec :
 \subparagraph{}
 \textit{Donner l'expression de $Y(p)$.}
 \ifprof
-\begin{corrige}
+\begin{corrige}~\\
 On raisonne par superposition :
 
 Si $C_r (p)=0$: 
@@ -380,12 +390,18 @@ $$
 $$
 =Y_{\text{cons}} (p) \dfrac{K_G K_{\text{Capt}} C(p) K_M  K_r}{(1+T_E p)(1+T_M p)p+K_G K_{\text{Capt}} C(p) K_M K_r )}$$.
 
+\end{corrige}
+
+\begin{corrige}
 Si $Y_{\text{Cons}} (p)=0$ :
 
-$Y_2 (p)
-=C_r (p) \dfrac{\dfrac{H_c (p) K_r}{p}}{1+\dfrac{K_r K_G K_{\text{Capt}} C(p) H_m (p)}{p} }
-=C_r (p) \dfrac{H_c (p) K_r}{p+K_r K_G K_{\text{Capt}} C(p) H_m (p) }
-=C_r (p) \dfrac{\dfrac{(R+Lp) K_M  K_r}{K_C }}{(1+T_E p)(1+T_M p)p+K_r K_G K_{\text{Capt}} C(p) K_M }$.
+$$Y_2 (p)
+=C_r (p) \dfrac{\dfrac{H_c (p) K_r}{p}}{1+\dfrac{K_r K_G K_{\text{Capt}} C(p) H_m (p)}{p} }$$
+
+$$
+=C_r (p) \dfrac{H_c (p) K_r}{p+K_r K_G K_{\text{Capt}} C(p) H_m (p) }$$
+$$
+=C_r (p) \dfrac{\dfrac{(R+Lp) K_M  K_r}{K_C }}{(1+T_E p)(1+T_M p)p+K_r K_G K_{\text{Capt}} C(p) K_M }$$
 
 On a donc :
 $Y(p)=Y_1 (p)+Y_2 (p)$.

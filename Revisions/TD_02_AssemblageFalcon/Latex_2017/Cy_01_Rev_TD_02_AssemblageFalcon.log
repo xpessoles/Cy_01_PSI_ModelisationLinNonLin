@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  26 MAY 2017 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  26 MAY 2017 21:56
 entering extended mode
 **Cy_01_Rev_TD_02_AssemblageFalcon.tex
 (Cy_01_Rev_TD_02_AssemblageFalcon.tex
@@ -2754,95 +2754,94 @@ Package mdframed Info: mdframed inside float
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 258.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+<images/corr_01.png, id=7, 350.2686pt x 81.4242pt>
+File: images/corr_01.png Graphic file (type png)
+ <use images/corr_01.png>
+Package pdftex.def Info: images/corr_01.png used on input line 261.
+(pdftex.def)             Requested size: 199.16928pt x 46.29921pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 259.
+ mdframed uses option nobreak mdframed on input line 263.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 266.
+(mdframed)              on input line 270.
 
-Overfull \hbox (3.82228pt too wide) in paragraph at lines 267--268
+Overfull \hbox (3.82228pt too wide) in paragraph at lines 271--272
 [][][][]\T1/pag/db/n/9 Correction  [][][][]$\OML/mdput/m/it/10 H[]\OT1/mdput/m/
 n/10 (-20) (\OML/mdput/m/it/10 p\OT1/mdput/m/n/10 (-20) ) = []$ 
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 268.
+ mdframed uses option nobreak mdframed on input line 272.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 6.43999pt on input line 273.
+(Font)              scaled to size 6.43999pt on input line 277.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 4.59999pt on input line 273.
+(Font)              scaled to size 4.59999pt on input line 277.
 
-Underfull \hbox (badness 8151) in paragraph at lines 273--275
+Underfull \hbox (badness 8151) in paragraph at lines 277--279
 \T1/mdput/b/n/10 Question    [][] \T1/mdput/m/it/10 (+20) Mon-trer que la fonc-
 tion de trans-
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 275.
+(mdframed)              on input line 279.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 279.
+ mdframed uses option nobreak mdframed on input line 283.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 286.
+(mdframed)              on input line 290.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 300.
+ mdframed uses option nobreak mdframed on input line 304.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 332.
+(Font)              scaled to size 7.35999pt on input line 304.
 LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.35999pt on input line 332.
+(Font)              scaled to size 7.35999pt on input line 304.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 332.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 304.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 332.
+(Font)              scaled to size 7.35999pt on input line 304.
 [1
 
 {C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/i
-mage1.png>]
+mage1.png> <./images/corr_01.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 332.
+(mdframed)              on input line 336.
 
-Underfull \hbox (badness 6047) in paragraph at lines 333--334
-[][][][]\T1/pag/db/n/9 Correction  [][][][]\T1/mdput/m/n/10 (+20) On doit avoir
- $\OML/mdput/m/it/10 K[] \OT1/mdput/m/n/10 (+20) = \OML/mdput/m/it/10 K[][][] \
-OT1/mdput/m/n/10 (+20) =$
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 334.
+ mdframed uses option nobreak mdframed on input line 339.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 341.
+(mdframed)              on input line 346.
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+
+ []
+
+<images/corr_02.png, id=48, 616.2222pt x 111.2958pt>
+File: images/corr_02.png Graphic file (type png)
+ <use images/corr_02.png>
+Package pdftex.def Info: images/corr_02.png used on input line 349.
+(pdftex.def)             Requested size: 199.16928pt x 35.972pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 342.
+ mdframed uses option nobreak mdframed on input line 352.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 368.
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--389
-[]$\OML/mdput/m/it/10 Y[]\OT1/mdput/m/n/10 (+20) (\OML/mdput/m/it/10 p\OT1/mdpu
-t/m/n/10 (+20) ) = \OML/mdput/m/it/10 C[]\OT1/mdput/m/n/10 (+20) (\OML/mdput/m/
-it/10 p\OT1/mdput/m/n/10 (+20) )[] =$
- []
-
-
-Overfull \hbox (115.031pt too wide) in paragraph at lines 385--389
-$\OML/mdput/m/it/10 C[]\OT1/mdput/m/n/10 (-20) (\OML/mdput/m/it/10 p\OT1/mdput/
-m/n/10 (-20) )[] = \OML/mdput/m/it/10 C[]\OT1/mdput/m/n/10 (-20) (\OML/mdput/m/
-it/10 p\OT1/mdput/m/n/10 (-20) )[]$\T1/mdput/m/n/10 (-20) . 
- []
-
+(mdframed)              on input line 378.
 Package mdframed Info: mdframed inside float 
  mdframed uses option nobreak mdframed on input line 393.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 400.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 401.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 408.
+(mdframed)              on input line 395.
 Package mdframed Info: mdframed inside float 
  mdframed uses option nobreak mdframed on input line 409.
 Package mdframed Info: mdframed detected package amsthm 
@@ -2852,38 +2851,49 @@ Package mdframed Info: mdframed inside float
  mdframed uses option nobreak mdframed on input line 417.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
+(mdframed)              on input line 424.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 425.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
 (mdframed)              on input line 432.
 Package mdframed Info: mdframed inside float 
  mdframed uses option nobreak mdframed on input line 433.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 450.
+(mdframed)              on input line 448.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 451.
+ mdframed uses option nobreak mdframed on input line 449.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 464.
+(mdframed)              on input line 466.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 465.
+ mdframed uses option nobreak mdframed on input line 467.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 472.
+(mdframed)              on input line 480.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 473.
+ mdframed uses option nobreak mdframed on input line 481.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 493.
+(mdframed)              on input line 488.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 494.
-<png/logo_lycee.png, id=45, 329.23pt x 265.99374pt>
+ mdframed uses option nobreak mdframed on input line 489.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 509.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 510.
+
+<png/logo_lycee.png, id=49, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 516.
+Package pdftex.def Info: png/logo_lycee.png used on input line 510.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 516.
+(Font)              scaled to size 7.35999pt on input line 510.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 516.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 510.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2891,26 +2901,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./png/logo_lycee.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
+[2 <./png/logo_lycee.png> <./images/corr_02.png>]
+File: png/logo_lycee.png Graphic file (type png)
+ <use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 532.
+(pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 45.97325pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 532.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 532.
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 532.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 532.
  (Cy_01_Rev_TD_02_AssemblageFalcon.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 516.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 532.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 532.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_Rev_TD_02_AssemblageFalcon.run.
 xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 532.
  ) 
 Here is how much of TeX's memory you used:
- 49930 strings out of 493675
- 1045866 string characters out of 3143992
- 1764783 words of memory out of 3000000
- 52260 multiletter control sequences out of 15000+200000
- 216437 words of font info for 238 fonts, out of 3000000 for 9000
+ 49955 strings out of 493675
+ 1046315 string characters out of 3143992
+ 1731809 words of memory out of 3000000
+ 52281 multiletter control sequences out of 15000+200000
+ 224577 words of font info for 239 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,98p,10445b,1952s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2929,10 +2955,10 @@ TeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ava
 ntgar/uagdo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a
 .pfb>
-Output written on Cy_01_Rev_TD_02_AssemblageFalcon.pdf (2 pages, 280591 bytes).
+Output written on Cy_01_Rev_TD_02_AssemblageFalcon.pdf (3 pages, 309973 bytes).
 
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 69287 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 69809 words of extra memory for PDF output out of 74296 (max. 10000000)
 
