@@ -81,7 +81,41 @@ Chapitre 1 -- \xxactivite%
 \vspace{2cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
+\section{Introduction}
+\subsection*{Qu'est-ce qu'un système multiphysique}
 
+\subsection*{Pourquoi modéliser des systèmes ?}
+Dans l'industrie, les modèles sont indispensables. Ils permettent d'avoir un modèle numérique, image du produit que l'on cherche à réaliser. image doit être aussi fidèle à la réalité que possible. Ce modèle peut-être << monophysique >> ou << multiphysique >>. 
+
+L'objectif du modèle est de se substituer au produit réel. Les simulations réalisées sur le modèle ont pour objectif de remplacer des expérimentations sur le produits, considérées comme coûteuse en temps et en argent. 
+
+Il est possible de recenser les avantages et inconvénients liés à la simulation des modèles \cite{1} : 
+\begin{itemize}[label=\ding{51}]
+\item pouvoir prévoir le comportement du système réel alors qu'il n’existe pas encore lors de la phase de conception;
+\item permettre la prévision de phénomènes (en météorologie par exemple);
+\item éviter ou limiter le recours aux expérimentations réelles qui peuvent être très
+coûteuses ou très dangereuses, voire proscrites (essais nucléaires militaires) ou
+impossibles dans l’état actuel des connaissances et des moyens (projet ITER) ;
+\item quand l’échelle de temps des phénomènes dans le système réel ne permet pas une
+expérience « en une durée raisonnable » pour effectuer des observations ou des mesures.
+(premiers instants de l’univers ($t < 10^{-6} \text{s}$) ou l’évolution des galaxies
+($t>10^6$ années);
+\item « observer » ou représenter des variables inaccessibles à l’expérience ou la mesure;
+\item les manipulations sont faciles sur un modèle. Elles peuvent être répétées, voire itérées
+automatiquement pour apprécier de très nombreuses situations ;
+\item le droit à l’erreur, sans risque ;
+\item la possibilité de supprimer des phénomènes perturbateurs ou des effets
+secondaires.
+\end{itemize}
+
+\begin{itemize}[label=\ding{56}]
+\item avoir une confiance aveugle dans les simulations et ses résultats. Des erreurs liées aux
+modèles ou aux calculs peuvent ne pas être perçues immédiatement ;
+\item « oublier » les conditions de la simulation et les hypothèses formulées pour établir le
+modèle et surtout dans le cas des systèmes complexes ;
+\item « inverser » la réalité et « forcer » le réel à intégrer les contraintes du modèle ;
+\item oublier le niveau de précision des résultats provenant du modèle.
+\end{itemize}
 \section{Modélisation des systèmes multiphysiques}
 \subsection{Modélisation causale et acausale}
 
@@ -107,6 +141,11 @@ Effet du pas de temps.
 
 A voir ultérieurement. 
 
+\section*{Références}
+Exemple :
+\begin{thebibliography}{2}
+   \bibitem[1]{ref1} Y. Crevits, {\it Éléments de modélisation multi-physique des systèmes industriels en vue de leur simulation numérique, Juin 2015.}
+\end{thebibliography}
 
 \end{document}
 
