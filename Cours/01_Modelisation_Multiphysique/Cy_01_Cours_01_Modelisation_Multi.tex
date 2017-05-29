@@ -7,7 +7,7 @@
 \input{style/macros_SII}
 
 \fichetrue
-%\fichefalse
+\fichefalse
 
 \proftrue
 %\proffalse
@@ -15,8 +15,8 @@
 %\tdtrue
 \tdfalse
 
-%\courstrue
-\coursfalse
+\courstrue
+%\coursfalse
 
 %%%%%%%%%%%%%%%%%%%
 \usepackage{numprint}
@@ -41,7 +41,7 @@
 \def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
 \def\xxtete{Sciences Industrielles de l'Ingénieur}
 
-\def\classe{Cy 01}
+\def\classe{\textsf{Cy 01}}
 \def\xxnumpartie{Cycle 01}
 \def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
 
@@ -63,7 +63,7 @@
 }}
 
 \def\xxfigures{
-%incgraphics[width=.8\textwidth]{}%images/prot_01}
+\includegraphics[width=.8\textwidth]{png/Header_Peugeot}%images/prot_01}
 }%figues de la page de garde
 
 \def\xxpied{%
@@ -76,7 +76,7 @@ Chapitre 1 -- \xxactivite%
 
 
 \begin{document}
-%\chapterimage{png/Fond_Cin}
+\chapterimage{png/Header_Peugeot}
 \input{style/new_pagegarde}
 \vspace{2cm}
 \pagestyle{fancy}
