@@ -78,6 +78,8 @@ Chapitre 1 -- \xxactivite%
 \begin{document}
 \chapterimage{png/Header_Peugeot}
 \input{style/new_pagegarde}
+\setlength{\columnseprule}{.1pt}
+
 \vspace{2cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
@@ -93,7 +95,7 @@ Pour modéliser un système, plusieurs outils peuvent être nécessaires. Lorsqu
 \item pour programmer une interface graphique d'un logiciel, il est possible d'utiliser Python...
 \end{itemize}
 
-En revanche, lorsqu'on veut que tous ces domaines communiquent, il faut une plateforme commune permettant l'échange entre les modèles. On parle alors de modélisation multiphysique. Il est possible d'utiliser des logiciels comme Scilab (Xcos -- Modelica) ou Matlab (Simulink). 
+En revanche, lorsqu'on veut que tous ces domaines communiquent, il faut une plateforme commune permettant l'échange entre les modèles. On parle alors de modélisation multiphysique. Il est possible d'utiliser des logiciels comme Scilab (Xcos -- Modelica) ou Matlab (Simulink -- Simscape). 
 
 
 
@@ -102,10 +104,10 @@ Dans l'industrie, les modèles sont indispensables. Ils permettent d'avoir un mo
 
 L'objectif du modèle est de se substituer au produit réel. Les simulations réalisées sur le modèle ont pour objectif de remplacer des expérimentations sur le produits, considérées comme coûteuse en temps et en argent. 
 
-Il est possible de recenser les avantages et inconvénients liés à la simulation des modèles \cite{1} : 
+Il est possible de recenser les avantages et inconvénients liés à la simulation des modèles \cite{1}. 
 \begin{multicols}{2}
 \begin{itemize}[label=\ding{51}]
-\item pouvoir prévoir le comportement du système réel alors qu'il n’existe pas encore lors de la phase de conception;
+\item Pouvoir prévoir le comportement du système réel alors qu'il n’existe pas encore lors de la phase de conception;
 \item permettre la prévision de phénomènes (en météorologie par exemple);
 \item éviter ou limiter le recours aux expérimentations réelles qui peuvent être très
 coûteuses ou très dangereuses, voire proscrites (essais nucléaires militaires) ou
@@ -119,11 +121,13 @@ expérience « en une durée raisonnable » pour effectuer des observations ou d
 automatiquement pour apprécier de très nombreuses situations ;
 \item le droit à l’erreur, sans risque ;
 \item la possibilité de supprimer des phénomènes perturbateurs ou des effets
-secondaires;
+secondaires.<s
 \end{itemize}
+\vfill\null
+\columnbreak
 
 \begin{itemize}[label=\ding{56}]
-\item avoir une confiance aveugle dans les simulations et ses résultats : des erreurs liées aux
+\item Avoir une confiance aveugle dans les simulations et ses résultats : des erreurs liées aux
 modèles ou aux calculs peuvent ne pas être perçues immédiatement ;
 \item « oublier » les conditions de la simulation et les hypothèses formulées pour établir le
 modèle et surtout dans le cas des systèmes complexes ;
@@ -131,6 +135,9 @@ modèle et surtout dans le cas des systèmes complexes ;
 \item oublier le niveau de précision des résultats provenant du modèle.
 \end{itemize}
 \end{multicols}
+
+
+\newpage
 
 \section{Modélisation des systèmes multiphysiques}
 \subsection{Modélisation causale et acausale}
@@ -141,6 +148,9 @@ Lorsque le fonctionnement d'un système est régit par une équation différenti
 On parle ici de modélisation \textbf{causale}. 
 
 Les liens entre les blocs représentent une grandeur physique (courant, tension, position, vitesse \textit{etc}.).
+
+\vfill\null
+\columnbreak
 
 En modélisation acausale, les entrées et sorties ne sont pas spécifiées. Les liens entre entrées et sorties sont définies de manière implicite. Lorsqu'on visualise la traduction graphique d'un modèle acausal, les liens ne sont pas orientés (les blocs sont << réversibles >>). Les blocs sont traversés par des flux d'énergie d'un même domaine physique.  
 
@@ -188,7 +198,7 @@ Exemple :
 \begin{thebibliography}{2}
    \bibitem[1]{ref1} Y. Crevits, {\it Éléments de modélisation multi-physique des systèmes industriels en vue de leur simulation numérique, Juin 2015.}
    \bibitem[2]{ref2} P. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
-  \ bibitem[3]{ref3}Yvan Liebgott{\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
+   \bibitem[3]{ref3} Yvan Liebgott{\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
 \end{thebibliography}
 
 \end{document}

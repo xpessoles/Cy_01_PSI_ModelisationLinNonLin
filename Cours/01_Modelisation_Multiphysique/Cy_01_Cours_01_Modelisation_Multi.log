@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  5 JUN 2017 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  5 JUN 2017 20:14
 entering extended mode
 **Cy_01_Cours_01_Modelisation_Multi.tex
 (Cy_01_Cours_01_Modelisation_Multi.tex
@@ -2519,8 +2519,8 @@ Package pdftex.def Info: png/logoCC.png used on input line 85.
 {C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./png/Head
 er_Peugeot.jpg> <./png/logoCC.png>])
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 84.
-LaTeX Font Info:    Try loading font information for TS1+mdput on input line 91
+(Font)              scaled to size 11.03998pt on input line 86.
+LaTeX Font Info:    Try loading font information for TS1+mdput on input line 93
 .
 
 (C:\Enseignement\Livre_Exo_Vuibert\Installation\MATHDESIGN\texmf\tex\latex\math
@@ -2528,41 +2528,41 @@ design\mdput\ts1mdput.fd
 File: ts1mdput.fd 2006/01/29 Fontinst v1.928 font definitions for TS1/mdput.
 )
 LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 91.
+(Font)              scaled to size 9.19998pt on input line 93.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `mdput' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Warning: Citation '1' on page 2 undefined on input line 105.
+LaTeX Warning: Citation '1' on page 2 undefined on input line 107.
 
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 115.
+(Font)              scaled to size 6.43999pt on input line 117.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.59999pt on input line 115.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 9.19998pt on input line 143.
+(Font)              scaled to size 4.59999pt on input line 117.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 153.
+(Font)              scaled to size 7.35999pt on input line 140.
 LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.35999pt on input line 153.
+(Font)              scaled to size 7.35999pt on input line 140.
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <8> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 153.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 140.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 153.
+(Font)              scaled to size 7.35999pt on input line 140.
 [2]
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 9.19998pt on input line 150.
 \tf@ptc=\write6
  <png/logo_lycee.png, id=87, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
 
 <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 194.
+Package pdftex.def Info: png/logo_lycee.png used on input line 204.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 194.
+(Font)              scaled to size 7.35999pt on input line 204.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 194.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 204.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2571,15 +2571,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 194.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 204.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 194.
+(Font)              scaled to size 11.03998pt on input line 204.
 [3 <./png/logo_lycee.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
  (Cy_01_Cours_01_Modelisation_Multi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 194.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 204.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2588,21 +2588,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                Cy_01_Cours_01_Modelisation_Multi
 (biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'Cy_01_Cours_01_Modelisation_Multi.run
 .xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
  47516 strings out of 493675
  971292 string characters out of 3143992
- 1670118 words of memory out of 3000000
+ 1672145 words of memory out of 3000000
  49864 multiletter control sequences out of 15000+200000
  223223 words of font info for 248 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -2621,7 +2618,7 @@ Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/avantgar/uagko8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding
 /uzdr.pfb>
-Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (3 pages, 597969 bytes)
+Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (3 pages, 598315 bytes)
 .
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
