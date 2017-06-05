@@ -135,6 +135,32 @@ modèle et surtout dans le cas des systèmes complexes ;
 \section{Modélisation des systèmes multiphysiques}
 \subsection{Modélisation causale et acausale}
 
+\begin{multicols}{2}
+Lorsque le fonctionnement d'un système est régit par une équation différentielle, dont l'ordre de dérivation de la sortie est supérieur à l'ordre de dérivation de l'entrée, la sortie est une conséquence de l'entrée. En passant l'équation dans le domaine de Laplace puis en la traduisant sous forme de schéma bloc, on obtient alors un bloc \textbf{orienté} traduisant ainsi la relation de cause à effet entre l'entrée et la sortie. 
+
+On parle ici de modélisation \textbf{causale}. 
+
+Les liens entre les blocs représentent une grandeur physique (courant, tension, position, vitesse \textit{etc}.).
+
+En modélisation acausale, les entrées et sorties ne sont pas spécifiées. Les liens entre entrées et sorties sont définies de manière implicite. Lorsqu'on visualise la traduction graphique d'un modèle acausal, les liens ne sont pas orientés (les blocs sont << réversibles >>). Les blocs sont traversés par des flux d'énergie d'un même domaine physique.  
+
+Dans Matlab -- Simulink, on parle de grandeurs potentielles (across) et de grandeur traversante (through) : 
+\begin{itemize}
+\item une variable potentielle est mesurée par un instrument
+en parallèle avec la chaîne d’énergie;
+\item une variable traversante est mesurée par un instrument
+en série avec la chaîne d’énergie.
+\end{itemize}
+
+Dans Scilab -- Coselica, (langage Modelica), on parle de variables potentielles et flux.
+\begin{itemize}
+\item variables potentielles: les variables qui sont reliées au même port sont égales;
+\item variables flux : les variables qui aboutissent au
+même port ont pour somme 0.
+\end{itemize}
+\end{multicols}
+
+
 \subsection{Les différents modèles et outils}
 
 \subsection{Résolutions}
@@ -161,6 +187,8 @@ A voir ultérieurement.
 Exemple :
 \begin{thebibliography}{2}
    \bibitem[1]{ref1} Y. Crevits, {\it Éléments de modélisation multi-physique des systèmes industriels en vue de leur simulation numérique, Juin 2015.}
+   \bibitem[2]{ref2} P. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
+  \ bibitem[3]{ref3}Yvan Liebgott{\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
 \end{thebibliography}
 
 \end{document}
