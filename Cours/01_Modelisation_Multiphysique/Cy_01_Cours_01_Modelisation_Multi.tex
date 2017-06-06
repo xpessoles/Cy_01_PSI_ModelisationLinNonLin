@@ -121,7 +121,7 @@ expérience « en une durée raisonnable » pour effectuer des observations ou d
 automatiquement pour apprécier de très nombreuses situations ;
 \item le droit à l’erreur, sans risque ;
 \item la possibilité de supprimer des phénomènes perturbateurs ou des effets
-secondaires.<s
+secondaires.
 \end{itemize}
 \vfill\null
 \columnbreak
@@ -171,9 +171,35 @@ même port ont pour somme 0.
 \end{multicols}
 
 
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+Domaine physique & Variables << across >> &  Variables << through >> \\ \hline\hline
+Électrique & Tension & Courant \\ \hline
+Hydraulique & Pression & Débit \\ \hline
+Mécanique de translation & Vitesse linéaire & Force \\ \hline 
+Mécanique de rotation & Vitesse angulaire & Moment \\ \hline
+Pneumatique & Pression et température & Débit massique et flux d'entropie \\ \hline 
+Thermique & Température & Flux thermique et flux d'entropie \\ \hline
+\\
+\end{tabular}
+
+\textit{Modélisation acausale dans Matlab -- Simulink -- Simscape : variables << across >> et << through >>.}
+\end{center}
+
 \subsection{Les différents modèles et outils}
 
-\subsection{Résolutions}
+La figure ci-dessous présente un modèle causal et un modèle acausal du système de laboratoire << Control'X >>en utilisant le logiciel Matlab-Simulink.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/Modeles}
+\end{center}
+
+Visuellement on constate que sur le modèle causal, les composants du système apparaissent. Ainsi, sans connaitre les lois de comportements des composants, il est possible de réaliser le modèle multiphysique d'un système.
+
+En modélisation acausale, on utilise une représentation par schéma-blocs. Il est ici indispensable de connaitre les modèles de connaissance ou de comportement des composants pour réaliser le modèle.
+
+\subsection{Résolution -- Avantage et Inconvénients}
 
 \section{Modélisation des systèmes physiques}
 \subsection{Modélisation des systèmes mécaniques}
@@ -198,7 +224,7 @@ Exemple :
 \begin{thebibliography}{2}
    \bibitem[1]{ref1} Y. Crevits, {\it Éléments de modélisation multi-physique des systèmes industriels en vue de leur simulation numérique, Juin 2015.}
    \bibitem[2]{ref2} P. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
-   \bibitem[3]{ref3} Yvan Liebgott{\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
+   \bibitem[3]{ref3} Yvan Liebgott, {\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
 \end{thebibliography}
 
 \end{document}
