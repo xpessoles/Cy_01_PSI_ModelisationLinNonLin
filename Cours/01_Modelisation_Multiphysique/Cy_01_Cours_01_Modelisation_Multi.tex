@@ -31,7 +31,7 @@
 \usetikzlibrary{babel}
 \usepackage{standalone}
 \standaloneconfig{mode=buildnew}
-
+\usepackage{siunitx}
 \usepackage{picins}
 
 % -------------------------------------
@@ -175,12 +175,12 @@ même port ont pour somme 0.
 \begin{tabular}{ccc}
 \hline
 Domaine physique & Variables << across >> &  Variables << through >> \\ \hline\hline
-Électrique & Tension & Courant \\ \hline
-Hydraulique & Pression & Débit \\ \hline
-Mécanique de translation & Vitesse linéaire & Force \\ \hline 
-Mécanique de rotation & Vitesse angulaire & Moment \\ \hline
-Pneumatique & Pression et température & Débit massique et flux d'entropie \\ \hline 
-Thermique & Température & Flux thermique et flux d'entropie \\ \hline
+Électrique & Tension (\si{V})& Courant (\si{A})\\ \hline
+Hydraulique & Pression (\si{Pa})& Débit (\si{m^3.s^{-1}})\\ \hline
+Mécanique de translation & Vitesse linéaire (\si{m.s^{-1}})& Force (\si{N})\\ \hline 
+Mécanique de rotation & Vitesse angulaire(\si{rad.s^{-1}}) & Moment (\si{Nm})\\ \hline
+%Pneumatique & Pression (V)& Débit massique (V)et flux d'entropie \\ \hline 
+Thermique & Température (V)& Flux thermique et flux d'entropie \\ \hline
 \\
 \end{tabular}
 
@@ -201,13 +201,53 @@ En modélisation acausale, on utilise une représentation par schéma-blocs. Il 
 
 \subsection{Résolution -- Avantage et Inconvénients}
 
-\section{Modélisation des systèmes physiques}
-\subsection{Modélisation des systèmes mécaniques}
-\subsection{Modélisation des systèmes électriques}
-\subsection{Modélisation des systèmes thermiques}
-\subsection{Modélisation des systèmes pneumatiques et hydrauliques}
+\noindent
+\begin{minipage}[c]{.6\linewidth}
+Que ce soient des modèles causaux ou acausaux, Matlab a recours à des solveurs pour simuler le comportement des systèmes. En effet, des équations différentielles, linéaires ou non, sont << cachées >> derrière les blocs.  
 
-\subsection{Modélisation des interfaces}
+Par défaut, nous laisserons un choix automatique du solveur. Cependant, certains modèles imposeront (via un message d'erreur) le changement de ce solveur. Par ailleurs le pas de simulation devra être changé dans certain cas, dans le but d'améliorer la précision des résultats.
+\end{minipage} \hfill
+\begin{minipage}[c]{.35\linewidth}
+\begin{center}
+\includegraphics[width=\linewidth]{images/solveur}
+\end{center}
+\end{minipage}
+
+\begin{warn}
+Attention, il est à noter qu'il n'est possible de réaliser de diagramme de Bode en utilisant un modèle acausal. Ceci peut être un handicap en phase de conception d'un système car il devient plus délicat de déterminer les résonances du système.
+\end{warn}
+\section{Modélisation des systèmes physiques}
+On utilisera ici Matlab -- Simulink. Certains modèles sont aussi transposables avec Scilab -- Xcos. 
+
+\subsection{Modélisation des systèmes mécaniques}
+Deux modes de modélisation des systèmes mécanique est disponible : une modélisation 1D (mouvement de translation suivant une seule direction, mouvement de rotation autour d'un axe fixe) ou une modélisation 3D. 
+La modélisation 1D est possible directement dans Matlab. Pour la modélisation 3D, il est plus aisé d'utiliser SolidWorks. 
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/Masse_Ressort}
+
+\textit{Modélisation causale et acausale d'un système avec deux systèmes << masse -- ressort -- amortisseur >> en série.}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/Modele3D}
+
+\textit{Modélisation acausale 3D d'un bras robotisé.}
+\end{center}
+
+\subsection{Modélisation des systèmes électriques}
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/MoteurCC}
+
+\textit{Modélisation acausale de la commande d'un moteur à courant continu.}
+\end{center}
+
+
+\subsection{Modélisation des systèmes thermiques, pneumatiques et hydrauliques}
+En cas de besoin, des exemples complémentaires sont disponibles en utilisant Maltab -- Simulink.
+
+%\subsection{Modélisation des interfaces}
 
 \section{Modélisation des non-linéarités}
 \subsection{Seuil}
@@ -219,8 +259,7 @@ Effet du pas de temps.
 
 A voir ultérieurement. 
 
-\section*{Références}
-Exemple :
+
 \begin{thebibliography}{2}
    \bibitem[1]{ref1} Y. Crevits, {\it Éléments de modélisation multi-physique des systèmes industriels en vue de leur simulation numérique, Juin 2015.}
    \bibitem[2]{ref2} P. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
