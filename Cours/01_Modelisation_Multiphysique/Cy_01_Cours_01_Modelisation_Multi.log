@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  7 JUN 2017 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  10 JUN 2017 23:48
 entering extended mode
 **Cy_01_Cours_01_Modelisation_Multi.tex
 (Cy_01_Cours_01_Modelisation_Multi.tex
@@ -2829,7 +2829,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@ptc=\write6
 File: png/logo_lycee.png Graphic file (type png)
 <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 269.
+Package pdftex.def Info: png/logo_lycee.png used on input line 271.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2839,11 +2839,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5 <./images/MoteurCC.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  (Cy_01_Cours_01_Modelisation_Multi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 269.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 271.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2858,13 +2858,13 @@ Package biblatex Warning: Please (re)run Biber on the file:
 
 Package logreq Info: Writing requests to 'Cy_01_Cours_01_Modelisation_Multi.run
 .xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  ) 
 Here is how much of TeX's memory you used:
- 50126 strings out of 493675
- 1049284 string characters out of 3143992
- 1719308 words of memory out of 3000000
- 52412 multiletter control sequences out of 15000+200000
+ 50128 strings out of 493675
+ 1049304 string characters out of 3143992
+ 1719301 words of memory out of 3000000
+ 52413 multiletter control sequences out of 15000+200000
  231392 words of font info for 276 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,18n,98p,10446b,1969s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2882,10 +2882,10 @@ Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/avantgar/uagko8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding
 /uzdr.pfb>
-Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (5 pages, 1497710 bytes
+Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (5 pages, 1498083 bytes
 ).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 80565 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 80573 words of extra memory for PDF output out of 89155 (max. 10000000)
 
