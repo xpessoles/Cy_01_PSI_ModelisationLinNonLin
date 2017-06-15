@@ -251,7 +251,7 @@ En cas de besoin, des exemples complémentaires sont disponibles en utilisant Ma
 
 \section{Modélisation des non-linéarités}
 
-Même si on cherche à modéliser les blocs d'un système par des équations linéaires (à coefficients constants), il est très fréquent de rencontrer des systèmes (notamment mécaniques) qui n'obéissent pas des lois linéaires (par exemple, le comportement du Maxpid est non linéaire : suivant la plage de fonctionnement -- entre 0 et 5\degree ou entre 85 et 90\degree -- un tour de moteur ne correspond pas au même mouvement angulaire du bras). 
+Même si on cherche à modéliser les blocs d'un système par des équations linéaires (à coefficients constants), il est très fréquent de rencontrer des systèmes (notamment mécaniques) qui n'obéissent pas des lois linéaires (par exemple, le comportement du Maxpid est non linéaire : suivant la plage de fonctionnement -- entre 0 et 5\textdegree ou entre 85 et 90\textdegree -- un tour de moteur ne correspond pas au même mouvement angulaire du bras). 
 
 Deux solutions s'offrent alors à nous : linéariser le fonctionnement ou modéliser la non linéarité. 
 Les modèles causaux sont par essence linéaire. Cependant, il est possible d'intégrer des non-linéarités modélisables relativement simplement (seuil, saturation, hystérésis). Il est en revanche plus délicat de modéliser les non linéarités géométriques des mécanismes. 
@@ -272,8 +272,24 @@ Lorsqu'un système est non linéaire, il peut être possible de le linéariser. 
 Même si vous l'avez peut-être peu remarqué, les saturations sont omniprésentes sur les systèmes réels. 
 
 
-Prenons par exemple le cas du moteur à continu du Maxpid  dont la modélisation est (ou devrait être)  bien connue. Sollicitons le moteur par un échelon de tension et observons les signaux que nous ne regardons peut être pas toujours.
 
+\begin{exemple}
+\begin{minipage}[c]{.48\linewidth}
+Prenons par exemple le cas du moteur à continu du Maxpid dont la modélisation est (ou devrait être)  bien connue. Sollicitons le moteur par un échelon de tension et observons les signaux que nous ne regardons peut être pas toujours, par exemple le courant. 
+Au démarrage du moteur, si on néglige la bobine et qu'on néglige l'existence d'une tension dans la boucle de retour, le courant initial est de l'ordre de $\dfrac{U}{R}\simeq \dfrac{48}{2}=\SI{24}{A}$. Pour certain système ce courant peut détériorer des composants. Afin de limiter le courant, des saturateurs permettant d'éviter de dépasser certaines intensités. 
+
+La conséquence peut ici être un ralentissement du système. En effet, le courant << plafonnant >>, l'accélération n'est pas aussi forte qu'on l'attendrait. En conséquence, le système est moins rapide. 
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.48\linewidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/Modele_MCC}
+
+\includegraphics[width=.9\linewidth]{images/Modele_MCC_sat}
+\end{center}
+\end{minipage}
+
+\end{exemple}
 
 \subsection{Seuil}
 

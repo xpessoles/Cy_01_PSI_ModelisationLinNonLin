@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  10 JUN 2017 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  15 JUN 2017 14:57
 entering extended mode
 **Cy_01_Cours_01_Modelisation_Multi.tex
 (Cy_01_Cours_01_Modelisation_Multi.tex
@@ -2717,7 +2717,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
 )
-<png/logoCC.png, id=39, 88.33pt x 31.11626pt>
+<png/logoCC.png, id=41, 88.33pt x 31.11626pt>
 File: png/logoCC.png Graphic file (type png)
  <use png/logoCC.png>
 Package pdftex.def Info: png/logoCC.png used on input line 85.
@@ -2760,13 +2760,13 @@ LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
 [2]
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
 (Font)              scaled to size 9.19998pt on input line 150.
- <images/Modeles.png, id=82, 1503.6175pt x 890.32625pt>
+ <images/Modeles.png, id=85, 1503.6175pt x 890.32625pt>
 File: images/Modeles.png Graphic file (type png)
 
 <use images/Modeles.png>
 Package pdftex.def Info: images/Modeles.png used on input line 195.
 (pdftex.def)             Requested size: 483.69687pt x 286.4046pt.
- <png/logo_lycee.png, id=83, 329.23pt x 265.99374pt>
+ <png/logo_lycee.png, id=86, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
 
 <use png/logo_lycee.png>
@@ -2788,27 +2788,27 @@ LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 199.
 [3 <./png/logo_lycee.png> <./images/Modeles.png>]
-<images/solveur.png, id=90, 260.975pt x 172.645pt>
+<images/solveur.png, id=93, 260.975pt x 172.645pt>
 File: images/solveur.png Graphic file (type png)
  <use images/solveur.png>
 Package pdftex.def Info: images/solveur.png used on input line 212.
 (pdftex.def)             Requested size: 169.29684pt x 111.99661pt.
 
-<images/Masse_Ressort.png, id=91, 1119.18124pt x 612.2875pt>
+<images/Masse_Ressort.png, id=94, 1119.18124pt x 612.2875pt>
 File: images/Masse_Ressort.png Graphic file (type png)
 
 <use images/Masse_Ressort.png>
 Package pdftex.def Info: images/Masse_Ressort.png used on input line 227.
 (pdftex.def)             Requested size: 290.22107pt x 158.77057pt.
 
-<images/Modele3D.png, id=92, 1403.2425pt x 412.54124pt>
+<images/Modele3D.png, id=95, 1403.2425pt x 412.54124pt>
 File: images/Modele3D.png Graphic file (type png)
 
 <use images/Modele3D.png>
 Package pdftex.def Info: images/Modele3D.png used on input line 233.
 (pdftex.def)             Requested size: 435.32422pt x 127.98088pt.
 
-<images/MoteurCC.png, id=93, 1393.205pt x 635.37375pt>
+<images/MoteurCC.png, id=96, 1393.205pt x 635.37375pt>
 File: images/MoteurCC.png Graphic file (type png)
 
 <use images/MoteurCC.png>
@@ -2826,10 +2826,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4 <./images/solveur.png> <./images/Masse_Ressort.png> <./images/Modele3D.png>]
-\tf@ptc=\write6
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 265.
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <5> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 266.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <5> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 266.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 269.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 276.
+<images/Modele_MCC.png, id=104, 1411.2725pt x 680.5425pt>
+File: images/Modele_MCC.png Graphic file (type png)
+
+<use images/Modele_MCC.png>
+Package pdftex.def Info: images/Modele_MCC.png used on input line 286.
+(pdftex.def)             Requested size: 202.90585pt x 97.8402pt.
+
+<images/Modele_MCC_sat.png, id=105, 1430.34375pt x 646.415pt>
+File: images/Modele_MCC_sat.png Graphic file (type png)
+
+<use images/Modele_MCC_sat.png>
+Package pdftex.def Info: images/Modele_MCC_sat.png used on input line 288.
+(pdftex.def)             Requested size: 202.90585pt x 91.69096pt.
+
+Overfull \hbox (32.4979pt too wide) in paragraph at lines 277--291
+[]$\MDA/mdput/m/n/5 „$ \T1/pag/db/n/9 Exemple  []$[]$  $[]$ 
+ []
+
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 292.
 File: png/logo_lycee.png Graphic file (type png)
 <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 271.
+Package pdftex.def Info: png/logo_lycee.png used on input line 292.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2839,11 +2870,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5 <./images/MoteurCC.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
- (Cy_01_Cours_01_Modelisation_Multi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 271.
+\tf@ptc=\write6
+File: png/logo_lycee.png Graphic file (type png)
+ <use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 311.
+(pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 45.97325pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./images/Modele_MCC.png> <./images/Modele_MCC_sat.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
+
+(Cy_01_Cours_01_Modelisation_Multi.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 311.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2858,34 +2903,36 @@ Package biblatex Warning: Please (re)run Biber on the file:
 
 Package logreq Info: Writing requests to 'Cy_01_Cours_01_Modelisation_Multi.run
 .xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
  ) 
 Here is how much of TeX's memory you used:
- 50128 strings out of 493675
- 1049304 string characters out of 3143992
- 1719301 words of memory out of 3000000
- 52413 multiletter control sequences out of 15000+200000
- 231392 words of font info for 276 fonts, out of 3000000 for 9000
+ 50178 strings out of 493675
+ 1050002 string characters out of 3143992
+ 1719380 words of memory out of 3000000
+ 52428 multiletter control sequences out of 15000+200000
+ 235974 words of font info for 300 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,18n,98p,10446b,1969s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/Progra
 m Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Enseignement/Livre_Exo_V
-uibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7y.pfb>
+uibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr7t.pfb>
 <C:/Enseignement/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/type1/ma
-thdesign/mdput/md-utr8t.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MAT
-HDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/uto
-pia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/avantgar/uagko8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding
-/uzdr.pfb>
-Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (5 pages, 1498083 bytes
+thdesign/mdput/md-utr7y.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MAT
+HDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utr8t.pfb><C:/Enseignement/Livre_
+Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/type1/mathdesign/mdput/md-utri7
+m.pfb><C:/Enseignement/Livre_Exo_Vuibert/Installation/MATHDESIGN/texmf/fonts/ty
+pe1/mathdesign/mdput/md-utrma.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adob
+e/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8
+a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avan
+tgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (6 pages, 1712061 bytes
 ).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 80573 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 81095 words of extra memory for PDF output out of 89155 (max. 10000000)
 
