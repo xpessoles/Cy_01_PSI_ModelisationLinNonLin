@@ -265,6 +265,17 @@ Lorsqu'un système est non linéaire, il peut être possible de le linéariser. 
 \begin{exemple}
 \textit{Loi entrée sortie du Maxpid}
 
+Le comportement mécanique du Maxpid n'est pas linéaire. Si on désire modéliser ce comportement sur un système causal, il est impératif d'utiliser une loi linéaire. 
+
+Dans le premier cas, on modélise le comportement en utilisant une régression linéaire. 
+Ce modèle génère des erreurs, mais il est << utilisable >> sur toute la plage de fonctionnement. 
+
+Il est aussi possible, dans un second cas, de linéariser le système autour d'un point de fonctionnement. Ainsi, le modèle sera plus fidèle à la réalité autour de ce point de fonctionnement. Par contre, les écarts s'accroissent en s'éloignant du point de fonctionnement. 
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/Maxpid_linearisation}
+\end{center}
+
 
 \end{exemple}
 

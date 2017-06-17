@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  16 JUN 2017 22:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  17 JUN 2017 22:26
 entering extended mode
 **Cy_01_Cours_01_Modelisation_Multi.tex
 (Cy_01_Cours_01_Modelisation_Multi.tex
@@ -2833,34 +2833,41 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <5> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 266.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <5> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 266.
+<images/Maxpid_linearisation.png, id=104, 1422.31375pt x 346.29375pt>
+File: images/Maxpid_linearisation.png Graphic file (type png)
+
+<use images/Maxpid_linearisation.png>
+Package pdftex.def Info: images/Maxpid_linearisation.png used on input line 268
+.
+(pdftex.def)             Requested size: 422.7243pt x 102.92194pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 269.
+ mdframed uses option nobreak mdframed on input line 272.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 276.
+(mdframed)              on input line 279.
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
-<images/Modele_MCC.png, id=104, 1411.2725pt x 680.5425pt>
+<images/Modele_MCC.png, id=105, 1411.2725pt x 680.5425pt>
 File: images/Modele_MCC.png Graphic file (type png)
 
 <use images/Modele_MCC.png>
-Package pdftex.def Info: images/Modele_MCC.png used on input line 287.
+Package pdftex.def Info: images/Modele_MCC.png used on input line 290.
 (pdftex.def)             Requested size: 202.90585pt x 97.8402pt.
 
-<images/Modele_MCC_sat.png, id=105, 1430.34375pt x 646.415pt>
+<images/Modele_MCC_sat.png, id=106, 1430.34375pt x 646.415pt>
 File: images/Modele_MCC_sat.png Graphic file (type png)
 
 <use images/Modele_MCC_sat.png>
-Package pdftex.def Info: images/Modele_MCC_sat.png used on input line 289.
+Package pdftex.def Info: images/Modele_MCC_sat.png used on input line 292.
 (pdftex.def)             Requested size: 202.90585pt x 91.69096pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 293.
+ mdframed uses option nobreak mdframed on input line 296.
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 293.
+Package pdftex.def Info: png/logo_lycee.png used on input line 296.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2869,11 +2876,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./images/MoteurCC.png>]
+[5 <./images/MoteurCC.png> <./images/Maxpid_linearisation.png>]
 \tf@ptc=\write6
 File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 312.
+
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 315.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2883,12 +2891,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6 <./images/Modele_MCC.png> <./images/Modele_MCC_sat.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
 
 (Cy_01_Cours_01_Modelisation_Multi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 312.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 312.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 315.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2903,13 +2911,13 @@ Package biblatex Warning: Please (re)run Biber on the file:
 
 Package logreq Info: Writing requests to 'Cy_01_Cours_01_Modelisation_Multi.run
 .xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
- 50182 strings out of 493675
- 1050052 string characters out of 3143992
+ 50187 strings out of 493675
+ 1050219 string characters out of 3143992
  1719380 words of memory out of 3000000
- 52432 multiletter control sequences out of 15000+200000
+ 52436 multiletter control sequences out of 15000+200000
  235974 words of font info for 300 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,18n,98p,10446b,1969s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2929,10 +2937,10 @@ eX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avan
 tgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (6 pages, 1711963 bytes
+Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (6 pages, 1778859 bytes
 ).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
+ 233 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
- 81095 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 81100 words of extra memory for PDF output out of 89155 (max. 10000000)
 
