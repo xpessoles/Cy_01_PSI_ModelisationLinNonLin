@@ -280,8 +280,20 @@ Il est aussi possible, dans un second cas, de linéariser le système autour d'u
 \end{exemple}
 
 \subsection{Saturation}
-Même si vous l'avez peut-être peu remarqué, les saturations sont omniprésentes sur les systèmes réels. 
+\begin{minipage}[c]{.78\linewidth}
+Même si vous l'avez peut-être peu remarqué, les saturations sont omniprésentes sur les systèmes réels. Les principales sources de saturation sont des saturations en tension ou des saturations en courant. 
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.18\linewidth}
+\begin{center}
+\includegraphics[width=3.5cm]{images/sat}
 
+Paramètres : valeur mini et valeur maxi
+\end{center}
+\end{minipage}
+Tout d'abord, dans les systèmes asservis et corrigés, le correcteur permet souvent une amplification de la consigne. Par exemple, un correcteur proportionnel de valeur 5 dans la boucle ouverte permet de multiplier par 5 la tension de commande. Celle-ci peut alors être supérieure à la tension que la source peut fournie.
+
+De même, suivant la charge agissant sur un système (charge électrique ou mécanique), le courant nécessaire à un déplacement peut devenir très important, notamment en phase transitoire. Un pic de courant peut avoir pour effet de détériorer des composants.
 
 
 \begin{exemple} ~\\
