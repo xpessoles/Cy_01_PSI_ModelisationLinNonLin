@@ -60,10 +60,17 @@
 \def\xxcompetences{%
 \textsl{%
 \textbf{Savoirs et compétences :}\\
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item \textit{Mod2.C1 :}Chaîne d’énergie et d'information
+\item \textit{Mod2.C8 :}Linéarisation des systèmes non linéaires	
+\item \textit{Mod3.C1 :}Point de fonctionnement : non-linéarités (hystérésis, saturation, seuil)
+\end{itemize}
 }}
 
 \def\xxfigures{
-\includegraphics[width=.8\textwidth]{png/Header_Peugeot}%images/prot_01}
+\includegraphics[width=1.4\textwidth]{images/matlab}%images/prot_01
+\\
+\textit{Modèle du pilote hydraulique avec pilotage interactif.}
 }%figues de la page de garde
 
 \def\xxpied{%
@@ -76,7 +83,7 @@ Chapitre 1 -- \xxactivite%
 
 
 \begin{document}
-\chapterimage{png/Header_Peugeot}
+\chapterimage{png/Fond_SLCI}
 \input{style/new_pagegarde}
 \setlength{\columnseprule}{.1pt}
 
@@ -363,10 +370,39 @@ Paramètres : valeur mini et valeur maxi
 
 \subsection{Hystérésis}
 
-\section{Modélisation des systèmes numériques}
-Effet du pas de temps.
 
-A voir ultérieurement. 
+\noindent \begin{minipage}[c]{.54\linewidth}
+\indent Les hystérésis (Relay) permettent de modéliser un comportement non linéaire pour lequel la sortie est différente quand l'entrée croît ou lorsqu'elle décroit. 
+
+
+
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.18\linewidth}
+\begin{center}
+\includegraphics[width=3.5cm]{images/hysteresis}
+Paramètres : switch on point, switch off point, output when on, output when off
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.22\linewidth}
+\begin{center}
+\begin{tikzpicture}
+\draw [-latex] (0,-1) -- (0,1) node [left]{\footnotesize $s(t)$};
+\draw [-latex] (-1,0) -- (1,0) node [below]{\footnotesize $e(t)$};
+\draw [cyan,very thick] (-.9,-.8) -- (.5,-.8) -- (.5,.8) -- (.9,.8) -- (-.5,.8) -- (-.5,-.8);
+
+\draw [latex-] (.5,0) --++(.5,-.5) node [right] {\footnotesize switch on point};
+\draw [latex-] (-.5,0) --++(-.5,-.5) node [left] {\footnotesize switch off point};
+\draw [latex-] (.5,.8) --++(.5,.5) node [left] {\footnotesize output when on};
+\draw [latex-] (.5,-.8) --++(-.5,-.5) node [left] {\footnotesize output when off};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+
+\section{Modélisation des systèmes numériques}
+On verra dans un chapitre ultérieur que les systèmes que nous manipulons sont souvent numériques. En effet, que ce soit sur le Maxpid, le Control'X, le D2C, la cheville NAO \textit{etc.} les grandeurs analogiques mesurées sont converties en grandeurs numériques grâce à un CAN (convertisseur analogique numérique). De ce fait, un paramètre déterminant est la fréquence d'échantillonnage du système. Nous verrons son rôle dans un chapitre ultérieur.
 
 
 \begin{thebibliography}{2}
@@ -374,6 +410,8 @@ A voir ultérieurement.
    \bibitem[2]{ref2} Ph. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
    \bibitem[3]{ref3} Yvan Liebgott, {\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
    \bibitem[4]{ref4} Frédéric Mazet, {\it Cours d'automatique de deuxième année, Lycée Dumont Durville, Toulon.}
+      \bibitem[5]{ref5} Ivan Liebgott, {\it Modélisation et Simulation des systèmes Multi-Physiques avec MATLAB--Simulink.}
+
 \end{thebibliography}
 
 \end{document}
