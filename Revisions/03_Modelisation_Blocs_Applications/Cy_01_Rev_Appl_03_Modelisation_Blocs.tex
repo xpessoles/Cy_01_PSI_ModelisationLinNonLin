@@ -1,0 +1,120 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation par fonction de transfert et schéma-blocs},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+\input{style/new_style}
+\input{style/macros_SII}
+
+\fichetrue
+%\fichefalse
+
+%\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+%\courstrue
+\coursfalse
+
+%%%%%%%%%%%%%%%%%%%
+\usepackage{numprint}
+\usetikzlibrary{calc}
+%definition style pour mettre un fond blanc dans un node sans avoir des marges énormes
+\tikzset{fondblanc/.style={ inner sep=2pt,fill=white,outer sep = 5pt}} 
+\tikzset{fondblanc2/.style={ inner sep=2pt,fill=white}} 
+\tikzset{fondblanc3/.style={ inner sep=1pt,fill=white,outer sep = 2pt}} 
+\usetikzlibrary{calc,circuits.ee.IEC}
+\usetikzlibrary{shapes}
+\usepackage[european resistor, european voltage, european current]{circuitikz}
+\usetikzlibrary{babel}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{style/schemabloc}
+\usepackage{picins}
+
+% -------------------------------------
+% Déclaration des titres
+% -------------------------------------
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{Cy01 - R 03}
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Révisions 3 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation par fonction de transfert et schéma-blocs}
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{19}%16
+
+\def\xxonglet{Cycle 01 -- Rév 3}
+
+\def\xxactivite{Application}
+\def\xxtitreexo{Application}
+\def\xxsourceexo{}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+}}
+
+\def\xxfigures{
+%incgraphics[width=.8\textwidth]{}%images/prot_01}
+}%figues de la page de garde
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+Révision 3 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{6cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\section{Modélisation par schéma-blocs}
+\begin{methode}
+Dans le cas où vous ne savez pas comment démarrer, vous pouvez suivre la méthode suivante.
+\begin{enumerate}
+\item Identifier la grandeur physique d'entrée et la grandeur physique de sortie.
+\item Lorsqu'une équation lie deux grandeurs physiques, réaliser le schéma-blocs associé à l'équation. 
+\item Lorsqu'une équation lie trois grandeurs physiques, réaliser le schéma-blocs associé à l'équation en utilisant un comparateur.
+\item Relier les blocs en commençant par l'entrée. Inverser les blocs si nécessaire.
+\end{enumerate}
+\end{methode}
+\subsection{Modélisation du moteur à courant continu}
+\subsection{Modélisation d'un système}
+\section{Réduction de schéma-blocs}
+\textit{D'après ressources de V. Reydellet.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/sb_01}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/sb_02}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/sb_03}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/sb_04}
+\end{center}
+
+\end{document}
+
+
