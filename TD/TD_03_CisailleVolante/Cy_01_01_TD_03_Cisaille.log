@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  26 AUG 2017 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  27 AUG 2017 16:10
 entering extended mode
 **Cy_01_01_TD_03_Cisaille.tex
 (Cy_01_01_TD_03_Cisaille.tex
@@ -2668,30 +2668,32 @@ LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
 [1
 
 {C:/Users/Xavier/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/f
-ig_01.png>]
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 6.43999pt on input line 154.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 4.59999pt on input line 154.
- <images/fig_02.png, id=34, 722.7pt x 564.1075pt>
+ig_01.png>] <images/fig_02.png, id=34, 722.7pt x 564.1075pt>
 File: images/fig_02.png Graphic file (type png)
 
 <use images/fig_02.png>
-Package pdftex.def Info: images/fig_02.png used on input line 166.
+Package pdftex.def Info: images/fig_02.png used on input line 156.
 (pdftex.def)             Requested size: 236.84843pt x 184.87352pt.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 6.43999pt on input line 159.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 4.59999pt on input line 159.
+ <images/fig_03.png, id=35, 686.565pt x 532.99126pt>
+File: images/fig_03.png Graphic file (type png)
 
-Overfull \vbox (43.98819pt too high) has occurred while \output is active []
-
-
-<png/logo_lycee.png, id=35, 329.23pt x 265.99374pt>
+<use images/fig_03.png>
+Package pdftex.def Info: images/fig_03.png used on input line 202.
+(pdftex.def)             Requested size: 236.84843pt x 183.86592pt.
+ <png/logo_lycee.png, id=36, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 204.
+
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 207.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 204.
+(Font)              scaled to size 7.35999pt on input line 207.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 204.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 207.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2700,9 +2702,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./png/logo_lycee.png> <./images/fig_02.png>]
+File: images/fig_02.png Graphic file (type png)
+ <use images/fig_02.png>
+Package pdftex.def Info: images/fig_02.png used on input line 215.
+(pdftex.def)             Requested size: 483.69687pt x 377.55411pt.
 File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 205.
+
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 218.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2712,28 +2719,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 205.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 218.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 205.
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
+(Font)              scaled to size 11.03998pt on input line 218.
+[3 <./images/fig_03.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (Cy_01_01_TD_03_Cisaille.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 205.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 218.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_01_TD_03_Cisaille.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 48539 strings out of 493675
- 1045889 string characters out of 3143992
- 1694832 words of memory out of 3000000
- 50827 multiletter control sequences out of 15000+200000
- 245370 words of font info for 342 fonts, out of 3000000 for 9000
+ 48548 strings out of 493675
+ 1046020 string characters out of 3143992
+ 1669832 words of memory out of 3000000
+ 50831 multiletter control sequences out of 15000+200000
+ 245642 words of font info for 345 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,77p,10436b,1926s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2751,9 +2758,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program
 1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantga
 r/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagdo8a.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_01_TD_03_Cisaille.pdf (3 pages, 248074 bytes).
+Output written on Cy_01_01_TD_03_Cisaille.pdf (3 pages, 265547 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
+ 172 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
- 76932 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 76937 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -139,17 +139,22 @@ $$m\dfrac{\text{d}^2 x(t) }{\text{d}t^2}=S\Delta p(t)-f\dfrac{\text{d} x(t) }{\t
 
 %\subparagraph{}\textit{Appliquer le principe fondamental de la dynamique à l’ensemble mobile en projection sur $\vect{x}$.}
 
-\subsection*{Fonction de transfert}
+\subsection*{Fonction de transfert du vérin}
 Pour le type de vérin utilisé, le débit d'alimentation a pour expression : $q(t)=S\dfrac{\text{d}x(t)}{\text{d} t}+\dfrac{V}{2B}+\dfrac{d\Delta p(t)}{\text{d}t}$. $V$ est le volume moyen d’une chambre et $B$ le module d’élasticité de l’huile, (ces deux paramètres sont des constantes).
 
 \subparagraph{}\textit{Transformer les deux équations précédentes dans le domaine de Laplace. En déduire l’expression de la fonction de transfert : $H_v(p)=\dfrac{X(p)}{Q(p)}$, que l’on mettra sous la forme : $H_v(p)=\dfrac{k}{p\left( ap^2 + bp + 1\right)}$}.
 
 
-\subsection*{Détermination des paramètres canoniques}
+\subsection*{Détermination des paramètres canoniques à partir du diagramme de Bode}
 
 On pose $H_v(p)=\dfrac{K_v}{p\left( 1+\dfrac{2\xi}{\omega_0} p + \dfrac{p^2}{\omega_0^2} \right)}$. 
 
-Une simulation numérique a permis de tracer le diagramme de Bode donné sur la feuille réponse. On se propose de retrouver les valeurs de $K_v$, $\omega_0$ et $\xi$ à partir du diagramme.
+Une simulation numérique a permis de tracer le diagramme de Bode donné ci-dessous. On se propose de retrouver les valeurs de $K_v$, $\omega_0$ et $\xi$ à partir du diagramme.
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\end{center}
 
 \subparagraph{}\textit{Donner l’expression littérale du gain fréquentiel en décibel $\text{GdB}(\omega)$ en fonction des notations $K_v$, $\omega_0$ et $\xi$, (ne pas développer le dénominateur pour le calcul du module de $H_v(j\omega)$. Quelle est sa valeur pour $\omega=\omega_0$ ?}
 
@@ -162,9 +167,6 @@ Pour quelle valeur de $\omega$ coupe-t-elle l’asymptote précédente ?}
 
 \subparagraph{}\textit{Déduire des résultats précédents et du diagramme de Bode de $H_v(p)$ donné sur la feuille réponse les valeurs des paramètres $K_v$, $\omega_0$ et $\xi$ (on tracera les asymptotes avec leur pente réelle).}
 
-\begin{center}
-\includegraphics[width=\linewidth]{images/fig_02}
-\end{center}
 
 
 \subparagraph{}\textit{Donner l’expression littérale de la phase $\varphi(\omega)$ en fonction des notations $\omega_0$ et $\xi$.	
@@ -191,9 +193,15 @@ Quel réglage suffit-il de faire sur la cisaille pour compenser cette erreur ?}
 
 
 \subsection*{Identification temporelle}
-On donne, sur la feuille réponse, le tracé de la courbe $x(t)$ obtenu à l’aide d’un logiciel de simulation.
+On donne ci-dessous, le tracé de la courbe $x(t)$ obtenu à l’aide d’un logiciel de simulation.
 Cette réponse est voisine de celle d’un premier ordre soumis à la même entrée.
 Soit $F(p)=\dfrac{K_f}{1+Tp}$ la fonction de transfert du système du premier ordre associé.
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+\end{center}
+
 
 \subparagraph{}\textit{Déterminer l’expression de la réponse temporelle de ce système soumis à une entrée identique à celle de la cisaille (déplacement de la tôle à vitesse constante : $v = \SI{1}{m.s^{-1}}$).}
 
@@ -202,6 +210,11 @@ Soit $F(p)=\dfrac{K_f}{1+Tp}$ la fonction de transfert du système du premier or
 \subparagraph{}\textit{Vérifier que l’on a la même erreur de traînage.}
 
 \end{multicols}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\end{center}
+
 \end{document}
 
 
