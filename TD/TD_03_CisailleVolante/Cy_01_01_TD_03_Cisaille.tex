@@ -6,7 +6,10 @@
 \input{style/new_style}
 \input{style/macros_SII}
 \usepackage{multicol}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
 \usepackage{siunitx}
+
 \usepackage{picins}
 \fichetrue
 %\fichefalse
@@ -123,6 +126,12 @@ Soit  $H_v(p)=\dfrac{X(p)}{Q(p)}$ la fonction de transfert associée à l'ensemb
 
 \subparagraph{}\textit{Représenter le schéma-blocs du système. Indiquer les grandeurs d'entrée et de sortie de chaque bloc.}
 
+\begin{corrige}~\\
+
+\begin{center}
+\includestandalone[width=.95\linewidth]{images/SchemaBlocs}
+\end{center}
+\end{corrige}
 
 \section*{Fonction de transfert de l'ensemble vérin et charge}
 \subsection*{Équation de comportement dynamique}
@@ -140,21 +149,45 @@ $$m\dfrac{\text{d}^2 x(t) }{\text{d}t^2}=S\Delta p(t)-f\dfrac{\text{d} x(t) }{\t
 %\subparagraph{}\textit{Appliquer le principe fondamental de la dynamique à l’ensemble mobile en projection sur $\vect{x}$.}
 
 \subsection*{Fonction de transfert du vérin}
-Pour le type de vérin utilisé, le débit d'alimentation a pour expression : $q(t)=S\dfrac{\text{d}x(t)}{\text{d} t}+\dfrac{V}{2B}+\dfrac{d\Delta p(t)}{\text{d}t}$. $V$ est le volume moyen d’une chambre et $B$ le module d’élasticité de l’huile, (ces deux paramètres sont des constantes).
+Pour le type de vérin utilisé, le débit d'alimentation a pour expression : $q(t)=S\dfrac{\text{d}x(t)}{\text{d} t}+\dfrac{V}{2B}\dfrac{d\Delta p(t)}{\text{d}t}$. $V$ est le volume moyen d’une chambre et $B$ le module d’élasticité de l’huile, (ces deux paramètres sont des constantes).
 
 \subparagraph{}\textit{Transformer les deux équations précédentes dans le domaine de Laplace. En déduire l’expression de la fonction de transfert : $H_v(p)=\dfrac{X(p)}{Q(p)}$, que l’on mettra sous la forme : $H_v(p)=\dfrac{k}{p\left( ap^2 + bp + 1\right)}$}.
+\begin{corrige} ~\\
+D'une part, $mp^2X(p)=S\Delta P(p)-fpX(p) \Leftrightarrow \dfrac{p\left(mp+f\right)}{S}X(p)=\Delta P(p) $.
 
+D'autre part :
+$Q(p)=SpX(p)+\dfrac{V}{2B}p\Delta P(p) \Leftrightarrow 2B\dfrac{Q(p)-SpX(p)}{Vp}=\Delta P(p) $.
+
+On a donc : 
+$\dfrac{p\left(mp+f\right)}{S}X(p) =
+2B\dfrac{Q(p)-SpX(p)}{Vp}$
+$\Longleftrightarrow
+\dfrac{p\left(mp+f\right)}{S}X(p) +\dfrac{2BSpX(p)}{Vp}=
+\dfrac{2BQ(p)}{Vp}$
+$\Longleftrightarrow
+\left(\dfrac{p\left(mp+f\right)}{S} +\dfrac{2BSp}{Vp}\right) \dfrac{Vp}{2B}=
+\dfrac{Q(p)}{ X(p)}$
+$\Longleftrightarrow
+\left(\dfrac{p\left(mp+f\right)}{S} \dfrac{Vp}{2B}+Sp \right) =
+\dfrac{Q(p)}{ X(p)}$.
+
+On a donc, 
+$H_v(p)
+=\dfrac{1}{p\left(\dfrac{\left(mp+f\right)}{S} \dfrac{Vp}{2B}+S \right)}
+=\dfrac{1}{p\left(\dfrac{Vm}{2BS}p^2+ \dfrac{fV}{2BS}p+S \right)}
+=\dfrac{1/Q}{p\left(\dfrac{Vm}{2BS^2}p^2+ \dfrac{fV}{2BS^2}p+1 \right)}
+$.
+\end{corrige}
 
 \subsection*{Détermination des paramètres canoniques à partir du diagramme de Bode}
 
 On pose $H_v(p)=\dfrac{K_v}{p\left( 1+\dfrac{2\xi}{\omega_0} p + \dfrac{p^2}{\omega_0^2} \right)}$. 
 
-Une simulation numérique a permis de tracer le diagramme de Bode donné ci-dessous. On se propose de retrouver les valeurs de $K_v$, $\omega_0$ et $\xi$ à partir du diagramme.
+Une simulation numérique a permis de tracer le diagramme de Bode donné page suivante. On se propose de retrouver les valeurs de $K_v$, $\omega_0$ et $\xi$ à partir du diagramme.
 
-
-\begin{center}
-\includegraphics[width=\linewidth]{images/fig_02}
-\end{center}
+%\begin{center}
+%\includegraphics[width=\linewidth]{images/fig_02}
+%\end{center}
 
 \subparagraph{}\textit{Donner l’expression littérale du gain fréquentiel en décibel $\text{GdB}(\omega)$ en fonction des notations $K_v$, $\omega_0$ et $\xi$, (ne pas développer le dénominateur pour le calcul du module de $H_v(j\omega)$. Quelle est sa valeur pour $\omega=\omega_0$ ?}
 
