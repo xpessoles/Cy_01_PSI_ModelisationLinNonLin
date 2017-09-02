@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  1 SEP 2017 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.16)  2 SEP 2017 15:50
 entering extended mode
 **Cy_01_01_TD_03_Cisaille.tex
 (Cy_01_01_TD_03_Cisaille.tex
@@ -2789,20 +2789,42 @@ $\OMS/mdput/m/n/10 ([]) [] [] \OT1/mdput/m/n/10 (+20) = []$ $\OMS/mdput/m/n/10
  []
 
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 180.
+ mdframed uses option nobreak mdframed on input line 182.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 6.43999pt on input line 192.
+(Font)              scaled to size 6.43999pt on input line 194.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 4.59999pt on input line 192.
+(Font)              scaled to size 4.59999pt on input line 194.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 196.
+
+Overfull \hbox (11.8813pt too wide) in paragraph at lines 209--212
+[]$\OT1/mdput/m/n/10 (-20) = 20 [] \OML/mdput/m/it/10 K[] \OMS/mdput/m/n/10   \
+OT1/mdput/m/n/10 (-20) 20 [] \OML/mdput/m/it/10 ! \OMS/mdput/m/n/10   \OT1/mdpu
+t/m/n/10 (-20) 20 [] []$ 
+ []
+
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 216.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 222.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 229.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 235.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 249.
 <png/logo_lycee.png, id=55, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
  <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 234.
+Package pdftex.def Info: png/logo_lycee.png used on input line 253.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.35999pt on input line 234.
+(Font)              scaled to size 7.35999pt on input line 253.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 234.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 253.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2810,21 +2832,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./png/logo_lycee.png>] <images/fig_03.png, id=79, 686.565pt x 532.99126pt>
+[2 <./png/logo_lycee.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 253.
+
+<images/cor_01.png, id=75, 1497.595pt x 1129.21875pt>
+File: images/cor_01.png Graphic file (type png)
+ <use images/cor_01.png>
+Package pdftex.def Info: images/cor_01.png used on input line 255.
+(pdftex.def)             Requested size: 226.04845pt x 170.44379pt.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 267.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 275.
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+
+Overfull \hbox (15.92178pt too wide) in paragraph at lines 286--288
+[]\T1/mdput/m/n/10 (-20) Lorsque $\OML/mdput/m/it/10 !$ \T1/mdput/m/n/10 (-20) 
+tend vers l'in-fini, $\OMS/mdput/m/n/10   [] []$
+ []
+
+<images/cor_02.png, id=76, 580.1675pt x 268.00125pt>
+File: images/cor_02.png Graphic file (type png)
+ <use images/cor_02.png>
+Package pdftex.def Info: images/cor_02.png used on input line 291.
+(pdftex.def)             Requested size: 135.63045pt x 62.65314pt.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 296.
+
+<images/cor_03.png, id=77, 1447.4075pt x 1129.21875pt>
+File: images/cor_03.png Graphic file (type png)
+ <use images/cor_03.png>
+Package pdftex.def Info: images/cor_03.png used on input line 299.
+(pdftex.def)             Requested size: 189.47946pt x 147.82019pt.
+
+<images/fig_03.png, id=78, 686.565pt x 532.99126pt>
 File: images/fig_03.png Graphic file (type png)
-
-<use images/fig_03.png>
-Package pdftex.def Info: images/fig_03.png used on input line 235.
+ <use images/fig_03.png>
+Package pdftex.def Info: images/fig_03.png used on input line 327.
 (pdftex.def)             Requested size: 236.84843pt x 183.86592pt.
- <images/fig_02.png, id=80, 722.7pt x 564.1075pt>
-File: images/fig_02.png Graphic file (type png)
-
-<use images/fig_02.png>
-Package pdftex.def Info: images/fig_02.png used on input line 248.
-(pdftex.def)             Requested size: 483.69687pt x 377.55411pt.
 File: png/logo_lycee.png Graphic file (type png)
- <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png used on input line 251.
+
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 332.
 (pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
 
 
@@ -2834,28 +2890,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Font shape `T1/mdput/bx/n' in size <12> not available
-(Font)              Font shape `T1/mdput/b/n' tried instead on input line 251.
+(Font)              Font shape `T1/mdput/b/n' tried instead on input line 332.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 251.
-[3 <./images/fig_03.png> <./images/fig_02.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 251.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 251.
+(Font)              scaled to size 11.03998pt on input line 332.
+[3 <./images/cor_01.png> <./images/cor_02.png> <./images/cor_03.png>]
+<images/fig_02.png, id=96, 722.7pt x 564.1075pt>
+File: images/fig_02.png Graphic file (type png)
+ <use images/fig_02.png>
+Package pdftex.def Info: images/fig_02.png used on input line 340.
+(pdftex.def)             Requested size: 483.69687pt x 377.55411pt.
+File: png/logo_lycee.png Graphic file (type png)
+
+<use png/logo_lycee.png>
+Package pdftex.def Info: png/logo_lycee.png used on input line 343.
+(pdftex.def)             Requested size: 56.9055pt x 45.97325pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 45.97325pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./images/fig_03.png> <./images/fig_02.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
  (Cy_01_01_TD_03_Cisaille.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 251.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 251.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 343.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package logreq Info: Writing requests to 'Cy_01_01_TD_03_Cisaille.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 251.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
  ) 
 Here is how much of TeX's memory you used:
- 49696 strings out of 493675
- 1065747 string characters out of 3143992
- 1698031 words of memory out of 3000000
- 51921 multiletter control sequences out of 15000+200000
- 246556 words of font info for 343 fonts, out of 3000000 for 9000
+ 49730 strings out of 493675
+ 1066312 string characters out of 3143992
+ 1704162 words of memory out of 3000000
+ 51938 multiletter control sequences out of 15000+200000
+ 247090 words of font info for 349 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,17n,79p,10436b,1926s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program File
@@ -2877,9 +2951,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/urw/avantgar/uagdo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_01_TD_03_Cisaille.pdf (3 pages, 305589 bytes).
+Output written on Cy_01_01_TD_03_Cisaille.pdf (4 pages, 611216 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 76942 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 76957 words of extra memory for PDF output out of 89155 (max. 10000000)
 

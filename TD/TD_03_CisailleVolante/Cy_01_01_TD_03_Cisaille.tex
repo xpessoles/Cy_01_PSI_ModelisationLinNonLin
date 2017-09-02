@@ -149,7 +149,7 @@ $$m\dfrac{\text{d}^2 x(t) }{\text{d}t^2}=S\Delta p(t)-f\dfrac{\text{d} x(t) }{\t
 %\subparagraph{}\textit{Appliquer le principe fondamental de la dynamique à l’ensemble mobile en projection sur $\vect{x}$.}
 
 \subsection*{Fonction de transfert du vérin}
-Pour le type de vérin utilisé, le débit d'alimentation a pour expression : $q(t)=S\dfrac{\text{d}x(t)}{\text{d} t}+\dfrac{V}{2B}\dfrac{d\Delta p(t)}{\text{d}t}$. $V$ est le volume moyen d’une chambre et $B$ le module d’élasticité de l’huile, (ces deux paramètres sont des constantes).
+Pour le type de vérin utilisé, le débit d'alimentation a pour expression : $q(t)=S\dfrac{\text{d}x(t)}{\text{d} t}+\dfrac{V}{2B}\dfrac{\text{d}\Delta p(t)}{\text{d}t}$. $V$ est le volume moyen d’une chambre et $B$ le module d’élasticité de l’huile, (ces deux paramètres sont des constantes).
 
 \subparagraph{}\textit{Transformer les deux équations précédentes dans le domaine de Laplace. En déduire l’expression de la fonction de transfert : $H_v(p)=\dfrac{X(p)}{Q(p)}$, que l’on mettra sous la forme : $H_v(p)=\dfrac{k}{p\left( ap^2 + bp + 1\right)}$}.
 \begin{corrige} ~\\
@@ -177,6 +177,8 @@ $H_v(p)
 =\dfrac{1}{p\left(\dfrac{Vm}{2BS}p^2+ \dfrac{fV}{2BS}p+S \right)}
 =\dfrac{1/Q}{p\left(\dfrac{Vm}{2BS^2}p^2+ \dfrac{fV}{2BS^2}p+1 \right)}
 $.
+
+Au final, $k=\dfrac{1}{Q}$, $a=\dfrac{Vm}{2BS}$ et $b=\dfrac{fV}{2BS^2}$.
 \end{corrige}
 
 \subsection*{Détermination des paramètres canoniques à partir du diagramme de Bode}
@@ -189,23 +191,113 @@ Une simulation numérique a permis de tracer le diagramme de Bode donné page su
 %\includegraphics[width=\linewidth]{images/fig_02}
 %\end{center}
 
-\subparagraph{}\textit{Donner l’expression littérale du gain fréquentiel en décibel $\text{GdB}(\omega)$ en fonction des notations $K_v$, $\omega_0$ et $\xi$, (ne pas développer le dénominateur pour le calcul du module de $H_v(j\omega)$. Quelle est sa valeur pour $\omega=\omega_0$ ?}
+\subparagraph{}\textit{Donner l’expression littérale du gain fréquentiel en décibel $\text{GdB}(\omega)$ en fonction des notations $K_v$, $\omega_0$ et $\xi$, (ne pas développer le dénominateur pour le calcul du module de $H_v(j\omega)$). Quelle est sa valeur pour $\omega=\omega_0$ ?}
+
+\begin{corrige}
+$H_v(j\omega )=\dfrac{K_v}{j\omega\left( 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2} \right)}$
+
+En conséquence, 
+
+$
+G_{\text{dB}}\left(\omega \right)=20\log\left| \dfrac{K_v}{j\omega\left( 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2} \right)} \right|
+$
+
+$
+=20\log K_v- 20\log  \left| j\omega\right| - 20\log  \left| 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2}  \right|
+$
+
+$
+=20\log K_v- 20\log  \omega - 20\log  \left| \sqrt{\left(1- \dfrac{\omega^2}{\omega_0^2} \right)^2+\left( \dfrac{2\xi\omega }{\omega_0} \right)^2} \right|
+$
+
+Au final, 
+$G_{\text{dB}}\left(\omega_0 \right)=
+20\log K_v- 20\log  \omega_0 - 20\log 2\xi $.
+\end{corrige}
 
 \subparagraph{}\textit{Déterminer l’asymptote de la courbe de gain lorsque 
 $\omega_0$ tend vers 0. Quelle est sa pente ?
 Pour quelle valeur de $\omega$ coupe-t-elle l’horizontale à \SI{0}{dB} ?}
 
+\begin{corrige}
+On a $G_{\text{dB}}\left(\omega \right)
+=20\log K_v- 20\log  \omega - 20\log  \left| \sqrt{\left(1- \dfrac{\omega^2}{\omega_0^2} \right)^2+\left( \dfrac{2\xi\omega }{\omega_0} \right)^2} \right|$. 
+
+Lorsque $\omega$ tend vers 0, le gain tend $20\log K_v- 20\log  \omega$.
+ La pente est donc de \SI{-20}{dB/decade}. Elle coupe l'horizontale à \SI{0}{dB} en $\omega=K_v$.
+
+\end{corrige}
+
 \subparagraph{}\textit{Déterminer l’asymptote de la courbe de gain lorsque $\omega$ tend vers l'$\infty$. Quelle est sa pente ?	
 Pour quelle valeur de $\omega$ coupe-t-elle l’asymptote précédente ?}
 
+
+\begin{corrige}
+On a $G_{\text{dB}}\left(\omega \right)
+=20\log K_v- 20\log  \omega - 20\log  \left| \sqrt{\left(1- \dfrac{\omega^2}{\omega_0^2} \right)^2+\left( \dfrac{2\xi\omega }{\omega_0} \right)^2} \right|$. 
+
+Lorsque $\omega$ tend vers l'infini, le gain tend $20\log K_v- 20\log  \omega$, 
+$G_{\text{dB}}$ tend vers 
+$= 20\log K_v- 20\log  \omega - 20\log  \dfrac{\omega^2}{\omega_0^2} $
+$= 20\log K_v- 20\log  \omega - 20\log  \omega^2 +20\log  \omega_0^2 $
+$= 20\log K_v+ 40\log  \omega_0 - 60\log  \omega $.
+
+L'intersection des deux asymptotes a lieu quand 
+
+$20\log K_v- 20\log  \omega= 20\log K_v+40\log  \omega_0 - 60\log  \omega$
+$\Leftrightarrow \log  \omega= \log  \omega_0 $. Ainsi, l'intersection des asymptotes a lieu en $\omega=\omega_0$. 
+\end{corrige}
+
 \subparagraph{}\textit{Déduire des résultats précédents et du diagramme de Bode de $H_v(p)$ donné sur la feuille réponse les valeurs des paramètres $K_v$, $\omega_0$ et $\xi$ (on tracera les asymptotes avec leur pente réelle).}
 
+\begin{corrige}
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_01}
+\end{center}
+Par lecture du graphe, on obtient $\omega_0=\SI{140}{rad/s}$ et $K_v=\SI{1000}{s.m^{-2}}$.
+
+$G_{\text{dB}}\left(\omega_0 \right)=
+20\log K_v- 20\log  \omega_0 - 20\log 2\xi 
+\Leftrightarrow 37=20\log 1000 - 20\log  140 - 20\log 2\xi
+\Leftrightarrow 37=60 - 20\log  140 - 20\log 2\xi
+\Leftrightarrow \dfrac{37-60 + 20\log  140}{-20} =\log 2\xi
+\Leftrightarrow  \xi \simeq 0,05
+$.
+
+\end{corrige}
 
 
 \subparagraph{}\textit{Donner l’expression littérale de la phase $\varphi(\omega)$ en fonction des notations $\omega_0$ et $\xi$.	
 Déterminer ses limites lorsque $\omega$ tend vers 0 et lorsque $\omega$ tend vers l'infini.	
 Tracer le diagramme asymptotique de phase.	
 Calculer les valeurs de la phase en degrés pour la pulsation propre $\omega_0$ puis pour \num{100} et \SI{200}{rad.s^{-1}}. Tracer la courbe de phase.}
+
+\begin{corrige} ~\\
+
+$
+\varphi\left(  \omega\right)
+=\arg K_v- \arg \left( j\omega\right) - \arg  \left( 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2}  \right)
+=0-\dfrac{\pi}{2} - \arg  \left( \left( 1 - \dfrac{\omega^2}{\omega_0^2}\right) + \dfrac{2\xi\omega}{\omega_0} j \right)
+$
+
+Lorsque $\omega$ tend vers 0, $\varphi\left(\omega\right)$ 
+tend vers $-\dfrac{\pi}{2}$. 
+
+Lorsque $\omega$ tend vers l'infini,
+$-\arg  \left( \left( 1 - \dfrac{\omega^2}{\omega_0^2}\right) + \dfrac{2\xi\omega}{\omega_0} j \right)$ tend vers $\pi$ donc $-\arg(...)$ tend vers $-\pi$.
+
+\textit{Explication graphique de prof de SII...}
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/cor_02}
+\end{center}
+
+Au final, lorsque $\omega$ tend vers l'infini, $\varphi(\omega)$ tend vers $-\dfrac{3\pi}{2}$.
+
+\end{corrige}
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/cor_03}
+\end{center}
 
 
 \subsection*{Détermination des gains $K_c$, $K_a$ et $K_d$}
