@@ -14,8 +14,8 @@
 \fichetrue
 %\fichefalse
 
-%\proftrue
-\proffalse
+\proftrue
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -45,7 +45,7 @@
 %\def\xxonglet{Part. 1 -- Ch. 3}
 \def\xxonglet{Cycle 01}
 
-\def\xxactivite{TD 03}
+\def\xxactivite{DM 1}
 \def\xxauteur{\textsl{D'après P. Dubois, C. Gamelon.}}
 
 \def\xxcompetences{%
@@ -95,6 +95,13 @@ Chapitre 1 -- \xxactivite%
 \section*{Mise en situation}
 \ifprof
 \else
+\begin{obj}
+\begin{itemize}
+\item Identifier les paramètres du vérin.
+\item Quantifier l'erreur de trainage et déterminer son impact sur le système.
+\item Proposer des solutions pour la compenser.
+\end{itemize}
+\end{obj}
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_01}
 \end{center}
@@ -177,9 +184,13 @@ $\Longleftrightarrow
 $\Longleftrightarrow
 \left(\dfrac{p\left(mp+f\right)}{S} +\dfrac{2BSp}{Vp}\right) \dfrac{Vp}{2B}=
 \dfrac{Q(p)}{ X(p)}$
+\end{corrige}
+
+\begin{corrige}
 $\Longleftrightarrow
 \left(\dfrac{p\left(mp+f\right)}{S} \dfrac{Vp}{2B}+Sp \right) =
 \dfrac{Q(p)}{ X(p)}$.
+
 
 On a donc, 
 $H_v(p)
@@ -192,11 +203,13 @@ Au final, $k=\dfrac{1}{Q}$, $a=\dfrac{Vm}{2BS}$ et $b=\dfrac{fV}{2BS^2}$.
 \end{corrige} \else \fi
 
 \subsection*{Détermination des paramètres canoniques à partir du diagramme de Bode}
-
+\ifprof
+\else
 On pose $H_v(p)=\dfrac{K_v}{p\left( 1+\dfrac{2\xi}{\omega_0} p + \dfrac{p^2}{\omega_0^2} \right)}$. 
 
 Une simulation numérique a permis de tracer le diagramme de Bode donné page suivante. On se propose de retrouver les valeurs de $K_v$, $\omega_0$ et $\xi$ à partir du diagramme.
 
+\fi
 %\begin{center}
 %\includegraphics[width=\linewidth]{images/fig_02}
 %\end{center}
@@ -304,11 +317,15 @@ $-\arg  \left( \left( 1 - \dfrac{\omega^2}{\omega_0^2}\right) + \dfrac{2\xi\omeg
 
 Au final, lorsque $\omega$ tend vers l'infini, $\varphi(\omega)$ tend vers $-\dfrac{3\pi}{2}$.
 
-\end{corrige} \else \fi
+\end{corrige} 
 
 \begin{center}
 \includegraphics[width=.8\linewidth]{images/cor_03}
 \end{center}
+
+\else \fi
+
+
 
 
 \subsection*{Détermination des gains $K_c$, $K_a$ et $K_d$}
@@ -320,7 +337,22 @@ Pour que le système soit stable en boucle fermée on décide de régler le corr
 \subparagraph{}\textit{Quelle valeur $K$ doit-on donner au produit des gains $K_c K_a K_d$ (préciser les unités).
 On note $K_0$ le produit $KK_v$ (gain en boucle ouverte). Quelle est la valeur de $K_0$ ?
 Quelle est la marge de phase ainsi obtenue ?}
+\ifprof
+\begin{corrige}
+Étant donné l'exigence demandée, le gain de la FTBO doit être de \SI{-6}{dB} lorsque la phase vaut -180\degres.
+On a déjà vu que pour cette phase, le gain décibel de $H_v$ vaut \SI{37}{dB}. Le gain dB vaut $20\log K + 20 \log |H_v|$. On cherche donc $K$ tel que $20\log K + 20 \log |H_v|=-6$. Au final, $K=\SI{7}{10^{-3}m^2.s^{-1}}$. Par suite, $K_0=\SI{7}{s^{-1}}$.
+\end{corrige}
+\else
+\fi
 
+\begin{methode}
+Cette question est un peu prématurée par rapport à notre avancée. Cependant, vous pouvez tentez d'appliquer la méthode suivante : 
+\begin{enumerate}
+\item Déterminer le gain (en dB) pour lequel la phase vaut -180\degres.
+\item Chercher $K$ tel que $20\log|FTBO|=-6$.
+\item Calculer $K_0$.
+\end{enumerate}
+\end{methode}
 
 \subsection*{Erreur de traînage}
 \ifprof
@@ -340,8 +372,7 @@ Le consigne étant une vitesse, on a donc $E(p)=\dfrac{v}{p^2}$. On a donc :
 $\varepsilon(p)=\dfrac{v}{p^2}\dfrac{1}{1+\dfrac{K_vK_cK_aK_d}{p\left( 1+\dfrac{2\xi}{\omega_0} p + \dfrac{p^2}{\omega_0^2} \right)}}$.
 \end{corrige} \else \fi
 
-\subparagraph{}\textit{On appelle erreur de traînage $\varepsilon_t$ la différence entre l'entrée et la sortie en régime permanent pour une entrée en rampe. Donner l'expression de $\varepsilon_t$. Faire l'application numérique avec $v = \SI{1}{m.s^{-1}}$ et $K_0 = 7$ (unité SI).	
-Quel réglage suffit-il de faire sur la cisaille pour compenser cette erreur ?}
+\subparagraph{}\textit{On appelle erreur de traînage $\varepsilon_t$ la différence entre l'entrée et la sortie en régime permanent pour une entrée en rampe. Donner l'expression de $\varepsilon_t$. Faire l'application numérique avec $v = \SI{1}{m.s^{-1}}$ et $K_0 = 7$ (unité SI).}
 \ifprof \begin{corrige}
 L'entrée en vitesse précédente correspondant à une entrée en rampe, on a donc 
 $
@@ -394,6 +425,14 @@ Reste à savoir que l'asymptote coupe l'axe des abscisses en $T$. Après lecture
 \ifprof \begin{corrige}
 Même erreur que précédemment.
 \end{corrige} \else \fi
+
+\subparagraph{}\textit{Quel réglage peut-on envisager sur la cisaille pour compenser cette erreur ?}
+
+\ifprof \begin{corrige}
+Il est possible de décaler la butée de 14 cm et ainsi supprimer l'écart de trainage.
+\end{corrige} \else \fi
+
+
 \end{multicols}
 
 \ifprof
