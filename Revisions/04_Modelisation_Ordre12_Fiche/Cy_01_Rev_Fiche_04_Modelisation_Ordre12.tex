@@ -32,7 +32,7 @@
 \usepackage{standalone}
 \standaloneconfig{mode=buildnew}
 \usepackage{style/schemabloc}
-\usepackage{picins}
+
 
 % -------------------------------------
 % Déclaration des titres
@@ -153,12 +153,12 @@ Les caractéristiques de la courbe sont les suivantes :
 \end{minipage} \hfill
 \begin{minipage}[c]{.32\linewidth}
 \centering
-\includestandalone{images/fig_01}
+\includegraphics{images/fig_01}
 \end{minipage}
 \end{resultat}
 
 
-\begin{resultat}[Réponse à un échelon d'un système du deuxième ordre]~\\
+\begin{resultat}[Réponse à un échelon d'un système du premier ordre]~\\
 
 \noindent \begin{minipage}[c]{.65\linewidth}
 On appelle réponse à une rampe, l'expression de la sortie $s$ lorsque on soumet le système à une fonction linéaire de pente $k$: 
@@ -182,7 +182,7 @@ Les caractéristiques de la courbe sont les suivantes :
 \end{minipage} \hfill
 \begin{minipage}[c]{.32\linewidth}
 \centering
-\includestandalone{images/rampe}
+\includegraphics{images/rampe}
 \end{minipage}
 \end{resultat}
 
@@ -243,7 +243,7 @@ Suivant la valeur du coefficient d'amortissement, l'allure de la réponse tempor
 
 \textbf{(apériodique)}
 
-\includestandalone{images/Ordre2_amorti}
+\includegraphics{images/Ordre2_amorti}
 \end{center} 
 & 
 \begin{center}
@@ -251,7 +251,7 @@ Suivant la valeur du coefficient d'amortissement, l'allure de la réponse tempor
 
 \textbf{(pseudo périodique)}
 
-\includestandalone{images/Ordre2_pseudo}
+\includegraphics{images/Ordre2_pseudo}
 \end{center} 
 \\
 \vspace*{-1cm}
@@ -265,7 +265,7 @@ Suivant la valeur du coefficient d'amortissement, l'allure de la réponse tempor
 \item La fonction de transfert a deux pôles réels.
 \item La tangente à l'origine est nulle.
 \item La pseudo-période est de la forme $T_p=\dfrac{2\pi }{\omega_0 \sqrt{1-\xi^2}}$.
-\item La valeur du premier dépassement vaut : $D_1=KE_0e^{\dfrac{-\pi \xi }{\sqrt{1-\xi^2}}}$.
+\item La valeur du premier dépassement vaut :  $D_1=KE_0e^{\dfrac{-\pi \xi }{\sqrt{1-\xi^2}}}$.
 \end{itemize}
 \end{tabular}
 \end{center}
