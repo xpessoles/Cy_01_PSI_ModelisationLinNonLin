@@ -32,7 +32,7 @@
 \usepackage{standalone}
 \standaloneconfig{mode=buildnew}
 \usepackage{style/schemabloc}
-\usepackage{picins}
+%\usepackage{picins}
 
 % -------------------------------------
 % Déclaration des titres
@@ -103,7 +103,7 @@ Dans le cas où vous ne savez pas comment démarrer, vous pouvez suivre la méth
 \subsection*{Modélisation du moteur à courant continu}
 On donne les équations du moteur à courant continu :
 \begin{itemize}
-\item $u(t) = e(t)+ Ri(t) L \dfrac{\text{d}i(t)}{\text{d} t}$;
+\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
 \item $e(t)=K\omega(t)$;
 \item $c(t)=Ki(t)$;
 \item $c(t)-c_r(t) - f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
@@ -112,9 +112,9 @@ On donne les équations du moteur à courant continu :
 \textit{Réaliser le schéma-blocs.}
 
 \subparagraph{}
-\textit{Exprimer $\Omega(p)$ en fonction de $U(p)$ et $C_r(p)$.}
+\textit{Exprimer $\Omega(p)$ en fonction de $U(p)$ et $C_r(p)$. Les fonctions de transfert seront exprimées sous forme canonique. Les constantes d'un système du second ordre seront explicitées.}
 
-\subsection*{Modélisation d'une servo commande}
+\subsection*{Modélisation d'une servo-commande}
 
 \setcounter{exo}{0}
 \begin{center}
