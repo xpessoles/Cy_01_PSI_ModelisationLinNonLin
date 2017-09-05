@@ -1,0 +1,30 @@
+\pdfminorversion=3
+\documentclass[tikz,border=1mm]{standalone}
+\usepackage{vuiprepstandalone}
+\usepackage{alain2}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\usepackage[locale=FR]{siunitx}
+
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+xlabel={Temps (s)},
+legend entries ={Vitesse ($\SI{}{km. h^{-1}}$)},
+legend style={at={(0.05,0.95)},anchor=north west},
+xmin=0,xmax=16,
+ymin=0,ymax=200,
+grid=major,
+width=6cm,height=5cm,
+minor y tick num=4,
+minor x tick num=1,
+font=\small ]
+
+\addplot [cyan,thick]  table[x index=0,y index =2]{CHAP2/ex_ScootElec/Ressources/pos_vit.txt};
+\end{axis}
+
+\end{tikzpicture}
+\end{document}
