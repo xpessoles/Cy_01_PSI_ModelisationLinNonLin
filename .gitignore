@@ -7,6 +7,8 @@
 *.synctex.gz
 *.ptc
 
+/TD/TD_01_CEvo/
+/TD/TD_02_VEGA/
 
 # Windows image file caches
 Thumbs.db
