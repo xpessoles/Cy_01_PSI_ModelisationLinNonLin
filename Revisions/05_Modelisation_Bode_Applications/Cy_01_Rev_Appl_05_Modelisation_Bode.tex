@@ -9,8 +9,8 @@
 \fichetrue
 %\fichefalse
 
-\proftrue
-%\proffalse
+%\proftrue
+\proffalse
 
 \tdtrue
 %\tdfalse
@@ -91,8 +91,10 @@ Révision 5 -- \xxactivite%
 
 \ifprof
 \else
-\begin{multicols}{2}
+%\begin{multicols}{2}
 \fi
+\newpage
+
 \section*{Diagramme de Bode}
 \subparagraph{}
 \textit{Tracer les diagrammes de Bode réels et asymptotiques de la fonction de transfert suivante : }
@@ -114,6 +116,7 @@ $H(p)=\dfrac{0,6}{(p+0,025)(p^2+0,2p+1)}=\dfrac{24}{(1+40p)\left(1+\dfrac{2\cdot
 \end{center}
 \fi
 
+\newpage
 \subparagraph{}
 \textit{Tracer les diagrammes de Bode réel et asymptotique de la fonction de transfert suivante : }
 $$
@@ -136,6 +139,8 @@ $
 \end{center}\fi
 
 
+
+\newpage
 
 \subparagraph{}
 \textit{Identifier la fonction de transfert représentée par le diagramme de Bode suivant. Vous justifierez notamment sa forme :$H(p)=\dfrac{K}{p(1+T_1 p)(1+T_2 p)}$. Donner les deux pôles dominants, en déduire une expression simplifiée de $H(p)$. }
@@ -186,6 +191,9 @@ L’angle est à mettre en radians.
 \end{corrige}
 \else
 \fi
+
+\newpage 
+
 \subparagraph{}
 \textit{Identifier la fonction de transfert représentée par le diagramme de Bode suivant. La calculatrice est autorisée.
 On rappelle que pour une fonction de transfert du 2ème ordre, on a : $\text{Max}\left(G_{\text{dB}} \right)=20\log\dfrac{K}{2\xi\sqrt{1-\xi^2}}$.}
@@ -239,6 +247,8 @@ $20\log(K⁄0.1)\simeq 33$ et $K\simeq4.5$
 %Le système est instable, il n’y a pas de marges de stabilité.
 %
 
+\newpage
+
 \section*{Réponse fréquentielle}
 \setcounter{exo}{0}
 Un capteur d'accélération de sensibilité S est utilisé dans la chaîne de retour d'un système asservi dont l'objectif est de contrôler l'accélération d'un plateau sur lequel est fixé ce capteur. Le moteur permettant la motorisation du plateau est connu par l'intermédiaire de sa fonction de transfert. 
@@ -290,7 +300,7 @@ On applique à l'entrée un échelon d'amplitude $E_0$ égale à \SI{0,2}{V}.
 
 \ifprof
 \else
-\end{multicols}
+%\end{multicols}
 \fi
 
 \end{document}
