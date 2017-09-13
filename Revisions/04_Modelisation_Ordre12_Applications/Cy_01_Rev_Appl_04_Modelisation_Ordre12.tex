@@ -10,7 +10,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -21,6 +21,7 @@
 %%%%%%%%%%%%%%%%%%%
 \usepackage{numprint}
 \usetikzlibrary{calc}
+\usepackage{siunitx}
 %definition style pour mettre un fond blanc dans un node sans avoir des marges énormes
 \tikzset{fondblanc/.style={ inner sep=2pt,fill=white,outer sep = 5pt}} 
 \tikzset{fondblanc2/.style={ inner sep=2pt,fill=white}} 
@@ -94,9 +95,10 @@ Révision 3 -- \xxactivite%
 \section*{Étude des performances des motoréducteurs équipant les roues d’un robot Martien}
 \begin{flushright}
 \textit{D'après concours X-ENS -- PSI -- 2005.}
-
 \textit{Adapté par Florestan Mathurin.}
 \end{flushright}
+\ifprof
+\else
 La mission Mars Exploration Rover (MER) est une mission spatiale confiée à la NASA. Elle a pour but d’explorer les sols de la planète Mars pour y rechercher la présence ancienne et prolongée d’eau.  Cette exploration est réalisée grâce à deux rovers automatiques lancées depuis Cap Canaveral. Le premier rover se nomme robot Spirit. Il a été lancé le 10 juin 2003 et s’est posé le 3 janvier 2004 dans le cratère Gusev. Le second rover se nomme Opportunity, il a été lancé le 8 juillet 2003 et s’est posé le 24 janvier 2004 sur Meridiani Planum. 
  
 \begin{center}
@@ -145,15 +147,28 @@ Le motoréducteur peut se représenter par le schéma bloc simplifié suivant :
 \end{center}
 %\end{minipage}
 
-
+\fi
 
 \subparagraph{}
 \textit{Déterminer le nom des composants qui réalisent les fonction $H(p)$ et $G(p)$.}
+\ifprof
+\begin{corrige}
+$H(p)$ : moteur et $G(p)$ : réducteur à engrenages.
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{ Déterminer la fonction de transfert en boucle fermée du système : $\dfrac{\Omega_r(p)}{\Omega_c(p)}$}
+\ifprof
+\begin{corrige}
+$\dfrac{\Omega_v(p)}{\Omega_c(p)}=\dfrac{H(p)G(p)}{1+H(p)G(p)}$.
+\end{corrige}
+\else
+\fi
 
-
+\ifprof
+\else
 On donne le modèle de connaissance du moteur courant continu du système :
 $$u_m(t) = e(t) + R\cdot i(t) 
 \quad e(t) = k_e\cdot \omega_m(t)
@@ -173,33 +188,81 @@ Avec :
 \item $R$, $L$, $k_e$, $f$ et $k_m$ sont constantes.
 \end{itemize}
 
+\fi
+
 \subparagraph{}
 \textit{En supposant les conditions initiales nulles (ce qui sera également supposé dans tout le reste de l'exercice), exprimer ces équations dans le domaine de Laplace. }
+\ifprof
+\begin{corrige}
+$U_m(p) = E(p) + RI(p)$, $E(p) = k_e\Omega_m(p)$, 
+$Jp\Omega_m(p) = C_m (p) -f\Omega_m(p)$, $C_m (p) = k_m I(p)$.
+
+\end{corrige}
+\else
+\fi
 
 
 \subparagraph{}
 \textit{Montrer que, dans le domaine de Laplace, la relation entre $\Omega_m (p)$ et $U_m (p)$ peut s'écrire sous la forme : $\dfrac{\Omega_m(p)}{U_m(p)} = \dfrac{K_m}{1+T_mp} $ où $K_m$ et $T_m$ sont deux constantes à déterminer.}
+\ifprof
+\begin{corrige}
+$\Omega_m(p)=\dfrac{K_m}{1+T_m p}$ avec $K_m=\dfrac{k_m}{fR+k_mk_e}$ et $T_m=\dfrac{RJ}{fR+k_mk_e}$.
+\end{corrige}
+\else
+\fi
 
+\ifprof
+\else
 L'application numérique des grandeurs physiques permet de trouver la fonction suivante : 
 $\dfrac{\Omega_r(p)}{\Omega_c(p)}=\dfrac{K}{1+Tp}$, avec $K=1$ et $T=0,05\;s$.
-
+\fi
 
 
 \subparagraph{}
 \textit{Déterminer $\omega_r (t)$ lorsque l’ordinateur du robot demande un échelon de rotation $\omega_c (t) = \omega_{c0} \cdot u(t)$. Exprimer le résultat en fonction de $K$ et $T$.}
+\ifprof
+\begin{corrige}
+$\omega_r(t)=K\omega_{c0}\left(1-e^{-\dfrac{t}{T}}\right)u(t)$.
+\end{corrige}
+\else
+\fi
 
 
 
 \subparagraph{}
 \textit{Le robot, initialement immobile, bouge selon le déplacement $x_r (t)$ tel que $\dfrac{d}{dt} x_r (t) = R\cdot \omega_r (t)$ où $R$ est rayon de la roue ($R$=constante). Déterminer $X_r (p)$ en fonction de $\Omega_r (p)$.}
+\ifprof
+\begin{corrige}
+%$t_{5\%}=3\tau=\SI{0,15}{s}<\SI{200}{ms}$. CDCF OK. 
+$\dfrac{\text{d}x_r(t)}{\text{d} t}=R\omega_r(t)$ et donc $pX_r(p)=R\Omega_r(p)$.
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
 \textit{Toujours dans le cas où l'ordinateur du robot demande un échelon de rotation $\omega_c (t) = \omega_{c0}\cdot u(t)$, déterminer la transformée de Laplace de $X_r (p)$ et en déduire $x_r (t)$.} 
+\ifprof
+\begin{corrige}
+$x_r(t)=RK\omega_{c0}\left( t-T+Te^{-\dfrac{t}{T}}\right)u(t)$.
+\end{corrige}
+\else
+\fi
 
-La vitesse angulaire que l'ordinateur du robot impose est $\omega_{c0}=2 rad\cdot s^{-1}$. Le rayon de la roue est $R=10\;cm$.  
+La vitesse angulaire que l'ordinateur du robot impose est $\omega_{c0}=\SI{2}{rad.s^{-1}}$. Le rayon de la roue est $R=\SI{10}{cm}$.  
 
 \subparagraph{}
 \textit{Déterminer le temps que met le robot à parcourir 1 km, en négligeant la fonction exponentielle présente dans $x_r (t)$. Justifier a posteriori que la fonction exponentielle était bien négligeable. Conclure quant à la capacité du robot à satisfaire la performance de vitesse de déplacement.}
+\ifprof
+\begin{corrige}
+$t_1=\SI{5000}{s}$ CDCF OK. 
+\end{corrige}
+\else
+\fi
+
+
+
+
+
 
 \section*{Système de freinage de l'A318}
 \setcounter{exo}{0}
@@ -293,6 +356,7 @@ les atterrisseurs, on distingue (voir figure 2) :
 \fi
 \section*{Description fonctionnelle du système de freinage}
 
+
 %On donne ci-dessous le SADT de niveau A-0 qui décrit la fonction principale du système de freinage.
 %
 %\begin{center}
@@ -327,10 +391,12 @@ indications ci-dessus. On prendra $a_c(t)$ comme entrée et $a(t)$ comme sortie.
 %\end{center}
 
 
-
 \section*{Modélisation du système de freinage}
 
 Dans cette seconde partie, on souhaite définir un modèle pour l'asservissement en décélération. Pour cela, on propose de déterminer une fonction de transfert pour tous les constituants.
+
+
+
 
 \subsection*{Modélisation de la servovalve}
 \ifprof
@@ -367,6 +433,8 @@ On donne ci-dessous la caractéristique reliant l'intensité $i(t)$ du moteur à
 
 \fi
 
+
+
 \subparagraph{}
 \textit{Que peut-on dire de cette caractéristique sur tout le domaine de variation de $i(t)$ ? Sachant que $\theta$ est très petit (varie autour de 0), on utilise la relation suivante $\theta(t)=K_1i(t)$.  Déterminer la valeur de $K_1$ à partir de la courbe.}
 
@@ -378,10 +446,7 @@ valeur $K_1$ correspond donc à la pente  de la courbe. En conséquence,
 $K_1=1\;rad\cdot A^{-1}$. 
 \end{corrige}
 \else 
-\fi
 
-\ifprof
-\else
 
 On admet que, pour le système buse-palette, la rotation d'angle $\theta$ de la palette se traduit par un
 accroissement ou diminution de la distance buse-palette. Les sections de fuite sont alors augmentées ou
@@ -405,6 +470,7 @@ En situation repos, lorsque $P_A=P_B=P_0$, le tiroir est en position milieu, $z 
 
 \textit{Tiroir en position repos}
 \end{center}
+
 
 En position travail, la pression différentielle se répercute aux extrémités du tiroir et provoque son
 déplacement.
@@ -430,6 +496,7 @@ m_t\dfrac{d^2z(t)}{dt^2} = -2k_tz(t) + 2S_t\Delta P(t) -c_t \dfrac{dz(t)}{dt}
 $$
 
 \fi
+
 
 \subparagraph{}
 \textit{Calculer la fonction de transfert $H_t(p)=\dfrac{Z(p)}{\Delta P(p)}$ 
@@ -477,22 +544,10 @@ fonctions de transfert de chaque bloc (utiliser les notations algébriques).}
 \ifprof
 \begin{corrige}
 On utilise les équation suivantes : 
-
-$$
-\theta(t)=K_1 i(t) \Leftrightarrow \Theta(p)=K_1 I(p)
-$$
-
-$$
-\Delta S(t) = K_2 \theta (t) \Leftrightarrow  \Delta S(p) = K_2 \Theta (p)
-$$
-
-$$
-\Delta P(t) = K_3 \Delta S(t) \Leftrightarrow  \Delta P(p) = K_3 \Delta S(p) 
-$$
-
-$$
-P_h(t)=K_4 z(t) \Leftrightarrow   P_h(p)=K_4 Z(p) 
-$$
+$\theta(t)=K_1 i(t) \Leftrightarrow \Theta(p)=K_1 I(p)$, 
+$\Delta S(t) = K_2 \theta (t) \Leftrightarrow  \Delta S(p) = K_2 \Theta (p)$,
+$\Delta P(t) = K_3 \Delta S(t) \Leftrightarrow  \Delta P(p) = K_3 \Delta S(p)$,
+$P_h(t)=K_4 z(t) \Leftrightarrow   P_h(p)=K_4 Z(p)$.
 
 On en déduit ainsi le schéma bloc suivant :
 \begin{center}
@@ -504,6 +559,7 @@ On en déduit ainsi le schéma bloc suivant :
 \includegraphics[width=.95\linewidth]{images/schema_bloc_vierge.png}
 \end{center}
 \fi
+
 
 
 \subparagraph{}
@@ -654,10 +710,9 @@ P_h(t) = K_{sv} i_0 \left(
 -\dfrac{t}{T_{sv}}e^{-\dfrac{-t}{T_{sv}}}
 \right) u(t)
 $$
-
+\end{corrige}
 \else
 \fi
-
 
 
 \subsection*{Modélisation de l'accéléromètre}
@@ -869,6 +924,8 @@ conséquence : $\omega_a = \dfrac{3}{0,045}\simeq 66\;  rad/s$.
 \else
 \fi
 
+
+
 \ifprof
 \else
 \begin{center}
@@ -984,6 +1041,7 @@ précis.
 \end{corrige}
 \else
 \fi
+
 
 \subparagraph{}
 \textit{On utilise un correcteur (correcteur PI) plus évolué de fonction de transfert
