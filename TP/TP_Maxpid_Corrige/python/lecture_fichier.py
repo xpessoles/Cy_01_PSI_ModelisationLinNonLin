@@ -40,13 +40,19 @@ def read_matlab(file):
 #les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("Ech_20_90_KP_50.Txt")
 #les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("Ech_60_70_KP_50.Txt")
 
-les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("kp_100_ech_10_20.Txt")
+#les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("kp_100_ech_10_20.Txt")
+les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("kp_100_ech_60_65.Txt")
+#les_t,les_cons,les_pos,les_vol,les_cour,les_w_bras,les_w_mot=read_max("kp_100_ech_10_90.Txt")
 
 f=len(les_t)
 if len(les_t)!=len(les_cons):
+ 
     f=f-(f-len(les_cons))
-
-les_tm,les_posm = read_matlab("Ech_10_20_Mat.txt")
+#les_tm,les_posm = read_matlab("kp_100_ech_10_20_M.txt")
+#les_tm,les_posm = read_matlab("kp_100_ech_60_65_M.txt")
+#les_tm,les_posm = read_matlab("kp_100_ech_10_80_M.txt")
+#les_tm,les_posm = read_matlab("kp_100_ech_10_80_M_Sat.txt")
+les_tm,les_posm = read_matlab("kp_100_ech_60_65_M_Sat.txt")
 plt.plot(les_t[0:f],les_cons,'b',label="Position consigne")
 plt.plot(les_t[0:f],les_pos,'r.',label="Position mesurée")
 
@@ -56,7 +62,7 @@ for val in les_tm:
         ind=ind+1
 
 les_tm = [k-1 for k in les_tm]
-les_posm = [k-1 for k in les_posm]
+les_posm = [k for k in les_posm]
 
 plt.plot(les_tm[ind:],les_posm[ind:],'k',label="Position simulée")
 
