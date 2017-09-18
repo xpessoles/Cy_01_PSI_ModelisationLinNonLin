@@ -49,10 +49,11 @@ if len(les_t)!=len(les_cons):
  
     f=f-(f-len(les_cons))
 #les_tm,les_posm = read_matlab("kp_100_ech_10_20_M.txt")
-#les_tm,les_posm = read_matlab("kp_100_ech_60_65_M.txt")
+les_tm,les_posm = read_matlab("kp_100_ech_60_65_M.txt")
 #les_tm,les_posm = read_matlab("kp_100_ech_10_80_M.txt")
 #les_tm,les_posm = read_matlab("kp_100_ech_10_80_M_Sat.txt")
-les_tm,les_posm = read_matlab("kp_100_ech_60_65_M_Sat.txt")
+#les_tm,les_posm = read_matlab("kp_100_ech_60_65_M_Sat.txt")
+##les_tm,les_posm = read_matlab("K100_60_65_fr.txt")
 plt.plot(les_t[0:f],les_cons,'b',label="Position consigne")
 plt.plot(les_t[0:f],les_pos,'r.',label="Position mesurée")
 
