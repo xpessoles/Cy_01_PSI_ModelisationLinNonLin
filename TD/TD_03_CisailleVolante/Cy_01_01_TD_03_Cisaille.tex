@@ -15,7 +15,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -199,7 +199,7 @@ $H_v(p)
 =\dfrac{1/Q}{p\left(\dfrac{Vm}{2BS^2}p^2+ \dfrac{fV}{2BS^2}p+1 \right)}
 $.
 
-Au final, $k=\dfrac{1}{Q}$, $a=\dfrac{Vm}{2BS}$ et $b=\dfrac{fV}{2BS^2}$.
+Au final, $k=\dfrac{1}{S}$, $a=\dfrac{Vm}{2BS^2}$ et $b=\dfrac{fV}{2BS^2}$.
 \end{corrige} \else \fi
 
 \subsection*{Détermination des paramètres canoniques à partir du diagramme de Bode}
@@ -264,6 +264,8 @@ $G_{\text{dB}}$ tend vers
 $= 20\log K_v- 20\log  \omega - 20\log  \dfrac{\omega^2}{\omega_0^2} $
 $= 20\log K_v- 20\log  \omega - 20\log  \omega^2 +20\log  \omega_0^2 $
 $= 20\log K_v+ 40\log  \omega_0 - 60\log  \omega $.
+
+La pente est donc de -60 dB/decade.
 
 L'intersection des deux asymptotes a lieu quand 
 
@@ -408,7 +410,7 @@ Première solution : cf cours pour un système du premier ordre soumis à une ra
 
 Seconde solution : se raccrocher à ce que l'on sait (peut-être) pour un premier ordre soumis à un échelon... en effet, la rampe peut être assimilée à un premier ordre intégré. Ainsi, pour un système du premier ordre soumis à un échelon d'amplitude $v$, la valeur finale est $vK_f$. Ainsi, en intégrant, la pente en régime permanent sera de $vK_f$. 
 
-Par lecture sur la courbe on obtient une pente de $\dfrac{0,65}{0,7}=\SI{0,93}{m/s}$ soit $K_f=0,93$. 
+La pente étant de 1 on a $K_f=1$. 
 
 Reste à savoir que l'asymptote coupe l'axe des abscisses en $T$. Après lecture, $T=\SI{0,15}{s}$.
 \end{corrige} 
