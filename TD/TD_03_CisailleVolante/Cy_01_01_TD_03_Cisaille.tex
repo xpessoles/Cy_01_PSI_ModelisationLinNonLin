@@ -91,7 +91,12 @@ Chapitre 1 -- \xxactivite%
 
 \def\pathfig{images}
 
+\ifprof
+\else
 \begin{multicols}{2}
+\fi
+
+
 \section*{Mise en situation}
 \ifprof
 \else
@@ -138,10 +143,9 @@ Soit  $H_v(p)=\dfrac{X(p)}{Q(p)}$ la fonction de transfert associée à l'ensemb
 \fi
 \subparagraph{}\textit{Représenter le schéma-blocs du système. Indiquer les grandeurs d'entrée et de sortie de chaque bloc.}
 
-\ifprof \begin{corrige}~\\
-
+\ifprof \begin{corrige}
 \begin{center}
-\includestandalone[width=.95\linewidth]{images/SchemaBlocs}
+\includestandalone[width=.6\linewidth]{images/SchemaBlocs}
 \end{center}
 \end{corrige} \else \fi
 
@@ -181,13 +185,11 @@ $\dfrac{p\left(mp+f\right)}{S}X(p) =
 $\Longleftrightarrow
 \dfrac{p\left(mp+f\right)}{S}X(p) +\dfrac{2BSpX(p)}{Vp}=
 \dfrac{2BQ(p)}{Vp}$
+
 $\Longleftrightarrow
 \left(\dfrac{p\left(mp+f\right)}{S} +\dfrac{2BSp}{Vp}\right) \dfrac{Vp}{2B}=
-\dfrac{Q(p)}{ X(p)}$
-\end{corrige}
-
-\begin{corrige}
-$\Longleftrightarrow
+\dfrac{Q(p)}{ X(p)}
+\Longleftrightarrow
 \left(\dfrac{p\left(mp+f\right)}{S} \dfrac{Vp}{2B}+Sp \right) =
 \dfrac{Q(p)}{ X(p)}$.
 
@@ -219,12 +221,9 @@ Une simulation numérique a permis de tracer le diagramme de Bode donné page su
 \ifprof \begin{corrige}
 $H_v(j\omega )=\dfrac{K_v}{j\omega\left( 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2} \right)}$
 
-En conséquence, 
-
-$
+En conséquence,  $
 G_{\text{dB}}\left(\omega \right)=20\log\left| \dfrac{K_v}{j\omega\left( 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2} \right)} \right|
 $
-
 $
 =20\log K_v- 20\log  \left| j\omega\right| - 20\log  \left| 1+\dfrac{2\xi}{\omega_0} j\omega - \dfrac{\omega^2}{\omega_0^2}  \right|
 $
@@ -277,9 +276,12 @@ $\Leftrightarrow \log  \omega= \log  \omega_0 $. Ainsi, l'intersection des asymp
 
 \ifprof \begin{corrige}~\\
 
+\begin{minipage}[c]{.45\linewidth}
 \begin{center}
-\includegraphics[width=\linewidth]{images/cor_01}
+\includegraphics[width=.95\linewidth]{images/cor_01}
 \end{center}
+\end{minipage} \hfill
+\begin{minipage}[c]{.45\linewidth}
 Par lecture du graphe, on obtient $\omega_0=\SI{140}{rad/s}$ et $K_v=\SI{1000}{s.m^{-2}}$.
 
 $G_{\text{dB}}\left(\omega_0 \right)=
@@ -289,7 +291,7 @@ $G_{\text{dB}}\left(\omega_0 \right)=
 \Leftrightarrow \dfrac{37-60 + 20\log  140}{-20} =\log 2\xi
 \Leftrightarrow  \xi \simeq 0,05
 $.
-
+\end{minipage}
 \end{corrige} \else \fi
 
 
@@ -314,15 +316,14 @@ $-\arg  \left( \left( 1 - \dfrac{\omega^2}{\omega_0^2}\right) + \dfrac{2\xi\omeg
 
 \textit{Explication graphique de prof de SII...}
 \begin{center}
-\includegraphics[width=.6\linewidth]{images/cor_02}
+\includegraphics[width=.4\linewidth]{images/cor_02}
 \end{center}
-
 Au final, lorsque $\omega$ tend vers l'infini, $\varphi(\omega)$ tend vers $-\dfrac{3\pi}{2}$.
 
 \end{corrige} 
 
 \begin{center}
-\includegraphics[width=.8\linewidth]{images/cor_03}
+\includegraphics[width=.6\linewidth]{images/cor_03}
 \end{center}
 
 \else \fi
@@ -346,7 +347,8 @@ On a déjà vu que pour cette phase, le gain décibel de $H_v$ vaut \SI{37}{dB}.
 \end{corrige}
 \else
 \fi
-
+\ifprof
+\else
 \begin{methode}
 Cette question est un peu prématurée par rapport à notre avancée. Cependant, vous pouvez tentez d'appliquer la méthode suivante : 
 \begin{enumerate}
@@ -355,6 +357,7 @@ Cette question est un peu prématurée par rapport à notre avancée. Cependant,
 \item Calculer $K_0$.
 \end{enumerate}
 \end{methode}
+\fi
 
 \subsection*{Erreur de traînage}
 \ifprof
@@ -415,7 +418,7 @@ La pente étant de 1 on a $K_f=1$.
 Reste à savoir que l'asymptote coupe l'axe des abscisses en $T$. Après lecture, $T=\SI{0,15}{s}$.
 \end{corrige} 
 \begin{center}
-\includegraphics[width=\linewidth]{images/cor_04}
+\includegraphics[width=.5\linewidth]{images/cor_04}
 \end{center}
 \else \fi
 
@@ -434,9 +437,10 @@ Même erreur que précédemment.
 Il est possible de décaler la butée de 14 cm et ainsi supprimer l'écart de trainage.
 \end{corrige} \else \fi
 
-
+\ifprof
+\else
 \end{multicols}
-
+\fi
 \ifprof
 \else
 \begin{center}
