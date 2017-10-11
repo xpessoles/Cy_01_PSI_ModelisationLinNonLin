@@ -23,17 +23,17 @@
 \def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
 \def\xxtete{Sciences Industrielles de l'Ingénieur}
 
-\def\classe{PSI$\star$ -- MP}
-\def\xxnumpartie{Cycle 02}
+\def\classe{PTSI}
+\def\xxnumpartie{Colles}
 \def\xxpartie{Modéliser les systèmes asservis dans le but de prévoir leur comportement}
 
 
-\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Rapidité des systèmes}
+\def\xxnumchapitre{}
+\def\xxchapitre{\hspace{.12cm} }
 
 
-\def\xxtitreexo{Radar d'avion}
-\def\xxsourceexo{\hspace{.2cm} \footnotesize{F. Mathurin}}
+\def\xxtitreexo{Cheville du robot NAO}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Xavier Pessoles}}
 
 
 \def\xxposongletx{2}
@@ -42,8 +42,8 @@
 %\def\xxonglet{Part. 1 -- Ch. 3}
 \def\xxonglet{Cycle 02}
 
-\def\xxactivite{TD 01}
-\def\xxauteur{\textsl{F. Mathurin.}}
+\def\xxactivite{Colle 1}
+\def\xxauteur{\textsl{X. Pessoles}}
 
 \def\xxcompetences{%
 \textsl{%
@@ -67,11 +67,11 @@
 
 
 \def\xxpied{%
-Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
-Chapitre 2 -- \xxactivite%
+Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
 }
 
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{5} 
 %---------------------------------------------------------------------------
 
 \usepackage{pgfplots}
@@ -89,89 +89,122 @@ Chapitre 2 -- \xxactivite%
 \def\pathfig{images}
 
 \begin{multicols}{2}
-Le support d'étude est un radar d'avion. Il permet au pilote de connaître la position des engins extérieurs (avions, hélicoptères, bateaux, ...). L'objectif de cette étude est de vérifier les performances décrites dans l’extrait de cahier des charges de ce système. 
-
+\section*{Présentation}
+La figure ci-dessous représente une partie de la chaîne fonctionnelle de la cheville du robot NAO.
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_02}
-%\textit{}
 \end{center}
 
-On réalise un asservissement de position angulaire du radar d’avion : l'angle souhaité est $\theta_c (t)$, l'angle réel du radar est $\theta_r (t)$. La différence des deux angles est transformée en une tension $u_m (t)$, selon la loi $u_m (t)= A(\theta_c - \theta_r (t))$. La tension $u_m (t)$ engendre, via un moteur de fonction de transfert $H_m (t)$, une vitesse angulaire $\omega_m (t)$. Cette vitesse angulaire est réduite grâce à un réducteur de vitesse, selon la relation $\omega_r (t) = B \omega_m (t)$ ($B<1$), $\omega_r (t)$ étant la vitesse angulaire du radar. 
+\begin{obj}
+Comparer les écarts entre le modèle de la cheville et le comportement réel.
+\end{obj}
 
-\subparagraph{}\textit{Réaliser le schéma-bloc du système. }
+\subsection*{Modélisation du réducteur}
+Le réducteur de la cheville est un réducteur à train simple dont une image CAO est donnée ci-dessous.
+\begin{center}
+\includegraphics[width=.7\linewidth]{images/fig_03}
+\end{center}
 
-Les équations du moteur à courant continu, qui est utilisé dans la motorisation, sont les suivantes : 
-$$
-u_m(t)=e(t)+Ri(t) 
-\quad e(t)=k_e\omega_m(t) 
-$$
-$$J \dfrac{\text{d}\omega_m(t)}{\text{d}t} = c_m(t)
-\quad c_m(t) = k_m i(t)
-$$
+Les caractéristiques des roues dentées sont les suivantes : 
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+Pièce & Module & Nombre dents \\ \hline
+Pignon 3 20              & 0,3 & 20 \\ \hline
+Mobile inf 1 -- Roue    & 0,3 & 80 \\ \hline
+Mobile inf 1 -- Pignon  & 0,4 & 25 \\ \hline
+Mobile inf 2 -- Roue    & 0,4 & 47 \\ \hline
+Mobile inf 2 -- Pignon  & 0,4 & 12 \\ \hline
+Mobile inf 4 -- Roue    & 0,4 & 58 \\ \hline
+Mobile inf 4 -- Pignon   & 0,7 & 10 \\ \hline
+Roue sortie inf          & 0,7 & 36 \\ \hline
+\end{tabular}
+\end{center}
 
 
-Avec : 
+\subparagraph{}\textit{Donner le rapport de réduction du réducteur $r$.}
+
+\subsection*{Modélisation du moteur à courant continu}
+On donne les équations permettant de modéliser le comportement du moteur à courant continu :
 \begin{itemize}
-\item $u(t)$ : tension aux bornes du moteur (en V) (entrée du moteur);
-\item $e(t)$ : force contre-électromotrice (en V);
-\item $i(t)$ : intensité (en A);
-\item $\omega_m (t)$ : vitesse de rotation du moteur (en rad/s);
-\item $C_m (t)$ : couple moteur (en N.m) (un couple est une action mécanique qui tend à faire tourner); 
-\item $J$ : inertie équivalente en rotation de l’arbre moteur (en $\text{kg.m}^2$): 
-\item $R$ : résistance électrique du moteur;
-\item $k_e$ : constante de force contre-électromotrice;
-\item $k_m$ : constante de couple.
+\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
+\item $e(t)=K\omega(t)$;
+\item $c(t)=Ki(t)$;
+\item $c(t)-c_r(t) - f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
+\end{itemize}
+
+Avec :
+\begin{itemize}
+\item $u(t)$ : tension d'alimentation du moteur;
+\item $i(t)$ : courant circulant dans le moteur;
+\item $R$ et $L$ : résistance et inductance du moteur;
+\item $K$ : constante électromécanique du moteur;
+\item $e(t)$ force contre électromotrice;
+\item $\omega(t)$ : taux de rotation du moteur;
+\item $J$ : inertie du moteur, du réducteur et de la cheville ramenées à l'arbre moteur;
+\item $c(t)$ : couple moteur; 
+\item $c_r(t)$ : couple résistant; 
+\item $f$ : coefficient de frottement visqueux.
 \end{itemize}
 
 
-\subparagraph{}\textit{Déterminer la fonction de transfert $H_m(p)=\dfrac{\Omega_m(p)}{U_m(p)}$.}
 
-\subparagraph{}\textit{Montrer que $H_m(p)$ peut se mettre sous la forme canonique $H_m(p)=\dfrac{K_m}{1+T_m p}$ et déterminer les valeurs littérales de $K_m$ et $T_m$.}
+\subparagraph{}\textit{Donner les équations dans le domaine de Laplace.}
 
-\subparagraph{}\textit{Préciser la valeur de $\omega_m (t)$ à l'origine, la pente de la tangente à l'origine de $\omega_m (t)$ et la valeur finale atteinte par $\omega_m (t)$ quand t tend vers l’infini. }
+\vspace{.25cm}
 
-\subparagraph{}\textit{Déterminer la fonction de transfert $H(p)=\dfrac{\theta_r(p)}{\theta_c(p)}$. Montrer que cette fonction peut se mettre sous la forme d'un système du second ordre dont on précisera les caractéristiques.}
+Le moteur à courant continu est commandé par la tension $u(t)$. On mesure le taux de rotation en $\omega(t)$ en sortie. Le système est perturbé par un couple résistant. 
 
-  La réponse indicielle de $H(p)$ à un échelon unitaire est donnée sur la figure suivante : 
-  
-\begin{center}
-\includegraphics[width=\linewidth]{images/fig_03}
-%\textit{}
-\end{center}
+\subparagraph{}\textit{Tracer le schéma-blocs du moteur à courant continu.}
 
+\vspace{.25cm}
 
-\subparagraph{}\textit{Déterminer, en expliquant la démarche utilisée, les valeurs numériques de $K$, $z$ et $\omega_0$.}
+On considère que $c_r(t)=0$.
 
-   Sans préjuger du résultat trouvé dans la question précédente, on prendra, pour la suite : $K = 1$, $z = 0,5$ et $\omega_0 = \SI{15}{rad/s}$.
+\subparagraph{}\textit{Exprimer la fonction de transfert $\dfrac{\text{d}\omega(t)}{\text{d}u(t)}$.}
 
 
-\subparagraph{}\textit{Déterminer, en expliquant la démarche utilisée, le temps de réponse à 5\%. Conclure quant la capacité du radar à vérifier le critère de rapidité du cahier des charges. }
+\vspace{.25cm}
 
-On améliore la performance du radar en ajoutant un composant électronique (un correcteur) entre l'amplificateur et le moteur. La nouvelle fonction de transfert est : 
-$
-H(p)=\dfrac{1}{\left(1+0,05p \right)\left(1+0,0005p \right)\left(1+0,002p \right)}
-$.
- 
+On considère que $L=\SI{0}{H}$ et $f_v=\SI{0}{Nms}$.
 
-\subparagraph{}\textit{Tracer le diagramme de Bode asymptotique (en gain et en phase) de cette fonction de transfert.}
+\subparagraph{}\textit{Donner l'expression de la fonction de transfert simplifiée ainsi que le schéma bloc associé.}
 
-\subparagraph{}\textit{Déterminer $G$ et $\varphi$ pour $\omega = \SI{10}{rad/s}$.}
-\subparagraph{}\textit{Déterminer, en régime permanent, $\theta_r (t)$ pour une entrée $\theta_c (t) = 0,2 \sin(10t)$.}
 
-Pour $\omega < \SI{20}{rad/s}$, on a $H(p)\simeq \dfrac{1}{1+0,05p}$.
+Le moteur est sollicité par un échelon de tension $u(t)=U_0 h(t)$ ($h$ fonction de Heaviside).
 
-\subparagraph{}\textit{Déterminer, sur cette approximation, la pulsation de coupure à $-\SI{3}{dB}$. Conclure quant à la capacité du radar à satisfaire le critère de bande passante du cahier des charges.  }
+\subparagraph{}\textit{Quelle est la valeur finale atteinte par $\omega(t)$ ? Quelle est la valeur initiale ? Quelle est la pente à l'origine ?}
 
-\subparagraph{}\textit{Déterminer, sur cette approximation, le temps de réponse à 5\% du système. Conclure quant à la capacité du radar à satisfaire le critère de rapidité du cahier des charges. }
+\subparagraph{}\textit{Proposer une allure de $\omega(t)$ en fonction du temps.}
 
-\end{multicols}
+
+\subsection*{Modélisation du système complet}
+La cheville est asservie en position angulaire.
+\subparagraph{}\textit{Que cela signifie-t-il ?}
+
+\vspace{.25cm}
+
+Le moteur << fournit >> un taux de rotation $\omega(t)$. On souhaite obtenir une angle $\theta(t)$.
+\subparagraph{}\textit{Quelle opération mathématique permet de passer d'un taux de rotation à une position angulaire ? Quel est le bloc équivalent  dans le domaine de Laplace ?}
+
+La structure de l'asservissement de la cheville est la suivante :
 
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_04}
-%\textit{}
 \end{center}
 
 
+\subparagraph{}\textit{Compléter le schéma-blocs.}
+
+\vspace{.25cm}
+Lorsque le système est correctement asservi, $\theta_c(p)=\theta(p)$ et $\varepsilon(p)=0$.
+
+\subparagraph{}\textit{Dans ces conditions proposez une technologie de capteur pour le gain $K_{capt}$. Proposer une valeur de gain pour $K_{adapt}$.}
+
+
+\section*{Conclusion}
+
+\end{multicols}
 \end{document}
 
 \subparagraph{}\textit{}
@@ -185,4 +218,5 @@ Pour $\omega < \SI{20}{rad/s}$, on a $H(p)\simeq \dfrac{1}{1+0,05p}$.
 \includegraphics[width=\linewidth]{images/img_04}
 %\textit{}
 \end{center}
+
 
