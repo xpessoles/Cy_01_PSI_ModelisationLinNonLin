@@ -1,0 +1,237 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation SLCI : Rapidité des systèmes},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{picins}
+\fichetrue
+%\fichefalse
+
+\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PTSI}
+\def\xxnumpartie{Colles}
+\def\xxpartie{Modéliser les systèmes asservis dans le but de prévoir leur comportement}
+
+
+\def\xxnumchapitre{}
+\def\xxchapitre{\hspace{.12cm} }
+
+
+\def\xxtitreexo{Cheville du robot NAO}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Xavier Pessoles}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{Cycle 02}
+
+\def\xxactivite{Colle 1}
+\def\xxauteur{\textsl{X. Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma bloc.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.6\linewidth]{images/fig_01}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
+}
+
+\setcounter{secnumdepth}{5} 
+%---------------------------------------------------------------------------
+
+\usepackage{pgfplots}
+\begin{document}
+
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+\def\pathfig{images}
+
+\begin{multicols}{2}
+\section*{Présentation}
+La figure ci-dessous représente une partie de la chaîne fonctionnelle de la cheville du robot NAO.
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\end{center}
+
+\begin{obj}
+L'objectid est de vérifier que les exigences suivantes sont satisfaites : 
+\begin{itemize}
+\item écart statique inférieur à 0,1\degres;
+\item dépassement inférieur à 1\%;
+\item temps de réponse à 5\% inférieur à \SI{0,1}{z}.
+\end{itemize}
+%Comparer les écarts entre le modèle de la cheville et le comportement réel.
+\end{obj}
+
+\subsection*{Modélisation du réducteur}
+Le réducteur de la cheville est un réducteur à train simple dont une image CAO est donnée ci-dessous.
+\begin{center}
+\includegraphics[width=.7\linewidth]{images/fig_03}
+\end{center}
+
+Les caractéristiques des roues dentées sont les suivantes : 
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+Pièce & Module & Nombre dents \\ \hline
+Pignon 3 20              & 0,3 & 20 \\ \hline
+Mobile inf 1 -- Roue    & 0,3 & 80 \\ \hline
+Mobile inf 1 -- Pignon  & 0,4 & 25 \\ \hline
+Mobile inf 2 -- Roue    & 0,4 & 47 \\ \hline
+Mobile inf 2 -- Pignon  & 0,4 & 12 \\ \hline
+Mobile inf 4 -- Roue    & 0,4 & 58 \\ \hline
+Mobile inf 4 -- Pignon   & 0,7 & 10 \\ \hline
+Roue sortie inf          & 0,7 & 36 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\subparagraph{}\textit{Donner le rapport de réduction du réducteur $r$.}
+
+\subsection*{Modélisation du moteur à courant continu}
+On donne les équations permettant de modéliser le comportement du moteur à courant continu :
+\begin{itemize}
+\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
+\item $e(t)=K\omega(t)$;
+\item $c(t)=Ki(t)$;
+\item $c(t)-c_r(t) - f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
+\end{itemize}
+
+Avec :
+\begin{itemize}
+\item $u(t)$ : tension d'alimentation du moteur;
+\item $i(t)$ : courant circulant dans le moteur;
+\item $R$ et $L$ : résistance et inductance du moteur;
+\item $K$ : constante électromécanique du moteur;
+\item $e(t)$ force contre électromotrice;
+\item $\omega(t)$ : taux de rotation du moteur;
+\item $J$ : inertie du moteur, du réducteur et de la cheville ramenées à l'arbre moteur;
+\item $c(t)$ : couple moteur; 
+\item $c_r(t)$ : couple résistant; 
+\item $f$ : coefficient de frottement visqueux.
+\end{itemize}
+
+
+
+\subparagraph{}\textit{Donner les équations dans le domaine de Laplace.}
+
+\vspace{.25cm}
+
+Le moteur à courant continu est commandé par la tension $u(t)$. On mesure le taux de rotation en $\omega(t)$ en sortie. Le système est perturbé par un couple résistant. 
+
+\subparagraph{}\textit{Tracer le schéma-blocs du moteur à courant continu.}
+
+\vspace{.25cm}
+
+On considère que $c_r(t)=0$.
+
+\subparagraph{}\textit{Exprimer la fonction de transfert $\dfrac{\text{d}\omega(t)}{\text{d}u(t)}$.}
+
+
+\vspace{.25cm}
+
+On considère que $L=\SI{0}{H}$ et $f_v=\SI{0}{Nms}$.
+
+\subparagraph{}\textit{Donner l'expression de la fonction de transfert simplifiée ainsi que le schéma bloc associé.}
+
+
+Le moteur est sollicité par un échelon de tension $u(t)=U_0 h(t)$ ($h$ fonction de Heaviside).
+
+\subparagraph{}\textit{Quelle est la valeur finale atteinte par $\omega(t)$ ? Quelle est la valeur initiale ? Quelle est la pente à l'origine ?}
+
+\subparagraph{}\textit{Proposer une allure de $\omega(t)$ en fonction du temps.}
+
+
+\subsection*{Modélisation du système complet}
+La cheville est asservie en position angulaire.
+\subparagraph{}\textit{Que cela signifie-t-il ?}
+
+\vspace{.25cm}
+
+Le moteur << fournit >> un taux de rotation $\omega(t)$. On souhaite obtenir une angle $\theta(t)$.
+\subparagraph{}\textit{Quelle opération mathématique permet de passer d'un taux de rotation à une position angulaire ? Quel est le bloc équivalent  dans le domaine de Laplace ?}
+
+La structure de l'asservissement de la cheville est la suivante :
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_04}
+\end{center}
+
+
+\subparagraph{}\textit{Compléter le schéma-blocs.}
+
+\vspace{.25cm}
+Lorsque le système est correctement asservi, $\theta_c(p)=\theta(p)$ et $\varepsilon(p)=0$.
+
+\subparagraph{}\textit{Dans ces conditions proposez une technologie de capteur pour le gain $K_{capt}$. Proposer une valeur de gain pour $K_{adapt}$.}
+
+\subparagraph{}\textit{Déterminer la fonction de transfert du système $\dfrac{\theta(p)}{\theta_c(p)}$.}
+\section*{Conclusion}
+
+La figure ci-dessus illustre la réponse du modèle suite à une entrée échelon de 20\degres.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
+
+\subparagraph{}\textit{Les exigences du cahier des charges sont-elles respectées ?}
+
+
+\end{multicols}
+\end{document}
+
+\subparagraph{}\textit{}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_06}
+%\textit{}
+\end{center}
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
+
