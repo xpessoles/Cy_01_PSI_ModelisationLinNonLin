@@ -1,0 +1,22 @@
+R = 3;
+L = 0.009;
+f = 0.2*10^(-2);
+Ke = 1.3;
+Kc  =  1.3;
+Jm = 140*10^(-6);
+Jred = 60*10^(-4);
+Jpm = 38*10^(-4);
+Jpr = 38*10^(-6);
+M = 5;
+Rp = 45*10^(-3);
+k = 1/5;
+Jeq1 = M*Rp*Rp*k*k+(Jpm+Jpm)*k*k+Jred*k*k+Jm;
+Jeq2 = 7*10^(-3);
+Jeq = Jeq2;
+
+a=Kc*Ke;
+b=-R*Jeq/(Kc*Ke);
+c =L*eq
+delta = b*b-4*a*c;
+t1 = (-b-sqrt(delta))/(2*a);
+t2 = (-b+sqrt(delta))/(2*a);
