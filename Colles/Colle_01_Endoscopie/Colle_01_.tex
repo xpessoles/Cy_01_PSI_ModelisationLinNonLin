@@ -1,0 +1,401 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation linéaire et non linéaire},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{siunitx}
+\usepackage{wrapfig}
+\fichetrue
+
+%\fichefalse
+
+%\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PSI$\star$}
+\def\xxnumpartie{\textsf{Cycle 01}}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation multiphysique}
+
+
+\def\xxtitreexo{\noindent Micromanipulateur compact pour la chirurgie endoscopique }
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Mines Ponts 2016}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 01}}
+
+\def\xxactivite{Colle 1}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma-blocs.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.9\linewidth]{images/fig_02}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+\usepackage{pgfplots}
+\begin{document}
+%\defimages{images}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{7cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\defimages2{images}
+\begin{multicols}{2}
+\section{Micromanipulateur compact pour la chirurgie endoscopique ($\text{MC}^2\text{E}$)}
+\subsection{Présentation générale}
+L’objet de cette étude est un robot appelé $\text{MC}^2\text{E}$ utilisé en chirurgie endoscopique. Ce type de
+robots médico-chirurgicaux est équipé de capteurs (caméra, capteur d’efforts…) permettant de maîtriser
+les interactions avec des environnements souvent déformables et difficilement modélisables comme le
+corps humain.
+%
+%\begin{center}
+%\begin{minipage}[c]{.1\linewidth}
+%\begin{center}
+%\includegraphics[height=4cm]{images/fig_01}
+%\end{center}
+%\end{minipage} \hfill
+%\begin{minipage}[c]{.65\linewidth}
+%\begin{center}
+%\includegraphics[height=3.5cm]{images/fig_02}
+%%Figure 1 : Modèle de la commande en effort
+%\end{center}
+%\end{minipage}
+%\end{center}
+
+%Le mode opératoire se décompose en quatre phases :
+%\begin{itemize}
+%\item phase 1 : après avoir introduit le trocart, l’abdomen du patient est gonflé avec du $\text{CO}_2$. Celui-ci se montrera alors aussi stable et rigide que possible pour la réussite de l’opération ;
+%\item phase 2 : le $\text{MC}^2\text{E}$ est positionné sur l’abdomen du patient. Celui-ci est maintenu en position grâce à des sangles. Les trois axes en rotation sont alors asservis en position constante ;
+%\item phase 3 : la pince est introduite dans le trocart au travers d’un guide (étanche). Une phase de calibration du robot utile à la compensation de pesanteur analysée par la suite, démarre ;
+%\item phase 4 : le chirurgien amène la pince du $\text{MC}^2\text{E}$ qui doit tirer la vésicule lors de l’opération. 
+%\end{itemize}
+%L’axe en translation du $\text{MC}^2\text{E}$ entre alors en fonctionnement : il est asservi en effort constant pour tirer (ou pousser) la vésicule au fur et à mesure que le chirurgien utilise son bistouri pour détacher la vésicule du foie. 
+
+La figure suivante décrit les principales exigences auxquelles est soumis le $\text{MC}^2\text{E}$.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05_BIS}
+%Figure 1 : Modèle de la commande en effort
+\end{center}
+
+%L’objectif de ce sujet est d’analyser, de comprendre et de justifier les choix structurels faits par les
+%ingénieurs. Pour cela, on se basera sur la démarche de l’ingénieur :
+%\begin{itemize}
+%\item les exigences et/ou performances souhaitées sont spécifiées tout au long du sujet;
+%\item des modèles et résultats analytiques ou simulés sont mis en place;
+%\item des résultats expérimentaux sont proposés.
+%\end{itemize}
+%À chaque fois, on cherchera à quantifier les écarts entre les différents résultats obtenus par simulation et/ou
+%expérimentation et les exigences et/ou performances souhaitées. Les réponses apportées aux questions
+%devront donc être rédigées dans cet esprit.
+
+\subsection{Validation des performances de l’asservissement d’effort}
+%On s’intéresse ici à la phase 4. Lors de l’opération envisagée, il est nécessaire de maintenir un effort
+%constant au bout de la pince (4). Pour cela, on réalise un asservissement d’effort de l’axe en translation que
+%l’on se propose d’étudier.
+%Le système est alimenté par un transformateur alternatif/continu. Un variateur permet de piloter le moteur
+%M4. Une interface de communication entrée/sortie permet de coder les consignes d’effort et acquérir des
+%grandeurs physiques. D’autre part, elle communique à la chaîne d’énergie, après traitement, des ordres
+%définis par un calculateur.
+%La description par diagramme partiel de définition de blocs de l’axe en translation est donnée ci-dessous. %Des modèles géométriques de cet axe sont donnés en annexe 5.
+%
+%
+%\begin{center}
+%%\begin{minipage}[c]{.45\linewidth}
+%\begin{center}
+%\includegraphics[height=9cm]{images/fig_03}
+%\end{center}
+%%\end{minipage} \hfill
+%%\begin{minipage}[c]{.45\linewidth}
+%%\begin{center}
+%%\includegraphics[height=4cm]{images/fig_04}
+%%%Figure 1 : Modèle de la commande en effort
+%%\end{center}
+%%\end{minipage}
+%\end{center}
+%
+%\subparagraph{}
+%\textit{Compléter le schéma représentant les chaînes d’énergie et d’information de cette chaîne
+%fonctionnelle asservie en indiquant le nom des composants réalisant chacune des fonctions.}
+%
+%
+%
+%Lors de l’opération, il est essentiel de contrôler et réguler l’effort appliqué sur l’organe et donc
+%indirectement l’effort fourni par le moteur M4. Le schéma-blocs fonctionnel retenu pour la structure
+%d’asservissement est donné figure 1. 
+%
+%\begin{center}
+%%\includegraphics[width=\linewidth]{images/}
+%Figure 1 : Modèle de la commande en effort
+%\end{center}
+%
+%A un effort de consigne va correspondre un effort appliqué sur l’organe
+%pour l’extraire. C’est ce même effort qui est mesuré par le capteur
+%d’effort. Celui-ci va alors générer un couple rapporté sur l’arbre du
+%moteur M4.
+%On souhaite ici s’intéresser à la structure de commande retenue pour
+%cette boucle d’asservissement. Les interactions avec l’organe étant par
+%définition inconnues et complexes, on va régler le calculateur en se
+%basant sur un montage d’essai mettant en interaction la pince (4) avec
+%un ressort simulant la vésicule biliaire (raideur du ressort similaire à la
+%raideur de la vésicule).
+%
+%Le schéma-blocs fonctionnel retenu pour cette étude est donc le
+%suivant :
+%
+%\begin{center}
+%%\includegraphics[width=\linewidth]{images/}
+%Figure 2 : Modèle de la commande en effort
+%\end{center}
+
+
+\subsubsection*{Modèle de connaissance de l'asservissement}
+
+\begin{obj}
+Modéliser l’asservissement en effort.
+\end{obj}
+
+L’équation de mouvement est définie par l’équation différentielle suivante : 
+$J\dfrac{\text{d}^2\theta_m(t)}{\text{d}t^2}=C_m(t)-C_e(t)$  avec :
+\begin{itemize}
+\item $J$, inertie équivalente à l’ensemble en mouvement, ramenée sur l’arbre moteur;
+\item $C_e(t)$, couple regroupant l’ensemble des couples extérieurs ramenés à l’arbre moteur, notamment fonction de la raideur du ressort.
+\end{itemize}
+
+
+On notera $\theta_m(p)$, $\Omega_m(p)$, $C_m(p)$ et $C_e(p)$ les transformées de Laplace des grandeurs de l’équation de mouvement.
+On pose $C_e(t)=K_{C\theta}\theta_m(t)$ où  $K_{C\theta}$ est une constante positive. On a de plus $\dfrac{\text{d}\theta_m(t)}{\text{d}t}=\omega_m(t)$. La régulation se met alors sous la forme du schéma-blocs à retour unitaire simplifié que l’on
+admettra :
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_06}
+
+\textit{Modèle simplifié du montage du capteur d’effort.}
+\end{center}
+%\end{multicols}
+
+Avec :
+\begin{itemize}
+\item $C_e(p)$, couple de sortie mesuré par le capteur d’effort situé sur le $\text{MC}^2\text{E}$ ;
+\item $C_c(p)$, couple de consigne ;
+\item $C_m(p)$, couple moteur ;
+\item $H_{\text{cor}}(p)$, fonction de transfert du correcteur.
+\end{itemize}
+Dans un premier temps, on prendra $H_{\text{cor}}(p)=1$.
+
+\subparagraph{}
+\textit{Déterminer les expressions des fonctions de transfert $H_1(p)$, $H_2(p)$ et $H_3(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Donner l’expression de la fonction de transfert en boucle fermée $H_{BF}(p)$ de l’asservissement
+d’effort.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Quel sera le comportement de cet asservissement en réponse à un échelon d'amplitude $C_0$?
+Conclure.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\vspace{.25cm}
+
+Pour remédier au problème ainsi mis en évidence, le concepteur a choisi de mettre en place une boucle
+interne numérique, dite tachymétrique, de gain $B$. On s’intéresse ici à la définition analytique de $B$.
+Le schéma-blocs modifié est donné figure suivante.
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_07}
+
+\textit{Régulation avec retour tachymétrique}
+\end{center}
+
+
+On règle B de telle façon que, pour $H_{\text{cor}}(p)=1$, la fonction de transfert en boucle ouverte, notée $H_{\text{BO}}(p)$, puisse être mise sous la forme suivante : 
+$H_{\text{BO}}(p)=\dfrac{1}{\left(1+\tau p\right)^2}$.
+
+
+
+\subparagraph{}
+\textit{Donner l’expression analytique du gain $B$, en fonction de $J$ et $K_{C\theta}$, permettant d’obtenir cette
+forme de fonction de transfert. En déduire l’expression analytique de la constante de temps $\tau$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\vspace{.25cm}
+
+Les exigences du cahier des charges sont données plus haut (exigences 1.2.2.1 à 1.2.2.4).
+
+Afin de répondre à ces exigences, on choisit un correcteur proportionnel-intégral de gain $K_i$ et de constante de temps $T_i$. Le schéma-blocs de la régulation se met sous la forme de la figure qui suit.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_08}
+
+\textit{Régulation avec correcteur PI.}
+\end{center}
+
+
+\subparagraph{}
+\textit{Donner l’expression de l’erreur statique en réponse à un échelon d'amplitude $C_0$. Conclure vis-à-vis du cahier des charges.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\vspace{.25cm}
+
+On souhaite régler le correcteur pour que le système asservi ait une fonction de transfert en boucle fermée
+d’ordre 2 de la forme :
+$\dfrac{K_{\text{BF}}}{1+\dfrac{2\xi_{\text{BF}}}{\omega_{0\text{BF}}}p+\dfrac{p^2}{\omega_{0\text{BF}}^2}}$.
+
+
+\subparagraph{}
+\textit{Proposer une expression simple pour la constante de temps $T_i$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{À partir des courbes suivantes, proposer une valeur de coefficient d'amortissement et de pulsation propre.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/im_01}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/im_02}
+\end{center}
+%
+%Sur le document réponse sont tracées les courbes de la réponse fréquentielle en boucle ouverte pour
+%$K_i=1$ et les réponses fréquentielles en boucle fermée pour différentes valeurs de $K_i$.
+%
+%
+
+%\subparagraph{}
+%\textit{En reportant les tracés nécessaires sur le document réponse et en utilisant les abaques 1 et 2 du
+%document réponse, proposer un choix de réglage pour $K_i$ permettant de vérifier toutes les
+%performances.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+%
+
+On donne $K_i=1$. 
+\subparagraph{}
+\textit{Les critères de performance du cahier des chartes sont-ils respectés ?
+Tracer l’allure de la réponse temporelle à un échelon $C_{c0}$ en indiquant toutes les valeurs caractéristiques
+nécessaires.}
+
+\ifprof
+\begin{corrige}
+
+\end{corrige}
+\else
+\fi
+
+
+
+\end{multicols}
+\newpage
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_01}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_02_01}
+\end{center}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_02_02}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_03}
+\end{center}
+
+\end{document}
+
+
+\subparagraph{}
+\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
