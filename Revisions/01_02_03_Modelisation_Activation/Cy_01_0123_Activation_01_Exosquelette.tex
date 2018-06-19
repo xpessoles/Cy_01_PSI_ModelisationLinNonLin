@@ -149,7 +149,7 @@ des rampes et des paraboles.
 %\textit{}
 \end{center}
 
-Selon le cahier des charges, pour assurer une bonne synchronisation des axes, l’exigence de précision statique suite à une entrée de type échelon, de type rampe ou de type accélération doit être inférieure à 1\%.
+%Selon le cahier des charges, pour assurer une bonne synchronisation des axes, l’exigence de précision statique suite à une entrée de type échelon, de type rampe ou de type accélération doit être inférieure à 1\%.
 Le premier modèle défini figure suivante est adopté pour chaque axe.
 
 
@@ -183,12 +183,13 @@ En utilisant le schéma-blocs précédent, on peut constater que :
 \item l'erreur entre l’entrée et la sortie est définie par la variable $\mu(t)= \theta_{mC}(t)-\theta_m(t)$.
 \end{itemize}
 
-Étant donné que le modèle utilisé est à retour unitaire, l’écart $\varepsilon(t)$ est égal à l’erreur $\mu(t)$. La précision statique du système est définie par les paramètres suivants :
-\begin{itemize}
-\item $\varepsilon_p = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type échelon unitaire $\theta_{mC}(t)=u(t)$, $\theta_{mC}(p)=\dfrac{1}{p}$, appelée erreur de position;
-\item $\varepsilon_v = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type rampe unitaire $\theta_{mC}(t)=tu(t)$, $\theta_{mC}(p)=\dfrac{1}{p^2}$, appelée erreur de traînage;
-\item $\varepsilon_a = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type accélération $\theta_{mC}(t)=\dfrac{t^2}{2}u(t)$, $\theta_{mC}(p)=\dfrac{1}{p^3}$, appelée erreur en accélération.
-\end{itemize}
+Étant donné que le modèle utilisé est à retour unitaire, l’écart $\varepsilon(t)$ est égal à l’erreur $\mu(t)$. 
+%La précision statique du système est définie par les paramètres suivants :
+%\begin{itemize}
+%\item $\varepsilon_p = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type échelon unitaire $\theta_{mC}(t)=u(t)$, $\theta_{mC}(p)=\dfrac{1}{p}$, appelée erreur de position;
+%\item $\varepsilon_v = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type rampe unitaire $\theta_{mC}(t)=tu(t)$, $\theta_{mC}(p)=\dfrac{1}{p^2}$, appelée erreur de traînage;
+%\item $\varepsilon_a = \lim\limits_{t\to \infty} \varepsilon(t)$ suite à une entrée de type accélération $\theta_{mC}(t)=\dfrac{t^2}{2}u(t)$, $\theta_{mC}(p)=\dfrac{1}{p^3}$, appelée erreur en accélération.
+%\end{itemize}
 
 \begin{hypo}
 Le couple résistant évolue lentement au regard de la dynamique de l’asservissement, ce qui permet de considérer
@@ -196,11 +197,39 @@ pour la suite de l’étude $C_r(p)=0$.
 \end{hypo}
 
 \subparagraph{}\textit{Déterminer la grandeur physique de la consigne et la grandeur physique asservie à partir du modèle multiphysique présenté plus bas et préciser leurs unités de base dans le système international d’unités (SI).}
+\ifprof
+\else
+\fi
+\begin{corrige}
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/cor_01}
+\end{center}
+\end{corrige}
+
 
 \subparagraph{}\textit{Exprimer $H_{\Omega}(p)=\dfrac{\Omega_m(p)}{\Omega_{mC}(p)}$
 en fonction de $J$, $K_2$ et $p$.}
+\ifprof
+\else
+\fi
+\begin{corrige}
+En faisant l'hypothèse que le couple perturbateur est nul, on a :
+$H_{\Omega}(p)=\dfrac{\Omega_m(p)}{\Omega_{mC}(p)}=\dfrac{C_{\Omega}(p)M_C(p)\dfrac{1}{Jp+f}}{1+C_{\Omega}(p)M_C(p)\dfrac{1}{Jp+f}}$. En conséquences : 
+$H_{\Omega}(p)=\dfrac{C_{\Omega} K_2}{Jp+C_{\Omega} K_2 } = \dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } $.
+
+\end{corrige}
 
 \subparagraph{}\textit{Exprimer $\varepsilon(p)$ en fonction de $\theta_{mC}(p)$, $H_{\Omega}(p)$, $K_1$ et $p$.}
+\ifprof
+\else
+\fi
+\begin{corrige}
+D'une part, $\varepsilon(p)=\theta_{mC}(p)-\theta_{m}(p)$. D'autre part, 
+$\theta_{m}(p) =H_{\Omega}(p) \dfrac{K_1}{p} \varepsilon(p)$. Par suite, 
+$\varepsilon(p)=\theta_{mC}(p)-H_{\Omega}(p) \dfrac{K_1}{p}\varepsilon(p) $ 
+$\Leftrightarrow \varepsilon(p)\left( 1+H_{\Omega}(p) \dfrac{K_1}{p}\right)= \theta_{mC}(p)$. 
+En conséquences, $\varepsilon(p)=\dfrac{ \theta_{mC}(p)}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}}$.
+\end{corrige}
 
 \subparagraph{}\textit{Déterminer l’erreur de position $\varepsilon_p$ puis l’erreur de traînage $\varepsilon_v$. Conclure sur la valeur de $K_1$ pour satisfaire
 à l’exigence d’erreur en traînage.}
