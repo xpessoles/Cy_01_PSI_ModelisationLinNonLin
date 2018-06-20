@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -125,12 +125,12 @@ On donne dans la figure ci-dessous, la modélisation cinématique retenue dans l
 \includegraphics[width=\linewidth]{images/fig_03}
 %\textit{}
 \end{center}
-\fi
 
 \begin{center}
 \includegraphics[width=\linewidth]{images/Exigences}
 %\textit{}
 \end{center}
+\fi
 
 \subsection*{Gestion du mouvement vertical}
 
@@ -139,6 +139,8 @@ Déterminer les réglages de la commande asservie des moteurs genou droit et gau
 \end{obj}
 
 
+\ifprof
+\else
 La demande de mouvement de l’utilisateur de l’exosquelette se traduit par une consigne de vitesse de type
 trapézoïdal pour le mouvement vertical. À l’aide du modèle articulaire inverse cette
 demande se traduit finalement en consigne de position des axes moteur genou gauche et droit. Cette consigne de position du moteur représentée à la figure suivante montre des parties qui peuvent être approchées par des constantes,
@@ -196,15 +198,20 @@ Le couple résistant évolue lentement au regard de la dynamique de l’asservis
 pour la suite de l’étude $C_r(p)=0$.
 \end{hypo}
 
+\fi
+
 \subparagraph{}\textit{Déterminer la grandeur physique de la consigne et la grandeur physique asservie à partir du modèle multiphysique présenté plus bas et préciser leurs unités de base dans le système international d’unités (SI).}
 \ifprof
-\else
-\fi
-\begin{corrige}
+\begin{corrige}~\\
+Il s'agit d'un asservissement en position. 
+
 \begin{center}
-\includegraphics[width=.6\linewidth]{images/cor_01}
+\includegraphics[width=\linewidth]{images/cor_01}
 \end{center}
 \end{corrige}
+
+\else
+\fi
 
 
 \subparagraph{}\textit{Exprimer $H_{\Omega}(p)=\dfrac{\Omega_m(p)}{\Omega_{mC}(p)}$
@@ -267,6 +274,8 @@ $= \lim\limits_{p\to 0} \dfrac{ 1}{ p^2+\dfrac{p}{\dfrac{Jp}{C_{\Omega} K_2}+1 }
 Ainsi, le correcteur choisi ne permet pas de vérifier le cahier des charges. 
 \end{corrige}
 
+\ifprof
+\else
 Pour satisfaire l’exigence d’une erreur en accélération inférieure à 1\%, le second modèle avec anticipation de la
 vitesse est adopté avec $H_{\Omega}(p)=\dfrac{1}{1+Tp}$ et $T=\SI{33}{ms}$.
 
@@ -274,18 +283,88 @@ vitesse est adopté avec $H_{\Omega}(p)=\dfrac{1}{1+Tp}$ et $T=\SI{33}{ms}$.
 \includegraphics[width=\linewidth]{images/fig_08}
 %\textit{}
 \end{center}
+\fi
 
 \subparagraph{}\textit{Exprimer $\varepsilon(p)$ en fonction de $\theta_{mC}(p)$, $T$, $K_1$, $K_3$ et $p$.}
+\ifprof
+\else
+\fi
+\begin{corrige}
+En utilisant le schéma-blocs, on a : 
+\begin{itemize}
+\item 
+$ \varepsilon(p)=\theta_{mC}(p)-\theta_{m}(p)$;
+\item  $\Omega_{mC}(p)=K_3 p \theta_{mC}(p) + K_1 \varepsilon(p)$;
+\item $\theta_m(p)=\Omega_{mC}(p) \dfrac{1}{p}\dfrac{1}{1+Tp}$. 
+\end{itemize}
+On a donc : 
+$ \varepsilon(p)=\theta_{mC}(p)-\Omega_{mC}(p) \dfrac{1}{p}\dfrac{1}{1+Tp}$ 
+$= \theta_{mC}(p)- 
+\left(K_3 p \theta_{mC}(p) + K_1 \varepsilon(p)  \right)
+\dfrac{1}{p \left( 1+Tp\right)}$
+$= \theta_{mC}(p)- 
+ \dfrac{K_3 p }{p \left( 1+Tp\right)} \theta_{mC}(p)
+-  \dfrac{K_1 }{p \left( 1+Tp\right)} \varepsilon(p)
+$. 
+
+On a alors 
+$
+\varepsilon(p)  \left(1+ \dfrac{K_1 }{p \left( 1+Tp\right)} \right)
+=  \theta_{mC}(p)\left(1-  \dfrac{K_3}{ 1+Tp}\right)$
+
+$\Leftrightarrow
+\varepsilon(p)  \dfrac{p \left( 1+Tp\right)+K_1 }{p \left( 1+Tp\right)} 
+=  \theta_{mC}(p)  \dfrac{ 1+Tp-K_3  }{ 1+Tp}
+$.
+
+Enfin,  
+$\varepsilon(p) = \theta_{mC}(p)\dfrac{p\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1}
+$.
+\end{corrige}
 
 Le second modèle avec anticipation de la figure précédente n’a pas d’incidence sur la valeur de l’erreur de position.
+
 \subparagraph{}\textit{Exprimer l’erreur de traînage et déterminer la valeur de $K_3$ permettant l’annuler cette erreur.}
 
+\ifprof
+\else
+\fi
+\begin{corrige}
+$\varepsilon_v = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ 
+$= \lim\limits_{p\to 0} p \dfrac{p\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1} \dfrac {1}{p^2}$
+$= \lim\limits_{p\to 0}  \dfrac{\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1}$
+$=\dfrac{1-K_3}{K_1}$.
+
+Au final, pour annuler l'erreur de traînage, on doit avoir $K_3=1$.
+\end{corrige}
 \subparagraph{}\textit{Exprimer et déterminer l’erreur d’accélération en prenant les valeurs de $K_3$ et de $K_1$ déterminées
 précédemment. Conclure quant au respect du cahier des charges.}
 
+On a : 
+
+\ifprof
+\else
+\fi
+\begin{corrige}
+$\varepsilon_a = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ 
+$= \lim\limits_{p\to 0} p \dfrac{p\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1} \dfrac {1}{p^3}$
+$= \lim\limits_{p\to 0} \dfrac{\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1} \dfrac {1}{p}$. En prenant $K_3=1$ et $K_1=100$, on obtient :
+$\varepsilon_a = \dfrac{ T}{p \left( 1+Tp\right)+100}=\dfrac{33\times 10^{-3}}{100} $.
+L'erreur est donc de $33\times 10^{-5}$. Le cahier des charges est donc validé. 
+
+\end{corrige}
 \end{multicols}
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=.65\linewidth]{images/fig_07}
 %\textit{}
 \end{center}
+\fi
+
+%\begin{center}
+%\includegraphics[width=.65\linewidth]{images/cor_01}
+%%\textit{}
+%\end{center}
+
 \end{document}
