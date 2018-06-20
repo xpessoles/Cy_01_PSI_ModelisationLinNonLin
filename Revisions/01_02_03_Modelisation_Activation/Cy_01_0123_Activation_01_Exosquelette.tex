@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-%\proffalse
+\proffalse
 
 \tdtrue
 %\tdfalse
@@ -250,7 +250,7 @@ On a :
 \item $\varepsilon_p = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ $= \lim\limits_{p\to 0} p \dfrac{ 1}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}} \dfrac {1}{p}$
 $= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}} = 0$ (ce qui était prévisible pour un système de classe 1);
 \item $\varepsilon_v = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ $= \lim\limits_{p\to 0} p \dfrac{ 1}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}} \dfrac {1}{p^2}$
-$= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}}\dfrac {1}{p} = 0$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}}\dfrac {1}{p} $
 $= \lim\limits_{p\to 0} \dfrac{ 1}{ p+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } K_1}= \dfrac{1}{K_1}$ (ce qui était prévisible pour un système de classe 1 et de gain $K_1$ en BO).
 \end{itemize}
 
@@ -258,6 +258,11 @@ Ainsi, pour avoir une erreur de traînage inférieure à 1\%, il faut $\dfrac{1}
 \end{corrige}
 \else
 \fi
+
+
+
+
+
 
 
 \subparagraph{}\textit{Déterminer l’erreur en accélération et conclure quant au respect du cahier des charges.}
@@ -339,6 +344,7 @@ $= \lim\limits_{p\to 0} p \dfrac{p\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+
 $= \lim\limits_{p\to 0}  \dfrac{\left( 1+Tp-K_3\right) }{p \left( 1+Tp\right)+K_1}$
 $=\dfrac{1-K_3}{K_1}$.
 
+
 Au final, pour annuler l'erreur de traînage, on doit avoir $K_3=1$.
 \end{corrige}
 \else
@@ -364,6 +370,24 @@ L'erreur est donc de $33\times 10^{-5}$. Le cahier des charges est donc validé.
 \subsection*{Synthèse}
 \subparagraph{}
 \textit{En utilisant la figure ci-dessous, conclure sur les actions qui ont mené à une validation du cahier des charges.}
+
+\footnotesize
+\begin{tabular}{|p{\linewidth}|}
+\hline
+Eléments de corrigé :
+\begin{enumerate}
+\item Asservissement en position.
+\item $H_{\Omega}(p)= {1}/\left(\dfrac{Jp}{C_{\Omega} K_2}+1 \right) $.
+\item $\varepsilon(p)=\left( \theta_{mC}(p)\right)/\left( 1+H_{\Omega}(p) \dfrac{K_1}{p}\right)$
+\item $\varepsilon(p)= 0, \varepsilon_v = \dfrac{1}{K_1}$   et $K_1 >100$.
+\item $\varepsilon_a = \infty$.
+\item $\varepsilon(p) = \theta_{mC}(p)\left(p\left( 1+Tp-K_3\right) \right)/\left(p \left( 1+Tp\right)+K_1\right) $.
+\item $\varepsilon_v =\dfrac{1-K_3}{K_1}$, $K_3=1$.
+\item $\varepsilon_a = \dfrac{33\times 10^{-3}}{100} $. Le cahier des charges est donc validé. 
+\end{enumerate} \\
+\hline
+\end{tabular}
+\normalsize
 \end{multicols}
 \ifprof
 \begin{center}
