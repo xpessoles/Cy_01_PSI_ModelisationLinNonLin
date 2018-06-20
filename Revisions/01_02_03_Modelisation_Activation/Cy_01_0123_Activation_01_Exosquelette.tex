@@ -234,7 +234,38 @@ En conséquences, $\varepsilon(p)=\dfrac{ \theta_{mC}(p)}{ 1+H_{\Omega}(p) \dfra
 \subparagraph{}\textit{Déterminer l’erreur de position $\varepsilon_p$ puis l’erreur de traînage $\varepsilon_v$. Conclure sur la valeur de $K_1$ pour satisfaire
 à l’exigence d’erreur en traînage.}
 
+\ifprof
+\else
+\fi
+\begin{corrige}
+On a :
+\begin{itemize}
+\item $\varepsilon_p = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ $= \lim\limits_{p\to 0} p \dfrac{ 1}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}} \dfrac {1}{p}$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}} = 0$ (ce qui était prévisible pour un système de classe 1);
+\item $\varepsilon_v = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ $= \lim\limits_{p\to 0} p \dfrac{ 1}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}} \dfrac {1}{p^2}$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}}\dfrac {1}{p} = 0$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ p+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } K_1}= \dfrac{1}{K_1}$ (ce qui était prévisible pour un système de classe 1 et de gain $K_1$ en BO).
+\end{itemize}
+
+Ainsi, pour avoir une erreur de trainage inférieure à 1\%, il faut $\dfrac{1}{K_1}<0,01$ et $K_1 >100$.
+\end{corrige}
+
+
 \subparagraph{}\textit{Déterminer l’erreur en accélération et conclure quant au respect du cahier des charges.}
+
+
+\ifprof
+\else
+\fi
+\begin{corrige}
+En raisonnant de même, on a :
+ $\varepsilon_a = \lim\limits_{t\to \infty} \varepsilon(t)= \lim\limits_{p\to 0} p\varepsilon(p) $ $= \lim\limits_{p\to 0} p \dfrac{ 1}{ 1+H_{\Omega}(p) \dfrac{K_1}{p}} \dfrac {1}{p^3}$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ 1+\dfrac{1}{\dfrac{Jp}{C_{\Omega} K_2}+1 } \dfrac{K_1}{p}}\dfrac {1}{p^2} = 0$
+$= \lim\limits_{p\to 0} \dfrac{ 1}{ p^2+\dfrac{p}{\dfrac{Jp}{C_{\Omega} K_2}+1 } K_1}= \infty$ (ce qui était prévisible pour un système de classe 1).
+
+
+Ainsi, le correcteur choisi ne permet pas de vérifier le cahier des charges. 
+\end{corrige}
 
 Pour satisfaire l’exigence d’une erreur en accélération inférieure à 1\%, le second modèle avec anticipation de la
 vitesse est adopté avec $H_{\Omega}(p)=\dfrac{1}{1+Tp}$ et $T=\SI{33}{ms}$.
