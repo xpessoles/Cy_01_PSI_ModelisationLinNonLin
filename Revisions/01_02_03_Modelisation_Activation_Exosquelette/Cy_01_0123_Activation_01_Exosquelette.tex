@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -73,9 +73,13 @@
 \includegraphics[width=.3\textwidth]{images/fig_01}
 }%figues de la page de garde
 
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
 
 \def\xxpied{%
-Cycle 07 -- Modélisation des chaînes de solides \\%dans le but de déterminer les contraintes géométriques dans les mécanismes\\% afin de valider leurs performances.\\
+Cycle 01 -- Modéliser les systèmes multiphysiques\\
 Révisions 1 -- 2 -- 3 -- \xxactivite%
 }
 
@@ -162,18 +166,18 @@ Le premier modèle défini figure suivante est adopté pour chaque axe.
 
 \textbf{Notations : }
 \begin{itemize}
-\item  $\theta_{mC}(p)$ consigne de position de l’axe moteur (variable temporelle : $\theta_{mC}(t)$ en rad);
-\item  $\theta_{m}(p)$ position de l’axe moteur (variable temporelle : $\theta_{m}(t)$ en rad);
-\item  $C_{mC}(p)$ consigne de couple moteur (variable temporelle : $c_{mC}(t)$ en Nm);
-\item  $C_{m}(p)$ couple moteur (variable temporelle : $c_{m}(t)$ en Nm);
-\item  $C_{r}(p)$couple résistant perturbateur (variable temporelle : $c_{r}(t)$ en Nm);
-\item  $K_1$ gain proportionnel du correcteur de l’asservissement de position (en $\text{s}^{-1}$);
-\item  $\Omega_{mC}(p)$ consigne de vitesse de l’axe moteur (variable temporelle : $\Omega_{mC}(t)$ en $\text{rad s}^{-1}$);
-\item  $\Omega_{m}(p)$ vitesse de l’axe moteur (variable temporelle : $\Omega_{m}(t)$ en  $\text{rad s}^{-1}$);
-\item  $C_{\Omega}(p)$ correcteur de l’asservissement de vitesse;
-\item  $M_C(p)$ modélise la boucle d’asservissement en couple de la machine électrique, considérée parfaite au vu de sa dynamique par rapport aux autres boucles : $M_C(p)=1$; 
-\item  $J$ moment d’inertie de l’ensemble en mouvement, rapporté au niveau de l’axe moteur;
-\item  $f$ coefficient de frottements visqueux équivalent pour l’ensemble en mouvement.
+\item $\theta_{mC}(p)$ consigne de position de l’axe moteur (variable temporelle : $\theta_{mC}(t)$ en rad);
+\item $\theta_{m}(p)$ position de l’axe moteur (variable temporelle : $\theta_{m}(t)$ en rad);
+\item $C_{mC}(p)$ consigne de couple moteur (variable temporelle : $c_{mC}(t)$ en Nm);
+\item $C_{m}(p)$ couple moteur (variable temporelle : $c_{m}(t)$ en Nm);
+\item $C_{r}(p)$ couple résistant perturbateur (variable temporelle : $c_{r}(t)$ en Nm);
+\item $K_1$ gain proportionnel du correcteur de l’asservissement de position (en $\text{s}^{-1}$);
+\item $\Omega_{mC}(p)$ consigne de vitesse de l’axe moteur (variable temporelle : $\Omega_{mC}(t)$ en $\text{rad s}^{-1}$);
+\item $\Omega_{m}(p)$ vitesse de l’axe moteur (variable temporelle : $\Omega_{m}(t)$ en  $\text{rad s}^{-1}$);
+\item $C_{\Omega}(p)$ correcteur de l’asservissement de vitesse;
+\item $M_C(p)$ modélise la boucle d’asservissement en couple de la machine électrique, considérée parfaite au vu de sa dynamique par rapport aux autres boucles : $M_C(p)=1$; 
+\item $J$ moment d’inertie de l’ensemble en mouvement, rapporté au niveau de l’axe moteur;
+\item $f$ coefficient de frottements visqueux équivalent pour l’ensemble en mouvement.
 \end{itemize}
 
 
