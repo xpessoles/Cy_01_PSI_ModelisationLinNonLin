@@ -1,0 +1,130 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Diagramme de Bode},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+
+\fichetrue
+%\fichefalse
+
+\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+
+\def\classe{\textsf{PSI$\star$ -- MP}}
+
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Révisions 5 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation des SLCI }
+
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+
+
+
+\def\xxactivite{Activation 01}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxtitreexo{Assistance pour le maniement de charges dans l’industrie}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Concours Centrale Supelec PSI 2016}}
+
+
+
+
+  
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 01}}
+
+\def\xxactivite{Activation 01}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item...%\textit{Mod2.C4} : calcul symbolique;
+%\item \textit{Mod2.C7.SF1} : analyser ou établir le schéma-bloc du système.
+\end{itemize}}}}
+
+
+\def\xxfigures{
+\includegraphics[width=.3\textwidth]{images/fig_01}
+}%figues de la page de garde
+
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser les systèmes multiphysiques\\
+Révisions 5 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\ifprof
+
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+
+
+\subparagraph{}\textit{E.}
+
+\ifprof
+
+On a : 
+
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+%\includegraphics[width=\linewidth]{images/fig_10}
+%\textit{}
+\end{center}
+
+%\begin{center}
+%\includegraphics[width=.65\linewidth]{images/cor_01}
+%%\textit{}
+%\end{center}
+\end{multicols}
+\end{document}
