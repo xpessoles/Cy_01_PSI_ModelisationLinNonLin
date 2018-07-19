@@ -139,16 +139,98 @@ Pour la chaine d’asservissement, le cahier des charges partiel suivant, caract
 \item marge de phase $\Delta \varphi \geq 45 \degres$.
 \end{itemize}
 
-\subparagraph{}\textit{E.}
+
+Pour la conception de la loi de commande, il s’agira :
+\begin{itemize}
+\item de montrer qu’une structure mono-boucle simple ne permet pas d’assurer le cahier des charges partiel ;
+\item d’analyser si une structure de commande adaptée aux systèmes à retard peut assurer les performances
+escomptées (permettant ainsi de s’affranchir du retard pur de la chaine de mesure par traitement d’images) ;
+\item de montrer qu’une structure adaptée aux systèmes à retard complétée par une boucle interne sur la mesure
+de position d’un axe non déformé permet de vérifier l’ensemble du cahier des charges.
+\end{itemize}
+
+\subsection*{Analyse d’une structure mono-boucle}
+
+Une solution simple est d’envisager, dans un premier temps, une structure de commande réalisée directement à
+partir de l’estimation $L^{de}(t)$ de la position réelle de l’axe considéré. Cette structure, dont le correcteur est noté
+$C_1(p)$ et la consigne $L^{*}(p)$, est représentée par le schéma de la figure suivante.
+
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+\textit{Structure de commande à une boucle}
+\end{center}
+
+En raison de la présence de bruits de mesure (signaux non représentés sur les schémas fournis), il n’est pas
+souhaitable d’introduire d’action dérivée dans le régulateur de cette boucle. Seuls des correcteurs de type
+proportionnel intégral seront envisagés.
+
+\subparagraph{}\textit{La figure B du document réponse montre le diagramme de Bode de la fonction $H(p)$. Tracer directement sur cette figure le diagramme de Bode (tracés réels des module et phase) de la fonction de transfert en boucle ouverte non corrigée (soit en prenant $C_1(p)=1$).}
 
 \ifprof
-
-On a : 
-
 \begin{corrige}
 \end{corrige}
 \else
 \fi
+
+
+\subparagraph{}\textit{Au regard des tracés de la question précédente et des performances souhaitées par le cahier des charges :
+\begin{itemize}
+\item compte tenu de la pulsation de coupure et de la marge de phase souhaitées, déterminer les deux contraintes (sur le module et l’argument) que le correcteur $C_1(j\omega)$ doit vérifier pour les deux cas : procédé sans retard pur et procédé avec la présence du retard pur $\tau$;
+\item en argumentant la réponse à l’aide du tracé des allures des diagrammes de Bode (directement sur la copie) d’un correcteur de type proportionnel intégral $C_1(p) = K_1\left(1 +
+\dfrac{1}{T{i1}p}\right)$, justifier qu’un correcteur de ce type :
+\begin{itemize}
+\item ne permet pas d’atteindre les performances exigées en présence du retard de mesure ;
+\item peut être toutefois envisagé en absence du retard dans la chaine de mesure.
+\end{itemize}
+\end{itemize}}
+
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subsection*{Structure de commande adaptée à un système avec retard}
+Pour remédier au problème mis en évidence à la question précédente, il est envisagé d’utiliser une structure de commande
+adaptée aux systèmes comportant des retards. La figure suivante montre deux structures de commande correspondant
+d’une part au schéma réel (a) représentant la réalisation de la commande ($X(p)$ est la transformée de Laplace
+d’une grandeur $x(t)$ interne au régulateur), d’autre part un schéma fictif (b).
+
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_04}
+\textit{Structure de commande adaptée aux systèmes à retard}
+\end{center}
+
+\subparagraph{}\textit{En utilisant le schéma fictif (b) et le diagramme de Bode de la figure B du document réponse, déterminer le
+correcteur de type proportionnel intégral $C(p)= K\left( 1+\dfrac{1}{T_ip}\right)$ permettant d’assurer les performances exprimées
+par le cahier des charges partiel. Pour concevoir ce régulateur, la démarche suivante pourra être suivie :
+\begin{itemize}
+\item déterminer la condition en phase, soit $\arg(C(j\omega))$, que doit vérifier le correcteur au regard de la marge de
+phase souhaitée. En déduire alors la valeur numérique du temps d’action intégrale $T_i$ ;
+\item pour la valeur de $T_i$ obtenue, déterminer alors la valeur du gain $K$ permettant d’assurer le cahier des charges partiel.
+\end{itemize}}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{E.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
 
 \begin{center}
 %\includegraphics[width=\linewidth]{images/fig_10}
