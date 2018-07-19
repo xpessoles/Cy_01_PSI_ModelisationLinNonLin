@@ -104,7 +104,40 @@ Révisions 5 -- \xxactivite%
 \begin{multicols}{2}
 %\fi
 \section*{Mise en situation}
+\begin{obj}
+En vue d’asservir la position de la colonne vertébrale à une position de référence, une structure de
+commande à partir de l’estimation de la position réelle est mise en place. Après la définition des
+modèles nécessaires à la synthèse des lois de commande, l’objet de cette partie est de concevoir le
+régulateur de cette architecture de commande.
 
+\end{obj}
+
+
+Pour la synthèse des régulateurs de la boucle externe, on adopte le modèle du procédé représenté par le schéma-blocs de la figure suivante. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\textit{Modèle du procédé pour la conception de la loi de commande
+de la chaine d’asservissement}
+\end{center}
+
+On suppose :
+\begin{itemize}
+\item qu’une première structure de commande « rapprochée » assure l’asservissement en vitesse des axes et que les caractéristiques dynamiques des six axes asservis sont identiques ;
+\item pour un axe donné, que les efforts dus à sa rigidité, à la charge et les couplages avec les autres axes sont modélisés sous la forme d’un signal externe perturbateur unique, ramené en entrée du procédé et dont $F_u(p)$ est la transformée de Laplace ;
+\item que les jeux dans les liaisons sont modélisés sous la forme d’un signal perturbateur externe, dont $D(p)$ est la transformée de Laplace, traduisant l’écart de déplacement de la position de l’axe ;
+\item pour l’axe considéré que $L^m(p)$, $L^d(p)$ et $L^{de}(p)$ sont respectivement les transformées de Laplace de la position non déformée, de la position de l’axe après déformation et de l’estimation de la position réelle issue de l’évaluation au moyen de l’algorithme de traitement d’images (la grandeur $L^m$ est obtenue au moyen d’une mesure issue d’un capteur placé directement sur l’axe de l’actionneur) ;
+\item que $U(p)$ représente la transformée de Laplace de la grandeur de commande (homogène à une tension) de la chaine de motorisation de l’axe considéré.
+\end{itemize}
+
+
+
+La chaine de motorisation est modélisée par la fonction de transfert $H(p)=\dfrac{L_m(p)}{U(p)}=\dfrac{0,5}{p\left( 1+0,01 p\right)}$, la chaine d'acquisition et le système de traitement d’images sont modélisés en temps continu comme un retard pur $\tau=\SI{0,04}{s}$.
+Pour la chaine d’asservissement, le cahier des charges partiel suivant, caractérisé par une pulsation de coupure en boucle ouverte et une marge de phase fixées à priori, est rappelé :
+\begin{itemize}
+\item pulsation de coupure $\omega_c$ à \SI{0}{dB} en boucle ouverte $\omega_c = \SI{60}{rad.s^{-1}}$;
+\item marge de phase $\Delta \varphi \geq 45 \degres$.
+\end{itemize}
 
 \subparagraph{}\textit{E.}
 
