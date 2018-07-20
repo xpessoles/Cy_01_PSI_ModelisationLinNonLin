@@ -200,11 +200,9 @@ adaptée aux systèmes comportant des retards. La figure suivante montre deux st
 d’une part au schéma réel (a) représentant la réalisation de la commande ($X(p)$ est la transformée de Laplace
 d’une grandeur $x(t)$ interne au régulateur), d’autre part un schéma fictif (b).
 
-
-
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_04}
-\textit{Structure de commande adaptée aux systèmes à retard}
+\textit{Figure 3 -- Structure de commande adaptée aux systèmes à retard}
 \end{center}
 
 \subparagraph{}\textit{En utilisant le schéma fictif (b) et le diagramme de Bode de la figure B du document réponse, déterminer le
@@ -223,7 +221,14 @@ phase souhaitée. En déduire alors la valeur numérique du temps d’action int
 \fi
 
 
-\subparagraph{}\textit{E.}
+\subparagraph{}\textit{
+Pour une consigne nulle $L^*(t)$, une perturbation en sortie nulle $d(t)=0$ et un échelon de perturbation en entrée $f_u(t)=F_0 h(t)$ où h(t) est l’échelon d’Heaviside :
+\begin{itemize}
+\item déterminer la valeur en régime permanent de la grandeur de commande $\lim\limits_{t \to \infty} u(t)$ (ce calcul sera effectué en utilisant la structure de la figure 3(a)) ;
+\item compte tenu de la forme de $H(p)$, en déduire alors le comportement de la grandeur $x(t)$ lorsque $t$ tend vers l’infini ;
+\item au regard de ce comportement, discuter alors des performances de cette structure de commande et conclure quant à sa pertinence sur l’asservissement de l’Hexapode.
+\end{itemize}
+}
 
 \ifprof
 \begin{corrige}
@@ -231,15 +236,65 @@ phase souhaitée. En déduire alors la valeur numérique du temps d’action int
 \else
 \fi
 
+\subsection*{Analyse d’une structure de commande à deux boucles}
+
+Pour remédier au problème mis en évidence à la question précédente, il est envisagé une structure à deux boucles définies ainsi :
+\begin{itemize}
+\item une boucle interne réalisée à partir de la mesure de la position non déformée de l’axe $L^m(t)$ permet d’asservir cette grandeur à une consigne de référence $L^{m*}(t)$. Le calcul du correcteur de la boucle interne est hors du cadre de cette étude, et on note $T(p)=\dfrac{L^m(p)}{L^{m*}(p)}$ la fonction de transfert en boucle fermée de la boucle
+interne ;
+\item la boucle externe, réalisée à partir de la grandeur estimée $L^{de}(t)$.
+\end{itemize}
+La nouvelle structure de commande est représentée par le schéma de la figure suivante où la représentation de la
+boucle interne est limitée à sa fonction de transfert en boucle fermée $T(p)$ où :
+\begin{itemize}
+\item $T(p) = \dfrac{L^m(p)}{L^{m*}(p)}= \dfrac{1}{\left(1+0,05p\right)^2}$ est la fonction de transfert en boucle fermée de l’asservissement de position de l’axe non déformée (elle est ainsi la fonction de transfert de la boucle interne non représentée sur la figure) ;
+\item $L^{m*}(p)$ est la consigne de l’asservissement de la boucle interne ;
+\item l’effet de la perturbation $F_u(p)$ est réduit par la boucle interne, et son influence peut être négligée;
+\item les seules perturbations se limitent alors à celles dues aux jeux, soit le signal de transformée de Laplace $D(p)$.
+\end{itemize}
+Pour la conception de la loi de commande :
+\begin{itemize}
+\item une approche identique à celle de la partie précédente adaptée au cas des systèmes présentant des retards est utilisée ;
+\item on synthétise dans ce cas un correcteur $C_2(p) = K_2 \left( 1+\dfrac{1}{T_{i2}p}\right) $ de type PI sans prendre en compte le retard et le régulateur $R_e(p)$ est réalisé en utilisant $C_2(p)$ selon une structure identique à celle de la figure précédente (a) ;
+\item le calcul du régulateur $C_2(p)$ ne fait pas partie de cette étude, on suppose cependant qu’il permet d’assurer les exigences du cahier des charges.
+\end{itemize}
+
 
 \begin{center}
-%\includegraphics[width=\linewidth]{images/fig_10}
-%\textit{}
+\includegraphics[width=\linewidth]{images/fig_05}
+\textit{Modèle de commande avec une boucle interne intégrée}
 \end{center}
 
+
+\subparagraph{}\textit{En utilisant la même démarche que celle de la question précédente, déterminer la valeur de la grandeur $L^{m$}(t)$ en régime permanent, soit 
+$\lim\limits_{t\to\infty} L^{m*}(t)$, en réponse à une perturbation $d(t)$ en échelon $d(t)=D_0 h(t)$. Au regard des différents éléments constitutifs de la boucle de régulation, justifier qualitativement que la réalisation du régulateur $R_e(p)$ selon le schéma de la figure 3(a) reste stable du point vue interne.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Retour sur le cahier des charges}
+La figure suivante montre les évolutions temporelles de la position $L^d(t)$ en réponse
+à une consigne en échelon $L^*(t)=L_0 h(t-0,02)$ avec $L_0 = \SI{10}{mm}$ et à une perturbation en échelon $D^*(t) = D_0 h(t-0,02)$ avec $D_0=\SI{10}{\mu m}$. 
+
+\subparagraph{}\textit{Commenter ces courbes et, en justifiant le résultat obtenu, valider les exigences vérifiées. Conclure alors sur la pertinence de l’approche utilisée et sur la structure de correction retenue.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 %\begin{center}
 %\includegraphics[width=.65\linewidth]{images/cor_01}
 %%\textit{}
 %\end{center}
 \end{multicols}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_06}
+%\textit{}
+\end{center}
+
 \end{document}
