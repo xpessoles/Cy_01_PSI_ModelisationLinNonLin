@@ -1,0 +1,393 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Diagramme de Bode},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+
+\fichetrue
+%\fichefalse
+
+\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+
+\def\classe{\textsf{PSI$\star$ -- MP}}
+
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Révisions 5 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation des SLCI }
+
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+
+
+
+\def\xxactivite{Activation 01}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxtitreexo{Système de freinage d’un TGV DUPLEX}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Concours Centrale Supelec PSI 2006}}
+
+
+
+
+  
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 01}}
+
+\def\xxactivite{Activation 01}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item...%\textit{Mod2.C4} : calcul symbolique;
+%\item \textit{Mod2.C7.SF1} : analyser ou établir le schéma-bloc du système.
+\end{itemize}}}}
+
+
+\def\xxfigures{
+\includegraphics[width=.6\textwidth]{images/fig_01}
+}%figues de la page de garde
+
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser les systèmes multiphysiques\\
+Révisions 5 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\ifprof
+
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+\begin{obj}
+L’objectif est d'étudier la loi de commande du dispositif d’anti-enrayage et plus précisément le calcul du correcteur de la boucle de régulation en vue de satisfaire un cahier des charges qui sera exprimé par la suite.
+\end{obj}
+
+
+La réalisation de la régulation de glissement ne peut être effectuée directement, en particulier la seule mesure généralement disponible est celle de la vitesse, aussi la vitesse est obtenue par estimation. En « pratique », la mise en place de la chaîne de régulation du dispositif d’anti-enrayage du système de freinage est conçue de la façon suivante :
+\begin{itemize}
+\item elle est réalisée au travers de l’asservissement des vitesses des roues à une
+consigne de référence obtenue à partir de ;
+\item la commande de l’actionneur est non linéaire, de type tout ou rien ;
+\item les algorithmes implémentés visent à optimiser le point de fonctionnement
+en vue de minimiser la distance de freinage.
+Cependant, dans le cadre de cette étude, on supposera que :
+\item les vitesses et sont directement accessibles à la mesure, éventuellement
+entachées d’une erreur ;
+\item la régulation peut se ramener directement à celle du glissement ;
+\item le comportement de l’actionneur et de sa « commande rapprochée » est modélisé
+par une fonction de transfert linéaire correspondant à un comportement
+« moyen ».
+\end{itemize}
+
+On suppose, pour la suite, que l’architecture de la boucle de régulation est
+représentée sur la figure suivante où $\nu_c$ est la consigne de glissement.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\textit{}
+\end{center}
+
+On note : 
+\begin{itemize}
+\item $H_1(p)$ la fonction de transfert de l’actionneur de freinage (vérin pneumatique + électrovalve) ;
+\item $H_2(p)$ la fonction de transfert de la roue au freinage;
+\item $C(p)$ le correcteur de la boucle de régulation ;
+\item $M(p)$ la fonction de transfert de la chaîne de mesure du glissement obtenu à partir des vitesses $V_T$ et $V_R$, cette chaîne comporte un filtre destiné à limiter
+l’impact des bruits de mesure ;
+\item $\nu m$ : glissement estimé à partir de $V_T$ et de $V_R$.
+\end{itemize}
+On adoptera pour la suite : $H_1(p)=\dfrac{2000}{1+0,1p+0,01p^2}$ et $M(p)=\dfrac{1}{1+0,05p}$.
+
+Pour une vitesse $V_T=\SI{200}{km.h^{-1}}$, le cahier des charges est résumé par les données du tableau 1 et les données numériques utilisées sont données ci-dessous.
+Enfin, les problèmes liés à l’évolution de la vitesse $V_T$ ne font pas l’objet de cette
+étude.
+
+On a $M=\SI{8200}{kg}$, $V_T=\SI{200}{km.h^{-1}}$, $I/r^2=\SI{400}{kg}$, $g=\SI{10}{m.s{-2}}$.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+\textit{Cahier des charges de la boucle de régulation de glissement pour $V_T = \SI{200}{km.h^{-1}}$}
+\end{center}
+
+
+
+\subsection*{Analyse des réponses fréquentielles en boucle ouverte}
+On donne la fonction de transfert entre le glissement relatif et la force de freinage : 
+$$
+\dfrac{\nu_1 (p)}{F_R(p)}=\dfrac{1}{gMf'\left(\nu_0\right)} \dfrac{1}{1+\dfrac{IV_{T0}}{r^2g Mf'\left(\nu_0\right)}p} = \dfrac{K}{1+\tau p}.
+$$
+
+\subparagraph{}\textit{En utilisant la relation précédente, préciser la fonction de transfert $H_2(p)$ autour du point de fonctionnement sous forme numérique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En prenant $C(p)=1$, compléter par le tracé asymptotique le diagramme
+de Bode de la fonction de transfert en boucle ouverte fourni en annexe 3
+en justifiant le tracé sur la copie (document réponse à joindre obligatoirement
+avec la copie). Pour la suite, vous pourrez adopter sans aucune justification le
+diagramme de Bode de l’annexe 3.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Synthèse du régulateur de la boucle de régulation}
+
+On décide d’implémenter un régulateur de type P.I. dont la fonction de transfert
+est : $C(p)=K_r\left(1+\dfrac{1}{T_i p} \right)$.
+
+\subparagraph{}\textit{Calculer la valeur que doit prendre l’argument $C(p)$ de afin d’assurer
+la marge de phase imposée par le cahier des charges à la pulsation de coupure $\omega_c$
+souhaitée.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Calculer la valeur minimale, $T_{imin}$, que l’on peut conférer à la constante $T_i$ de l’action intégrale du régulateur.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En adoptant $T_{i}=T_{imin}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Le système étant bouclé par le régulateur dimensionné à la question
+précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Vérification du cahier des charges vis-à-vis de la consigne de glissement}
+Le correcteur de la boucle de régulation du dispositif d’anti-enrayage a été déterminé
+à partir de considérations sur la réponse fréquentielle en boucle ouverte
+(pulsation de coupure à $\SI{0}{dB}$ et marge de phase). Aussi l’objectif de cette partie
+est de vérifier que le correcteur déterminé permet de satisfaire le cahier des charges.
+Cette vérification concerne d’une part les performances vis-à-vis des variations
+de la consigne de glissement : temps du 1\ier maximum, dépassement, écart
+en régime permanent et d’autre part la réponse vis-à-vis des variations d’adhérence.
+
+Au regard de la réponse fréquentielle en boucle fermée $F(p)=\dfrac{\nu_1(p)}{\nu_c(p)}$, on
+décide de modéliser la transmittance correspondante par la fonction suivante :
+$ F(p)=\dfrac{\nu_1(p)}{\nu_c(p)}=\dfrac{K_f\left( 1+\tau_1 p\right)}{\left( 1+\tau_2 p\right)^2 \left({1+\dfrac{2 \xi }{\omega_0}p+\dfrac{p^2}{\omega_0^2}} \right)} $.
+
+On supposera sans aucune justification que $\omega_0 > \dfrac{1}{\tau_2}$.
+
+\subparagraph{}\textit{En examinant les diagrammes de Bode fournis en annexe 4 de la fonction de transfert en boucle fermée $F(p)$, justifier l’expression adoptée et
+compléter les diagrammes fournis par leur tracé asymptotique (document
+réponse à joindre obligatoirement avec la copie). Une tolérance sera admise pour
+les brisures, mais il est demandé d’assurer une très bonne concordance pour les
+comportements en haute fréquence et en basse fréquence.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Proposer les valeurs numériques pour les différents paramètres associés à
+cette fonction de transfert.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En justifiant votre réponse, montrer que l’on peut approcher la fonction de
+transfert $F(p)$ par la forme suivante : $ F(p)=\dfrac{\nu_1(p)}{\nu_c(p)}=\dfrac{K_f\left( 1+\tau_1 p\right)}{\left( 1+\tau_2 p\right)^2 } $.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+On donne la réponse temporelle vis-à-vis de la consigne de glissement : $f(t)=\left( \dfrac{\tau_2 - \tau_1 }{\tau_2^3 }t +\dfrac{\tau_1}{\tau_2^2} \right)e^{-\dfrac{t}{\tau_2}} h(t)$.
+
+
+
+
+\subparagraph{}\textit{Calculer le temps du 1\ier maximum et en déduire le
+dépassement en réponse à une variation en échelon de la consigne de glissement
+relatif $\nu_c(t)=\nu_{c0}u(t)$ où $u(t)$ désigne l’échelon unité.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Vérifier le cahier des charges en réponse à une variation en échelon de la consigne de glissement relatif.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Analyse des performances temporelles en réponse à des variations d’adhérence}
+La variation d’adhérence peut être modélisée en première approximation comme une force perturbatrice externe additive . On admet que cette modélisation conduit au schéma bloc représenté sur la figure ci-dessous.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+%\textit{}
+\end{center}
+
+On se propose dans cette partie d’évaluer les performances de la chaîne de régulation de freinage vis-à-vis de cette perturbation.
+
+\subparagraph{}\textit{Déterminer la fonction de transfert $F_2(p)=\dfrac{\nu_1(p)}{F_{ext}(p)}$ entre le glissement
+et la force de perturbation que vous expliciterez en fonction des différentes
+transmittances de la boucle de régulation. En expliquant soigneusement
+votre démarche, montrer que le module de la réponse fréquentielle, notée $||F_2(j \omega)||$, de cette fonction peut être approché par la relation :
+$||F_2(j \omega)|| = \min \left[ ||H_2(j \omega) || ; \dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}\right]$ }.
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+% Calcul de la fonction de transfert F_2(p).
+
+
+\subparagraph{}\textit{L’annexe 5 comporte le tracé de la fonction $\dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}$, tracer
+directement sur cette annexe (document réponse à joindre obligatoirement avec
+la copie) le diagramme asymptotique de la fonction $||H_2(j \omega) ||$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En déduire la forme du tracé asymptotique de la fonction $||F_2(j \omega) ||$. En analysant
+les brisures de ce diagramme et en supposant que le système bouclé est
+stable, donner directement sous forme numérique, l’expression de la fonction de
+transfert $F_2(p)$ entre le glissement et la perturbation due à la
+variation d’adhérence.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+%  Calcul de l’évolution du glissement en réponse à une variation de l’adhérence.
+
+
+\subparagraph{}\textit{Préciser les pôles de la fonction $F_2(p)$ déterminée à la question précédente et en justifiant votre réponse proposer une fonction approchée de cette fonction sous
+la forme : $F_2(p)=\dfrac{K_2p}{1+Tp}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En utilisant cette fonction de transfert, donner l’expression de l’évolution
+temporelle du glissement relatif  $\nu_1(t)$ en réponse à une variation en échelon de
+la force perturbatrice $F_{ext}=F_0u(t)$ , où $u(t)$ représente l’échelon unité et avec
+$F_0=\SI{2000}{N}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Tracer l’allure de l’évolution temporelle du glissement relatif $\nu_1(t)$ en précisant
+la valeur initiale $\nu_1(0)$. En vous référant à des fonctions ou des résultats
+connus, déterminer un ordre de grandeur du temps de réponse $t_r$ à partir
+duquel le glissement reste en dessous de 5\,\% de la valeur initiale $\nu_1(0)$ (valeurs
+à considérer en valeur absolue).}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Conclure sur les performances obtenues vis-à-vis des exigences du cahier des charges en réponse à des variations de l’adhérence.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+%\begin{center}
+%\includegraphics[width=.65\linewidth]{images/cor_01}
+%%\textit{}
+%\end{center}
+\end{multicols}
+
+
+\end{document}
