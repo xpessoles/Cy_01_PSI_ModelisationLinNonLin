@@ -104,33 +104,37 @@ Révisions 5 -- \xxactivite%
 \begin{multicols}{2}
 %\fi
 \section*{Mise en situation}
+
+L’objet de cette étude est l’analyse du système de freinage mécanique à énergie
+pneumatique, installé sur les TGV Duplex. Par soucis de sécurité, on souhaite en particulier éviter le blocage des roues (phénomène appelé enrayage) lors du freinage. Pour cela il est nécessaire de maîtriser la vitesse de glissement entre la roue et le rail.
 \begin{obj}
-L’objectif est d'étudier la loi de commande du dispositif d’anti-enrayage et plus précisément le calcul du correcteur de la boucle de régulation en vue de satisfaire un cahier des charges qui sera exprimé par la suite.
+L’objectif est d'étudier la loi de commande du dispositif d’anti-enrayage et plus précisément le calcul du correcteur de la boucle de régulation.
 \end{obj}
 
+%La réalisation de la régulation de glissement entre la roue et le rail ne peut être effectuée directement, en particulier la seule mesure généralement disponible est celle de la vitesse, aussi la vitesse est obtenue par estimation. 
 
-La réalisation de la régulation de glissement ne peut être effectuée directement, en particulier la seule mesure généralement disponible est celle de la vitesse, aussi la vitesse est obtenue par estimation. En « pratique », la mise en place de la chaîne de régulation du dispositif d’anti-enrayage du système de freinage est conçue de la façon suivante :
-\begin{itemize}
-\item elle est réalisée au travers de l’asservissement des vitesses des roues à une
-consigne de référence obtenue à partir de ;
-\item la commande de l’actionneur est non linéaire, de type tout ou rien ;
-\item les algorithmes implémentés visent à optimiser le point de fonctionnement
-en vue de minimiser la distance de freinage.
-Cependant, dans le cadre de cette étude, on supposera que :
-\item les vitesses et sont directement accessibles à la mesure, éventuellement
-entachées d’une erreur ;
-\item la régulation peut se ramener directement à celle du glissement ;
-\item le comportement de l’actionneur et de sa « commande rapprochée » est modélisé
-par une fonction de transfert linéaire correspondant à un comportement
-« moyen ».
-\end{itemize}
 
-On suppose, pour la suite, que l’architecture de la boucle de régulation est
-représentée sur la figure suivante où $\nu_c$ est la consigne de glissement.
+%En « pratique », la mise en place de la chaîne de régulation du dispositif d’anti-enrayage du système de freinage est conçue de la façon suivante :
+%\begin{itemize}
+%\item elle est réalisée au travers de l’asservissement des vitesses des roues à une
+%consigne de référence obtenue à partir de $V_T$ (vitesse de translation du train par rapport aux rails);
+%\item la commande de l’actionneur est non linéaire, de type tout ou rien ;
+%\item les algorithmes implémentés visent à optimiser le point de fonctionnement
+%en vue de minimiser la distance de freinage.
+%Cependant, dans le cadre de cette étude, on supposera que :
+%\item les vitesses $V_R$ (l’opposée de la vitesse du point de contact appartenant à la roue par
+%rapport au bogie) et $V_T$ sont directement accessibles à la mesure, éventuellement
+%entachées d’une erreur ;
+%\item la régulation peut se ramener directement à celle du glissement ;
+%\item le comportement de l’actionneur et de sa « commande rapprochée » est modélisé
+%par une fonction de transfert linéaire correspondant à un comportement « moyen ».
+%\end{itemize}
+
+On suppose, pour la suite, que l’architecture de la boucle de régulation est représentée sur la figure suivante où $\nu_c$ est la consigne de glissement.
 
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_02}
-\textit{}
+\textit{Structure de la chaîne de régulation de glissement}
 \end{center}
 
 On note : 
@@ -138,37 +142,56 @@ On note :
 \item $H_1(p)$ la fonction de transfert de l’actionneur de freinage (vérin pneumatique + électrovalve) ;
 \item $H_2(p)$ la fonction de transfert de la roue au freinage;
 \item $C(p)$ le correcteur de la boucle de régulation ;
-\item $M(p)$ la fonction de transfert de la chaîne de mesure du glissement obtenu à partir des vitesses $V_T$ et $V_R$, cette chaîne comporte un filtre destiné à limiter
-l’impact des bruits de mesure ;
-\item $\nu m$ : glissement estimé à partir de $V_T$ et de $V_R$.
+\item $M(p)$ la fonction de transfert de la chaîne de mesure du glissement,% obtenu à partir des vitesses $V_T$ et $V_R$
+ cette chaîne comporte un filtre destiné à limiter l’impact des bruits de mesure;
+\item $\nu_m$ : glissement estimé.% à partir de $V_T$ et de $V_R$.
 \end{itemize}
 On adoptera pour la suite : $H_1(p)=\dfrac{2000}{1+0,1p+0,01p^2}$ et $M(p)=\dfrac{1}{1+0,05p}$.
 
-Pour une vitesse $V_T=\SI{200}{km.h^{-1}}$, le cahier des charges est résumé par les données du tableau 1 et les données numériques utilisées sont données ci-dessous.
-Enfin, les problèmes liés à l’évolution de la vitesse $V_T$ ne font pas l’objet de cette
-étude.
+Pour une vitesse de train $V_T=\SI{200}{km.h^{-1}}$, le cahier des charges est résumé par les données du tableau suivant et les données numériques utilisées sont données ci-dessous.
+Enfin, les problèmes liés à l’évolution de la vitesse $V_T$ ne font pas l’objet de cette étude.
 
-On a $M=\SI{8200}{kg}$, $V_T=\SI{200}{km.h^{-1}}$, $I/r^2=\SI{400}{kg}$, $g=\SI{10}{m.s{-2}}$.
+On a $M=\SI{8200}{kg}$, $V_T=\SI{200}{km.h^{-1}}$, $I/r^2=\SI{400}{kg}$, $g=\SI{10}{m.s^{-2}}$.
+
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.6\linewidth}|p{.3\linewidth}|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Marges de stabilité, performances en boucle ouverte}} \\ \hline
+Pulsation de coupure à \SI{0}{dB} & $\omega_c \simeq \SI{1}{rad.s^{-1}}$ \\ \hline
+Marge de phase & $\Delta \varphi \geq 60\degres$ au point de fonctionnement nominal $B$ \\ \hline
+Stabilité quel que soit le point de fonctionnement sur la caractéristique $\mu = f(\nu)$ & \\ \hline
+\multicolumn{2}{|l|}{\textbf{Réponse à un échelon de consigne de glissement}} \\ \hline
+Écart en régime permanent & Nul \\ \hline
+Temps du 1\ier maximum & $t_m\leq \SI{3,5}{s}$ \\ \hline
+Dépassement & $D\simeq  18\, \%$  \\ \hline
+\multicolumn{2}{|l|}{\textbf{Réponse à une variation en échelon de l'adhérence}} \\ \hline
+Écart en régime permanent & Nul \\ \hline
+Temps de réponse & $t_r \leq \SI{9}{s}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\normalsize
 
 \begin{center}
-\includegraphics[width=\linewidth]{images/fig_03}
+%\includegraphics[width=\linewidth]{images/fig_02a}
 \textit{Cahier des charges de la boucle de régulation de glissement pour $V_T = \SI{200}{km.h^{-1}}$}
 \end{center}
 
 
 
 \subsection*{Analyse des réponses fréquentielles en boucle ouverte}
-On donne la fonction de transfert entre le glissement relatif et la force de freinage : 
-$$
-\dfrac{\nu_1 (p)}{F_R(p)}=\dfrac{1}{gMf'\left(\nu_0\right)} \dfrac{1}{1+\dfrac{IV_{T0}}{r^2g Mf'\left(\nu_0\right)}p} = \dfrac{K}{1+\tau p}.
-$$
+On donne la fonction de transfert entre le glissement relatif et la force de freinage : $\dfrac{\nu_1 (p)}{F_R(p)}=\dfrac{45\cdot 10^{-6}}{p}$.
+%\dfrac{1}{gMf'\left(\nu_0\right)} \dfrac{1}{1+\dfrac{IV_{T0}}{r^2g Mf'\left(\nu_0\right)}p} = \dfrac{K}{1+\tau p}.
+%$$
 
-\subparagraph{}\textit{En utilisant la relation précédente, préciser la fonction de transfert $H_2(p)$ autour du point de fonctionnement sous forme numérique.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
+%\subparagraph{}\textit{En utilisant la relation précédente, préciser la fonction de transfert $H_2(p)$ autour du point de fonctionnement sous forme numérique.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
 
 
 \subparagraph{}\textit{En prenant $C(p)=1$, compléter par le tracé asymptotique le diagramme
