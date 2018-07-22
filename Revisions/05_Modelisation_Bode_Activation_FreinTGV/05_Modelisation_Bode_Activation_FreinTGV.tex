@@ -149,7 +149,7 @@ On note :
 On adoptera pour la suite : $H_1(p)=\dfrac{2000}{1+0,1p+0,01p^2}$ et $M(p)=\dfrac{1}{1+0,05p}$.
 
 Pour une vitesse de train $V_T=\SI{200}{km.h^{-1}}$, le cahier des charges est résumé par les données du tableau suivant et les données numériques utilisées sont données ci-dessous.
-Enfin, les problèmes liés à l’évolution de la vitesse $V_T$ ne font pas l’objet de cette étude.
+Enfin, les problèmes liés à l’évolution de la vitesse du train par rapport au rail $V_T$ ne font pas l’objet de cette étude.
 
 On a $M=\SI{8200}{kg}$, $V_T=\SI{200}{km.h^{-1}}$, $I/r^2=\SI{400}{kg}$, $g=\SI{10}{m.s^{-2}}$.
 
@@ -213,6 +213,7 @@ est : $C(p)=K_r\left(1+\dfrac{1}{T_i p} \right)$.
 \subparagraph{}\textit{Calculer la valeur que doit prendre l’argument $C(p)$ de afin d’assurer
 la marge de phase imposée par le cahier des charges à la pulsation de coupure $\omega_c$
 souhaitée.}
+ECRIRE LA CONDITION
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -230,6 +231,8 @@ souhaitée.}
 
 
 \subparagraph{}\textit{En adoptant $T_{i}=T_{imin}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
+ECRIRE CONDITION
+
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -321,7 +324,7 @@ La variation d’adhérence peut être modélisée en première approximation co
 
 On se propose dans cette partie d’évaluer les performances de la chaîne de régulation de freinage vis-à-vis de cette perturbation.
 
-\subparagraph{}\textit{Déterminer la fonction de transfert $F_2(p)=\dfrac{\nu_1(p)}{F_{ext}(p)}$ entre le glissement
+\subparagraph{}\textit{Déterminer la fonction de transfert $F_2(p)=\dfrac{\nu_1(p)}{F_{\text{ext}}(p)}$ entre le glissement
 et la force de perturbation que vous expliciterez en fonction des différentes
 transmittances de la boucle de régulation. En expliquant soigneusement
 votre démarche, montrer que le module de la réponse fréquentielle, notée $||F_2(j \omega)||$, de cette fonction peut être approché par la relation :
@@ -346,13 +349,6 @@ la copie) le diagramme asymptotique de la fonction $||H_2(j \omega) ||$.}
 \else
 \fi
 
-
-\subparagraph{}\textit{}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
 
 
 \subparagraph{}\textit{En déduire la forme du tracé asymptotique de la fonction $||F_2(j \omega) ||$. En analysant
@@ -380,7 +376,7 @@ la forme : $F_2(p)=\dfrac{K_2p}{1+Tp}$.}
 
 \subparagraph{}\textit{En utilisant cette fonction de transfert, donner l’expression de l’évolution
 temporelle du glissement relatif  $\nu_1(t)$ en réponse à une variation en échelon de
-la force perturbatrice $F_{ext}=F_0u(t)$ , où $u(t)$ représente l’échelon unité et avec
+la force perturbatrice $F_{\text{ext}}=F_0u(t)$ , où $u(t)$ représente l’échelon unité et avec
 $F_0=\SI{2000}{N}$.}
 \ifprof
 \begin{corrige}
