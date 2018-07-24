@@ -195,10 +195,16 @@ On donne la fonction de transfert entre le glissement relatif et la force de fre
 
 
 \subparagraph{}\textit{En prenant $C(p)=1$, compléter par le tracé asymptotique le diagramme
-de Bode de la fonction de transfert en boucle ouverte fourni en annexe 3
-en justifiant le tracé sur la copie (document réponse à joindre obligatoirement
-avec la copie). Pour la suite, vous pourrez adopter sans aucune justification le
-diagramme de Bode de l’annexe 3.}
+de Bode de la fonction de transfert en boucle ouverte fourni.}% en annexe 3
+%en justifiant le tracé sur la copie (document réponse à joindre obligatoirement
+%avec la copie). Pour la suite, vous pourrez adopter sans aucune justification le
+%diagramme de Bode de l’annexe 3.}
+\begin{center}
+\includegraphics[width=\linewidth]{images/BodeQ1}
+%\textit{Cahier des charges de la boucle de régulation de glissement pour $V_T = \SI{200}{km.h^{-1}}$}
+\end{center}
+
+
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -213,7 +219,14 @@ est : $C(p)=K_r\left(1+\dfrac{1}{T_i p} \right)$.
 \subparagraph{}\textit{Calculer la valeur que doit prendre l’argument $C(p)$ de afin d’assurer
 la marge de phase imposée par le cahier des charges à la pulsation de coupure $\omega_c$
 souhaitée.}
-ECRIRE LA CONDITION
+
+\footnotesize
+\begin{methode}
+Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \omega_c \right)| = \SI{0}{dB}$. On peut alors définir la marge de phase par $M\varphi=\arg H\left( j \omega_c\right)-\left(-180\degres\right)$.
+\end{methode}
+
+\normalsize 
+
 \ifprof
 \begin{corrige}
 \end{corrige}
