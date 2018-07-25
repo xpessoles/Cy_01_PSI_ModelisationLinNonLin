@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-%\proffalse
+\proffalse
 
 \tdtrue
 %\tdfalse
@@ -222,7 +222,7 @@ souhaitée.}
 
 \footnotesize
 \begin{methode}
-Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \omega_c \right)| = \SI{0}{dB}$. On peut alors définir la marge de phase par $M\varphi=\arg H\left( j \omega_c\right)-\left(-180\degres\right)$.
+Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \omega_c \right)| = \SI{0}{dB}$. On peut alors définir la marge de phase par $M\varphi=\arg \left[H\left( j \omega_c\right)\right]-\left(-180\degres\right)$.
 \end{methode}
 
 \normalsize 
@@ -234,7 +234,7 @@ Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \
 \fi
 
 
-\subparagraph{}\textit{Calculer la valeur minimale, $T_{imin}$, que l’on peut conférer à la constante $T_i$ de l’action intégrale du régulateur.}
+\subparagraph{}\textit{Calculer la valeur minimale, $T_{\text{imin}}$, que l’on peut conférer à la constante $T_i$ de l’action intégrale du régulateur.}
 
 \ifprof
 \begin{corrige}
@@ -243,8 +243,8 @@ Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \
 \fi
 
 
-\subparagraph{}\textit{En adoptant $T_{i}=T_{imin}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
-ECRIRE CONDITION
+\subparagraph{}\textit{En adoptant $T_{i}=T_{\text{imin}}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
+%ECRIRE CONDITION
 
 \ifprof
 \begin{corrige}
@@ -255,6 +255,10 @@ ECRIRE CONDITION
 
 \subparagraph{}\textit{Le système étant bouclé par le régulateur dimensionné à la question
 précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues.}
+
+\begin{methode}
+Soit $\omega_{\varphi}$ la pulsation telle que $\varphi\left(\omega_{\varphi} \right)=-180\degres$. La marge de gain s'exprime alors par $MG=-|H\left(j \omega_{\varphi} \right)|$.
+\end{methode}
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -276,11 +280,15 @@ $ F(p)=\dfrac{\nu_1(p)}{\nu_c(p)}=\dfrac{K_f\left( 1+\tau_1 p\right)}{\left( 1+\
 
 On supposera sans aucune justification que $\omega_0 > \dfrac{1}{\tau_2}$.
 
-\subparagraph{}\textit{En examinant les diagrammes de Bode fournis en annexe 4 de la fonction de transfert en boucle fermée $F(p)$, justifier l’expression adoptée et
-compléter les diagrammes fournis par leur tracé asymptotique (document
-réponse à joindre obligatoirement avec la copie). Une tolérance sera admise pour
-les brisures, mais il est demandé d’assurer une très bonne concordance pour les
-comportements en haute fréquence et en basse fréquence.}
+\subparagraph{}\textit{En examinant les diagrammes de Bode suivants de la fonction de transfert en boucle fermée $F(p)$, justifier l’expression adoptée et
+compléter les diagrammes fournis par leur tracé asymptotique.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/Q06.png}
+%\textit{Cahier des charges de la boucle de régulation de glissement pour $V_T = \SI{200}{km.h^{-1}}$}
+\end{center}
+
+
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -305,7 +313,7 @@ transfert $F(p)$ par la forme suivante : $ F(p)=\dfrac{\nu_1(p)}{\nu_c(p)}=\dfra
 \else
 \fi
 
-On donne la réponse temporelle vis-à-vis de la consigne de glissement : $f(t)=\left( \dfrac{\tau_2 - \tau_1 }{\tau_2^3 }t +\dfrac{\tau_1}{\tau_2^2} \right)e^{-\dfrac{t}{\tau_2}} h(t)$.
+On donne la réponse temporelle vis-à-vis de la consigne de glissement : $f(t)=\left( \dfrac{\tau_2 - \tau_1 }{\tau_2^3 }t +\dfrac{\tau_1}{\tau_2^2} \right)e^{-\dfrac{t}{\tau_2}} u(t)$.
 
 
 
@@ -353,9 +361,14 @@ $||F_2(j \omega)|| = \min \left[ ||H_2(j \omega) || ; \dfrac{1}{||C(j\omega) H_1
 % Calcul de la fonction de transfert F_2(p).
 
 
-\subparagraph{}\textit{L’annexe 5 comporte le tracé de la fonction $\dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}$, tracer
-directement sur cette annexe (document réponse à joindre obligatoirement avec
-la copie) le diagramme asymptotique de la fonction $||H_2(j \omega) ||$.}
+\subparagraph{}\textit{La figure suivante comporte le tracé de la fonction $\dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}$. Tracer
+directement sur cette figure le diagramme asymptotique de la fonction $||H_2(j \omega) ||$.}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/Q12}
+\end{center}
+
+
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -408,6 +421,7 @@ duquel le glissement reste en dessous de 5\,\% de la valeur initiale $\nu_1(0)$ 
 \else
 \fi
 
+\subsection*{Retour sur le cahier des charges}
 
 \subparagraph{}\textit{Conclure sur les performances obtenues vis-à-vis des exigences du cahier des charges en réponse à des variations de l’adhérence.}
 \ifprof
