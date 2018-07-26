@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -207,6 +207,15 @@ de Bode de la fonction de transfert en boucle ouverte fourni.}% en annexe 3
 
 \ifprof
 \begin{corrige}
+On a pour $H_1(p)$, $\dfrac{1}{\omega_0^2}=0,01 \Leftrightarrow \omega_0=10$ et $2\dfrac{\xi}{\omega_0}=0,1$ soit $\xi = 0,1\times 10 / 2 = 0,5$. Les pulsations caractéristiques de la FTBO sont donc $\omega_0=\SI{10}{rad.s^{-1}}$ et $1/0,05 = \SI{20}{rad.s^{-1}}$.
+
+Pour tracer un diagramme de Bode avec un intégrateur, il est nécessaire de définir un point pour définir la << hauteur >> du tracé. Pour cela on prend un point pour lequel seul l'intégrateur et les constantes ont de l'effet. Ainsi, pour $\omega=\SI{0,1}{rad.s^{-1}}$, on a $\text{FTBO}(p) \simeq \dfrac{2000\times 45\times 10^{-6}}{p}$. On a donc $20\log 0,09 - 20 \log 0,1 \simeq \SI{-0,92}{dB}$.
+
+On peut dresser le tableau de variations de la FTBO puis tracer les asymptotes. 
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_01}
+\includegraphics[width=\linewidth]{images/cor_02}
+\end{center}
 \end{corrige}
 \else
 \fi
