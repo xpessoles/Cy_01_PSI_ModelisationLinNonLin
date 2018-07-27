@@ -98,11 +98,11 @@ Révisions 5 -- \xxactivite%
 \def\columnseprulecolor{\color{ocre}}
 \setlength{\columnseprule}{0.4pt} 
 
-%\ifprof
+\ifprof
 
-%\else
+\else
 \begin{multicols}{2}
-%\fi
+\fi
 \section*{Mise en situation}
 
 L’objet de cette étude est l’analyse du système de freinage mécanique à énergie
@@ -231,13 +231,39 @@ souhaitée.}
 
 \footnotesize
 \begin{methode}
-Si on note $\omega_c$ on définit la pulsation de coupure telle que $|H\left(j \omega_c \right)| = \SI{0}{dB}$. On peut alors définir la marge de phase par $M\varphi=\arg \left[H\left( j \omega_c\right)\right]-\left(-180\degres\right)$.
+Si on note $\omega_c$ on définit la pulsation de coupure telle que $|\text{FTBO}\left(j \omega_c \right)| = \SI{0}{dB}$. On peut alors définir la marge de phase par $M\varphi=\arg \left[\text{FTBO}\left( j \omega_c\right)\right]-\left(-180\degres\right)$.
 \end{methode}
 
 \normalsize 
 
 \ifprof
 \begin{corrige}
+La pulsation de coupure souhaitée est $\omega_c \simeq \SI{1}{rad.s^{-1}}$. 
+On cherche donc $K_r$ et $T_i$ tels que $\arg \left[\text{FTBO}\left( j \omega_c\right)\right]-\left(-180\degres\right)=60\degres$.
+
+$\arg \left[\text{FTBO}\left( j \omega\right)\right]$ 
+$ = \arg \left[
+\underbrace{\dfrac{2000}{1+0,1p+0,01p^2}}_{\to 0 \text{ qd } \omega=\omega_c} 
+\cdot
+\underbrace{\dfrac{1}{1+0,05p}}_{\to 0 \text{ qd } \omega=\omega_c} 
+\cdot 
+ \underbrace{K_r}_{\to 0}
+ \left(1+\dfrac{1}{T_i p} \right) \cdot 
+\underbrace{\dfrac{45\cdot 10^{-6}}{p}}_{\to -90\degres } 
+\right] $
+$ = \arg \left[  \left(1+\dfrac{1}{T_i p} \right) \right] -90$
+
+\begin{rem}
+Ci-dessus, ce sont les \textbf{arguments} que l'on évalue lorsque $\omega=\omega_c$. L'argument du produit est égal à la somme des arguments.
+\end{rem}
+$ \arg \left[\text{FTBO}\left( j \omega\right)\right] = \arg \left[  \dfrac{T_i p+1}{T_i p}  \right]-90 $
+$ = \arctan (T_i \omega) -90-90$.
+
+$\arg \left[\text{FTBO}\left( j \omega_c\right)\right]-\left(-180\right)=60$
+$\Leftrightarrow  \arctan (T_i \omega_c) -180 +180 =60$
+$\Leftrightarrow  \arctan (T_i \omega_c)  =60$
+$\Rightarrow  T_i =\tan(60)=\SI{1,73}{s}$.
+ 
 \end{corrige}
 \else
 \fi
@@ -442,7 +468,10 @@ duquel le glissement reste en dessous de 5\,\% de la valeur initiale $\nu_1(0)$ 
 %\includegraphics[width=.65\linewidth]{images/cor_01}
 %%\textit{}
 %\end{center}
+\ifprof
+\else
 \end{multicols}
+\fi
 
 
 \end{document}
