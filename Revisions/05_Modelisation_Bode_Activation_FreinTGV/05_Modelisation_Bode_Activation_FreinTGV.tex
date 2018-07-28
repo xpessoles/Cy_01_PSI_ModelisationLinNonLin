@@ -256,23 +256,34 @@ $ = \arg \left[  \left(1+\dfrac{1}{T_i p} \right) \right] -98,5$
 \begin{rem}
 Ci-dessus, ce sont les \textbf{arguments} que l'on évalue lorsque $\omega=\omega_c$. L'argument du produit est égal à la somme des arguments.
 \end{rem}
-$ \arg \left[\text{FTBO}\left( j \omega\right)\right] = \arg \left[  \dfrac{T_i p+1}{T_i p}  \right]-98,5 $
-$ = \arctan (T_i \omega) -98,5-90$.
+$ \arg \left[\text{FTBO}\left( j \omega\right)\right] = \arg \left[  \dfrac{T_i p+1}{T_i p}  \right]-98,5 $.
+%$ = \arctan (T_i \omega) -98,5-90$.
 
-$\arg \left[\text{FTBO}\left( j \omega_c\right)\right]-\left(-180\right)=60$
-$\Leftrightarrow  \arctan (T_i \omega_c) -188,5 +180 =60$
-$\Leftrightarrow  \arctan (T_i \omega_c)  =68,5$
-$\Rightarrow  T_i =\tan(68,5)=\SI{2,54}{s}$.
+Pour respecter la marge souhaitée, il est donc nécessaire que 
+$\arg \left[\text{FTBO}\left( j \omega_c\right)\right]-\left(-180\right)\geq60$
+Soit 
+$\arg \left[  \dfrac{T_i p+1}{T_i p}  \right]-98,5+ 180 \geq60$ 
+et $\arg \left[  \dfrac{T_i p+1}{T_i p}  \right] \geq - \SI{21,5}{\degres}$.
  
 \end{corrige}
 \else
 \fi
 
-
 \subparagraph{}\textit{Calculer la valeur minimale, $T_{\text{imin}}$, que l’on peut conférer à la constante $T_i$ de l’action intégrale du régulateur.}
 
 \ifprof
 \begin{corrige}
+On en déduit que pour $\omega=\omega_c=1$, 
+$\arg \left[  \dfrac{T_i p+1}{T_i p}  \right] \geq - \SI{21,5}{\degres}$
+$ \Leftrightarrow  \arctan (T_i \omega) -90 \geq - \SI{21,5}{\degres}$ 
+$ \Leftrightarrow  \arctan (T_i \omega)  \geq \SI{68,5}{\degres}$ 
+et donc $\Rightarrow  T_i \geq \tan(68,5)=\SI{2,54}{s}$.
+ 
+
+ \begin{warn}
+\textbf{Attention} : à ce stade, la marge de phase serait de 60\degres \textbf{SI} la pulsation de  coupure était de \SI{1}{rad.s^{-1}} ce qui n'est pas encore le cas pour le moemnt.
+ \end{warn}
+ 
 \end{corrige}
 \else
 \fi
@@ -280,6 +291,10 @@ $\Rightarrow  T_i =\tan(68,5)=\SI{2,54}{s}$.
 
 \subparagraph{}\textit{En adoptant $T_{i}=T_{\text{imin}}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
 %ECRIRE CONDITION
+
+\begin{methode}
+Il faut chercher $K_r$ tel que $|\text{FTBO}(j\omega)|_{dB}$
+\end{methode}
 
 \ifprof
 \begin{corrige}
@@ -292,7 +307,7 @@ $\Rightarrow  T_i =\tan(68,5)=\SI{2,54}{s}$.
 précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues.}
 
 \begin{methode}
-Soit $\omega_{\varphi}$ la pulsation telle que $\varphi\left(\omega_{\varphi} \right)=-180\degres$. La marge de gain s'exprime alors par $MG=-|H\left(j \omega_{\varphi} \right)|$.
+Soit $\omega_{\varphi}$ la pulsation telle que $\varphi\left(\omega_{\varphi} \right)=-180\degres$. La marge de gain s'exprime alors par $MG=-20\log||H\left(j \omega_{\varphi} \right)||$.
 \end{methode}
 \ifprof
 \begin{corrige}
