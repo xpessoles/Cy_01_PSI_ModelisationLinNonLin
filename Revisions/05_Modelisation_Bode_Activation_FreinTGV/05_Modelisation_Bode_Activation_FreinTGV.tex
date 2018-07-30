@@ -293,11 +293,40 @@ et donc $\Rightarrow  T_i \geq \tan(68,5)=\SI{2,54}{s}$.
 %ECRIRE CONDITION
 
 \begin{methode}
-Il faut chercher $K_r$ tel que $|\text{FTBO}(j\omega)|_{dB}$
+Il faut chercher $K_r$ tel que $20\log||\text{FTBO}(j\omega_c)||=0$.
 \end{methode}
+\ifprof
+
 
 \ifprof
 \begin{corrige}
+$20\log||\text{FTBO}(j\omega_c)||=0 \Rightarrow ||\text{FTBO}(j\omega_c)||=1$.
+
+$\left|\left| \text{FTBO}\left( j \omega\right)\right|\right|$ 
+$ = \left|\left|
+{\dfrac{2000}{1+0,1p+0,01p^2}}
+\cdot
+{\dfrac{1}{1+0,05p}}
+\cdot 
+{K_r}
+ \left(1+\dfrac{1}{T_i p} \right) \cdot 
+\dfrac{45\cdot 10^{-6}}{p}
+\right|\right| $
+
+$ = \left|\left|
+{\dfrac{2000}{1+0,1p+0,01p^2}}
+\cdot
+{\dfrac{1}{1+0,05p}}
+\cdot 
+{K_r}
+ \dfrac{1+T_i p}{T_i p} 
+\dfrac{45\cdot 10^{-6}}{p}
+\right|\right| $
+
+$ =  \dfrac{K_r}{T_i}  90\cdot 10^{-3}  \sqrt{1+T_i^2\omega^2}\left|\left|
+\dfrac{1}{1+0,1p+0,01p^2}
+\dfrac{1}{1+0,05p}
+\right|\right| $
 \end{corrige}
 \else
 \fi
@@ -305,11 +334,11 @@ Il faut chercher $K_r$ tel que $|\text{FTBO}(j\omega)|_{dB}$
 
 \subparagraph{}\textit{Le système étant bouclé par le régulateur dimensionné à la question
 précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues.}
-
 \begin{methode}
 Soit $\omega_{\varphi}$ la pulsation telle que $\varphi\left(\omega_{\varphi} \right)=-180\degres$. La marge de gain s'exprime alors par $MG=-20\log||H\left(j \omega_{\varphi} \right)||$.
 \end{methode}
-\ifprof
+
+
 \begin{corrige}
 \end{corrige}
 \else
