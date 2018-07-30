@@ -300,6 +300,13 @@ Il faut chercher $K_r$ tel que $20\log||\text{FTBO}(j\omega_c)||=0$.
 
 \ifprof
 \begin{corrige}
+En raisonnant graphiquement à l'aide du diagramme en boucle ouverte non corrigé, on lit que le gain est d'environ \SI{-20}{dB} lorsque $\omega=1$. La fonction de transfert du correcteur est 
+$C(p)=K_r  \left(1+\dfrac{1}{T_i p} \right)=K_r  \dfrac{T_i p+1}{T_i p} $. Le gain dB du correcteur doit donc être de \SI{20}{dB} lorsque $\omega=1$ :
+$20\log K_r  +20\log \sqrt{T_i^2 \omega^2 + 1}- 20\log T_i \omega =20$
+$\Leftrightarrow \log K_r  +\log \sqrt{T_i^2  + 1}- \log T_i  =1$
+$\Leftrightarrow \log K_r   =1-\log \sqrt{T_i^2  + 1}+ \log T_i $. 
+
+Anlaytiquement (à vérifier....)
 $20\log||\text{FTBO}(j\omega_c)||=0 \Rightarrow ||\text{FTBO}(j\omega_c)||=1$.
 
 $\left|\left| \text{FTBO}\left( j \omega\right)\right|\right|$ 
@@ -323,10 +330,18 @@ $ = \left|\left|
 \dfrac{45\cdot 10^{-6}}{p}
 \right|\right| $
 
-$ =  \dfrac{K_r}{T_i}  90\cdot 10^{-3}  \sqrt{1+T_i^2\omega^2}\left|\left|
+$ =  \dfrac{K_r}{T_i\omega^2}  90\cdot 10^{-3}  \sqrt{1+T_i^2\omega^2}\left|\left|
 \dfrac{1}{1+0,1p+0,01p^2}
 \dfrac{1}{1+0,05p}
 \right|\right| $
+$ =  \dfrac{K_r}{T_i\omega^2}  90\cdot 10^{-3}  
+\dfrac{\sqrt{1+T_i^2\omega^2}}{\sqrt{1+0,05^2 \omega^2}}
+\dfrac{1}{\sqrt{\left(1-0,01^2\omega^2\right)^2+0,1^2\omega^2}} $
+
+$ =  \dfrac{K_r}{T_i}  90\cdot 10^{-3}  
+\dfrac{\sqrt{1+T_i^2}}{\sqrt{1+0,05^2 }}
+\dfrac{1}{\sqrt{\left(1-0,01^2\right)^2+0,1^2}} $
+
 \end{corrige}
 \else
 \fi
