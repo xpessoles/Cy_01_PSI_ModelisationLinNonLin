@@ -32,7 +32,7 @@
 \usepackage{standalone}
 \standaloneconfig{mode=buildnew}
 \usepackage{siunitx}
-\usepackage{picins}
+
 
 % -------------------------------------
 % Déclaration des titres
@@ -102,7 +102,7 @@ Pour modéliser un système, plusieurs outils peuvent être nécessaires. Lorsqu
 \item pour programmer une interface graphique d'un logiciel, il est possible d'utiliser Python...
 \end{itemize}
 
-En revanche, lorsqu'on veut que tous ces domaines communiquent, il faut une plateforme commune permettant l'échange entre les modèles. On parle alors de modélisation multiphysique. Il est possible d'utiliser des logiciels comme Scilab (Xcos -- Modelica) ou Matlab (Simulink -- Simscape). 
+En revanche, lorsqu'on veut que tous ces domaines communiquent, il faut une plate forme commune permettant l'échange entre les modèles. On parle alors de modélisation multiphysique. Il est possible d'utiliser des logiciels comme Scilab (Xcos -- Modelica) ou Matlab (Simulink -- Simscape). 
 
 
 
@@ -202,9 +202,9 @@ La figure ci-dessous présente un modèle causal et un modèle acausal du systè
 \includegraphics[width=\linewidth]{images/Modeles}
 \end{center}
 
-Visuellement on constate que sur le modèle causal, les composants du système apparaissent. Ainsi, sans connaitre les lois de comportements des composants, il est possible de réaliser le modèle multiphysique d'un système.
+Visuellement on constate que sur le modèle causal, les composants du système apparaissent. Ainsi, sans connaître les lois de comportements des composants, il est possible de réaliser le modèle multiphysique d'un système.
 
-En modélisation acausale, on utilise une représentation par schéma-blocs. Il est ici indispensable de connaitre les modèles de connaissance ou de comportement des composants pour réaliser le modèle.
+En modélisation acausale, on utilise une représentation par schéma-blocs. Il est ici indispensable de connaître les modèles de connaissance ou de comportement des composants pour réaliser le modèle.
 
 \subsection{Résolution -- Avantage et Inconvénients}
 
@@ -221,7 +221,7 @@ Par défaut, nous laisserons un choix automatique du solveur. Cependant, certain
 \end{minipage}
 
 \begin{warn}
-Attention, il est à noter qu'il n'est possible de réaliser de diagramme de Bode en utilisant un modèle acausal. Ceci peut être un handicap en phase de conception d'un système car il devient plus délicat de déterminer les résonances du système.
+Attention, il est à noter qu'il peut être difficile de réaliser de diagramme de Bode en utilisant un modèle acausal. Ceci peut être un handicap en phase de conception d'un système car il devient plus délicat de déterminer les résonances du système.
 \end{warn}
 \section{Modélisation des systèmes physiques}
 On utilisera ici Matlab -- Simulink. Certains modèles sont aussi transposables avec Scilab -- Xcos. 
@@ -424,6 +424,8 @@ On verra dans un chapitre ultérieur que les systèmes que nous manipulons sont 
    \bibitem[2]{ref2} Ph. Fichou, {\it La modélisation multiphysique, Technologie, Mars 2012.}
    \bibitem[3]{ref3} Yvan Liebgott, {\it Modélisation et Simulation des Systemes Multi-Physiques avec MATLAB.}
    \bibitem[4]{ref4} Frédéric Mazet, {\it Cours d'automatique de deuxième année, Lycée Dumont Durville, Toulon.}
+   \bibitem[5]{ref5} Patrick Beynet, {\it Sciences industrielles de l'ingénieur MP - PSI}
+, Éditions Ellipses.
 %      \bibitem[5]{ref5} Ivan Liebgott, {\it Modélisation et Simulation des systèmes Multi-Physiques avec MATLAB--Simulink.}
 
 \end{thebibliography}
