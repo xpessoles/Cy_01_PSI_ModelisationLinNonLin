@@ -13,7 +13,7 @@
 %\fichefalse
 
 \proftrue
-%\proffalse
+\proffalse
 
 \tdtrue
 %\tdfalse
@@ -65,7 +65,9 @@
 \vspace{-.2cm}
 \begin{itemize}[label=\ding{112},font=\color{ocre}] 
 \item\textit{Mod2.C4} : calcul symbolique;
-\item \textit{Mod2.C7.SF1} : analyser ou établir le schéma-bloc du système.
+\item \textit{Mod2.C7.SF1} : analyser ou établir le schéma-bloc du système;
+\item \textit{Res2.C10} : précision des SLCI : erreur en régime permanent;
+\item \textit{Res2.C10.SF1} : déterminer l’erreur en régime permanent vis-à-vis d’une entrée en échelon ou en rampe (consigne ou perturbation).
 \end{itemize}}}}
 
 
@@ -243,6 +245,11 @@ En conséquences, $\varepsilon(p)=\dfrac{ \theta_{mC}(p)}{ 1+H_{\Omega}(p) \dfra
 \else
 \fi
 
+\ifprof
+\else
+\begin{methode} On peut définir $\varepsilon_p$ par $\varepsilon_p=\lim\limits_{t \to +\infty} \varepsilon(t)=\lim\limits_{p \to 0} p\varepsilon(p)$
+\end{methode}
+\fi
 
 \subparagraph{}\textit{Déterminer l’erreur de position $\varepsilon_p$ puis l’erreur de traînage $\varepsilon_v$. Conclure sur la valeur de $K_1$ pour satisfaire
 à l’exigence d’erreur en traînage.}
