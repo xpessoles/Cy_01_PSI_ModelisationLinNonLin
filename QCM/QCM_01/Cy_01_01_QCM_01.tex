@@ -11,7 +11,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -89,7 +89,8 @@ Chapitre 1 -- \xxactivite%
 
 %\begin{multicols}{2}
 %\end{multicols}
-
+\ifprof
+\else
 Vrai ou faux : 
 \begin{enumerate}
 \item La modélisation d’un système dans le domaine symbolique ne concerne que les systèmes linéaires. 
@@ -100,10 +101,17 @@ Vrai ou faux :
 \item La modélisation acausale nécessite de la part du modélisateur une connaissance des lois de comportement des constituants.
 \item Il est possible de mélanger modélisation causale et modélisation acausale dans un modèle global.
 \item Cette modélisation respecte les règles d’association : 
+\includegraphics[width=.4\linewidth]{images/fig_01}
 \item Cette modélisation respecte les règles d’association : 
+\begin{center}
+\includegraphics[width=.4\linewidth]{images/fig_02}
+\end{center}
+
 \item Dans la formule donnant la puissance électrique instantanée : $p(t)=u(t)\times i(t)$, $u(t)$ est une grandeur de type <<~effort~>> et est une grandeur de type <<~flux~>>.
 
 \end{enumerate}
+
+\fi
 
 \ifprof
 \begin{corrige}
