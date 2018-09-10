@@ -182,7 +182,7 @@ Temps de réponse & $t_r \leq \SI{9}{s}$ \\
 
 
 \subsection*{Analyse des réponses fréquentielles en boucle ouverte}
-On donne la fonction de transfert entre le glissement relatif et la force de freinage : $\dfrac{\nu_1 (p)}{F_R(p)}=\dfrac{45\cdot 10^{-6}}{p}$.
+On donne la fonction de transfert entre le glissement relatif et la force de freinage : $H_2(p)=\dfrac{\nu_1 (p)}{F_R(p)}=\dfrac{45\cdot 10^{-6}}{p}$.
 %\dfrac{1}{gMf'\left(\nu_0\right)} \dfrac{1}{1+\dfrac{IV_{T0}}{r^2g Mf'\left(\nu_0\right)}p} = \dfrac{K}{1+\tau p}.
 %$$
 
@@ -289,7 +289,7 @@ et donc $\Rightarrow  T_i \geq \tan(68,5)=\SI{2,54}{s}$.
 \fi
 
 
-\subparagraph{}\textit{En adoptant $T_{i}=T_{\text{imin}}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées.}
+\subparagraph{}\textit{En adoptant $T_{i}=T_{\text{imin}}$, déterminer alors le gain $K_r$ du régulateur permettant de satisfaire la pulsation de coupure et la marge de phase souhaitées. (Approche graphique demandée, approche analytique facultative)}
 %ECRIRE CONDITION
 
 \begin{methode}
@@ -351,7 +351,7 @@ $ =  \dfrac{K_r}{T_i}  90\cdot 10^{-3}
 
 
 \subparagraph{}\textit{Le système étant bouclé par le régulateur dimensionné à la question
-précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues.}
+précédente, déterminer la marge de gain. Conclure sur les marges de stabilité obtenues. (Approche graphique demandée, approche analytique facultative)}
 \begin{methode}
 Soit $\omega_{\varphi}$ la pulsation telle que $\varphi\left(\omega_{\varphi} \right)=-180\degres$. La marge de gain s'exprime alors par $MG=-20\log||H\left(j \omega_{\varphi} \right)||$.
 \end{methode}
@@ -418,10 +418,9 @@ cette fonction de transfert.}
 \begin{itemize}
 \item $K_f=1$ : lorsque $\omega$ tend vers 0, le gain tend vers 0;
 \item $\omega_0  = 0,5$ : valeur de la pulsation de résonance; 
-\item $\tau_1$ :
-\item $\tau_2$ :
-\item $\xi$ :
-
+\item $\tau_1 = \dfrac{1}{0,9}=\SI{1,11}{s}$;
+\item $\tau_2 = \dfrac{1}{7} =\SI{0,14}{s}$;
+\item $\xi<0,7$ (résonance).
 \end{itemize}
 \end{corrige}
 \else
@@ -442,7 +441,7 @@ On donne la réponse temporelle vis-à-vis de la consigne de glissement : $f(t)=
 
 
 
-\subparagraph{}\textit{Calculer le temps du 1\ier maximum et en déduire le
+\subparagraph{}\textbf{Facultatif \; } \textit{Calculer le temps du 1\ier maximum et en déduire le
 dépassement en réponse à une variation en échelon de la consigne de glissement
 relatif $\nu_c(t)=\nu_{c0}u(t)$ où $u(t)$ désigne l’échelon unité.}
 \ifprof
@@ -452,7 +451,7 @@ relatif $\nu_c(t)=\nu_{c0}u(t)$ où $u(t)$ désigne l’échelon unité.}
 \fi
 
 
-\subparagraph{}\textit{Vérifier le cahier des charges en réponse à une variation en échelon de la consigne de glissement relatif.}
+\subparagraph{}\textbf{Facultatif \; }\textit{Vérifier le cahier des charges en réponse à une variation en échelon de la consigne de glissement relatif.}
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -471,12 +470,23 @@ On se propose dans cette partie d’évaluer les performances de la chaîne de r
 
 \subparagraph{}\textit{Déterminer la fonction de transfert $F_2(p)=\dfrac{\nu_1(p)}{F_{\text{ext}}(p)}$ entre le glissement
 et la force de perturbation que vous expliciterez en fonction des différentes
-transmittances de la boucle de régulation. En expliquant soigneusement
+transmittances de la boucle de régulation (on suppose $\nu_c$ nulle). En expliquant soigneusement
 votre démarche, montrer que le module de la réponse fréquentielle, notée $||F_2(j \omega)||$, de cette fonction peut être approché par la relation :
 $||F_2(j \omega)|| = \min \left[ ||H_2(j \omega) || ; \dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}\right]$ }.
 
 \ifprof
 \begin{corrige}
+On a directement $F_2(p)=-\dfrac{H_2(p)}{1+H_2(p)M(p)C(p)H_1(p)}$.
+
+On peut alors déterminer le module et on a $||F_2(j\omega)||=\left|\left|\dfrac{H_2(j\omega)}{1+H_2(j\omega)M(j\omega)C(j\omega)H_1(j\omega)}\right|\right|$. 
+
+Dans ces conditions: 
+\begin{itemize} 
+\item si $\left|\left|{H_2(j\omega)M(j\omega)C(j\omega)H_1(j\omega)}\right|\right|>>1$ alors  $||F_2(j\omega)||\simeq \left|\left|\dfrac{H_2(j\omega)}{H_2(j\omega)M(j\omega)C(j\omega)H_1(j\omega)}\right|\right|\simeq \left|\left|\dfrac{1}{M(j\omega)C(j\omega)H_1(j\omega)}\right|\right|$;
+\item si $\left|\left|{H_2(j\omega)M(j\omega)C(j\omega)H_1(j\omega)}\right|\right|<<1$ alors  $||F_2(j\omega)||\simeq \left|\left|{H_2(j\omega)}\right|\right|$.
+\end{itemize}
+
+On peut en conclure que $||F_2(j \omega)|| = \min \left[ ||H_2(j \omega) || ; \dfrac{1}{||C(j\omega) H_1(j \omega) M(j\omega)||}\right]$.
 \end{corrige}
 \else
 \fi
@@ -507,7 +517,15 @@ stable, donner directement sous forme numérique, l’expression de la fonction 
 transfert $F_2(p)$ entre le glissement et la perturbation due à la
 variation d’adhérence.}
 \ifprof
-\begin{corrige}
+\begin{corrige} ~\\
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_03}
+\end{center}
+
+En analysant les brisures de $F_2$, on peut proposer la fonction de transfert suivante : 
+$F_2 = -\dfrac{Kp}{\left(1+\tau_1 p\right)\left(1+\tau_2 p\right)}$ avec $\tau_1 = \dfrac{1}{0,35}\simeq \SI{2,9}{s}$, $\tau_2 = \dfrac{1}{1,8}\simeq \SI{0,6}{s}$. Avec cette proposition, en basse fréquence, seul le dérivateur existe, ona donc  $20 \log K\omega =20\log  0,01K = -123$ soit $K = 100\times 10 ^{-123/20}\simeq 7 \cdot 10^{-5}$. 
+
+Au final, $F_2 = -\dfrac{7 \cdot 10^{-5}p}{\left(1+2,9 p\right)\left(1+0,6 p\right)}$.
 \end{corrige}
 \else
 \fi
@@ -524,7 +542,7 @@ la forme : $F_2(p)=\dfrac{K_2p}{1+Tp}$.}
 \fi
 
 
-\subparagraph{}\textit{En utilisant cette fonction de transfert, donner l’expression de l’évolution
+\subparagraph{}\textbf{Facultatif \, }\textit{En utilisant cette fonction de transfert, donner l’expression de l’évolution
 temporelle du glissement relatif  $\nu_1(t)$ en réponse à une variation en échelon de
 la force perturbatrice $F_{\text{ext}}=F_0u(t)$ , où $u(t)$ représente l’échelon unité et avec
 $F_0=\SI{2000}{N}$.}
@@ -534,7 +552,7 @@ $F_0=\SI{2000}{N}$.}
 \else
 \fi
 
-\subparagraph{}\textit{Tracer l’allure de l’évolution temporelle du glissement relatif $\nu_1(t)$ en précisant
+\subparagraph{}\textbf{Facultatif \, }\textit{Tracer l’allure de l’évolution temporelle du glissement relatif $\nu_1(t)$ en précisant
 la valeur initiale $\nu_1(0)$. En vous référant à des fonctions ou des résultats
 connus, déterminer un ordre de grandeur du temps de réponse $t_r$ à partir
 duquel le glissement reste en dessous de 5\,\% de la valeur initiale $\nu_1(0)$ (valeurs
@@ -547,7 +565,7 @@ duquel le glissement reste en dessous de 5\,\% de la valeur initiale $\nu_1(0)$ 
 
 \subsection*{Retour sur le cahier des charges}
 
-\subparagraph{}\textit{Conclure sur les performances obtenues vis-à-vis des exigences du cahier des charges en réponse à des variations de l’adhérence.}
+\subparagraph{}\textbf{Facultatif \, }\textit{Conclure sur les performances obtenues vis-à-vis des exigences du cahier des charges en réponse à des variations de l’adhérence.}
 \ifprof
 \begin{corrige}
 \end{corrige}
