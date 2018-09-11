@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  4 SEP 2018 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  11 SEP 2018 09:39
 entering extended mode
 **./Cy_01_Rev_Appl_03_Modelisation_Blocs.tex
 (Cy_01_Rev_Appl_03_Modelisation_Blocs.tex
@@ -2598,57 +2598,26 @@ Package pdftex.def Info: images/img5.png  used on input line 121. on input line
  121.
 Package pdftex.def Info: Requested size: 213.16214pt x 103.02454pt on input lin
 e 121.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 144.
-<images/bloc1.png, id=7, 449.68pt x 170.6375pt>
-File: images/bloc1.png Graphic file (type png)
-<use images/bloc1.png>
-Package pdftex.def Info: images/bloc1.png  used on input line 156. on input lin
-e 156.
-Package pdftex.def Info: Requested size: 49.3905pt x 18.74153pt on input line 1
-56.
-<images/bloc2.png, id=9, 400.49625pt x 207.77625pt>
-File: images/bloc2.png Graphic file (type png)
-<use images/bloc2.png>
-Package pdftex.def Info: images/bloc2.png  used on input line 161. on input lin
-e 161.
-Package pdftex.def Info: Requested size: 49.3905pt x 25.62321pt on input line 1
-61.
-<images/bloc3.png, id=10, 400.49625pt x 92.345pt>
-File: images/bloc3.png Graphic file (type png)
-<use images/bloc3.png>
-Package pdftex.def Info: images/bloc3.png  used on input line 166. on input lin
-e 166.
-Package pdftex.def Info: Requested size: 49.3905pt x 11.38809pt on input line 1
-66.
-<images/bloc4.png, id=11, 400.49625pt x 98.3675pt>
-File: images/bloc4.png Graphic file (type png)
-<use images/bloc4.png>
-Package pdftex.def Info: images/bloc4.png  used on input line 171. on input lin
-e 171.
-Package pdftex.def Info: Requested size: 49.3905pt x 12.13078pt on input line 1
-71.
-<images/schema_bloc.png, id=12, 1024.82875pt x 221.82875pt>
-File: images/schema_bloc.png Graphic file (type png)
-<use images/schema_bloc.png>
-Package pdftex.def Info: images/schema_bloc.png  used on input line 178. on inp
-ut line 178.
-Package pdftex.def Info: Requested size: 180.83945pt x 39.14217pt on input line
- 178.
-<images/sb_01.png, id=13, 858.20625pt x 311.1625pt>
+<images/sb_01.png, id=7, 858.20625pt x 311.1625pt>
 File: images/sb_01.png Graphic file (type png)
 <use images/sb_01.png>
 Package pdftex.def Info: images/sb_01.png  used on input line 192. on input lin
 e 192.
 Package pdftex.def Info: Requested size: 171.6382pt x 62.23138pt on input line 
 192.
+<images/sb_02.png, id=9, 1158.3275pt x 314.17375pt>
+File: images/sb_02.png Graphic file (type png)
+<use images/sb_02.png>
+Package pdftex.def Info: images/sb_02.png  used on input line 196. on input lin
+e 196.
+Package pdftex.def Info: Requested size: 231.66139pt x 62.83363pt on input line
+ 196.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 193.
+(Font)              scaled to size 7.52002pt on input line 202.
 LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.52002pt on input line 193.
+(Font)              scaled to size 7.52002pt on input line 202.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.52002pt on input line 193.
+(Font)              scaled to size 7.52002pt on input line 202.
 [1
 
 {C:/Users/pt_ptsi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
@@ -2658,46 +2627,38 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.193 \end{center}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{exo.2}) has been already used, duplicate ignored
+l.202 \begin{center}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{exo.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.193 \end{center}
-                  
+l.202 \begin{center}
+                    
 design size mismatch in local font md-utro8t in virtual font mdputro8t.vf ignor
-ed. <./images/img5.png> <./images/bloc1.png> <./images/bloc2.png> <./images/blo
-c3.png> <./images/bloc4.png> <./images/schema_bloc.png>]
-<images/sb_02.png, id=46, 1158.3275pt x 314.17375pt>
-File: images/sb_02.png Graphic file (type png)
-<use images/sb_02.png>
-Package pdftex.def Info: images/sb_02.png  used on input line 196. on input lin
-e 196.
-Package pdftex.def Info: Requested size: 231.66139pt x 62.83363pt on input line
- 196.
-<images/sb_03.png, id=47, 564.1075pt x 218.8175pt>
+ed. <./images/img5.png> <./images/sb_01.png> <./images/sb_02.png>]
+<images/sb_03.png, id=40, 564.1075pt x 218.8175pt>
 File: images/sb_03.png Graphic file (type png)
 <use images/sb_03.png>
 Package pdftex.def Info: images/sb_03.png  used on input line 203. on input lin
 e 203.
 Package pdftex.def Info: Requested size: 112.81949pt x 43.76271pt on input line
  203.
-<images/sb_04.png, id=48, 1158.3275pt x 312.16624pt>
+<images/sb_04.png, id=41, 1158.3275pt x 312.16624pt>
 File: images/sb_04.png Graphic file (type png)
 <use images/sb_04.png>
 Package pdftex.def Info: images/sb_04.png  used on input line 209. on input lin
 e 209.
 Package pdftex.def Info: Requested size: 231.66139pt x 62.43213pt on input line
  209.
-<images/sb_05.png, id=49, 1056.94875pt x 347.2975pt>
+<images/sb_05.png, id=42, 1056.94875pt x 347.2975pt>
 File: images/sb_05.png Graphic file (type png)
 <use images/sb_05.png>
 Package pdftex.def Info: images/sb_05.png  used on input line 213. on input lin
 e 213.
 Package pdftex.def Info: Requested size: 211.386pt x 69.45827pt on input line 2
 13.
-<png/logo_lycee.png, id=50, 329.23pt x 265.99374pt>
+<png/logo_lycee.png, id=43, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
 <use png/logo_lycee.png>
 Package pdftex.def Info: png/logo_lycee.png  used on input line 217. on input l
@@ -2715,20 +2676,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./png/logo_lycee.png> <./images/sb_01.png> <./images/sb_02.png> <./images/s
-b_03.png> <./images/sb_04.png> <./images/sb_05.png>]
+[2 <./png/logo_lycee.png> <./images/sb_03.png> <./images/sb_04.png> <./images/s
+b_05.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
-
-(Cy_01_Rev_Appl_03_Modelisation_Blocs.aux)
+ (Cy_01_Rev_Appl_03_Modelisation_Blocs.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 217.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'Cy_01_Rev_Appl_03_Modelisation_Blocs.
 run.xml'.
@@ -2737,10 +2694,10 @@ run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
- 51801 strings out of 493352
- 1068158 string characters out of 3137163
- 1774660 words of memory out of 3000000
- 54365 multiletter control sequences out of 15000+200000
+ 51773 strings out of 493352
+ 1067618 string characters out of 3137163
+ 1771660 words of memory out of 3000000
+ 54343 multiletter control sequences out of 15000+200000
  719403 words of font info for 220 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
  57i,17n,98p,10451b,1921s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2756,10 +2713,10 @@ dobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/uto
 pia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr
 i8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_Rev_Appl_03_Modelisation_Blocs.pdf (2 pages, 284357 byt
+Output written on Cy_01_Rev_Appl_03_Modelisation_Blocs.pdf (2 pages, 248208 byt
 es).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 61033 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 61008 words of extra memory for PDF output out of 61914 (max. 10000000)
 
