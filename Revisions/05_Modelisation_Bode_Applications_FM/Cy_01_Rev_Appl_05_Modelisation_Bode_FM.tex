@@ -1,0 +1,200 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Analyse fréquentielle},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+\input{style/new_style}
+\input{style/macros_SII}
+
+\fichetrue
+%\fichefalse
+
+\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+%\courstrue
+\coursfalse
+
+%%%%%%%%%%%%%%%%%%%
+\usepackage{numprint}
+\usetikzlibrary{calc}
+%definition style pour mettre un fond blanc dans un node sans avoir des marges énormes
+\tikzset{fondblanc/.style={ inner sep=2pt,fill=white,outer sep = 5pt}} 
+\tikzset{fondblanc2/.style={ inner sep=2pt,fill=white}} 
+\tikzset{fondblanc3/.style={ inner sep=1pt,fill=white,outer sep = 2pt}} 
+\usetikzlibrary{calc,circuits.ee.IEC}
+\usetikzlibrary{shapes}
+\usepackage[european resistor, european voltage, european current]{circuitikz}
+\usetikzlibrary{babel}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{style/schemabloc}
+%\usepackage{picins}
+\usepackage{siunitx}
+% -------------------------------------
+% Déclaration des titres
+% -------------------------------------
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+
+\def\classe{Cy01 - R 05}
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Révisions 5 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation des systèmes linéaires -- Domaine fréquentiel}
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{10}%19
+
+\def\xxonglet{Cycle 01 -- Rév 5}
+
+\def\xxactivite{Applications}
+\def\xxtitreexo{Applications}
+\def\xxsourceexo{D'après ressources de Florestan Mathurin \\
+\url{http://florestan.mathurin.free.fr}}
+\def\xxauteur{\textsl{Florestan Mathurin}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+}}
+
+\def\xxfigures{
+%incgraphics[width=.8\linewidth]{}%images/prot_01}
+}%figues de la page de garde
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+Révision 5 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{images/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+
+\ifprof
+\else
+\begin{multicols}{2}
+\fi
+\newpage
+
+\section*{Réponses temporelles et harmoniques d'un système}
+
+\ifprof
+\else
+Soit un système dont le diagramme de Bode est donné ci-dessous.
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_01}
+\end{center}
+
+
+\subparagraph{}
+\textit{Tracer le diagramme de Bode asymptotique.}
+\ifprof
+%\begin{corrige}
+%\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Identifier le type de la fonction de transfert et ses valeurs remarquables.}
+
+
+\subparagraph{}
+\textit{Le diagramme temporel ci-dessous présente 3 signaux d'entrée sinusoïdaux. Déterminer les période et les pulsations de chacun des signaux. }
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_02}
+\end{center}
+
+
+\ifprof
+%\begin{corrige}
+%\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{En déduire le gain et le déphasage en régime permanent pour chacune des courbes temporelles de sortie correspondant aux 3 entrées de la question 3. }
+\ifprof
+%\begin{corrige}
+%\end{corrige}
+\else
+\fi
+
+
+
+\setcounter{exo}{0}
+\section*{Tracés de diagrammes de Bode}
+
+\subparagraph*{}
+\textit{Tracer les diagrammes asymptotiques de Bode puis l'allure des diagrammes des systèmes suivants : }
+
+\begin{itemize}
+\item $F_1(p) = \dfrac{1}{1+p}$, $F_2(p) = \dfrac{10}{1+p}$, $F_3(p) = \dfrac{1}{10+p}$; 
+\item $G_1(p) = 3$, $G_2(p) = 3p$, $G_3(p) = \dfrac{3}{p}$;
+\item $H_1(p)=\dfrac{1}{1+p+p^2}$, $H_2(p)=\dfrac{10}{1+0,1p+p^2}$, $H_3(p)=\dfrac{1}{1+p+0,1p^2}$;
+\item $K_1(p)=3+3p$, $K_2(p)=3+\dfrac{0,3}{p}$, $K_3(p)=3+3p+\dfrac{0,3}{p}$.
+\end{itemize}
+\ifprof
+%\begin{corrige}
+%\end{corrige}
+\else
+\fi
+
+\section*{Identification de fonction de transfert sur diagramme de Bode}
+\subparagraph*{}
+\textit{Pour les quatre diagrammes de Bode suivants, tracer les diagrammes de Bode asymptotiques puis identifier les fonctions de transfert correspondantes (pour le second ordre faiblement amorti, on ne cherchera pas la valeur précise de z mais seulement une estimation).}
+
+\ifprof
+\else
+\end{multicols}
+\fi
+
+\fi
+
+
+\ifprof
+%\begin{corrige}
+\begin{center}
+\includegraphics[width=\textwidth]{images/cor_01}
+
+\includegraphics[width=\textwidth]{images/cor_02}
+
+\includegraphics[height=\textheight]{images/cor_03}
+\end{center}
+%\end{corrige}
+\else
+\fi
+
+\end{document}
+
+
+\subparagraph{}
+\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
