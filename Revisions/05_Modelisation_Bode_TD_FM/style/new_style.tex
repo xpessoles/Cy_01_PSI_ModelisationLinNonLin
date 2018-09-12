@@ -350,7 +350,6 @@
 \newtheorem{vocabulary}{Vocabulaire}[section]
 %\newtheorem{definitionT}{Definition}[section]
 \newtheorem{definitionT}{Définition}[section]
-\newtheorem{propT}{Propriété}[section]
 \newtheorem{rappelT}{Rappel}[section]
 \newtheorem{demoT}{Démonstration}[section]
 \newtheorem{corollaryT}[dummy]{Corollaire}
@@ -478,11 +477,11 @@ linecolor=gray,
 backgroundcolor=black!5,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
-innertopmargin=1pt,
+innertopmargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt,
-innerbottommargin=1pt]{hyBox}
+innerbottommargin=5pt]{hyBox}
 
 
 % Boite pour le titre de la partie (pBox)
@@ -636,7 +635,6 @@ innerbottommargin=5pt]{sqlBox}
 \newenvironment{exercice}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
-\newenvironment{prop}{\begin{dBox}\begin{propT}}{\end{propT}\end{dBox}}	
 \newenvironment{rappel}{\begin{dBox}\begin{rappelT}}{\end{rappelT}\end{dBox}}	
 \newenvironment{defi}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{demo}{\begin{demoBox}\begin{demoT}}{\end{demoT}\end{demoBox}}	
