@@ -10,7 +10,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -111,8 +111,41 @@ On donne les équations du moteur à courant continu :
 \subparagraph{}
 \textit{Réaliser le schéma-blocs.}
 
+\ifprof
+\begin{corrige}
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/cor_01}
+\end{center}
+\end{corrige}
+\else
+\fi
+
 \subparagraph{}
-\textit{Exprimer $\Omega(p)$ sous la forme  $\Omega(p)$=F_1(p)U(p) + F_2(p) C_r(p)$. Les fonctions de transfert $F_1$ $F_2$ seront exprimées sous forme canonique. Les constantes du système du second ordre seront explicitées.}
+\textit{Exprimer $\Omega(p)$ sous la forme  $\Omega(p)=F_1(p)U(p) + F_2(p) C_r(p)$. Les fonctions de transfert $F_1$ $F_2$ seront exprimées sous forme canonique. Les constantes du système du second ordre seront explicitées.}
+\ifprof
+\begin{corrige}
+Par superposition, on a : 
+$\Omega_1(p)/U(p)=\dfrac{K\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}{1+K^2\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}$
+$=\dfrac{K}{\left(Jp+f\right)\left(Lp+R\right)+K^2}$.
+
+Par ailleurs, $\Omega_2(p)/C_r(p)=\dfrac{\dfrac{1}{Jp+f}}{1+K^2\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}$
+$=\dfrac{Lp+R}{\left(Jp+f\right)\left(Lp+R\right)+K^2}$.
+
+
+Au final, $\Omega(p)=\dfrac{K}{\left(Jp+f\right)\left(Lp+R\right)+K^2} U(p) + \dfrac{Lp+R}{\left(Jp+f\right)\left(Lp+R\right)+K^2} C_r(p)$. 
+
+On peut alors mettre $F_1$ sous forme canonique : 
+$$
+K_0 =\dfrac{K}{fR+K^2}
+\quad 
+\dfrac{2\xi}{\omega_0} = \dfrac{RJ+Lf}{fR+K^2}
+\quad
+\dfrac{1}{\omega_0^2} =  \dfrac{LJ}{fR+K^2}.
+$$
+\end{corrige}
+\else
+\fi
+
 
 \subsection*{Modélisation d'une servo-commande}
 
