@@ -14,7 +14,7 @@
 
 %\fichefalse
 
-%\proftrue
+\proftrue
 %\proffalse
 
 \tdtrue
@@ -103,6 +103,10 @@ Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
 Le robot Kuka, objet de cette étude, a pour objectif la palettisation de bidons utilisés en agriculture biologique (compléments permettant d'améliorer les qualités nutritives des produits agricoles).
 
 
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/fig_04}
+\end{center}
+
 \begin{obj}
 On s’intéresse à l’asservissement en position de l’axe A1. On souhaite s’assurer que la chaîne 
 fonctionnelle d’asservissement permet de  respecter  les performances  souhaitées en  terme de 
@@ -111,7 +115,7 @@ suivant la charge transportée.
 \end{obj}
 
 L’axe  $A_1$  est  mu  par  un  servomoteur  qui  présente  l'avantage  de  posséder  une  très  faible inertie. Le comportement électromécanique de ce type de moteur est donné par les équations suivantes : 
-$u(t) = Ri(t) + e(t)$, $e(t) =k_e \omega_m(t)$, $J_e \dfrac{\dd \omega_mt(t)}{\dd t}=c_m(t)$, $c_m(t)=k_t i(t)$.
+$u(t) = Ri(t) + e(t)$, $e(t) =k_e \omega_m(t)$, $J_e \dfrac{\dd \omega_m(t)}{\dd t}=c_m(t)$, $c_m(t)=k_t i(t)$.
 
 Avec  $u(t)$  la  tension  appliquée  aux  bornes  du moteur,  $i(t)$  le  courant  d’induit,  $e(t)$  la  force 
 contre  électromotrice, $\omega_m(t)$  la  vitesse  de  rotation  du moteur,  $c_m(t)$  le  couple  délivré  par  le 
@@ -144,8 +148,8 @@ réglable de l’amplificateur de puissance.
 
 \begin{center}
 \includegraphics[width=\linewidth]{images/fig_02}
-
 \end{center}
+
 La boucle externe  réalise  la  correction de position à partir de  la  tension $u_r(t)$  fournie par  le 
 capteur de position de gain $K_r$ monté  en prise directe  sur  l’arbre de  sortie du  réducteur. La 
 fonction de transfert du correcteur est notée $C(p)$. 
@@ -156,6 +160,7 @@ Les performances souhaitées sont les suivantes :
 \item marge de phase de 45\degres. 
 \end{itemize}
 
+On montre que $J_e = J_m + \dfrac{J_1}{N^2}$.
 %\subsection*{Fonction de transfert du moteur}
 %\subparagraph{}\textit{Donner l’expression littérale de l’inertie équivalente Je ramenée sur l’arbre
 %moteur en fonction de $J_m$ et de $J_1$. }
@@ -170,25 +175,37 @@ Les performances souhaitées sont les suivantes :
  en considérant nulles les conditions initiales. }
 \ifprof
 \begin{corrige}~\\
+$U(p) = RI(p) + E(p)$, $E(p) =k_e \Omega_m(p)$, $J_e p \Omega_m(p)=C_m(p)$, $C_m(p)=k_t I(p)$.
 \end{corrige}
 \else
 \fi
 
 
-\subparagraph{}\textit{Compléter le schéma bloc de la figure 18 du document réponse DR2 par les
-transmittances manquantes ****. }
+\subparagraph{}\textit{Compléter le schéma-blocs par les transmittances manquantes. }
 \ifprof
 \begin{corrige}~\\
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_01}
+\end{center}
+
 \end{corrige}
 \else
 \fi
 
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
 
-\subparagraph{}\textit{En déduire la fonction de transfert $M(p)=\dfrac{\Omega(p)}{U(p)}$ du moteur que l’on
+
+
+\subparagraph{}\textit{En déduire la fonction de transfert $M(p)=\dfrac{\Omega_m(p)}{U(p)}$ du moteur que l’on
 exprimera sous la forme canonique d’un système du premier ordre de gain $K_m$ et de
 constante de temps $\tau_m$. Donner les expressions littérales de $K_m$ et $\tau_m$ et préciser leurs unités.}
 \ifprof
 \begin{corrige}~\\
+On a $M(p)=\dfrac{\dfrac{k_t}{RJ_ep}}{1+\dfrac{k_t k_e}{RJ_ep}}=\dfrac{k_t}{RJ_ep+k_t k_e}=\dfrac{1/k_e}{\dfrac{RJ_e}{k_t k_e}p+1}$.
+
+On a $K_m = \dfrac{1}{k_e}$ (en rad/s/V), $\tau_m=\dfrac{RJ_e}{k_t k_e}$ (en s).
 \end{corrige}
 \else
 \fi
