@@ -150,6 +150,166 @@ La boucle externe  réalise  la  correction de position à partir de  la  tensio
 capteur de position de gain $K_r$ monté  en prise directe  sur  l’arbre de  sortie du  réducteur. La 
 fonction de transfert du correcteur est notée $C(p)$. 
 
+Les performances souhaitées sont les suivantes : 
+\begin{itemize}
+\item pas d’écart de position, écart de traînage lors d’un transfert à \SI{105}{\degres.s^{-1}} inférieur à 1\degres ; 
+\item marge de phase de 45\degres. 
+\end{itemize}
+
+%\subsection*{Fonction de transfert du moteur}
+%\subparagraph{}\textit{Donner l’expression littérale de l’inertie équivalente Je ramenée sur l’arbre
+%moteur en fonction de $J_m$ et de $J_1$. }
+%\ifprof
+%\begin{corrige}~\\
+%\end{corrige}
+%\else
+%\fi
+
+
+\subparagraph{}\textit{Déterminer les transformées de Laplace des équations 1 à 4 du moteur
+ en considérant nulles les conditions initiales. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Compléter le schéma bloc de la figure 18 du document réponse DR2 par les
+transmittances manquantes ****. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{En déduire la fonction de transfert $M(p)=\dfrac{\Omega(p)}{U(p)}$ du moteur que l’on
+exprimera sous la forme canonique d’un système du premier ordre de gain $K_m$ et de
+constante de temps $\tau_m$. Donner les expressions littérales de $K_m$ et $\tau_m$ et préciser leurs unités.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Calculer, suivant  l’inertie Je mini ou maxi du robot, les caractéristiques
+suivantes du moteur : 
+\begin{enumerate}
+\item constante de temps $\tau_m$ (mini et maxi);
+\item temps de réponse à $5\%$ (mini et maxi) ;
+\item bande passante à $\SI{-3}{dB}$ (mini et maxi).
+\end{enumerate}
+Conclure quant à l’influence de l’inertie du robot sur les performances du moteur.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subsection*{Étude de la boucle de vitesse}
+La tension $u_g(t)$ en sortie de la génératrice tachymétrique varie de 0 à $\SI{12}{V}$ quand la vitesse de 
+rotation du moteur varie de 0 à $\SI{3500}{tr.min^{-1}}$.
+
+
+\subparagraph{}\textit{En déduire la valeur du gain $K_g$ de la génératrice tachymétrique.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Déterminer, en fonction notamment de $K_m$ et $\tau_m$, la fonction de transfert 
+$H(p)=\dfrac{\Omega_m(p)}{U_v(p)}$  que l’on exprimera sous la forme canonique d’un système du premier ordre
+de gain $K’_m$ et de constante de temps $\tau’_m$. Donner les expressions littérales de $K’_m$ et $\tau’_m$ et
+préciser leurs unités. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Montrer que, si $G$ est très grand, on peut admettre que $H(p)\simeq \dfrac{1}{K_g}$.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+ 
+\subsection*{Étude de la boucle de précision}
+ La boucle de position est représentée ci-dessous. 
+ 
+ \begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+%\textit{}
+\end{center}
+
+ 
+ On admet que : 
+ \begin{itemize}
+ \item $H(p)=\dfrac{\Omega_m(p)}{U_v(p)}=\dfrac{30}{1+5\cdot 10^{-3}p}$;
+ \item $K_r=\SI{4}{V.rad^{-1}}$ : gain du capteur de position;
+ \item $K_a$ : gain de l’adaptateur du signal de consigne $\alpha_e(t)$; 
+ \item le signal de consigne  $\alpha_e(t)$  est exprimé en degré ; 
+ \item le correcteur $C(p)$ est à action proportionnelle de gain réglable $K_c$.
+ \end{itemize} 
+ 
+ 
+ 
+\subparagraph{}\textit{Déterminer :
+\begin{enumerate}
+\item la fonction de transfert $R(p)=\dfrac{\alpha_r(p)}{\Omega_m(p)}$;
+\item le gain $K_a$ de l'adaptateur.
+\end{enumerate} }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}\textit{Déterminer, en fonction notamment de $K’_{m}$ et $\tau’_m,$ la fonction de transfert
+en boucle ouverte $T(p)$ que l’on exprimera sous forme canonique. En déduire l’expression du
+gain de boucle, noté $K_{\text{BO}}$. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{\label{qkbo}}\textit{On souhaite une marge de phase de 45\degres.
+\begin{enumerate}
+\item Déterminer la valeur de $K_{\text{BO}}$ permettant de satisfaire cette condition.
+\item En déduire la valeur du gain $K_c$ du correcteur. 
+\item Déterminer l’écart de position. Conclure vis-à-vis des exigences du cahier des
+charges. 
+\end{enumerate}}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+On souhaite un écart de traînage inférieur à 1\degres pour une consigne de vitesse de \SI{105}{\degres/s}. 
+
+\subparagraph{}\textit{Déterminer l’expression de $\alpha_e(t)$ correspondant à une consigne de vitesse
+de \SI{105}{\degres/s}. En déduire $\alpha_e(p)$.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{La valeur de $K_{\text{BO}}$ définie question \ref{qkbo} permet-elle de satisfaire l’exigence
+de précision imposée par le cahier des charges ? Conclure. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
 
 
 \end{multicols}
