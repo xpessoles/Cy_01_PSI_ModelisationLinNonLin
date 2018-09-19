@@ -1,0 +1,342 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Energétique},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{picins}
+\fichetrue
+%\fichefalse
+
+\proftrue
+
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+
+\def\classe{\textsf{PSI$\star$ -- MP}}
+\def\xxnumpartie{Cycle 05}
+\def\xxpartie{Modéliser le comportement des systèmes mécaniques dans le but d'établir une loi de comportement ou de déterminer des actions mécaniques en utilisant les méthodes énergétiques}
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Approche énergétique}
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+
+  
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 05}}
+
+\def\xxactivite{TD}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxtitreexo{Renault Twizy -- A TERMINER}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{Concours Mines Ponts -- PSI 2017}}
+
+
+\def\xxcompetences{%
+\vspace{-.5cm}
+\footnotesize{
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.2cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+\item Mod2.C18.SF1 : Déterminer l’énergie cinétique d’un solide, ou d’un ensemble de solides, dans son mouvement par rapport à un autre solide.
+\item Res1.C1.SF1 : Proposer une démarche permettant la détermination de la loi de mouvement.
+%\item Mod1.C5.SF2 : Déterminer la puissance des actions mécaniques extérieures à un solide ou à un ensemble de solides, dans son mouvement rapport à un autre solide.
+%\item Mod1.C5.SF3 : Déterminer la puissance des actions mécaniques intérieures à un ensemble de solides.
+\end{itemize}}}}
+
+\def\xxfigures{
+\includegraphics[width=.7\textwidth]{images/fig_01}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Cycle 05 -- Modélisation mécanique -- Énergétique\\% afin de valider leurs performances.\\
+Chapitre 1 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+\ifprof
+\else
+\fi
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/Exigences}
+\end{center}
+
+\subsection*{Choix du motoréducteur}
+
+
+\begin{obj}
+Mettre en place un modèle permettant de choisir un ensemble moto-réducteur afin d’obtenir les
+exigences d’accélération et de vitesse.
+\end{obj}
+
+On donne le paramétrage et les données nécessaires pour cette modélisation.
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\includegraphics[width=\linewidth]{images/fig_03}
+\end{center}
+
+
+\textbf{Hypothèses générales : }
+\begin{itemize}
+\item le vecteur $\vect{z_0}$ est vertical ascendant et on notera $g$ l'accélération de la pesanteur;
+\item le repère $\repere{O}{x_0}{y_0}{z_0}$ est galiléen;
+Le centre de gravité de l’ensemble voiture et charges est supposé rester dans le
+plan de symétrie de la voiture $\left(O,\vect{z_s},\vect{x_s}\right)$;
+\item toutes les liaisons sont supposées parfaites à l’exception du contact roue -- sol;
+\item les roues roulent sans glisser sur le sol en $I_i$;
+\item le coefficient de résistance au roulement $\mu$ est identique pour tous les contacts
+roue -- sol : $\mu = \si{3e-3}{m}$. On pose $\vect{I_1J_1}=\mu \vect{x_s}$, avec $\mu >0$
+si le déplacement du véhicule est suivant $+\vect{x_s}$;
+\item les frottements de l’air sur le véhicule seront négligés;
+seules les roues arrière sont motrices.
+\end{itemize}
+
+\textbf{Actions mécaniques}
+Le torseur des actions mécaniques du sol sur un ensemble, avant ou arrière, de roues
+est :
+$\torseurstat{F}{s}{i}=\torseurl{T_i\vect{x_s}+N_i\vect{z_s}}{\vect{0}}{J_i}$ avec $J_i \in \left(O,\vect{x_s},\vect{y_s}\right)$ et $i=1$ (roues arrières) ou 2 (roues avants). Le moteur permet d'appliquer un couple en 3 et 4 tel que 
+$\torseurstat{F}{3}{4}=\torseurl{\vect{0}}{C_m\vect{y_0}}{-}$. 
+
+\textbf{Masses et inerties : }
+\begin{itemize}
+\item le moment d'inertie du rotor moteur autour de son axe $\axe{A}{y_0}$ : $J_m =\SI{6e-3}{kg.m^2}$;
+\item le moment d'inertie d'une roue autour de son axe $\axe{O_i}{y_0}$ : $J_R =\SI{0,1}{kg.m^2}$;
+\item la masse du véhicule en charge : $m=\SI{685}{kg}$;
+\item le centre de gravité du véhicule en charge sera noté $G$;
+\item les autres inerties seront négligées.
+\end{itemize}
+
+\textbf{Grandeurs cinématiques :}
+Soit $\omega_m$ la vitesse de rotation de l’arbre moteur 4 par rapport à 3, $\omega_{13}$ la vitesse de rotation des roues arrière 1 par rapport à 3 et $\omega_{23}$ la vitesse de rotation des roues avant 2 par rapport à 3.
+
+On notera $r$ le rapport de transmission du réducteur tel que $\omega_m = r \omega_{13}$. On appellera $\vectv{G}{3}{0}=\vect{V}_{3/0}=v\vect{x_s}$la vitesse du véhicule.
+Les roues ont un rayon $R = \SI{280}{mm}$.
+
+
+\subsubsection*{Choix de l’ensemble moto-réducteur}
+\subsubsection*{Équation de mouvement du véhicule}
+
+
+\begin{obj}
+Objectif : Déterminer l’équation de mouvement nécessaire pour choisir l’ensemble moto-réducteur.
+\end{obj}
+
+\textbf{Notations :}
+\begin{itemize}
+\item puissance extérieure des actions mécaniques du solide $i$ sur le solide $j$ dans le mouvement de $i$ par rapport à 0 : $\mathcal{P}\left( i \to j / 0\right)$;
+\item puissance intérieure des actions mécaniques entre le solide $i$ et le solide $j$: $\mathcal{P}\left( i \leftrightarrow j\right)$ ;
+\item énergie cinétique du solide $i$ dans son mouvement par rapport à 0 : $\mathcal{E}_c\left(i/0\right)$.
+\end{itemize}
+
+\subparagraph{}\textit{Rédiger les réponses aux questions suivantes dans le cadre prévu à cet effet du document réponse :
+\begin{itemize}
+\item écrire la forme générale du théorème de l’énergie puissance appliqué au véhicule en identifiant les différentes puissances extérieures, les différentes puissances intérieures et les énergies cinétiques des différents éléments mobiles en respectant les notations précédentes ;
+\item déterminer explicitement les différentes puissances extérieures ;
+\item déterminer explicitement les différentes puissances intérieures ;
+\item déterminer explicitement les énergies cinétiques ;
+\item en déduire une équation faisant intervenir $C_m$, $N_1$, $N_2$, $v$, $\omega_m$, $\omega_{1/0}$, $\omega_{2/0}$ …… ;
+\item expliquer pourquoi l’équation obtenue n’est pas l’équation de mouvement du véhicule.
+\end{itemize}
+}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{À partir des théorèmes généraux de la dynamique, déterminer une équation supplémentaire qui permet simplement de déterminer $(N_1 + N_2)$. Puis avec l’équation précédente, écrire l’équation de mouvement du véhicule.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Déterminer en énonçant les hypothèses nécessaires les relations entre $(v, \omega_{10})$, $(v, \omega_{20})$ et $(\omega_{m}, \omega_{10})$. Montrer que l’équation de mouvement du véhicule peut se mettre sous la forme $\dfrac{rC_m(t)}{R}-F_r(t)=M_{eq}\dfrac{\text{d} v(t)}{\text{d} t}$ avec $F_r(t)$ fonction de $m$, $\mu$, $g$, $R$ et $\alpha$ et $M_{eq}$ fonction $m$, $J_m$, $J_R$, $R$ et $r$.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subsubsection*{Détermination du coefficient de résistance au roulement $\mu$}
+\begin{obj}
+Déterminer le coefficient de résistance au roulement $\mu$ suite à une expérimentation.
+\end{obj}
+
+
+\subparagraph{}\textit{En utilisant les résultats de l’essai routier effectué ci-dessous, il est possible de déterminer le coefficient de
+résistance au roulement $\mu$. Proposer un protocole expérimental pour l’évaluer :
+\begin{itemize}
+\item justifier dans quelle phase se placer;
+\item définir la variable mesurée;
+\item définir les hypothèses nécessaires;
+\item énoncer les équations utilisées pour déterminer $\mu$.
+\end{itemize}}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_04}
+\end{center}
+
+
+\subsubsection*{Choix du moto-réducteur}
+\begin{obj}
+Choisir un ensemble moto-réducteur afin d’obtenir les exigences d’accélération et de vitesse.
+\end{obj}
+
+Les courbes de l’évolution de l’accélération maximale $\dfrac{\text{d} v(t)}{\text{d} t}$
+du véhicule obtenue pour 3 moteurs présélectionnés en fonction du rapport de transmission $r$ issues de l’équation de mouvement du véhicule précédente sont fournies sur le document réponse.
+
+
+
+
+\subparagraph{}\textit{Déterminer la valeur minimale du rapport de transmission $r_{\text{mini}}$ pour les 3 moteurs proposés qui permet d’obtenir l’accélération maximale moyenne souhaitée dans le diagramme des exigences.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Déterminer la valeur maximale du rapport de transmission $r_{\text{max}}$ qui permet d’obtenir au moins la vitesse maximale du véhicule souhaitée dans le diagramme des exigences.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{À partir des résultats précédents, choisir parmi les 3 moteurs proposés, celui qui respecte les exigences d’accélération et de vitesse souhaitées permettant la plus grande plage possible pour le rapport de transmission.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\subsubsection*{Validation du choix constructeur du moto-réducteur}
+\begin{obj}
+Valider le choix du moto-réducteur fait par le constructeur.
+\end{obj}
+
+\subparagraph{}\textit{À partir de la vue 3D du réducteur choisi par le constructeur, compléter le schéma cinématique du document réponse, calculer son rapport de transmission $r = \dfrac{\omega_{4/3}}{\omega_{4/3}}$ et conclure.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05}
+%\textit{}
+\end{center}
+
+
+\end{multicols}
+\end{document}
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+\begin{center}
+%\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
