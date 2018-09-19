@@ -2269,4 +2269,45 @@ LaTeX Font Info:    Try loading font information for MDB+cmr on input line 78.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdbcmr.fd"
 File: mdbcmr.fd 
 )
-LaTeX Font
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 78.
+\AtBeginShipoutBox=\box121
+Package hyperref Info: Link coloring OFF on input line 78.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count491
+)
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
+
+! I can't write on file `Cy_01_Rev_Fiche_04_Modelisation_Ordre12.pdf'.
+Please type another file name for output: 
+! Emergency stop.
+<to be read again> 
+                   \edef 
+l.78 \begin{document}
+                     
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 50391 strings out of 493352
+ 1044613 string characters out of 3137163
+ 1739892 words of memory out of 3000000
+ 53240 multiletter control sequences out of 15000+200000
+ 539974 words of font info for 26 fonts, out of 3000000 for 9000
+ 1127 hyphenation exceptions out of 8191
+ 57i,0n,98p,10454b,1537s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
