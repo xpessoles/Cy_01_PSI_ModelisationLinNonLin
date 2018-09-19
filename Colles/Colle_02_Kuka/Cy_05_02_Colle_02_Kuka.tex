@@ -1,0 +1,214 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation linéaire et non linéaire},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{siunitx}
+\usepackage{wrapfig}
+\fichetrue
+
+%\fichefalse
+
+%\proftrue
+%\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PSI$\star$}
+\def\xxnumpartie{\textsf{Cycle 01}}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation multiphysique}
+
+
+\def\xxtitreexo{\noindent Robot palettiseur Kuka}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{CCP MP 2010}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 02}}
+
+\def\xxactivite{Colle 1}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\textit{****}
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma-blocs.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.3\linewidth]{images/fig_01}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+\ifprof
+\else
+\fi
+
+Le robot Kuka, objet de cette étude, a pour objectif la palettisation de bidons utilisés en agriculture biologique (compléments permettant d'améliorer les qualités nutritives des produits agricoles).
+
+
+\begin{obj}
+On s’intéresse à l’asservissement en position de l’axe A1. On souhaite s’assurer que la chaîne 
+fonctionnelle d’asservissement permet de  respecter  les performances  souhaitées en  terme de 
+précision, rapidité et stabilité tout en restant peu sensible aux variations de l’inertie du robot 
+suivant la charge transportée. 
+\end{obj}
+
+L’axe  $A_1$  est  mu  par  un  servomoteur  qui  présente  l'avantage  de  posséder  une  très  faible inertie. Le comportement électromécanique de ce type de moteur est donné par les équations suivantes : 
+$u(t) = Ri(t) + e(t)$, $e(t) =k_e \omega_m(t)$, $J_e \dfrac{\dd \omega_mt(t)}{\dd t}=c_m(t)$, $c_m(t)=k_t i(t)$.
+
+Avec  $u(t)$  la  tension  appliquée  aux  bornes  du moteur,  $i(t)$  le  courant  d’induit,  $e(t)$  la  force 
+contre  électromotrice, $\omega_m(t)$  la  vitesse  de  rotation  du moteur,  $c_m(t)$  le  couple  délivré  par  le 
+moteur et Je l’inertie équivalente ramenée sur l’arbre moteur. 
+Le  réducteur  retenu  pour  cette  motorisation  est  un  réducteur  Harmonic-Drive.  Les 
+caractéristiques de l’ensemble moteur-réducteur sont les suivantes : 
+\begin{itemize}
+\item $k_e = \SI{0,2}{V/(rad/s)}$ : constante de force électromotrice ; 
+\item $k_t = \SI{0,2}{Nm/A}$ : constante de couple ; 
+\item $R = \SI{2}{W}$ : résistance de l’induit ; 
+\item $J_m = \SI{4e-3}{kg.m2}$ : inertie de l’ensemble axe moteur et réducteur sur l'arbre moteur ; 
+\item $N = 200$ : rapport de transmission.
+\end{itemize} 
+L’inertie $J_1$ du robot autour de l’axe $\axe{O_1}{z_1}$ dépend de la configuration du robot et de la masse 
+transportée. Elle est telle que : 
+\begin{itemize}
+\item $J_{1,\text{mini}} = \SI{50}{kg.m^2}$ lorsque le déplacement a lieu à vide ; 
+\item $J_{1,\text{maxi}} = \SI{200}{kg.m^2}$ lorsque la masse transportée est de \SI{50}{daN}.
+\end{itemize}
+
+L’inertie équivalente Je ramenée sur l’arbre moteur est alors égale à : 
+\begin{itemize}
+\item $J_{e,\text{mini}} = \SI{5,25e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{mini}}$ ; 
+\item $J_{e,\text{maxi}} =\SI{9e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{maxi}}$.
+\end{itemize}
+
+La chaîne fonctionnelle de l’asservissement de l’axe $A1$ est représentée ci-dessous. La boucle interne réalise une correction de vitesse à partir de la tension $u_g(t)$ fournie par une 
+génératrice  tachymétrique  de  gain $K_g$ montée  en  prise  directe  sur  le moteur. $G$  est  le  gain 
+réglable de l’amplificateur de puissance. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+
+\end{center}
+La boucle externe  réalise  la  correction de position à partir de  la  tension $u_r(t)$  fournie par  le 
+capteur de position de gain $K_r$ monté  en prise directe  sur  l’arbre de  sortie du  réducteur. La 
+fonction de transfert du correcteur est notée $C(p)$. 
+
+
+
+\end{multicols}
+\end{document}
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+\begin{center}
+%\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
