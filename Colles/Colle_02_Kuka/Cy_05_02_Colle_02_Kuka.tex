@@ -15,7 +15,7 @@
 %\fichefalse
 
 \proftrue
-%\proffalse
+\proffalse
 
 \tdtrue
 %\tdfalse
@@ -126,17 +126,17 @@ caractéristiques de l’ensemble moteur-réducteur sont les suivantes :
 \item $k_e = \SI{0,2}{V/(rad/s)}$ : constante de force électromotrice ; 
 \item $k_t = \SI{0,2}{Nm/A}$ : constante de couple ; 
 \item $R = \SI{2}{W}$ : résistance de l’induit ; 
-\item $J_m = \SI{4e-3}{kg.m2}$ : inertie de l’ensemble axe moteur et réducteur sur l'arbre moteur ; 
+%\item $J_m = \SI{4e-3}{kg.m2}$ : inertie de l’ensemble axe moteur et réducteur sur l'arbre moteur ; 
 \item $N = 200$ : rapport de transmission.
 \end{itemize} 
-L’inertie $J_1$ du robot autour de l’axe $\axe{O_1}{z_1}$ dépend de la configuration du robot et de la masse 
-transportée. Elle est telle que : 
-\begin{itemize}
-\item $J_{1,\text{mini}} = \SI{50}{kg.m^2}$ lorsque le déplacement a lieu à vide ; 
-\item $J_{1,\text{maxi}} = \SI{200}{kg.m^2}$ lorsque la masse transportée est de \SI{50}{daN}.
-\end{itemize}
+%L’inertie $J_1$ du robot autour de l’axe $\axe{O_1}{z_1}$ dépend de la configuration du robot et de la masse 
+%transportée. Elle est telle que : 
+%\begin{itemize}
+%\item $J_{1,\text{mini}} = \SI{50}{kg.m^2}$ lorsque le déplacement a lieu à vide ; 
+%\item $J_{1,\text{maxi}} = \SI{200}{kg.m^2}$ lorsque la masse transportée est de \SI{50}{daN}.
+%\end{itemize}
 
-L’inertie équivalente Je ramenée sur l’arbre moteur est alors égale à : 
+L’inertie équivalente $J_e$ ramenée sur l’arbre moteur est alors égale à : 
 \begin{itemize}
 \item $J_{e,\text{mini}} = \SI{5,25e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{mini}}$ ; 
 \item $J_{e,\text{maxi}} =\SI{9e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{maxi}}$.
@@ -156,11 +156,14 @@ fonction de transfert du correcteur est notée $C(p)$.
 
 Les performances souhaitées sont les suivantes : 
 \begin{itemize}
-\item pas d’écart de position, écart de traînage lors d’un transfert à \SI{105}{\degres.s^{-1}} inférieur à 1\degres ; 
+\item pas d’écart de position;
+\item écart de traînage lors d’un transfert à \SI{105}{\degres.s^{-1}} inférieur à 1\degres ; 
 \item marge de phase de 45\degres. 
 \end{itemize}
 
-On montre que $J_e = J_m + \dfrac{J_1}{N^2}$.
+%%On montre que $J_e = J_m + \dfrac{J_1}{N^2}$.
+
+
 %\subsection*{Fonction de transfert du moteur}
 %\subparagraph{}\textit{Donner l’expression littérale de l’inertie équivalente Je ramenée sur l’arbre
 %moteur en fonction de $J_m$ et de $J_1$. }
@@ -171,7 +174,7 @@ On montre que $J_e = J_m + \dfrac{J_1}{N^2}$.
 %\fi
 
 
-\subparagraph{}\textit{Déterminer les transformées de Laplace des équations 1 à 4 du moteur
+\subparagraph{}\textit{Déterminer les transformées de Laplace des équations du moteur
  en considérant nulles les conditions initiales. }
 \ifprof
 \begin{corrige}~\\
@@ -211,7 +214,7 @@ On a $K_m = \dfrac{1}{k_e}$ (en rad/s/V), $\tau_m=\dfrac{RJ_e}{k_t k_e}$ (en s).
 \fi
 
 
-\subparagraph{}\textit{Calculer, suivant  l’inertie Je mini ou maxi du robot, les caractéristiques
+\subparagraph{}\textit{Calculer, suivant  l’inertie $J_e$ mini ou maxi du robot, les caractéristiques
 suivantes du moteur : 
 \begin{enumerate}
 \item constante de temps $\tau_m$ (mini et maxi);
@@ -221,6 +224,12 @@ suivantes du moteur :
 Conclure quant à l’influence de l’inertie du robot sur les performances du moteur.}
 \ifprof
 \begin{corrige}~\\
+\begin{tabular}{|c|c|c|c|}
+ \hline
+ & $\tau_m$ & $t_{5\%}$ & BP \SI{-3}{dB} \\ \hline
+$ J_{e,\text{mini}}$  & & & \\ \hline
+$ J_{e,\text{maxi}}$  & & & \\ \hline
+\end{tabular}
 \end{corrige}
 \else
 \fi
@@ -230,7 +239,7 @@ La tension $u_g(t)$ en sortie de la génératrice tachymétrique varie de 0 à $
 rotation du moteur varie de 0 à $\SI{3500}{tr.min^{-1}}$.
 
 
-\subparagraph{}\textit{En déduire la valeur du gain $K_g$ de la génératrice tachymétrique.}
+\subparagraph{}\textit{En déduire la valeur du gain $K_g$ de la génératrice tachymétrique (schéma-blocs du recto).}
 \ifprof
 \begin{corrige}~\\
 \end{corrige}
