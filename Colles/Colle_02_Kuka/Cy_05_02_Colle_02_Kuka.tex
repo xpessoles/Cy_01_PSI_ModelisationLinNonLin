@@ -15,7 +15,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -125,7 +125,7 @@ caractéristiques de l’ensemble moteur-réducteur sont les suivantes :
 \begin{itemize}
 \item $k_e = \SI{0,2}{V/(rad/s)}$ : constante de force électromotrice ; 
 \item $k_t = \SI{0,2}{Nm/A}$ : constante de couple ; 
-\item $R = \SI{2}{W}$ : résistance de l’induit ; 
+\item $R = \SI{2}{\Omega}$ : résistance de l’induit ; 
 %\item $J_m = \SI{4e-3}{kg.m2}$ : inertie de l’ensemble axe moteur et réducteur sur l'arbre moteur ; 
 \item $N = 200$ : rapport de transmission.
 \end{itemize} 
@@ -224,12 +224,15 @@ suivantes du moteur :
 Conclure quant à l’influence de l’inertie du robot sur les performances du moteur.}
 \ifprof
 \begin{corrige}~\\
+
+\begin{center}
 \begin{tabular}{|c|c|c|c|}
  \hline
  & $\tau_m$ & $t_{5\%}$ & BP \SI{-3}{dB} \\ \hline
 $ J_{e,\text{mini}}$  & & & \\ \hline
 $ J_{e,\text{maxi}}$  & & & \\ \hline
 \end{tabular}
+\end{center}
 \end{corrige}
 \else
 \fi
@@ -242,6 +245,7 @@ rotation du moteur varie de 0 à $\SI{3500}{tr.min^{-1}}$.
 \subparagraph{}\textit{En déduire la valeur du gain $K_g$ de la génératrice tachymétrique (schéma-blocs du recto).}
 \ifprof
 \begin{corrige}~\\
+On a directement, $K_g = \dfrac{12}{3500\dfrac{2\pi}{60}}\simeq 0,03274\,\text{V}\,\text{s}\,\text{rad}^{-1}$.
 \end{corrige}
 \else
 \fi
@@ -252,6 +256,8 @@ de gain $K’_m$ et de constante de temps $\tau’_m$. Donner les expressions li
 préciser leurs unités. }
 \ifprof
 \begin{corrige}~\\
+$H(p)=\dfrac{\dfrac{GK_m}{1+\tau_m p}}{1+\dfrac{GK_gK_m}{1+\tau_m p}}=\dfrac{GK_m}{1+\tau_mp+{GK_gK_m}}=\dfrac{K'_m}{1+\tau'_m p}$. 
+On a $K'_m=\dfrac{GK_m}{1+GK_mK_g}$ et $\tau'_m=\dfrac{\tau_m}{1+GK_mK_g}$
 \end{corrige}
 \else
 \fi
@@ -259,6 +265,7 @@ préciser leurs unités. }
 \subparagraph{}\textit{Montrer que, si $G$ est très grand, on peut admettre que $H(p)\simeq \dfrac{1}{K_g}$.}
 \ifprof
 \begin{corrige}~\\
+Si $G$ est très grand, $K'_m$ tend vers 1 et $\tau'_m$ tend vers 0. On a donc $H(p)\simeq \dfrac{1}{K_g}$.
 \end{corrige}
 \else
 \fi
@@ -290,6 +297,9 @@ préciser leurs unités. }
 \end{enumerate} }
 \ifprof
 \begin{corrige}~\\
+On a $R(p)=\dfrac{\alpha_r(p)}{\Omega_m(p)}=\dfrac{1}{Np}=\dfrac{1}{200p}$.
+
+Pour que l'asservissement soit précis, on doit avoir en régime permanent, $\varepsilon(p)=0$ et $\alpha_e(p) = \alpha(p)$. En conséquences, $\varepsilon(p)=0 \Leftrightarrow \alpha_e(p) K_a - \alpha_r(p) K_r = 0$ $\Leftrightarrow \alpha_e(p) K_a - \alpha(p) \dfrac{\pi}{180} K_r = 0$  $\Rightarrow  K_a = \dfrac{\pi}{180} K_r$.
 \end{corrige}
 \else
 \fi
