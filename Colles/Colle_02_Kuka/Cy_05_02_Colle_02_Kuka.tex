@@ -15,7 +15,7 @@
 %\fichefalse
 
 \proftrue
-\proffalse
+%\proffalse
 
 \tdtrue
 %\tdfalse
@@ -138,8 +138,8 @@ caractéristiques de l’ensemble moteur-réducteur sont les suivantes :
 
 L’inertie équivalente $J_e$ ramenée sur l’arbre moteur est alors égale à : 
 \begin{itemize}
-\item $J_{e,\text{mini}} = \SI{5,25e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{mini}}$ ; 
-\item $J_{e,\text{maxi}} =\SI{9e-3}{kg.m^2}$ lorsque $J_1=J_{1,\text{maxi}}$.
+\item $J_{e,\text{mini}} = \SI{5,25e-3}{kg.m^2}$;% lorsque $J_1=J_{1,\text{mini}}$ ; 
+\item $J_{e,\text{maxi}} =\SI{9e-3}{kg.m^2}$.% lorsque $J_1=J_{1,\text{maxi}}$.
 \end{itemize}
 
 La chaîne fonctionnelle de l’asservissement de l’axe $A1$ est représentée ci-dessous. La boucle interne réalise une correction de vitesse à partir de la tension $u_g(t)$ fournie par une 
@@ -281,7 +281,7 @@ Si $G$ est très grand, $K'_m$ tend vers 1 et $\tau'_m$ tend vers 0. On a donc $
  
  On admet que : 
  \begin{itemize}
- \item $H(p)=\dfrac{\Omega_m(p)}{U_v(p)}=\dfrac{30}{1+5\cdot 10^{-3}p}$;
+ \item $H(p)=\dfrac{\Omega_m(p)}{U_v(p)}=\dfrac{K'_m}{1+\tau'_m p}=\dfrac{30}{1+5\cdot 10^{-3}p}$;
  \item $K_r=\SI{4}{V.rad^{-1}}$ : gain du capteur de position;
  \item $K_a$ : gain de l’adaptateur du signal de consigne $\alpha_e(t)$; 
  \item le signal de consigne  $\alpha_e(t)$  est exprimé en degré ; 
@@ -311,6 +311,8 @@ en boucle ouverte $T(p)$ que l’on exprimera sous forme canonique. En déduire 
 gain de boucle, noté $K_{\text{BO}}$. }
 \ifprof
 \begin{corrige}~\\
+Par définition, $T(p)=\dfrac{U_r}{\varepsilon(p)} = \dfrac{K_c   K'_m}{1+\tau'_m p}\dfrac{1}{Np} K_r$. On a donc 
+$K_{\text{BO}}=\dfrac{K_c  K'_mK_r}{N} $.
 \end{corrige}
 \else
 \fi
@@ -325,6 +327,12 @@ charges.
 \end{enumerate}}
 \ifprof
 \begin{corrige}~\\
+On a $M_{\varphi} = \varphi\left(\omega_{\SI{0}{dB}}\right)-\left(-180\right)$.
+%
+%Commençons par chercher $\omega_{\SI{0}{dB}}$ : $20\log \left| T(j\omega)\right|=0 \Rightarrow \left| T(j\omega)\right|=1$ $\Rightarrow \left| T(j\omega)\right|=1$ $\Rightarrow \left| \dfrac{K_{\text{BO}}}{1+\tau'_m p}\dfrac{1}{p}\right|=1$ $\Rightarrow \left| \dfrac{K_{\text{BO}}}{j\omega-\tau'_m \omega^2}\right| =1$ $\Rightarrow  \dfrac{K_{\text{BO}}}{\omega\sqrt{\left(\tau'_{m}\right)^{2} \omega^2+1}} =1$
+%$\Rightarrow  K_{\text{BO}}^2 =\left(\tau'_{m}\right)^{2} \omega^4+\omega^2$
+
+
 \end{corrige}
 \else
 \fi
