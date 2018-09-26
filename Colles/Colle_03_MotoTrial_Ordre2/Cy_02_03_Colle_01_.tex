@@ -1,0 +1,465 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation SLCI : Rapidité des systèmes},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{picins}
+\fichetrue
+%\fichefalse
+
+\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PSI$\star$ -- MP}
+\def\xxnumpartie{Cycle 02}
+\def\xxpartie{Modéliser les systèmes asservis dans le but de prévoir leur comportement}
+
+
+\def\xxnumchapitre{Chapitre 2 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Rapidité des systèmes}
+
+
+\def\xxtitreexo{Moto de trial électrique}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{E3A MP}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{Cycle 02}
+
+\def\xxactivite{Colle 3}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma bloc.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.5\linewidth]{images/fig_01}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+Chapitre 2 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+
+\usepackage{pgfplots}
+\begin{document}
+
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+\def\pathfig{images}
+
+\begin{multicols}{2}
+
+
+\subsection*{Mise en situation}
+\subsubsection*{Présentation}
+%\noindent \begin{minipage}[c]{.7\linewidth}
+La motorisation électrique fait désormais partie intégrante du paysage des deux-roues motorisés.
+À l'image de l'industrie automobile, la propulsion électrique est le nouveau cheval de bataille de nombreux
+constructeurs de 2 roues, voire l'unique alternative aux soucis de pollution qu’elle soit chimique ou sonore. La
+culture d’entreprise d’Electric-Motion est essentiellement tournée vers l’électrique.
+
+À l’heure actuelle l’offre moto électrique est réduite et les gammes sont plus que restreintes.
+Electric-Motion étend la gamme des possibilités offertes aux amateurs de 2 roues en proposant un modèle trial
+aux adeptes de « green motorcycle ».
+%\end{minipage} \hfill
+%\begin{minipage}[c]{.28\linewidth}
+%\begin{center}
+%	\includegraphics[width=\linewidth]{images/fig_01}
+% 	%\textit{Diagramme de Bode (gain uniquement) du système corrigé.}
+%\end{center}
+%\end{minipage}
+
+\subsubsection*{Extrait des exigences fonctionnelles}
+%
+\begin{center}
+	\includegraphics[width=\linewidth]{images/fig_02_bis}
+\end{center}
+%
+%
+%\subsection*{Vérification de la vitesse de la moto}
+%
+%\begin{obj}
+%Bien que la moto soit un modèle trial, une vitesse minimale doit être atteinte pour un
+%minimum de confort lors des courts déplacements. Nous allons vérifier cette performance.
+%\end{obj}
+%
+%La moto est équipée de 2 transmissions en série, la transmission primaire par courroie crantée, et la
+%transmission secondaire par chaîne. Les caractéristiques des transmissions sont données dans le tableau suivant :
+%
+%\begin{center}
+%\begin{tabular}{|l|l|l|}
+%\hline
+%Courroie primaire & $Z_{P1}=\SI{20}{dents}$ & $Z_{P2}=\SI{44}{dents}$ \\
+%\hline
+%Chaîne secondaire & $Z_{S1}=\SI{9}{dents}$ & $Z_{s2}=\SI{57}{dents}$ \\
+%\hline
+%\end{tabular}
+%\end{center}
+%
+%\begin{center}
+%	\includegraphics[width=\linewidth]{images/fig_03}
+%\end{center}
+%
+%Le rayon de la roue arrière est $R_1=\SI{345}{mm}$ (pneu compris).  
+%La fréquence de rotation maxi du moteur vaut : $N_{\text{max}}=\SI{4200}{tr/min}$. 
+%
+%\subparagraph{}
+%\textit{Déterminer la vitesse de la moto en m/s puis en km/h, conclure vis-à-vis des exigences
+%fonctionnelles.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+
+
+
+
+\subsection*{Vérification des performances de la suspension}
+
+\begin{obj}
+Justifier le choix par le constructeur de l’amortisseur arrière et de son réglage.
+\end{obj}
+
+La figure ci-dessous représente %une vue CAO de la suspension et
+ le modèle retenu pour l'amortisseur. 
+
+\begin{center}
+%\begin{tabular}{c}
+%	\includegraphics[width=6cm]{images/fig_04} \\
+       \includegraphics[width=6cm]{images/fig_05}
+%\end{tabular}
+\end{center}
+
+On suppose que l’origine de $x(t)$ correspond à la situation où la moto roule avec un pilote dessus, en l’absence de défaut de la route. $y(t)$ caractérise le profil de la route.
+L’équation de la résultante dynamique appliquée à la masse donne donc :
+$$M\ddot{x}(t)= - k\left(x(t)-y(t)\right) -\mu \left(\dot{x}(t)-\dot{y}(t) \right).$$
+
+On notera $f(t)$ en temporel et $F(p)$ sa transformée dans le domaine de Laplace.
+
+
+
+\subparagraph{}
+\textit{Exprimer la fonction de transfert de l’amortisseur $H(p)=\dfrac{X(p)}{Y(p)}$
+sous forme canonique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Pour la suite, on néglige le terme en $p$ du numérateur.
+
+
+\subparagraph{}
+\textit{Déterminer la pulsation propre du système $\omega_0$, le gain $K_a$ et le facteur d’amortissement $z$ en
+fonction de $M$, $k$ et $\mu$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Lors de l’étude de l’équilibre de la moto, la masse de l’ensemble est répartie équitablement entre la roue avant et la roue arrière. On donne la masse $M=\SI{70}{kg}$ de l’ensemble comprenant la moitié de la masse moto+pilote, et
+la raideur du ressort $k=\SI{70000}{N/m}$.
+
+\subparagraph{}
+\textit{Choisir le coefficient d’amortissement $\mu$ pour avoir un temps de réponse à 5\% minimal.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+%\subsection*{Réponse de la suspension à un obstacle}
+%La moto rencontre un obstacle modélisé par un échelon $y_0$ de $\SI{50}{mm}$ du profil de la route. On cherche à en tracer la réponse.
+%
+%Données numériques : on donne $M=\SI{70}{kg}$, $k=\SI{70000}{N/m}$ et $\mu=\SI{3000}{N.s/m}$.
+%
+%$$
+%M\ddot{x}(t)=-k\left(x(t)-y(t) \right)-\mu\left(\dot{x}(t)-\dot{y}(t) \right)+ky_0.
+%$$
+%
+%\subparagraph{}
+%\textit{Déterminer $a$, $b$ et $c$ numériquement tel que : $\ddot{x}(t)=a\dot{x}(t)+bx(t)+c$.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+
+
+\subsection*{Influence de la pente sur la vitesse maximale de la moto}
+%\begin{obj}
+
+%Modélisation du système de motorisation et influence de la pente sur l’accélération et la%
+%vitesse maximale.
+%\end{obj}
+
+%
+%
+%\begin{center}
+%\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
+%\hline 
+%Composant & Données && \\
+%\hline
+%Moto +Utilisateur & $Mmu= \SI{170}{kg}$ && \\ \hline
+%Roue AV  & Inertie : $J_{av} = \SI{0.8}{kg.m^2}$ &  Diamètre : \SI{690}{mm} &\\ \hline
+%Roue AR & Inertie : $J_{ar} = \SI{0.3}{kg.m^2}$ &  Diamètre : \SI{690}{mm} &\\ \hline
+%Rotor & Inertie : $J_r =\SI{0.006}{kg.m^2}$ & Diamètre : \SI{155}{mm} & \\ \hline
+%Arbre intermédiaire & Inertie :$J_{int} = \SI{0.0017}{kg.m^2}$ & &  \\ \hline
+%Courroie primaire : & $Z_{p1} = 20$ &  $Z_{p2} =44$ &  Rapport de transmission :
+%$K1 = 0.45$  \\ \hline
+%Chaine secondaire : & $Z_{s1} = 9$ & $Z_{s2} =57 $ & Rapport de transmission :
+%$K2 = 0.16$ \\ \hline
+%Moteur synchrone,
+%assimilable à un MCC : & 
+%$R_m= 0,15 \Omega $
+%
+%$L_m=\SI{60}{mH}$
+%
+%Constantes du moteur :
+%
+%$K_e=\SI{0,12}{V/rad/s}$
+%
+%$K_m=\SI{0,12}{N.m/A}$
+%
+%$K=K_m=K_e$ 
+%&
+%Intensité maxi :
+%100A en régime
+%permanent
+%220A en pic
+%&U=\SI{48}{V}\\ \hline
+%%& $U=\SI{48}{V}$ \\ \hline
+%Batterie :&  
+%I max=220A 
+%
+% $U=\SI{48}{V}$ 
+%  & & 
+% \\ \hline
+%\end{tabular}
+%\end{center}
+
+Le pilote demande une consigne en tension $U_c$ au moteur à l’aide de la poignée d’accélérateur (comprise entre 0 et 48V). Le moteur va donc créer sur la poulie $P_1$ un couple $C_m$. On souhaite connaître la vitesse à laquelle peut aller la moto en fonction de la pente. On aura donc, une consigne $u_c(t)$ en volt et une réponse $\omega_m (t)$ en rad/s.
+
+On se placera dans différents cas :
+\begin{itemize}
+\item sur le plat : $Cr=\SI{0}{Nm}$;
+\item sur une faible pente (20\%) : $Cr = \SI{110}{Nm}$;
+\item sur une forte pente (40\%) : $Cr = \SI{210}{Nm}$.
+\end{itemize}
+
+Hypothèses :
+\begin{itemize}
+\item on suppose que les roues de la moto restent en contact avec le sol, sans glisser;
+\item on appelle l’ensemble $ \Sigma$=\{Moto + Pilote + roueAV + roueAR + Arbre intermédiaire+ Rotor\}.
+\end{itemize}
+Le schéma-blocs suivant modélise la commande en vitesse du moteur :
+\begin{center}
+	\includegraphics[width=.9\linewidth]{images/fig_06}
+\end{center}
+
+
+En appliquant le théorème de l'énergie cinétique, on obtient : $J_{eq}\dot{\omega}_m(t)=C_r(t) K_1 K_2 + C_m(t)$.
+
+\subparagraph{}
+\textit{En déduire les fonctions de transfert $H4(p)$ et $H1(p)$ littéralement.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Pour la suite du sujet, on prendra $J_{eq} = {0,1}{kg.m^2}$. On assimile ce moteur brushless à un moteur à courant continu. Les équations du comportement du moteur
+sont donc :
+$u_m(t) =  R_m i_m(t) + L_m \dfrac{di_m(t)}{dt} + e(t)$, $e (t)= K_e \omega_m (t)$, 
+$C_m(t) = K_mi(t)$.
+
+
+
+\subparagraph{}
+\textit{En déduire les fonctions de transfert : $H_2(p)$, $H_3(p)$ et $H_5(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Montrer que l’on peut écrire  $\Omega_m(p)$ sous la forme :
+$\Omega_m(p)=H_u(p)Uc(p)-H_{Cr}(p)Cr(p)$.
+%$\Omega_m(p)=H_u(p)Uc(p)-H_{Cr}(p)C_r(p)$.
+Pour cela, expliciter $H_{cr}(p)$ et $H_u(p)$ en fonction des $H_1(p)$, $H_2(p)$, …$H_5(p)$.
+}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Dans le cas où $Cr(p) =0$, déterminer la fonction de transfert du moteur en Boucle Fermée $H_U(p)=\dfrac{\Omega_m(p)}{U_c(p)}$ sous la forme $H_u(p)=\dfrac{K_v}{1+\dfrac{2z}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}$.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Calculer les valeur littérales de $Kv$, $z$ et $\omega_0$, puis faire l’application numérique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Pour la suite on prendra des valeurs suivantes : $z=0,8$ et $\omega_0 = \SI{1,55}{rad/s}$.
+
+
+
+\subparagraph{}
+\textit{De quel ordre est ce système ? Calculer le temps de réponse à 5\% et la valeur du premier
+dépassement de ce système à l’aide des abaques fournis ci-dessous. Conclure vis-à-vis des
+exigences fonctionnelles.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\vspace{.25cm}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_07}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_08}
+\end{center}
+
+
+\vspace{.25cm}
+
+On rappelle la relation de la pseudo-période $T$ d’une réponse indicielle d’un système de second ordre : $T=\dfrac{2\pi}{\omega_0 \sqrt{1-z^2}}$.
+
+
+\subparagraph{}
+\textit{Compléter sur le document réponse la courbe de réponse en vitesse pour un $Cr=\SI{0}{Nm}$ en indiquant sur la courbe les tangentes, le temps du 1\ier dépassement, le premier dépassement, et le $Tr_{5\%}$.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+On a sur la courbe du document réponse, la réponse à un échelon de commande (accélérateur à fond) de la moto qui roule à plat et pour 2 pentes différentes (20\% et 40\%).
+
+\subparagraph{}
+\textit{Le temps d’accélération est-il changé ? Sur quelle valeur influence ce changement de pente ? Conclure vis-à-vis des exigences fonctionnelles.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\end{multicols}
+%
+%
+%\newpage
+%
+%\begin{center}
+%%\includegraphics[width=\linewidth]{images/cor_01}
+%%\textit{}
+%\end{center}
+%
+%
+%\begin{center}
+%%\includegraphics[width=\linewidth]{images/cor_02}
+%%\textit{}
+%\end{center}
+
+
+\begin{center}
+	\includegraphics[width=16cm]{images/dr_01}
+\end{center}
+
+\newpage
+
+
+\begin{center}
+	\includegraphics[width=.9\linewidth]{images/cor_01}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=.9\linewidth]{images/cor_02}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=.9\linewidth]{images/cor_03}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=.9\linewidth]{images/cor_04}
+\end{center}
+
+\end{document}
+
+\subparagraph{}\textit{}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_06}
+%\textit{}
+\end{center}
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
