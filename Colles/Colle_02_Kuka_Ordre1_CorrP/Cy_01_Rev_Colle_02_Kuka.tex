@@ -1,0 +1,418 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation linéaire et non linéaire},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{siunitx}
+\usepackage{wrapfig}
+\fichetrue
+
+%\fichefalse
+
+\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PSI$\star$}
+\def\xxnumpartie{\textsf{Cycle 01}}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation multiphysique}
+
+
+\def\xxtitreexo{\noindent Robot palettiseur Kuka}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{CCP MP 2010}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{\textsf{Cycle 02}}
+
+\def\xxactivite{Colle 2}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\textit{****}
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma-blocs.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.3\linewidth]{images/fig_01}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+%\chapterimage{png/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{4.5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%\ifprof
+%\else
+\begin{multicols}{2}
+%\fi
+\section*{Mise en situation}
+\ifprof
+\else
+\fi
+
+Le robot Kuka, objet de cette étude, a pour objectif la palettisation de bidons utilisés en agriculture biologique (compléments permettant d'améliorer les qualités nutritives des produits agricoles).
+
+
+\begin{center}
+\includegraphics[width=.6\linewidth]{images/fig_04}
+\end{center}
+
+\begin{obj}
+On s’intéresse à l’asservissement en position de l’axe A1. On souhaite s’assurer que la chaîne 
+fonctionnelle d’asservissement permet de  respecter  les performances  souhaitées en  terme de 
+précision, rapidité et stabilité tout en restant peu sensible aux variations de l’inertie du robot 
+suivant la charge transportée. 
+\end{obj}
+
+L’axe  $A_1$  est  mu  par  un  servomoteur  qui  présente  l'avantage  de  posséder  une  très  faible inertie. Le comportement électromécanique de ce type de moteur est donné par les équations suivantes : 
+$u(t) = Ri(t) + e(t)$, $e(t) =k_e \omega_m(t)$, $J_e \dfrac{\dd \omega_m(t)}{\dd t}=c_m(t)$, $c_m(t)=k_t i(t)$.
+
+Avec  $u(t)$  la  tension  appliquée  aux  bornes  du moteur,  $i(t)$  le  courant  d’induit,  $e(t)$  la  force 
+contre  électromotrice, $\omega_m(t)$  la  vitesse  de  rotation  du moteur,  $c_m(t)$  le  couple  délivré  par  le 
+moteur et Je l’inertie équivalente ramenée sur l’arbre moteur. 
+Le  réducteur  retenu  pour  cette  motorisation  est  un  réducteur  Harmonic-Drive.  Les 
+caractéristiques de l’ensemble moteur-réducteur sont les suivantes : 
+\begin{itemize}
+\item $k_e = \SI{0,2}{V/(rad/s)}$ : constante de force électromotrice ; 
+\item $k_t = \SI{0,2}{Nm/A}$ : constante de couple ; 
+\item $R = \SI{2}{\Omega}$ : résistance de l’induit ; 
+%\item $J_m = \SI{4e-3}{kg.m2}$ : inertie de l’ensemble axe moteur et réducteur sur l'arbre moteur ; 
+\item $N = 200$ : rapport de transmission.
+\end{itemize} 
+%L’inertie $J_1$ du robot autour de l’axe $\axe{O_1}{z_1}$ dépend de la configuration du robot et de la masse 
+%transportée. Elle est telle que : 
+%\begin{itemize}
+%\item $J_{1,\text{mini}} = \SI{50}{kg.m^2}$ lorsque le déplacement a lieu à vide ; 
+%\item $J_{1,\text{maxi}} = \SI{200}{kg.m^2}$ lorsque la masse transportée est de \SI{50}{daN}.
+%\end{itemize}
+
+L’inertie équivalente $J_e$ ramenée sur l’arbre moteur est alors égale à : 
+\begin{itemize}
+\item $J_{e,\text{mini}} = \SI{5,25e-3}{kg.m^2}$;% lorsque $J_1=J_{1,\text{mini}}$ ; 
+\item $J_{e,\text{maxi}} =\SI{9e-3}{kg.m^2}$.% lorsque $J_1=J_{1,\text{maxi}}$.
+\end{itemize}
+
+La chaîne fonctionnelle de l’asservissement de l’axe $A1$ est représentée ci-dessous. La boucle interne réalise une correction de vitesse à partir de la tension $u_g(t)$ fournie par une 
+génératrice  tachymétrique  de  gain $K_g$ montée  en  prise  directe  sur  le moteur. $G$  est  le  gain 
+réglable de l’amplificateur de puissance. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_02}
+\end{center}
+
+La boucle externe  réalise  la  correction de position à partir de  la  tension $u_r(t)$  fournie par  le 
+capteur de position de gain $K_r$ monté  en prise directe  sur  l’arbre de  sortie du  réducteur. La 
+fonction de transfert du correcteur est notée $C(p)$. 
+
+Les performances souhaitées sont les suivantes : 
+\begin{itemize}
+\item pas d’écart de position;
+\item écart de traînage lors d’un transfert à \SI{105}{\degres.s^{-1}} inférieur à 1\degres ; 
+\item marge de phase de 45\degres. 
+\end{itemize}
+
+%%On montre que $J_e = J_m + \dfrac{J_1}{N^2}$.
+
+
+%\subsection*{Fonction de transfert du moteur}
+%\subparagraph{}\textit{Donner l’expression littérale de l’inertie équivalente Je ramenée sur l’arbre
+%moteur en fonction de $J_m$ et de $J_1$. }
+%\ifprof
+%\begin{corrige}~\\
+%\end{corrige}
+%\else
+%\fi
+
+
+\subparagraph{}\textit{Déterminer les transformées de Laplace des équations du moteur
+ en considérant nulles les conditions initiales. }
+\ifprof
+\begin{corrige}~\\
+$U(p) = RI(p) + E(p)$, $E(p) =k_e \Omega_m(p)$, $J_e p \Omega_m(p)=C_m(p)$, $C_m(p)=k_t I(p)$.
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Compléter le schéma-blocs par les transmittances manquantes. }
+\ifprof
+\begin{corrige}~\\
+\begin{center}
+\includegraphics[width=\linewidth]{images/cor_01}
+\end{center}
+
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
+
+
+
+\subparagraph{}\textit{En déduire la fonction de transfert $M(p)=\dfrac{\Omega_m(p)}{U(p)}$ du moteur que l’on
+exprimera sous la forme canonique d’un système du premier ordre de gain $K_m$ et de
+constante de temps $\tau_m$. Donner les expressions littérales de $K_m$ et $\tau_m$ et préciser leurs unités.}
+\ifprof
+\begin{corrige}~\\
+On a $M(p)=\dfrac{\dfrac{k_t}{RJ_ep}}{1+\dfrac{k_t k_e}{RJ_ep}}=\dfrac{k_t}{RJ_ep+k_t k_e}=\dfrac{1/k_e}{\dfrac{RJ_e}{k_t k_e}p+1}$.
+
+On a $K_m = \dfrac{1}{k_e}$ (en rad/s/V), $\tau_m=\dfrac{RJ_e}{k_t k_e}$ (en s).
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Calculer, suivant  l’inertie $J_e$ mini ou maxi du robot, les caractéristiques
+suivantes du moteur : 
+\begin{enumerate}
+\item constante de temps $\tau_m$ (mini et maxi);
+\item temps de réponse à $5\%$ (mini et maxi) ;
+\item bande passante à $\SI{-3}{dB}$ (mini et maxi).
+\end{enumerate}
+Conclure quant à l’influence de l’inertie du robot sur les performances du moteur.}
+\ifprof
+\begin{corrige}~\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+ \hline
+ & $\tau_m$ & $t_{5\%}$ & BP \SI{-3}{dB} \\ \hline
+$ J_{e,\text{mini}}$  & & & \\ \hline
+$ J_{e,\text{maxi}}$  & & & \\ \hline
+\end{tabular}
+\end{center}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Étude de la boucle de vitesse}
+La tension $u_g(t)$ en sortie de la génératrice tachymétrique varie de 0 à $\SI{12}{V}$ quand la vitesse de 
+rotation du moteur varie de 0 à $\SI{3500}{tr.min^{-1}}$.
+
+
+\subparagraph{}\textit{En déduire la valeur du gain $K_g$ de la génératrice tachymétrique (schéma-blocs du recto).}
+\ifprof
+\begin{corrige}~\\
+On a directement, $K_g = \dfrac{12}{3500\dfrac{2\pi}{60}}\simeq 0,03274\,\text{V}\,\text{s}\,\text{rad}^{-1}$.
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Déterminer, en fonction notamment de $K_m$ et $\tau_m$, la fonction de transfert 
+$H(p)=\dfrac{\Omega_m(p)}{U_v(p)}$  que l’on exprimera sous la forme canonique d’un système du premier ordre
+de gain $K’_m$ et de constante de temps $\tau’_m$. Donner les expressions littérales de $K’_m$ et $\tau’_m$ et
+préciser leurs unités. }
+\ifprof
+\begin{corrige}~\\
+$H(p)=\dfrac{\dfrac{GK_m}{1+\tau_m p}}{1+\dfrac{GK_gK_m}{1+\tau_m p}}=\dfrac{GK_m}{1+\tau_mp+{GK_gK_m}}=\dfrac{K'_m}{1+\tau'_m p}$. 
+On a $K'_m=\dfrac{GK_m}{1+GK_mK_g}$ et $\tau'_m=\dfrac{\tau_m}{1+GK_mK_g}$
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{Montrer que, si $G$ est très grand, on peut admettre que $H(p)\simeq \dfrac{1}{K_g}$.}
+\ifprof
+\begin{corrige}~\\
+Si $G$ est très grand, $K'_m$ tend vers 1 et $\tau'_m$ tend vers 0. On a donc $H(p)\simeq \dfrac{1}{K_g}$.
+\end{corrige}
+\else
+\fi
+ 
+\subsection*{Étude de la boucle de précision}
+ La boucle de position est représentée ci-dessous. 
+ 
+ \begin{center}
+\includegraphics[width=\linewidth]{images/fig_03}
+%\textit{}
+\end{center}
+
+ 
+ On admet que : 
+ \begin{itemize}
+ \item $H(p)=\dfrac{\Omega_m(p)}{U_v(p)}=\dfrac{K'_m}{1+\tau'_m p}=\dfrac{30}{1+5\cdot 10^{-3}p}$;
+ \item $K_r=\SI{4}{V.rad^{-1}}$ : gain du capteur de position;
+ \item $K_a$ : gain de l’adaptateur du signal de consigne $\alpha_e(t)$; 
+ \item le signal de consigne  $\alpha_e(t)$  est exprimé en degré ; 
+ \item le correcteur $C(p)$ est à action proportionnelle de gain réglable $K_c$.
+ \end{itemize} 
+ 
+ 
+ 
+\subparagraph{}\textit{Déterminer :
+\begin{enumerate}
+\item la fonction de transfert $R(p)=\dfrac{\alpha_r(p)}{\Omega_m(p)}$;
+\item le gain $K_a$ de l'adaptateur.
+\end{enumerate} }
+\ifprof
+\begin{corrige}~\\
+On a $R(p)=\dfrac{\alpha_r(p)}{\Omega_m(p)}=\dfrac{1}{Np}=\dfrac{1}{200p}$.
+
+Pour que l'asservissement soit précis, on doit avoir en régime permanent, $\varepsilon(p)=0$ et $\alpha_e(p) = \alpha(p)$. En conséquences, $\varepsilon(p)=0 \Leftrightarrow \alpha_e(p) K_a - \alpha_r(p) K_r = 0$ $\Leftrightarrow \alpha_e(p) K_a - \alpha(p) \dfrac{\pi}{180} K_r = 0$  $\Rightarrow  K_a = \dfrac{\pi}{180} K_r$.
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}\textit{Déterminer, en fonction notamment de $K’_{m}$ et $\tau’_m,$ la fonction de transfert
+en boucle ouverte $T(p)$ que l’on exprimera sous forme canonique. En déduire l’expression du
+gain de boucle, noté $K_{\text{BO}}$. }
+\ifprof
+\begin{corrige}~\\
+Par définition, $T(p)=\dfrac{U_r}{\varepsilon(p)} = \dfrac{K_c   K'_m}{1+\tau'_m p}\dfrac{1}{Np} K_r$. On a donc 
+$K_{\text{BO}}=\dfrac{K_c  K'_mK_r}{N} $.
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{\label{qkbo}}\textit{On souhaite une marge de phase de 45\degres.
+\begin{enumerate}
+\item Déterminer la valeur de $K_{\text{BO}}$ permettant de satisfaire cette condition.
+\item En déduire la valeur du gain $K_c$ du correcteur. 
+\item Déterminer l’écart de position. Conclure vis-à-vis des exigences du cahier des
+charges. 
+\end{enumerate}}
+\ifprof
+\begin{corrige}~\\
+On a $M_{\varphi} = \varphi\left(\omega_{\SI{0}{dB}}\right)-\left(-180\right)$.
+%
+%Commençons par chercher $\omega_{\SI{0}{dB}}$ : $20\log \left| T(j\omega)\right|=0 \Rightarrow \left| T(j\omega)\right|=1$ $\Rightarrow \left| T(j\omega)\right|=1$ $\Rightarrow \left| \dfrac{K_{\text{BO}}}{1+\tau'_m p}\dfrac{1}{p}\right|=1$ $\Rightarrow \left| \dfrac{K_{\text{BO}}}{j\omega-\tau'_m \omega^2}\right| =1$ $\Rightarrow  \dfrac{K_{\text{BO}}}{\omega\sqrt{\left(\tau'_{m}\right)^{2} \omega^2+1}} =1$
+%$\Rightarrow  K_{\text{BO}}^2 =\left(\tau'_{m}\right)^{2} \omega^4+\omega^2$
+
+
+\end{corrige}
+\else
+\fi
+
+On souhaite un écart de traînage inférieur à 1\degres pour une consigne de vitesse de \SI{105}{\degres/s}. 
+
+\subparagraph{}\textit{Déterminer l’expression de $\alpha_e(t)$ correspondant à une consigne de vitesse
+de \SI{105}{\degres/s}. En déduire $\alpha_e(p)$.}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{La valeur de $K_{\text{BO}}$ définie question \ref{qkbo} permet-elle de satisfaire l’exigence
+de précision imposée par le cahier des charges ? Conclure. }
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+
+\end{multicols}
+\end{document}
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}~\\
+\end{corrige}
+\else
+\fi
+\begin{center}
+%\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
