@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  2 APR 2019 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  11 APR 2019 10:08
 entering extended mode
 **./Cy_01_Rev_Fiche_04_Modelisation_Ordre12.tex
 (Cy_01_Rev_Fiche_04_Modelisation_Ordre12.tex
@@ -2655,22 +2655,17 @@ Overfull \hbox (14.54002pt too wide) in paragraph at lines 240--271
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 274.
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
-
- []
-
 <png/logo_lycee.png, id=66, 329.23pt x 265.99374pt>
 File: png/logo_lycee.png Graphic file (type png)
 <use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 282. on input l
-ine 282.
+Package pdftex.def Info: png/logo_lycee.png  used on input line 284. on input l
+ine 284.
 Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 2
-82.
+84.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 282.
+(Font)              scaled to size 7.52002pt on input line 284.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 282.
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 284.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 45.97325pt.
@@ -2679,30 +2674,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2 <./png/logo_lycee.png> <./images/Ordre2_amorti.pdf> <./images/Ordre2_pseudo.
 pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (Cy_01_Rev_Fiche_04_Modelisation_Ordre12.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 284.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'Cy_01_Rev_Fiche_04_Modelisation_Ordre
 12.run.xml'.
 \openout1 = `Cy_01_Rev_Fiche_04_Modelisation_Ordre12.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 51772 strings out of 493352
- 1068184 string characters out of 3137163
+ 51782 strings out of 493352
+ 1068308 string characters out of 3137163
  1771796 words of memory out of 3000000
- 54397 multiletter control sequences out of 15000+200000
- 699833 words of font info for 186 fonts, out of 3000000 for 9000
+ 54399 multiletter control sequences out of 15000+200000
+ 700369 words of font info for 192 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
  57i,17n,98p,10454b,1936s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Fi
@@ -2724,7 +2716,7 @@ pia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Cy_01_Rev_Fiche_04_Modelisation_Ordre12.pdf (2 pages, 250609 
+Output written on Cy_01_Rev_Fiche_04_Modelisation_Ordre12.pdf (2 pages, 251084 
 bytes).
 PDF statistics:
  164 PDF objects out of 1000 (max. 8388607)
