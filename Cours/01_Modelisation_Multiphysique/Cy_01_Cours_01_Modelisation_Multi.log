@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  19 SEP 2018 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.4)  11 APR 2019 09:06
 entering extended mode
 **./Cy_01_Cours_01_Modelisation_Multi.tex
 (Cy_01_Cours_01_Modelisation_Multi.tex
@@ -149,7 +149,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 )
-(style/new_style.tex
+(../../style/new_style.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count97
@@ -499,6 +499,11 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel-french\frenchb.ldf"
 Language: frenchb 2017/07/08 v3.3b French support from the babel system
 
+
+Package babel-french Warning: Option `francais' for Babel is *deprecated*,
+(babel-french)                it might be removed sooner or later. Please
+(babel-french)                use `french' instead; reported on input line 45.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel-french\french.ldf"
 Language: french 2017/07/08 v3.3b French support from the babel system
 
@@ -632,6 +637,342 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip52
 \backup@length=\skip53
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
+Package: expl3 2017/07/19 L3 programming layer (loader) 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
+Package: expl3 2017/07/19 L3 programming layer (code)
+\c_max_int=\count142
+\l_tmpa_int=\count143
+\l_tmpb_int=\count144
+\g_tmpa_int=\count145
+\g_tmpb_int=\count146
+\g__intarray_font_int=\count147
+\g__prg_map_int=\count148
+\c_log_iow=\count149
+\l_iow_line_count_int=\count150
+\l__iow_line_target_int=\count151
+\l__iow_one_indent_int=\count152
+\l__iow_indent_int=\count153
+\c_zero_dim=\dimen192
+\c_max_dim=\dimen193
+\l_tmpa_dim=\dimen194
+\l_tmpb_dim=\dimen195
+\g_tmpa_dim=\dimen196
+\g_tmpb_dim=\dimen197
+\c_zero_skip=\skip54
+\c_max_skip=\skip55
+\l_tmpa_skip=\skip56
+\l_tmpb_skip=\skip57
+\g_tmpa_skip=\skip58
+\g_tmpb_skip=\skip59
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+\l_keys_choice_int=\count154
+\c__fp_leading_shift_int=\count155
+\c__fp_middle_shift_int=\count156
+\c__fp_trailing_shift_int=\count157
+\c__fp_big_leading_shift_int=\count158
+\c__fp_big_middle_shift_int=\count159
+\c__fp_big_trailing_shift_int=\count160
+\c__fp_Bigg_leading_shift_int=\count161
+\c__fp_Bigg_middle_shift_int=\count162
+\c__fp_Bigg_trailing_shift_int=\count163
+\c__fp_rand_size_int=\count164
+\c__fp_rand_four_int=\count165
+\c__fp_rand_eight_int=\count166
+\l__sort_length_int=\count167
+\l__sort_min_int=\count168
+\l__sort_top_int=\count169
+\l__sort_max_int=\count170
+\l__sort_true_max_int=\count171
+\l__sort_block_int=\count172
+\l__sort_begin_int=\count173
+\l__sort_end_int=\count174
+\l__sort_A_int=\count175
+\l__sort_B_int=\count176
+\l__sort_C_int=\count177
+\l__tl_build_start_index_int=\count178
+\l__tl_build_index_int=\count179
+\l__tl_analysis_normal_int=\count180
+\l__tl_analysis_index_int=\count181
+\l__tl_analysis_nesting_int=\count182
+\l__tl_analysis_type_int=\count183
+\l__regex_internal_a_int=\count184
+\l__regex_internal_b_int=\count185
+\l__regex_internal_c_int=\count186
+\l__regex_balance_int=\count187
+\l__regex_group_level_int=\count188
+\l__regex_mode_int=\count189
+\c__regex_cs_in_class_mode_int=\count190
+\c__regex_cs_mode_int=\count191
+\l__regex_catcodes_int=\count192
+\l__regex_default_catcodes_int=\count193
+\c__regex_catcode_D_int=\count194
+\c__regex_catcode_S_int=\count195
+\c__regex_catcode_L_int=\count196
+\c__regex_catcode_O_int=\count197
+\c__regex_catcode_A_int=\count198
+\c__regex_all_catcodes_int=\count199
+\l__regex_show_lines_int=\count266
+\l__regex_min_state_int=\count267
+\l__regex_max_state_int=\count268
+\l__regex_left_state_int=\count269
+\l__regex_right_state_int=\count270
+\l__regex_capturing_group_int=\count271
+\l__regex_min_pos_int=\count272
+\l__regex_max_pos_int=\count273
+\l__regex_curr_pos_int=\count274
+\l__regex_start_pos_int=\count275
+\l__regex_success_pos_int=\count276
+\l__regex_curr_char_int=\count277
+\l__regex_curr_catcode_int=\count278
+\l__regex_last_char_int=\count279
+\l__regex_case_changed_char_int=\count280
+\l__regex_curr_state_int=\count281
+\l__regex_step_int=\count282
+\l__regex_min_active_int=\count283
+\l__regex_max_active_int=\count284
+\l__regex_replacement_csnames_int=\count285
+\l__regex_match_count_int=\count286
+\l__regex_min_submatch_int=\count287
+\l__regex_submatch_int=\count288
+\l__regex_zeroth_submatch_int=\count289
+\g__debug_trace_regex_int=\count290
+\c_empty_box=\box64
+\l_tmpa_box=\box65
+\l_tmpb_box=\box66
+\g_tmpa_box=\box67
+\g_tmpb_box=\box68
+\l__box_top_dim=\dimen198
+\l__box_bottom_dim=\dimen199
+\l__box_left_dim=\dimen256
+\l__box_right_dim=\dimen257
+\l__box_top_new_dim=\dimen258
+\l__box_bottom_new_dim=\dimen259
+\l__box_left_new_dim=\dimen260
+\l__box_right_new_dim=\dimen261
+\l__box_internal_box=\box69
+\l__coffin_internal_box=\box70
+\l__coffin_internal_dim=\dimen262
+\l__coffin_offset_x_dim=\dimen263
+\l__coffin_offset_y_dim=\dimen264
+\l__coffin_x_dim=\dimen265
+\l__coffin_y_dim=\dimen266
+\l__coffin_x_prime_dim=\dimen267
+\l__coffin_y_prime_dim=\dimen268
+\c_empty_coffin=\box71
+\l__coffin_aligned_coffin=\box72
+\l__coffin_aligned_internal_coffin=\box73
+\l_tmpa_coffin=\box74
+\l_tmpb_coffin=\box75
+\l__coffin_display_coffin=\box76
+\l__coffin_display_coord_coffin=\box77
+\l__coffin_display_pole_coffin=\box78
+\l__coffin_display_offset_dim=\dimen269
+\l__coffin_display_x_dim=\dimen270
+\l__coffin_display_y_dim=\dimen271
+\l__coffin_bounding_shift_dim=\dimen272
+\l__coffin_left_corner_dim=\dimen273
+\l__coffin_right_corner_dim=\dimen274
+\l__coffin_bottom_corner_dim=\dimen275
+\l__coffin_top_corner_dim=\dimen276
+\l__coffin_scaled_total_height_dim=\dimen277
+\l__coffin_scaled_width_dim=\dimen278
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def"
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count291
+\l__driver_tmp_box=\box79
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
+Package: xparse 2017/07/19 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count292
+\g__xparse_grabber_int=\count293
+\l__xparse_m_args_int=\count294
+\l__xparse_mandatory_args_int=\count295
+\l__xparse_v_nesting_int=\count296
+)
+Package: siunitx 2017/08/02 v2.7j A comprehensive (SI) units package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen279
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
+Package: l3keys2e 2017/07/19 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box80
+\l__siunitx_tmp_dim=\dimen280
+\l__siunitx_tmp_int=\count297
+\l__siunitx_number_mantissa_length_int=\count298
+\l__siunitx_number_uncert_length_int=\count299
+\l__siunitx_round_int=\count300
+\l__siunitx_process_decimal_int=\count301
+\l__siunitx_process_uncertainty_int=\count302
+\l__siunitx_process_fixed_int=\count303
+\l__siunitx_process_integer_min_int=\count304
+\l__siunitx_process_precision_int=\count305
+\l__siunitx_group_min_int=\count306
+\l__siunitx_angle_marker_box=\box81
+\l__siunitx_angle_unit_box=\box82
+\l__siunitx_angle_marker_dim=\dimen281
+\l__siunitx_angle_unit_dim=\dimen282
+\l__siunitx_unit_int=\count307
+\l__siunitx_unit_denominator_int=\count308
+\l__siunitx_unit_numerator_int=\count309
+\l__siunitx_unit_prefix_int=\count310
+\l__siunitx_unit_prefix_base_int=\count311
+\l__siunitx_unit_prefix_gram_int=\count312
+\l__siunitx_number_product_int=\count313
+\c__siunitx_one_fill_skip=\skip60
+\l__siunitx_table_unit_align_skip=\skip61
+\l__siunitx_table_exponent_dim=\dimen283
+\l__siunitx_table_integer_dim=\dimen284
+\l__siunitx_table_mantissa_dim=\dimen285
+\l__siunitx_table_marker_dim=\dimen286
+\l__siunitx_table_result_dim=\dimen287
+\l__siunitx_table_uncert_dim=\dimen288
+\l__siunitx_table_fill_pre_dim=\dimen289
+\l__siunitx_table_fill_post_dim=\dimen290
+\l__siunitx_table_fill_mid_dim=\dimen291
+\l__siunitx_table_pre_box=\box83
+\l__siunitx_table_post_box=\box84
+\l__siunitx_table_mantissa_box=\box85
+\l__siunitx_table_result_box=\box86
+\l__siunitx_table_number_align_skip=\skip62
+\l__siunitx_table_text_align_skip=\skip63
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7247.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7250.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7253.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7256.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7259.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7262.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7265.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7280.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \num with sig. 'om' on line 7289.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7298.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrange with sig. 'omm' on line 7307.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7319.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrange with sig. 'ommm' on line 7331.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SI with sig. 'omom' on line 7343.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sisetup with sig. 'm' on line 7346.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tablenum with sig. 'om' on line 7361.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \si with sig. 'om' on line 7373.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numInBookmark with sig. 'om' on line 7420.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrangeInBookmark with sig. 'omm' on line 7422.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIInBookmark with sig. 'omom' on line 7424.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlistInBookmark with sig. 'omm' on line 7426.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7428.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \siInBookmark with sig. 'om' on line 7429.
+.................................................
+\g__file_internal_ior=\read2
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\translator.sty
+"
+Package: translator 2010/06/12 ver 1.10
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\translator-lang
+uage-mappings.tex")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\avant.sty"
 Package: avant 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
@@ -710,10 +1051,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
 )
-\XKV@depth=\count142
+\XKV@depth=\count314
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 LaTeX Font Info:    Try loading font information for OT1+mdput on input line 18
@@ -732,10 +1073,9 @@ LaTeX Font Info:    Overwriting symbol font `mathdesignA' in version `bold'
 \symmathdesignB=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `mathdesignB' in version `bold'
 (Font)                  MDB/mdput/m/n --> MDB/mdput/b/n on input line 498.
-\@emptytoks=\toks36
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 532.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 533.
-\rulethickness=\skip54
+\rulethickness=\skip64
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
@@ -756,17 +1096,17 @@ LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
 Package: microtype 2017/07/07 v2.7 Micro-typographical refinements (RS)
 \MT@toks=\toks37
-\MT@count=\count143
+\MT@count=\count315
 LaTeX Info: Redefining \textls on input line 789.
-\MT@outer@kern=\dimen192
+\MT@outer@kern=\dimen292
 LaTeX Info: Redefining \textmicrotypecontext on input line 1334.
-\MT@listname@count=\count144
+\MT@listname@count=\count316
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
 File: microtype-pdftex.def 2017/07/07 v2.7 Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 912.
 LaTeX Info: Redefining \lslig on input line 912.
-\MT@outer@space=\skip55
+\MT@outer@space=\skip65
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1109,11 +1449,11 @@ Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count145
+\etb@tempcnta=\count317
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count146
+\lrq@indent=\count318
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1121,62 +1461,62 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write4
-\integerpart=\count147
-\decimalpart=\count148
+\integerpart=\count319
+\decimalpart=\count320
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count149
-\c@listtotal=\count150
-\c@listcount=\count151
-\c@liststart=\count152
-\c@liststop=\count153
-\c@citecount=\count154
-\c@citetotal=\count155
-\c@multicitecount=\count156
-\c@multicitetotal=\count157
-\c@instcount=\count158
-\c@maxnames=\count159
-\c@minnames=\count160
-\c@maxitems=\count161
-\c@minitems=\count162
-\c@citecounter=\count163
-\c@savedcitecounter=\count164
-\c@uniquelist=\count165
-\c@uniquename=\count166
-\c@refsection=\count167
-\c@refsegment=\count168
-\c@maxextratitle=\count169
-\c@maxextratitleyear=\count170
-\c@maxextrayear=\count171
-\c@maxextraalpha=\count172
-\c@abbrvpenalty=\count173
-\c@highnamepenalty=\count174
-\c@lownamepenalty=\count175
-\c@maxparens=\count176
-\c@parenlevel=\count177
-\blx@tempcnta=\count178
-\blx@tempcntb=\count179
-\blx@tempcntc=\count180
-\blx@maxsection=\count181
-\blx@maxsegment@0=\count182
-\blx@notetype=\count183
-\blx@parenlevel@text=\count184
-\blx@parenlevel@foot=\count185
-\blx@sectionciteorder@0=\count186
-\labelnumberwidth=\skip56
-\labelalphawidth=\skip57
-\biblabelsep=\skip58
-\bibitemsep=\skip59
-\bibnamesep=\skip60
-\bibinitsep=\skip61
-\bibparsep=\skip62
-\bibhang=\skip63
-\blx@bcfin=\read2
+\c@tabx@nest=\count321
+\c@listtotal=\count322
+\c@listcount=\count323
+\c@liststart=\count324
+\c@liststop=\count325
+\c@citecount=\count326
+\c@citetotal=\count327
+\c@multicitecount=\count328
+\c@multicitetotal=\count329
+\c@instcount=\count330
+\c@maxnames=\count331
+\c@minnames=\count332
+\c@maxitems=\count333
+\c@minitems=\count334
+\c@citecounter=\count335
+\c@savedcitecounter=\count336
+\c@uniquelist=\count337
+\c@uniquename=\count338
+\c@refsection=\count339
+\c@refsegment=\count340
+\c@maxextratitle=\count341
+\c@maxextratitleyear=\count342
+\c@maxextrayear=\count343
+\c@maxextraalpha=\count344
+\c@abbrvpenalty=\count345
+\c@highnamepenalty=\count346
+\c@lownamepenalty=\count347
+\c@maxparens=\count348
+\c@parenlevel=\count349
+\blx@tempcnta=\count350
+\blx@tempcntb=\count351
+\blx@tempcntc=\count352
+\blx@maxsection=\count353
+\blx@maxsegment@0=\count354
+\blx@notetype=\count355
+\blx@parenlevel@text=\count356
+\blx@parenlevel@foot=\count357
+\blx@sectionciteorder@0=\count358
+\labelnumberwidth=\skip66
+\labelalphawidth=\skip67
+\biblabelsep=\skip68
+\bibitemsep=\skip69
+\bibnamesep=\skip70
+\bibinitsep=\skip71
+\bibparsep=\skip72
+\bibhang=\skip73
+\blx@bcfin=\read3
 \blx@bcfout=\write5
-\c@mincomprange=\count187
-\c@maxcomprange=\count188
-\c@mincompwidth=\count189
+\c@mincomprange=\count359
+\c@maxcomprange=\count360
+\c@mincompwidth=\count361
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1185,78 +1525,78 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count190
-\c@savedafterword=\count191
-\c@annotator=\count192
-\c@savedannotator=\count193
-\c@author=\count194
-\c@savedauthor=\count195
-\c@bookauthor=\count196
-\c@savedbookauthor=\count197
-\c@commentator=\count198
-\c@savedcommentator=\count199
-\c@editor=\count266
-\c@savededitor=\count267
-\c@editora=\count268
-\c@savededitora=\count269
-\c@editorb=\count270
-\c@savededitorb=\count271
-\c@editorc=\count272
-\c@savededitorc=\count273
-\c@foreword=\count274
-\c@savedforeword=\count275
-\c@holder=\count276
-\c@savedholder=\count277
-\c@introduction=\count278
-\c@savedintroduction=\count279
-\c@namea=\count280
-\c@savednamea=\count281
-\c@nameb=\count282
-\c@savednameb=\count283
-\c@namec=\count284
-\c@savednamec=\count285
-\c@translator=\count286
-\c@savedtranslator=\count287
-\c@shortauthor=\count288
-\c@savedshortauthor=\count289
-\c@shorteditor=\count290
-\c@savedshorteditor=\count291
-\c@labelname=\count292
-\c@savedlabelname=\count293
-\c@institution=\count294
-\c@savedinstitution=\count295
-\c@lista=\count296
-\c@savedlista=\count297
-\c@listb=\count298
-\c@savedlistb=\count299
-\c@listc=\count300
-\c@savedlistc=\count301
-\c@listd=\count302
-\c@savedlistd=\count303
-\c@liste=\count304
-\c@savedliste=\count305
-\c@listf=\count306
-\c@savedlistf=\count307
-\c@location=\count308
-\c@savedlocation=\count309
-\c@organization=\count310
-\c@savedorganization=\count311
-\c@origlocation=\count312
-\c@savedoriglocation=\count313
-\c@origpublisher=\count314
-\c@savedorigpublisher=\count315
-\c@publisher=\count316
-\c@savedpublisher=\count317
-\c@language=\count318
-\c@savedlanguage=\count319
-\c@pageref=\count320
-\c@savedpageref=\count321
-\shorthandwidth=\skip64
-\shortjournalwidth=\skip65
-\shortserieswidth=\skip66
-\shorttitlewidth=\skip67
-\shortauthorwidth=\skip68
-\shorteditorwidth=\skip69
+\c@afterword=\count362
+\c@savedafterword=\count363
+\c@annotator=\count364
+\c@savedannotator=\count365
+\c@author=\count366
+\c@savedauthor=\count367
+\c@bookauthor=\count368
+\c@savedbookauthor=\count369
+\c@commentator=\count370
+\c@savedcommentator=\count371
+\c@editor=\count372
+\c@savededitor=\count373
+\c@editora=\count374
+\c@savededitora=\count375
+\c@editorb=\count376
+\c@savededitorb=\count377
+\c@editorc=\count378
+\c@savededitorc=\count379
+\c@foreword=\count380
+\c@savedforeword=\count381
+\c@holder=\count382
+\c@savedholder=\count383
+\c@introduction=\count384
+\c@savedintroduction=\count385
+\c@namea=\count386
+\c@savednamea=\count387
+\c@nameb=\count388
+\c@savednameb=\count389
+\c@namec=\count390
+\c@savednamec=\count391
+\c@translator=\count392
+\c@savedtranslator=\count393
+\c@shortauthor=\count394
+\c@savedshortauthor=\count395
+\c@shorteditor=\count396
+\c@savedshorteditor=\count397
+\c@labelname=\count398
+\c@savedlabelname=\count399
+\c@institution=\count400
+\c@savedinstitution=\count401
+\c@lista=\count402
+\c@savedlista=\count403
+\c@listb=\count404
+\c@savedlistb=\count405
+\c@listc=\count406
+\c@savedlistc=\count407
+\c@listd=\count408
+\c@savedlistd=\count409
+\c@liste=\count410
+\c@savedliste=\count411
+\c@listf=\count412
+\c@savedlistf=\count413
+\c@location=\count414
+\c@savedlocation=\count415
+\c@organization=\count416
+\c@savedorganization=\count417
+\c@origlocation=\count418
+\c@savedoriglocation=\count419
+\c@origpublisher=\count420
+\c@savedorigpublisher=\count421
+\c@publisher=\count422
+\c@savedpublisher=\count423
+\c@language=\count424
+\c@savedlanguage=\count425
+\c@pageref=\count426
+\c@savedpageref=\count427
+\shorthandwidth=\skip74
+\shortjournalwidth=\skip75
+\shortserieswidth=\skip76
+\shorttitlewidth=\skip77
+\shortauthorwidth=\skip78
+\shorteditorwidth=\skip79
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1268,13 +1608,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count322
-\c@textcitetotal=\count323
-\c@textcitemaxnames=\count324
-\c@biburlnumpenalty=\count325
-\c@biburlucpenalty=\count326
-\c@biburllcpenalty=\count327
-\c@smartand=\count328
+\c@textcitecount=\count428
+\c@textcitetotal=\count429
+\c@textcitemaxnames=\count430
+\c@biburlnumpenalty=\count431
+\c@biburlucpenalty=\count432
+\c@biburllcpenalty=\count433
+\c@smartand=\count434
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1286,8 +1626,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count329
-\c@bbx:relatedtotal=\count330
+\c@bbx:relatedcount=\count435
+\c@bbx:relatedtotal=\count436
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1311,23 +1651,19 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
-)
-
-Package biblatex Warning: 'babel' option is deprecated, use 'autolang' instead.
-
-
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count331
-\calc@Bcount=\count332
-\calc@Adimen=\dimen193
-\calc@Bdimen=\dimen194
-\calc@Askip=\skip70
-\calc@Bskip=\skip71
+\calc@Acount=\count437
+\calc@Bcount=\count438
+\calc@Adimen=\dimen293
+\calc@Bdimen=\dimen294
+\calc@Askip=\skip80
+\calc@Bskip=\skip81
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count333
-\calc@Cskip=\skip72
+\calc@Ccount=\count439
+\calc@Cskip=\skip82
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -1339,273 +1675,104 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 Writing index file Cy_01_Cours_01_Modelisation_Multi.idx
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
 Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen195
+\ttl@leftsep=\dimen295
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip73
-\f@nch@O@elh=\skip74
-\f@nch@O@erh=\skip75
-\f@nch@O@olh=\skip76
-\f@nch@O@orh=\skip77
-\f@nch@O@elf=\skip78
-\f@nch@O@erf=\skip79
-\f@nch@O@olf=\skip80
-\f@nch@O@orf=\skip81
+\f@nch@headwidth=\skip83
+\f@nch@O@elh=\skip84
+\f@nch@O@erh=\skip85
+\f@nch@O@olh=\skip86
+\f@nch@O@orh=\skip87
+\f@nch@O@elf=\skip88
+\f@nch@O@erf=\skip89
+\f@nch@O@olf=\skip90
+\f@nch@O@orf=\skip91
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/11/05 v2.16a AMS math features
-\@mathmargin=\skip82
+\@mathmargin=\skip92
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks40
-\ex@=\dimen196
-))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen197
+\pmbraise@=\dimen296
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count334
+\inf@bad=\count440
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count335
-\leftroot@=\count336
+\uproot@=\count441
+\leftroot@=\count442
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count337
-\DOTSCASE@=\count338
+\classnum@=\count443
+\DOTSCASE@=\count444
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box64
-\strutbox@=\box65
-\big@size=\dimen198
+\Mathstrutbox@=\box87
+\strutbox@=\box88
+\big@size=\dimen297
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count339
-\c@MaxMatrixCols=\count340
-\dotsspace@=\muskip11
-\c@parentequation=\count341
-\dspbrk@lvl=\count342
-\tag@help=\toks41
-\row@=\count343
-\column@=\count344
-\maxfields@=\count345
-\andhelp@=\toks42
-\eqnshift@=\dimen199
-\alignsep@=\dimen256
-\tagshift@=\dimen257
-\tagwidth@=\dimen258
-\totwidth@=\dimen259
-\lineht@=\dimen260
-\@envbody=\toks43
-\multlinegap=\skip83
-\multlinetaggap=\skip84
-\mathdisplay@stack=\toks44
+\macc@depth=\count445
+\c@MaxMatrixCols=\count446
+\dotsspace@=\muskip17
+\c@parentequation=\count447
+\dspbrk@lvl=\count448
+\tag@help=\toks40
+\row@=\count449
+\column@=\count450
+\maxfields@=\count451
+\andhelp@=\toks41
+\eqnshift@=\dimen298
+\alignsep@=\dimen299
+\tagshift@=\dimen300
+\tagwidth@=\dimen301
+\totwidth@=\dimen302
+\lineht@=\dimen303
+\@envbody=\toks42
+\multlinegap=\skip93
+\multlinetaggap=\skip94
+\mathdisplay@stack=\toks43
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks45
-\thm@bodyfont=\toks46
-\thm@headfont=\toks47
-\thm@notefont=\toks48
-\thm@headpunct=\toks49
-\thm@preskip=\skip85
-\thm@postskip=\skip86
-\thm@headsep=\skip87
-\dth@everypar=\toks50
+\thm@style=\toks44
+\thm@bodyfont=\toks45
+\thm@headfont=\toks46
+\thm@notefont=\toks47
+\thm@headpunct=\toks48
+\thm@preskip=\skip95
+\thm@postskip=\skip96
+\thm@headsep=\skip97
+\dth@everypar=\toks49
 )
-\c@notation=\count346
-\c@dummy=\count347
-\c@problem=\count348
-\c@exerciseT=\count349
-\c@exempleT=\count350
-\c@termT=\count351
-\c@pyT=\count352
-\c@sciT=\count353
-\c@pseudoT=\count354
-\c@sqlT=\count355
-\c@vocabulary=\count356
-\c@definitionT=\count357
-\c@propT=\count358
-\c@rappelT=\count359
-\c@demoT=\count360
-\c@hypoT=\count361
-\c@titrepartieT=\count362
-\c@titrechapitreT=\count363
+\c@notation=\count452
+\c@dummy=\count453
+\c@problem=\count454
+\c@exerciseT=\count455
+\c@exempleT=\count456
+\c@termT=\count457
+\c@pyT=\count458
+\c@sciT=\count459
+\c@pseudoT=\count460
+\c@sqlT=\count461
+\c@vocabulary=\count462
+\c@definitionT=\count463
+\c@rappelT=\count464
+\c@demoT=\count465
+\c@hypoT=\count466
+\c@titrepartieT=\count467
+\c@titrechapitreT=\count468
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mdframed\mdframed.sty"
 Package: mdframed 2013/07/01 1.9b: mdframed
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
-Package: expl3 2017/07/19 L3 programming layer (loader) 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
-Package: expl3 2017/07/19 L3 programming layer (code)
-\c_max_int=\count364
-\l_tmpa_int=\count365
-\l_tmpb_int=\count366
-\g_tmpa_int=\count367
-\g_tmpb_int=\count368
-\g__intarray_font_int=\count369
-\g__prg_map_int=\count370
-\c_log_iow=\count371
-\l_iow_line_count_int=\count372
-\l__iow_line_target_int=\count373
-\l__iow_one_indent_int=\count374
-\l__iow_indent_int=\count375
-\c_zero_dim=\dimen261
-\c_max_dim=\dimen262
-\l_tmpa_dim=\dimen263
-\l_tmpb_dim=\dimen264
-\g_tmpa_dim=\dimen265
-\g_tmpb_dim=\dimen266
-\c_zero_skip=\skip88
-\c_max_skip=\skip89
-\l_tmpa_skip=\skip90
-\l_tmpb_skip=\skip91
-\g_tmpa_skip=\skip92
-\g_tmpb_skip=\skip93
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count376
-\c__fp_leading_shift_int=\count377
-\c__fp_middle_shift_int=\count378
-\c__fp_trailing_shift_int=\count379
-\c__fp_big_leading_shift_int=\count380
-\c__fp_big_middle_shift_int=\count381
-\c__fp_big_trailing_shift_int=\count382
-\c__fp_Bigg_leading_shift_int=\count383
-\c__fp_Bigg_middle_shift_int=\count384
-\c__fp_Bigg_trailing_shift_int=\count385
-\c__fp_rand_size_int=\count386
-\c__fp_rand_four_int=\count387
-\c__fp_rand_eight_int=\count388
-\l__sort_length_int=\count389
-\l__sort_min_int=\count390
-\l__sort_top_int=\count391
-\l__sort_max_int=\count392
-\l__sort_true_max_int=\count393
-\l__sort_block_int=\count394
-\l__sort_begin_int=\count395
-\l__sort_end_int=\count396
-\l__sort_A_int=\count397
-\l__sort_B_int=\count398
-\l__sort_C_int=\count399
-\l__tl_build_start_index_int=\count400
-\l__tl_build_index_int=\count401
-\l__tl_analysis_normal_int=\count402
-\l__tl_analysis_index_int=\count403
-\l__tl_analysis_nesting_int=\count404
-\l__tl_analysis_type_int=\count405
-\l__regex_internal_a_int=\count406
-\l__regex_internal_b_int=\count407
-\l__regex_internal_c_int=\count408
-\l__regex_balance_int=\count409
-\l__regex_group_level_int=\count410
-\l__regex_mode_int=\count411
-\c__regex_cs_in_class_mode_int=\count412
-\c__regex_cs_mode_int=\count413
-\l__regex_catcodes_int=\count414
-\l__regex_default_catcodes_int=\count415
-\c__regex_catcode_D_int=\count416
-\c__regex_catcode_S_int=\count417
-\c__regex_catcode_L_int=\count418
-\c__regex_catcode_O_int=\count419
-\c__regex_catcode_A_int=\count420
-\c__regex_all_catcodes_int=\count421
-\l__regex_show_lines_int=\count422
-\l__regex_min_state_int=\count423
-\l__regex_max_state_int=\count424
-\l__regex_left_state_int=\count425
-\l__regex_right_state_int=\count426
-\l__regex_capturing_group_int=\count427
-\l__regex_min_pos_int=\count428
-\l__regex_max_pos_int=\count429
-\l__regex_curr_pos_int=\count430
-\l__regex_start_pos_int=\count431
-\l__regex_success_pos_int=\count432
-\l__regex_curr_char_int=\count433
-\l__regex_curr_catcode_int=\count434
-\l__regex_last_char_int=\count435
-\l__regex_case_changed_char_int=\count436
-\l__regex_curr_state_int=\count437
-\l__regex_step_int=\count438
-\l__regex_min_active_int=\count439
-\l__regex_max_active_int=\count440
-\l__regex_replacement_csnames_int=\count441
-\l__regex_match_count_int=\count442
-\l__regex_min_submatch_int=\count443
-\l__regex_submatch_int=\count444
-\l__regex_zeroth_submatch_int=\count445
-\g__debug_trace_regex_int=\count446
-\c_empty_box=\box66
-\l_tmpa_box=\box67
-\l_tmpb_box=\box68
-\g_tmpa_box=\box69
-\g_tmpb_box=\box70
-\l__box_top_dim=\dimen267
-\l__box_bottom_dim=\dimen268
-\l__box_left_dim=\dimen269
-\l__box_right_dim=\dimen270
-\l__box_top_new_dim=\dimen271
-\l__box_bottom_new_dim=\dimen272
-\l__box_left_new_dim=\dimen273
-\l__box_right_new_dim=\dimen274
-\l__box_internal_box=\box71
-\l__coffin_internal_box=\box72
-\l__coffin_internal_dim=\dimen275
-\l__coffin_offset_x_dim=\dimen276
-\l__coffin_offset_y_dim=\dimen277
-\l__coffin_x_dim=\dimen278
-\l__coffin_y_dim=\dimen279
-\l__coffin_x_prime_dim=\dimen280
-\l__coffin_y_prime_dim=\dimen281
-\c_empty_coffin=\box73
-\l__coffin_aligned_coffin=\box74
-\l__coffin_aligned_internal_coffin=\box75
-\l_tmpa_coffin=\box76
-\l_tmpb_coffin=\box77
-\l__coffin_display_coffin=\box78
-\l__coffin_display_coord_coffin=\box79
-\l__coffin_display_pole_coffin=\box80
-\l__coffin_display_offset_dim=\dimen282
-\l__coffin_display_x_dim=\dimen283
-\l__coffin_display_y_dim=\dimen284
-\l__coffin_bounding_shift_dim=\dimen285
-\l__coffin_left_corner_dim=\dimen286
-\l__coffin_right_corner_dim=\dimen287
-\l__coffin_bottom_corner_dim=\dimen288
-\l__coffin_top_corner_dim=\dimen289
-\l__coffin_scaled_total_height_dim=\dimen290
-\l__coffin_scaled_width_dim=\dimen291
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def"
-File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count447
-\l__driver_tmp_box=\box81
-))
-Package: xparse 2017/07/19 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count448
-\g__xparse_grabber_int=\count449
-\l__xparse_m_args_int=\count450
-\l__xparse_mandatory_args_int=\count451
-\l__xparse_v_nesting_int=\count452
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\zref-abspage.sty"
 Package: zref-abspage 2016/05/21 v2.26 Module abspage for zref (HO)
 
@@ -1615,90 +1782,90 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count453
+\c@abspage=\count469
 Package zref Info: New property: abspage on input line 62.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\needspace\needspace.sty"
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip94
-\c@mdf@globalstyle@cnt=\count454
-\mdf@skipabove@length=\skip95
-\mdf@skipbelow@length=\skip96
-\mdf@leftmargin@length=\skip97
-\mdf@rightmargin@length=\skip98
-\mdf@innerleftmargin@length=\skip99
-\mdf@innerrightmargin@length=\skip100
-\mdf@innertopmargin@length=\skip101
-\mdf@innerbottommargin@length=\skip102
-\mdf@splittopskip@length=\skip103
-\mdf@splitbottomskip@length=\skip104
-\mdf@outermargin@length=\skip105
-\mdf@innermargin@length=\skip106
-\mdf@linewidth@length=\skip107
-\mdf@innerlinewidth@length=\skip108
-\mdf@middlelinewidth@length=\skip109
-\mdf@outerlinewidth@length=\skip110
-\mdf@roundcorner@length=\skip111
-\mdf@footenotedistance@length=\skip112
-\mdf@userdefinedwidth@length=\skip113
-\mdf@needspace@length=\skip114
-\mdf@frametitleaboveskip@length=\skip115
-\mdf@frametitlebelowskip@length=\skip116
-\mdf@frametitlerulewidth@length=\skip117
-\mdf@frametitleleftmargin@length=\skip118
-\mdf@frametitlerightmargin@length=\skip119
-\mdf@shadowsize@length=\skip120
-\mdf@extratopheight@length=\skip121
-\mdf@subtitleabovelinewidth@length=\skip122
-\mdf@subtitlebelowlinewidth@length=\skip123
-\mdf@subtitleaboveskip@length=\skip124
-\mdf@subtitlebelowskip@length=\skip125
-\mdf@subtitleinneraboveskip@length=\skip126
-\mdf@subtitleinnerbelowskip@length=\skip127
-\mdf@subsubtitleabovelinewidth@length=\skip128
-\mdf@subsubtitlebelowlinewidth@length=\skip129
-\mdf@subsubtitleaboveskip@length=\skip130
-\mdf@subsubtitlebelowskip@length=\skip131
-\mdf@subsubtitleinneraboveskip@length=\skip132
-\mdf@subsubtitleinnerbelowskip@length=\skip133
+\mdf@templength=\skip98
+\c@mdf@globalstyle@cnt=\count470
+\mdf@skipabove@length=\skip99
+\mdf@skipbelow@length=\skip100
+\mdf@leftmargin@length=\skip101
+\mdf@rightmargin@length=\skip102
+\mdf@innerleftmargin@length=\skip103
+\mdf@innerrightmargin@length=\skip104
+\mdf@innertopmargin@length=\skip105
+\mdf@innerbottommargin@length=\skip106
+\mdf@splittopskip@length=\skip107
+\mdf@splitbottomskip@length=\skip108
+\mdf@outermargin@length=\skip109
+\mdf@innermargin@length=\skip110
+\mdf@linewidth@length=\skip111
+\mdf@innerlinewidth@length=\skip112
+\mdf@middlelinewidth@length=\skip113
+\mdf@outerlinewidth@length=\skip114
+\mdf@roundcorner@length=\skip115
+\mdf@footenotedistance@length=\skip116
+\mdf@userdefinedwidth@length=\skip117
+\mdf@needspace@length=\skip118
+\mdf@frametitleaboveskip@length=\skip119
+\mdf@frametitlebelowskip@length=\skip120
+\mdf@frametitlerulewidth@length=\skip121
+\mdf@frametitleleftmargin@length=\skip122
+\mdf@frametitlerightmargin@length=\skip123
+\mdf@shadowsize@length=\skip124
+\mdf@extratopheight@length=\skip125
+\mdf@subtitleabovelinewidth@length=\skip126
+\mdf@subtitlebelowlinewidth@length=\skip127
+\mdf@subtitleaboveskip@length=\skip128
+\mdf@subtitlebelowskip@length=\skip129
+\mdf@subtitleinneraboveskip@length=\skip130
+\mdf@subtitleinnerbelowskip@length=\skip131
+\mdf@subsubtitleabovelinewidth@length=\skip132
+\mdf@subsubtitlebelowlinewidth@length=\skip133
+\mdf@subsubtitleaboveskip@length=\skip134
+\mdf@subsubtitlebelowskip@length=\skip135
+\mdf@subsubtitleinneraboveskip@length=\skip136
+\mdf@subsubtitleinnerbelowskip@length=\skip137
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mdframed\md-frame-1.mdf"
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
-\mdf@frametitlebox=\box82
-\mdf@footnotebox=\box83
-\mdf@splitbox@one=\box84
-\mdf@splitbox@two=\box85
-\mdf@splitbox@save=\box86
-\mdfsplitboxwidth=\skip134
-\mdfsplitboxtotalwidth=\skip135
-\mdfsplitboxheight=\skip136
-\mdfsplitboxdepth=\skip137
-\mdfsplitboxtotalheight=\skip138
-\mdfframetitleboxwidth=\skip139
-\mdfframetitleboxtotalwidth=\skip140
-\mdfframetitleboxheight=\skip141
-\mdfframetitleboxdepth=\skip142
-\mdfframetitleboxtotalheight=\skip143
-\mdffootnoteboxwidth=\skip144
-\mdffootnoteboxtotalwidth=\skip145
-\mdffootnoteboxheight=\skip146
-\mdffootnoteboxdepth=\skip147
-\mdffootnoteboxtotalheight=\skip148
-\mdftotallinewidth=\skip149
-\mdfboundingboxwidth=\skip150
-\mdfboundingboxtotalwidth=\skip151
-\mdfboundingboxheight=\skip152
-\mdfboundingboxdepth=\skip153
-\mdfboundingboxtotalheight=\skip154
-\mdf@freevspace@length=\skip155
-\mdf@horizontalwidthofbox@length=\skip156
-\mdf@verticalmarginwhole@length=\skip157
-\mdf@horizontalspaceofbox=\skip158
-\mdfsubtitleheight=\skip159
-\mdfsubsubtitleheight=\skip160
-\c@mdfcountframes=\count455
+\mdf@frametitlebox=\box89
+\mdf@footnotebox=\box90
+\mdf@splitbox@one=\box91
+\mdf@splitbox@two=\box92
+\mdf@splitbox@save=\box93
+\mdfsplitboxwidth=\skip138
+\mdfsplitboxtotalwidth=\skip139
+\mdfsplitboxheight=\skip140
+\mdfsplitboxdepth=\skip141
+\mdfsplitboxtotalheight=\skip142
+\mdfframetitleboxwidth=\skip143
+\mdfframetitleboxtotalwidth=\skip144
+\mdfframetitleboxheight=\skip145
+\mdfframetitleboxdepth=\skip146
+\mdfframetitleboxtotalheight=\skip147
+\mdffootnoteboxwidth=\skip148
+\mdffootnoteboxtotalwidth=\skip149
+\mdffootnoteboxheight=\skip150
+\mdffootnoteboxdepth=\skip151
+\mdffootnoteboxtotalheight=\skip152
+\mdftotallinewidth=\skip153
+\mdfboundingboxwidth=\skip154
+\mdfboundingboxtotalwidth=\skip155
+\mdfboundingboxheight=\skip156
+\mdfboundingboxdepth=\skip157
+\mdfboundingboxtotalheight=\skip158
+\mdf@freevspace@length=\skip159
+\mdf@horizontalwidthofbox@length=\skip160
+\mdf@verticalmarginwhole@length=\skip161
+\mdf@horizontalspaceofbox=\skip162
+\mdfsubtitleheight=\skip163
+\mdfsubsubtitleheight=\skip164
+\c@mdfcountframes=\count471
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1714,39 +1881,39 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count456
-\c@mdf@env@i=\count457
-\c@mdf@env@ii=\count458
-\c@mdf@zref@counter=\count459
+\mdf@envdepth=\count472
+\c@mdf@env@i=\count473
+\c@mdf@env@ii=\count474
+\c@mdf@zref@counter=\count475
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 
 Package hyperref Warning: Option `backref' has already been used,
-(hyperref)                setting the option has no effect on input line 766.
+(hyperref)                setting the option has no effect on input line 770.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 766.
+(hyperref)                setting the option has no effect on input line 770.
 
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 766.
+(hyperref)                setting the option has no effect on input line 770.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 766.
-Package hyperref Info: Option `breaklinks' set `true' on input line 766.
+Package hyperref Info: Option `colorlinks' set `false' on input line 770.
+Package hyperref Info: Option `breaklinks' set `true' on input line 770.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 766.
+(hyperref)                setting the option has no effect on input line 770.
 
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 766.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 770.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
-\BKM@id=\count460
+\BKM@id=\count476
 ))
-\c@exo=\count461
+\c@exo=\count477
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
@@ -1903,112 +2070,27 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
-Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count462
-\algocf@hangindent=\skip161
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count463
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
-)
-\skiptotal=\skip162
-\skiplinenumber=\skip163
-\skiprule=\skip164
-\skiphlne=\skip165
-\skiptext=\skip166
-\skiplength=\skip167
-\algomargin=\skip168
-\skipalgocfslide=\skip169
-\algowidth=\dimen292
-\inoutsize=\dimen293
-\inoutindent=\dimen294
-\interspacetitleruled=\dimen295
-\interspacealgoruled=\dimen296
-\interspacetitleboxruled=\dimen297
-\algocf@ruledwidth=\skip170
-\algocf@inoutbox=\box87
-\algocf@inputbox=\box88
-\AlCapSkip=\skip171
-\AlCapHSkip=\skip172
-\algoskipindent=\skip173
-\algocf@nlbox=\box89
-\algocf@hangingbox=\box90
-\algocf@untilbox=\box91
-\algocf@skipuntil=\skip174
-\algocf@capbox=\box92
-\algocf@lcaptionbox=\skip175
-\algoheightruledefault=\skip176
-\algoheightrule=\skip177
-\algotitleheightruledefault=\skip178
-\algotitleheightrule=\skip179
-\c@algocfline=\count464
-\c@algocfproc=\count465
-\c@algocf=\count466
-\algocf@algoframe=\box93
-\algocf@algobox=\box94
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count467
-\lst@gtempboxa=\box95
-\lst@token=\toks51
-\lst@length=\count468
-\lst@currlwidth=\dimen298
-\lst@column=\count469
-\lst@pos=\count470
-\lst@lostspace=\dimen299
-\lst@width=\dimen300
-\lst@newlines=\count471
-\lst@lineno=\count472
-\lst@maxwidth=\dimen301
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count473
-\lst@skipnumbers=\count474
-\lst@framebox=\box96
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
-File: lstlang2.sty 2015/06/04 1.6 listings language file
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
-File: lstlang3.sty 2015/06/04 1.6 listings language file
-))
-(style/macros_SII.tex)
+(../../style/macros_SII.tex)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\numprint\numprint.sty"
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count475
-\c@nprt@mantissa@digitsafter=\count476
-\c@nprt@exponent@digitsbefore=\count477
-\c@nprt@exponent@digitsafter=\count478
-\nprt@digitwidth=\skip180
-\nprt@sepwidth=\skip181
-\nprt@decimalwidth=\skip182
-\nprt@blockwidth=\skip183
-\nprt@digittoks=\toks52
-\nprt@pretoks=\toks53
-\nprt@posttoks=\toks54
-\nprt@thisdigit=\count479
-\nprt@curpos=\count480
-\nprt@rndpos=\count481
-\c@nprt@digitsfirstblock=\count482
-\c@nprt@blockcnt=\count483
-\c@nprt@cntprint=\count484
+\c@nprt@mantissa@digitsbefore=\count478
+\c@nprt@mantissa@digitsafter=\count479
+\c@nprt@exponent@digitsbefore=\count480
+\c@nprt@exponent@digitsafter=\count481
+\nprt@digitwidth=\skip165
+\nprt@sepwidth=\skip166
+\nprt@decimalwidth=\skip167
+\nprt@blockwidth=\skip168
+\nprt@digittoks=\toks50
+\nprt@pretoks=\toks51
+\nprt@posttoks=\toks52
+\nprt@thisdigit=\count482
+\nprt@curpos=\count483
+\nprt@rndpos=\count484
+\c@nprt@digitsfirstblock=\count485
+\c@nprt@blockcnt=\count486
+\c@nprt@cntprint=\count487
 
 No configuration file `numprint.cfg' found.)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
@@ -2027,21 +2109,21 @@ s\tikzlibrarydecorations.markings.code.tex"
 s\tikzlibrarydecorations.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecoration
 s.code.tex"
-\pgfdecoratedcompleteddistance=\dimen302
-\pgfdecoratedremainingdistance=\dimen303
-\pgfdecoratedinputsegmentcompleteddistance=\dimen304
-\pgfdecoratedinputsegmentremainingdistance=\dimen305
-\pgf@decorate@distancetomove=\dimen306
-\pgf@decorate@repeatstate=\count485
-\pgfdecorationsegmentamplitude=\dimen307
-\pgfdecorationsegmentlength=\dimen308
+\pgfdecoratedcompleteddistance=\dimen304
+\pgfdecoratedremainingdistance=\dimen305
+\pgfdecoratedinputsegmentcompleteddistance=\dimen306
+\pgfdecoratedinputsegmentremainingdistance=\dimen307
+\pgf@decorate@distancetomove=\dimen308
+\pgf@decorate@repeatstate=\count488
+\pgfdecorationsegmentamplitude=\dimen309
+\pgfdecorationsegmentlength=\dimen310
 )
-\tikz@lib@dec@box=\box97
+\tikz@lib@dec@box=\box94
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.markings.code.tex"))
-\tikz@lib@circ@count=\count486
-\tikzcircuitssizeunit=\dimen309
+\tikz@lib@circ@count=\count489
+\tikzcircuitssizeunit=\dimen311
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\p
 gflibraryshapes.gates.ee.code.tex"))
@@ -2052,7 +2134,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
 code.tex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen310
+\arrowsize=\dimen312
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\p
 gflibraryshapes.gates.ee.IEC.code.tex"))
@@ -2107,42 +2189,42 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 shapes.multipart.code.tex"
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box98
-\pgfnodeparttwobox=\box99
-\pgfnodepartthreebox=\box100
-\pgfnodepartfourbox=\box101
-\pgfnodeparttwentybox=\box102
-\pgfnodepartnineteenbox=\box103
-\pgfnodeparteighteenbox=\box104
-\pgfnodepartseventeenbox=\box105
-\pgfnodepartsixteenbox=\box106
-\pgfnodepartfifteenbox=\box107
-\pgfnodepartfourteenbox=\box108
-\pgfnodepartthirteenbox=\box109
-\pgfnodeparttwelvebox=\box110
-\pgfnodepartelevenbox=\box111
-\pgfnodeparttenbox=\box112
-\pgfnodepartninebox=\box113
-\pgfnodeparteightbox=\box114
-\pgfnodepartsevenbox=\box115
-\pgfnodepartsixbox=\box116
-\pgfnodepartfivebox=\box117
+\pgfnodepartlowerbox=\box95
+\pgfnodeparttwobox=\box96
+\pgfnodepartthreebox=\box97
+\pgfnodepartfourbox=\box98
+\pgfnodeparttwentybox=\box99
+\pgfnodepartnineteenbox=\box100
+\pgfnodeparteighteenbox=\box101
+\pgfnodepartseventeenbox=\box102
+\pgfnodepartsixteenbox=\box103
+\pgfnodepartfifteenbox=\box104
+\pgfnodepartfourteenbox=\box105
+\pgfnodepartthirteenbox=\box106
+\pgfnodeparttwelvebox=\box107
+\pgfnodepartelevenbox=\box108
+\pgfnodeparttenbox=\box109
+\pgfnodepartninebox=\box110
+\pgfnodeparteightbox=\box111
+\pgfnodepartsevenbox=\box112
+\pgfnodepartsixbox=\box113
+\pgfnodepartfivebox=\box114
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\circuitikz\circuitikz.sty"
 Package: circuitikz 2017/05/28{} The CircuiTikz circuit drawing package version
  0.8.3
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\circuitikz\pgfcirc.defines.tex"
-\pgf@circ@res@up=\dimen311
-\pgf@circ@res@down=\dimen312
-\pgf@circ@res@zero=\dimen313
-\pgf@circ@res@left=\dimen314
-\pgf@circ@res@right=\dimen315
-\pgf@circ@res@other=\dimen316
-\pgf@circ@res@step=\dimen317
-\pgf@circ@res@temp=\dimen318
-\pgfstartlinewidth=\dimen319
-\pgf@circ@Rlen=\dimen320
+\pgf@circ@res@up=\dimen313
+\pgf@circ@res@down=\dimen314
+\pgf@circ@res@zero=\dimen315
+\pgf@circ@res@left=\dimen316
+\pgf@circ@res@right=\dimen317
+\pgf@circ@res@other=\dimen318
+\pgf@circ@res@step=\dimen319
+\pgf@circ@res@temp=\dimen320
+\pgfstartlinewidth=\dimen321
+\pgf@circ@Rlen=\dimen322
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\circuitikz\pgfcircutils.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\circuitikz\pgfcircshapes.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\circuitikz\pgfcircmonopoles.tex
@@ -2172,7 +2254,7 @@ nt input file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filehook\filehook.sty"
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )
-\c@currfiledepth=\count487
+\c@currfiledepth=\count490
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\gincltex\gincltex.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\svn-prov\svn-prov.sty"
@@ -2192,203 +2274,51 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box118
+\collectedbox=\box115
 )
-\tc@llx=\dimen321
-\tc@lly=\dimen322
-\tc@urx=\dimen323
-\tc@ury=\dimen324
+\tc@llx=\dimen323
+\tc@lly=\dimen324
+\tc@urx=\dimen325
+\tc@ury=\dimen326
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen325
-\adjbox@Height=\dimen326
-\adjbox@Depth=\dimen327
-\adjbox@Totalheight=\dimen328
+\adjbox@Width=\dimen327
+\adjbox@Height=\dimen328
+\adjbox@Depth=\dimen329
+\adjbox@Totalheight=\dimen330
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count491
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box119
-\sift@deathcycles=\count488
-\@vwid@loff=\dimen329
-\@vwid@roff=\dimen330
+\@vwid@box=\box116
+\sift@deathcycles=\count492
+\@vwid@loff=\dimen331
+\@vwid@roff=\dimen332
 ))
-\gincltex@box=\box120
+\gincltex@box=\box117
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filemod\filemod-expmin.sty"
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
  (expandable; minimal)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
-Package: siunitx 2017/08/02 v2.7j A comprehensive (SI) units package
+Package biblatex Info: Trying to load language 'francais'...
+Package biblatex Info: ... file 'francais.lbx' not found.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
-Package: l3keys2e 2017/07/19 LaTeX2e option processing using LaTeX3 keys
+
+Package biblatex Warning: Language 'francais' not supported.
+(biblatex)                Using fallback language 'english' on input line 86.
+
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
+File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
-\l__siunitx_tmp_box=\box121
-\l__siunitx_tmp_dim=\dimen331
-\l__siunitx_tmp_int=\count489
-\l__siunitx_number_mantissa_length_int=\count490
-\l__siunitx_number_uncert_length_int=\count491
-\l__siunitx_round_int=\count492
-\l__siunitx_process_decimal_int=\count493
-\l__siunitx_process_uncertainty_int=\count494
-\l__siunitx_process_fixed_int=\count495
-\l__siunitx_process_integer_min_int=\count496
-\l__siunitx_process_precision_int=\count497
-\l__siunitx_group_min_int=\count498
-\l__siunitx_angle_marker_box=\box122
-\l__siunitx_angle_unit_box=\box123
-\l__siunitx_angle_marker_dim=\dimen332
-\l__siunitx_angle_unit_dim=\dimen333
-\l__siunitx_unit_int=\count499
-\l__siunitx_unit_denominator_int=\count500
-\l__siunitx_unit_numerator_int=\count501
-\l__siunitx_unit_prefix_int=\count502
-\l__siunitx_unit_prefix_base_int=\count503
-\l__siunitx_unit_prefix_gram_int=\count504
-\l__siunitx_number_product_int=\count505
-\c__siunitx_one_fill_skip=\skip184
-\l__siunitx_table_unit_align_skip=\skip185
-\l__siunitx_table_exponent_dim=\dimen334
-\l__siunitx_table_integer_dim=\dimen335
-\l__siunitx_table_mantissa_dim=\dimen336
-\l__siunitx_table_marker_dim=\dimen337
-\l__siunitx_table_result_dim=\dimen338
-\l__siunitx_table_uncert_dim=\dimen339
-\l__siunitx_table_fill_pre_dim=\dimen340
-\l__siunitx_table_fill_post_dim=\dimen341
-\l__siunitx_table_fill_mid_dim=\dimen342
-\l__siunitx_table_pre_box=\box124
-\l__siunitx_table_post_box=\box125
-\l__siunitx_table_mantissa_box=\box126
-\l__siunitx_table_result_box=\box127
-\l__siunitx_table_number_align_skip=\skip186
-\l__siunitx_table_text_align_skip=\skip187
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7247.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPostPower with sig. 'mm' on line 7250.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7253.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIPrePower with sig. 'mm' on line 7256.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIQualifier with sig. 'mm' on line 7259.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7262.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7265.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7280.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \num with sig. 'om' on line 7289.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7298.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numrange with sig. 'omm' on line 7307.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7319.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIrange with sig. 'ommm' on line 7331.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SI with sig. 'omom' on line 7343.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \sisetup with sig. 'm' on line 7346.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \tablenum with sig. 'om' on line 7361.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \si with sig. 'om' on line 7373.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numInBookmark with sig. 'om' on line 7420.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \numrangeInBookmark with sig. 'omm' on line 7422.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIInBookmark with sig. 'omom' on line 7424.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIlistInBookmark with sig. 'omm' on line 7426.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7428.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \siInBookmark with sig. 'om' on line 7429.
-.................................................
-\g__file_internal_ior=\read3
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\translator.sty
-"
-Package: translator 2010/06/12 ver 1.10
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\translator-lang
-uage-mappings.tex")))
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
 
@@ -2399,48 +2329,48 @@ File: french.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count506
-\@quotereset=\count507
+\@quotelevel=\count493
+\@quotereset=\count494
 (Cy_01_Cours_01_Modelisation_Multi.aux)
 \openout1 = `Cy_01_Cours_01_Modelisation_Multi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 86.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdacmr.fd"
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 85.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 86.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdbcmr.fd"
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 85.
-\AtBeginShipoutBox=\box128
-Package hyperref Info: Link coloring OFF on input line 85.
+LaTeX Font Info:    ... okay on input line 86.
+\AtBeginShipoutBox=\box118
+Package hyperref Info: Link coloring OFF on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2448,11 +2378,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count508
+\c@section@level=\count495
 )
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2490,17 +2420,17 @@ LaTeX Info: Redefining \nameref on input line 85.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count509
-\scratchdimen=\dimen343
-\scratchbox=\box129
-\nofMPsegments=\count510
-\nofMParguments=\count511
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count512
-\MPscratchDim=\dimen344
-\MPnumerator=\count513
-\makeMPintoPDFobject=\count514
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count496
+\scratchdimen=\dimen333
+\scratchbox=\box119
+\nofMPsegments=\count497
+\nofMParguments=\count498
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count499
+\MPscratchDim=\dimen334
+\MPnumerator=\count500
+\makeMPintoPDFobject=\count501
+\everyMPtoPDFconversion=\toks54
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2515,10 +2445,25 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \degres on input line 85.
-LaTeX Info: Redefining \dots on input line 85.
-LaTeX Info: Redefining \up on input line 85.
-LaTeX Info: Redefining \microtypecontext on input line 85.
+LaTeX Info: Redefining \degres on input line 86.
+LaTeX Info: Redefining \dots on input line 86.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 86.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 86.
+LaTeX Info: Redefining \up on input line 86.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\dicts\translato
+r-basic-dictionary\translator-basic-dictionary-English.dict"
+Dictionary: translator-basic-dictionary, Language: English 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
+"
+File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
+)
+LaTeX Info: Redefining \microtypecontext on input line 86.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2542,92 +2487,83 @@ Package biblatex Info: ... file 'Cy_01_Cours_01_Modelisation_Multi.bbl' not fou
 nd.
 
 No file Cy_01_Cours_01_Modelisation_Multi.bbl.
-Package biblatex Info: Reference section=0 on input line 85.
-Package biblatex Info: Reference segment=0 on input line 85.
-\c@lstlisting=\count515
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\translator\dicts\translato
-r-basic-dictionary\translator-basic-dictionary-English.dict"
-Dictionary: translator-basic-dictionary, Language: English 
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
-"
-File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
-)
-\c__siunitx_mathsf_int=\count516
+Package biblatex Info: Reference section=0 on input line 86.
+Package biblatex Info: Reference segment=0 on input line 86.
+\c__siunitx_mathsf_int=\count502
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mdput' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for OML+mdput on input line 85
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for OML+mdput on input line 86
 .
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\omlmdput.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\omlmdput.fd"
 File: omlmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdput.
 )
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for OMS+mdput on input line 85
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for OMS+mdput on input line 86
 .
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\omsmdput.fd"
 File: omsmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdput.
 )
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for OMX+mdput on input line 85
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for OMX+mdput on input line 86
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\omxmdput.fd"
 File: omxmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdput.
 )
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
+(Font)              scaled to size 4.70001pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for MDA+mdput on input line 85
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for MDA+mdput on input line 86
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdamdput.fd"
 File: mdamdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdput.
 )
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for MDB+mdput on input line 85
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for MDB+mdput on input line 86
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdbmdput.fd"
 File: mdbmdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdput.
 )
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 85.
+(Font)              scaled to size 9.40002pt on input line 86.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 85.
+(Font)              scaled to size 6.58002pt on input line 86.
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 85.
-LaTeX Font Info:    Try loading font information for OT1+pag on input line 85.
+(Font)              scaled to size 4.70001pt on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+pag on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pag.fd"
 File: ot1pag.fd 2001/06/04 font definitions for OT1/pag.
@@ -2636,30 +2572,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pag' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count517
+\c__siunitx_mathtt_int=\count503
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 10.70007pt on input line 85.
+(Font)              scaled to size 10.70007pt on input line 86.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 7.49005pt on input line 85.
+(Font)              scaled to size 7.49005pt on input line 86.
 LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 5.35004pt on input line 85.
+(Font)              scaled to size 5.35004pt on input line 86.
 
-(style/new_pagegarde.tex
-<png/Fond_SLCI.png, id=6, 590.6868pt x 284.7438pt>
-File: png/Fond_SLCI.png Graphic file (type png)
-<use png/Fond_SLCI.png>
-Package pdftex.def Info: png/Fond_SLCI.png  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 597.50787pt x 288.0582pt on input line
- 9.
+(../../style/new_pagegarde.tex
+
+! LaTeX Error: File `../../png/Fond_SLCI' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...aphics[width=\paperwidth]{\thechapterimage}
+                                                  };
+? 
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
 (Font)              scaled to size 19.49565pt on input line 11.
 LaTeX Font Info:    Try loading font information for T1+pag on input line 11.
-
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pag.fd"
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
@@ -2752,39 +2690,9 @@ LaTeX Font Info:    Font shape `T1/pag/b/fsc' in size <12> not available
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
 (Font)              scaled to size 9.40002pt on input line 40.
 LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 8.56006pt on input line 40.
-LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
-(Font)              scaled to size 6.42004pt on input line 40.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 40.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 40.
+(Font)              scaled to size 13.53603pt on input line 40.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 40.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 54.
@@ -2801,7 +2709,7 @@ LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
 (Font)              scaled to size 9.40002pt on input line 63.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 64.
-<images/matlab.png, id=8, 791.95876pt x 446.66875pt>
+<images/matlab.png, id=6, 791.95876pt x 446.66875pt>
 File: images/matlab.png Graphic file (type png)
 <use images/matlab.png>
 Package pdftex.def Info: images/matlab.png  used on input line 72. on input lin
@@ -2813,280 +2721,370 @@ Overfull \hbox (58.04332pt too wide) in paragraph at lines 72--72
  [] 
  []
 
-\c@ttl@toc@default=\count518
+\c@ttl@toc@default=\count504
 (Cy_01_Cours_01_Modelisation_Multi.ptc
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
 )
-<png/logoCC.png, id=43, 88.33pt x 31.11626pt>
-File: png/logoCC.png Graphic file (type png)
-<use png/logoCC.png>
-Package pdftex.def Info: png/logoCC.png  used on input line 85. on input line 8
-5.
-Package pdftex.def Info: Requested size: 56.9055pt x 20.04631pt on input line 8
-5.
- [1
+
+! LaTeX Error: File `png/logoCC' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \includegraphics[width=2cm]{png/logoCC}
+                                            
+? 
+[1
 
 {C:/Users/pt_ptsi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 design size mismatch in local font md-utbo8t in virtual font mdputbo8t.vf ignor
 ed.
 design size mismatch in local font md-utro8t in virtual font mdputro8t.vf ignor
-ed. <./png/Fond_SLCI.png> <./images/matlab.png> <./png/logoCC.png>])
+ed. <./images/matlab.png>])
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 93.
-LaTeX Font Info:    Try loading font information for TS1+mdput on input line 10
-0.
+(Font)              scaled to size 11.28003pt on input line 94.
+
+
+LaTeX Warning: Citation '1' on page 2 undefined on input line 115.
+
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 125.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 125.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 148.
+LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
+(Font)              scaled to size 7.52002pt on input line 148.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 7.52002pt on input line 148.
+[2
+design size mismatch in local font md-utro8t in virtual font mdputro8t.vf ignor
+ed.]
+<images/Modeles.png, id=83, 1503.6175pt x 890.32625pt>
+File: images/Modeles.png Graphic file (type png)
+<use images/Modeles.png>
+Package pdftex.def Info: images/Modeles.png  used on input line 203. on input l
+ine 203.
+Package pdftex.def Info: Requested size: 483.69687pt x 286.4046pt on input line
+ 203.
+
+
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 204.
+
+
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204 \end{center}
+                  
+? 
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 10.70007pt on input line 204.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 7.52002pt on input line 204.
+LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 204.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 56.90533pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 204.
+[3]
+<images/solveur.png, id=89, 260.975pt x 172.645pt>
+File: images/solveur.png Graphic file (type png)
+<use images/solveur.png>
+Package pdftex.def Info: images/solveur.png  used on input line 220. on input l
+ine 220.
+Package pdftex.def Info: Requested size: 169.29684pt x 111.99661pt on input lin
+e 220.
+<images/Masse_Ressort.png, id=90, 1119.18124pt x 612.2875pt>
+File: images/Masse_Ressort.png Graphic file (type png)
+<use images/Masse_Ressort.png>
+Package pdftex.def Info: images/Masse_Ressort.png  used on input line 236. on i
+nput line 236.
+Package pdftex.def Info: Requested size: 290.22107pt x 158.77057pt on input lin
+e 236.
+
+
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 238.
+
+
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.238 ... -- ressort -- amortisseur >> en série.}
+                                                  
+? 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 56.90533pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./images/Modeles.png> <./images/solveur.png>]
+<images/Modele3D.png, id=98, 1403.2425pt x 412.54124pt>
+File: images/Modele3D.png Graphic file (type png)
+<use images/Modele3D.png>
+Package pdftex.def Info: images/Modele3D.png  used on input line 242. on input 
+line 242.
+Package pdftex.def Info: Requested size: 435.32422pt x 127.98088pt on input lin
+e 242.
+<images/Bilbio_SimMeca.png, id=99, 715.67375pt x 392.46625pt>
+File: images/Bilbio_SimMeca.png Graphic file (type png)
+<use images/Bilbio_SimMeca.png>
+Package pdftex.def Info: images/Bilbio_SimMeca.png  used on input line 251. on 
+input line 251.
+Package pdftex.def Info: Requested size: 435.32422pt x 238.72734pt on input lin
+e 251.
+<images/transmission_meca.png, id=100, 1178.4025pt x 522.95375pt>
+File: images/transmission_meca.png Graphic file (type png)
+<use images/transmission_meca.png>
+Package pdftex.def Info: images/transmission_meca.png  used on input line 257. 
+on input line 257.
+Package pdftex.def Info: Requested size: 435.32422pt x 193.18663pt on input lin
+e 257.
+
+
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 258.
+
+
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 \end{center}
+                  
+? 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 56.90533pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <./images/Masse_Ressort.png> <./images/Modele3D.png> <./images/Bilbio_SimMec
+a.png>]
+<images/MoteurCC.png, id=109, 1393.205pt x 635.37375pt>
+File: images/MoteurCC.png Graphic file (type png)
+<use images/MoteurCC.png>
+Package pdftex.def Info: images/MoteurCC.png  used on input line 263. on input 
+line 263.
+Package pdftex.def Info: Requested size: 483.69687pt x 220.59056pt on input lin
+e 263.
+LaTeX Font Info:    Try loading font information for TS1+mdput on input line 27
+6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathdesign\mdput\ts1mdput.fd"
 File: ts1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdput.
 )
 LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 100.
+(Font)              scaled to size 9.40002pt on input line 276.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mdput' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Warning: Citation '1' on page 2 undefined on input line 114.
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 286.
 
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 124.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 124.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 147.
-LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
-(Font)              scaled to size 7.52002pt on input line 147.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.52002pt on input line 147.
-[2
-design size mismatch in local font md-utro8t in virtual font mdputro8t.vf ignor
-ed.]
-<images/Modeles.png, id=87, 1503.6175pt x 890.32625pt>
-File: images/Modeles.png Graphic file (type png)
-<use images/Modeles.png>
-Package pdftex.def Info: images/Modeles.png  used on input line 202. on input l
-ine 202.
-Package pdftex.def Info: Requested size: 483.69687pt x 286.4046pt on input line
- 202.
-<png/logo_lycee.png, id=88, 329.23pt x 265.99374pt>
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 203. on input l
-ine 203.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 2
-03.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 203.
-LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 203.
 
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 
+      
+? 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3 <./png/logo_lycee.png>]
-<images/solveur.png, id=94, 260.975pt x 172.645pt>
-File: images/solveur.png Graphic file (type png)
-<use images/solveur.png>
-Package pdftex.def Info: images/solveur.png  used on input line 219. on input l
-ine 219.
-Package pdftex.def Info: Requested size: 169.29684pt x 111.99661pt on input lin
-e 219.
-<images/Masse_Ressort.png, id=95, 1119.18124pt x 612.2875pt>
-File: images/Masse_Ressort.png Graphic file (type png)
-<use images/Masse_Ressort.png>
-Package pdftex.def Info: images/Masse_Ressort.png  used on input line 235. on i
-nput line 235.
-Package pdftex.def Info: Requested size: 290.22107pt x 158.77057pt on input lin
-e 235.
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 237. on input l
-ine 237.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 2
-37.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4 <./images/Modeles.png> <./images/solveur.png>]
-<images/Modele3D.png, id=103, 1403.2425pt x 412.54124pt>
-File: images/Modele3D.png Graphic file (type png)
-<use images/Modele3D.png>
-Package pdftex.def Info: images/Modele3D.png  used on input line 241. on input 
-line 241.
-Package pdftex.def Info: Requested size: 435.32422pt x 127.98088pt on input lin
-e 241.
-<images/Bilbio_SimMeca.png, id=104, 715.67375pt x 392.46625pt>
-File: images/Bilbio_SimMeca.png Graphic file (type png)
-<use images/Bilbio_SimMeca.png>
-Package pdftex.def Info: images/Bilbio_SimMeca.png  used on input line 250. on 
-input line 250.
-Package pdftex.def Info: Requested size: 435.32422pt x 238.72734pt on input lin
-e 250.
-<images/transmission_meca.png, id=105, 1178.4025pt x 522.95375pt>
-File: images/transmission_meca.png Graphic file (type png)
-<use images/transmission_meca.png>
-Package pdftex.def Info: images/transmission_meca.png  used on input line 256. 
-on input line 256.
-Package pdftex.def Info: Requested size: 435.32422pt x 193.18663pt on input lin
-e 256.
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 257. on input l
-ine 257.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 2
-57.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <./images/Masse_Ressort.png> <./images/Modele3D.png> <./images/Bilbio_SimMec
-a.png>]
-<images/MoteurCC.png, id=114, 1393.205pt x 635.37375pt>
-File: images/MoteurCC.png Graphic file (type png)
-<use images/MoteurCC.png>
-Package pdftex.def Info: images/MoteurCC.png  used on input line 262. on input 
-line 262.
-Package pdftex.def Info: Requested size: 483.69687pt x 220.59056pt on input lin
-e 262.
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 285. on input l
-ine 285.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 2
-85.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
+ Make it at least 56.90533pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [6 <./images/transmission_meca.png> <./images/MoteurCC.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 286.
+(mdframed)              on input line 287.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <5> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 287.
-<images/Maxpid_linearisation.png, id=121, 1422.31375pt x 346.29375pt>
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 288.
+<images/Maxpid_linearisation.png, id=116, 1422.31375pt x 346.29375pt>
 File: images/Maxpid_linearisation.png Graphic file (type png)
 <use images/Maxpid_linearisation.png>
 Package pdftex.def Info: images/Maxpid_linearisation.png  used on input line 29
-7. on input line 297.
+8. on input line 298.
 Package pdftex.def Info: Requested size: 422.7243pt x 102.92194pt on input line
- 297.
-<images/sat.png, id=122, 359.3425pt x 135.50626pt>
+ 298.
+<images/sat.png, id=117, 359.3425pt x 135.50626pt>
 File: images/sat.png Graphic file (type png)
 <use images/sat.png>
-Package pdftex.def Info: images/sat.png  used on input line 314. on input line 
-314.
+Package pdftex.def Info: images/sat.png  used on input line 315. on input line 
+315.
 Package pdftex.def Info: Requested size: 99.58464pt x 37.55276pt on input line 
-314.
+315.
 
-Overfull \hbox (12.52275pt too wide) in paragraph at lines 314--315
+Overfull \hbox (12.52275pt too wide) in paragraph at lines 315--316
  [] 
  []
 
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
+(Font)              scaled to size 8.56006pt on input line 324.
+LaTeX Font Info:    Font shape `OT1/cmtt/m/n' will be
+(Font)              scaled to size 6.42004pt on input line 324.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 324.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 324.
 LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 326.
+(Font)              scaled to size 5.64001pt on input line 327.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 339.
+(mdframed)              on input line 340.
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-<images/Modele_MCC.png, id=123, 1411.2725pt x 680.5425pt>
+<images/Modele_MCC.png, id=118, 1411.2725pt x 680.5425pt>
 File: images/Modele_MCC.png Graphic file (type png)
 <use images/Modele_MCC.png>
-Package pdftex.def Info: images/Modele_MCC.png  used on input line 350. on inpu
-t line 350.
+Package pdftex.def Info: images/Modele_MCC.png  used on input line 351. on inpu
+t line 351.
 Package pdftex.def Info: Requested size: 202.90585pt x 97.8402pt on input line 
-350.
-<images/Modele_MCC_sat.png, id=124, 1430.34375pt x 646.415pt>
+351.
+<images/Modele_MCC_sat.png, id=119, 1430.34375pt x 646.415pt>
 File: images/Modele_MCC_sat.png Graphic file (type png)
 <use images/Modele_MCC_sat.png>
-Package pdftex.def Info: images/Modele_MCC_sat.png  used on input line 352. on 
-input line 352.
+Package pdftex.def Info: images/Modele_MCC_sat.png  used on input line 353. on 
+input line 353.
 Package pdftex.def Info: Requested size: 202.90585pt x 91.69096pt on input line
- 352.
-<images/seuil.png, id=125, 363.3575pt x 163.61125pt>
+ 353.
+<images/seuil.png, id=120, 363.3575pt x 163.61125pt>
 File: images/seuil.png Graphic file (type png)
 <use images/seuil.png>
-Package pdftex.def Info: images/seuil.png  used on input line 370. on input lin
-e 370.
+Package pdftex.def Info: images/seuil.png  used on input line 371. on input lin
+e 371.
 Package pdftex.def Info: Requested size: 99.58464pt x 44.83969pt on input line 
-370.
+371.
 
-Overfull \hbox (12.52275pt too wide) in paragraph at lines 370--372
+Overfull \hbox (12.52275pt too wide) in paragraph at lines 371--373
  [] 
  []
 
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 385. on input l
-ine 385.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 3
-85.
+
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 386.
+
+
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.386 \subsection
+                 {Hystérésis}
+? 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
+ Make it at least 56.90533pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [7 <./images/Maxpid_linearisation.png> <./images/sat.png (PNG copy)> <./images/
 Modele_MCC.png> <./images/Modele_MCC_sat.png>]
-<images/hysteresis.png, id=138, 277.035pt x 132.495pt>
+<images/hysteresis.png, id=133, 277.035pt x 132.495pt>
 File: images/hysteresis.png Graphic file (type png)
 <use images/hysteresis.png>
-Package pdftex.def Info: images/hysteresis.png  used on input line 397. on inpu
-t line 397.
+Package pdftex.def Info: images/hysteresis.png  used on input line 398. on inpu
+t line 398.
 Package pdftex.def Info: Requested size: 99.58464pt x 47.6274pt on input line 3
-97.
+98.
 
-Overfull \hbox (12.52275pt too wide) in paragraph at lines 397--399
+Overfull \hbox (12.52275pt too wide) in paragraph at lines 398--400
  [] 
  []
 
 
-Overfull \hbox (69.28258pt too wide) in paragraph at lines 413--414
+Overfull \hbox (69.28258pt too wide) in paragraph at lines 414--415
  [] 
  []
 
 \tf@ptc=\write7
 \openout7 = `Cy_01_Cours_01_Modelisation_Multi.ptc'.
 
-File: png/logo_lycee.png Graphic file (type png)
-<use png/logo_lycee.png>
-Package pdftex.def Info: png/logo_lycee.png  used on input line 433. on input l
-ine 433.
-Package pdftex.def Info: Requested size: 56.9055pt x 45.97325pt on input line 4
-33.
+
+LaTeX Warning: File `png/logo_lycee.png' not found on input line 434.
+
+
+! Package pdftex.def Error: File `png/logo_lycee.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 \end{document}
+                    
+? 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 45.97325pt.
+ Make it at least 56.90533pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [8 <./images/seuil.png (PNG copy)> <./images/hysteresis.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
 
 (Cy_01_Cours_01_Modelisation_Multi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 433.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 434.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3106,35 +3104,36 @@ Package logreq Info: Writing requests to 'Cy_01_Cours_01_Modelisation_Multi.run
 .xml'.
 \openout1 = `Cy_01_Cours_01_Modelisation_Multi.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
  ) 
 Here is how much of TeX's memory you used:
- 54477 strings out of 493352
- 1140658 string characters out of 3137163
- 1816518 words of memory out of 3000000
- 56845 multiletter control sequences out of 15000+200000
- 778345 words of font info for 354 fonts, out of 3000000 for 9000
+ 51933 strings out of 493352
+ 1101585 string characters out of 3137163
+ 1773060 words of memory out of 3000000
+ 54312 multiletter control sequences out of 15000+200000
+ 786291 words of font info for 356 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 57i,18n,98p,10448b,1936s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc}{C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr7t.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/mathdesign/mdput/md-utr7y.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/mathdesign/mdput/md-utr8t.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/mathdesign/mdpgd/md-utrma.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ado
-be/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopi
-a/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8
-a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (8 pages, 2474042 bytes
+ 57i,17n,98p,10453b,1932s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\pt_ptsi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi64
+2\ectt1000.pk>{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.e
+nc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr7t.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr7y.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr8t.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/mathdesign/mdpgd/md-utrma.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/adobe/u
+topia/putri8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/u
+agd8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagk8a.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Cy_01_Cours_01_Modelisation_Multi.pdf (8 pages, 1710606 bytes
 ).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
+ 267 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
- 93418 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 94427 words of extra memory for PDF output out of 106986 (max. 10000000)
 

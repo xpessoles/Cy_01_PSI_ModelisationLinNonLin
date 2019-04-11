@@ -1,12 +1,61 @@
-%%%% Paramétrage du cours %%%%
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation systèmes multiphysiques : Modélisation linéaire et non linéaire},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+\input{style/new_style}
+\input{style/macros_SII}
+
+\fichetrue
+\fichefalse
+
+\proftrue
+%\proffalse
+
+%\tdtrue
+\tdfalse
+
+\courstrue
+%\coursfalse
+
+%%%%%%%%%%%%%%%%%%%
+\usepackage{numprint}
+\usetikzlibrary{calc}
+%definition style pour mettre un fond blanc dans un node sans avoir des marges énormes
+\tikzset{fondblanc/.style={ inner sep=2pt,fill=white,outer sep = 5pt}} 
+\tikzset{fondblanc2/.style={ inner sep=2pt,fill=white}} 
+\tikzset{fondblanc3/.style={ inner sep=1pt,fill=white,outer sep = 2pt}} 
+\usetikzlibrary{calc,circuits.ee.IEC}
+\usetikzlibrary{shapes}
+\usepackage[european resistor, european voltage, european current]{circuitikz}
+\usetikzlibrary{babel}
+\usepackage{standalone}
+\standaloneconfig{mode=buildnew}
+\usepackage{siunitx}
+
+
+% -------------------------------------
+% Déclaration des titres
+% -------------------------------------
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{\textsf{PSI$\star$ -- MP}}
+\def\xxnumpartie{Cycle 01}
+\def\xxpartie{Modéliser le comportement linéaire et non linéaire des systèmes multiphysiques}
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Modélisation multiphysique}
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{19}%16
+
+\def\xxonglet{Cycle 01}
+
 \def\xxactivite{Cours}
 \def\xxauteur{\textsl{Xavier Pessoles}}
-
-\fichefalse
-\proftrue
-\tdfalse
-\courstrue
-
 
 \def\xxcompetences{%
 \textsl{%
@@ -19,24 +68,28 @@
 }}
 
 \def\xxfigures{
-\includegraphics[width=1.4\textwidth]{matlab}%images/prot_01
+\includegraphics[width=1.4\textwidth]{images/matlab}%images/prot_01
 \\
 \textit{Modèle du pilote hydraulique avec pilotage interactif.}
 }%figues de la page de garde
 
+\def\xxpied{%
+Cycle 01 -- Modéliser le comportement des systèmes multiphysiques\\
+Chapitre 1 -- \xxactivite%
+}
+
+\setcounter{secnumdepth}{5}
+%---------------------------------------------------------------------------
 
 
-\input{../style/new_pagegarde}
+\begin{document}
+\chapterimage{png/Fond_SLCI}
+\input{style/new_pagegarde}
 \setlength{\columnseprule}{.1pt}
 
 \vspace{2cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Introduction}
 \subsection{Qu'est-ce qu'un système multiphysique}
 
@@ -146,7 +199,7 @@ Thermique & Température (K)& Flux thermique et flux d'entropie \\ \hline
 La figure ci-dessous présente un modèle causal et un modèle acausal du système de laboratoire << Control'X >>en utilisant le logiciel Matlab-Simulink.
 
 \begin{center}
-\includegraphics[width=\linewidth]{Modeles}
+\includegraphics[width=\linewidth]{images/Modeles}
 \end{center}
 
 Visuellement on constate que sur le modèle causal, les composants du système apparaissent. Ainsi, sans connaître les lois de comportements des composants, il est possible de réaliser le modèle multiphysique d'un système.
@@ -163,7 +216,7 @@ Par défaut, nous laisserons un choix automatique du solveur. Cependant, certain
 \end{minipage} \hfill
 \begin{minipage}[c]{.35\linewidth}
 \begin{center}
-\includegraphics[width=\linewidth]{solveur}
+\includegraphics[width=\linewidth]{images/solveur}
 \end{center}
 \end{minipage}
 
@@ -179,13 +232,13 @@ Deux modes de modélisation des systèmes mécanique est disponible : une modél
 La modélisation 1D est possible directement dans Matlab. Pour la modélisation 3D, il est plus aisé d'utiliser SolidWorks. 
 
 \begin{center}
-\includegraphics[width=.6\linewidth]{Masse_Ressort}
+\includegraphics[width=.6\linewidth]{images/Masse_Ressort}
 
 \textit{Modélisation causale et acausale d'un système avec deux systèmes << masse -- ressort -- amortisseur >> en série.}
 \end{center}
 
 \begin{center}
-\includegraphics[width=.9\linewidth]{Modele3D}
+\includegraphics[width=.9\linewidth]{images/Modele3D}
 
 \textit{Modélisation acausale 3D d'un bras robotisé.}
 \end{center}
@@ -194,19 +247,19 @@ La modélisation 1D est possible directement dans Matlab. Pour la modélisation 
 Les éléments communément utilisés sont donnés dans la figure suivante. 
 
 \begin{center}
-\includegraphics[width=.9\linewidth]{Bilbio_SimMeca}
+\includegraphics[width=.9\linewidth]{images/Bilbio_SimMeca}
 \end{center}
 
 La figure suivante illustre une transmission mécanique modélisée en utilisant Simulink. On notera le positionnement des capteurs pour mesurer des variables accross ou through, ainsi que le positionnement du bloc permettant de modéliser les frottements.
 
 \begin{center}
-\includegraphics[width=.9\linewidth]{transmission_meca}
+\includegraphics[width=.9\linewidth]{images/transmission_meca}
 \end{center}
 
 \subsection{Modélisation des systèmes électriques}
 
 \begin{center}
-\includegraphics[width=\linewidth]{MoteurCC}
+\includegraphics[width=\linewidth]{images/MoteurCC}
 
 \textit{Modélisation acausale de la commande d'un moteur à courant continu.}
 \end{center}
@@ -241,7 +294,7 @@ Ce modèle génère des erreurs, mais il est << utilisable >> sur toute la plage
 Il est aussi possible, dans un second cas, de linéariser le système autour d'un point de fonctionnement. Ainsi, le modèle sera plus fidèle à la réalité autour de ce point de fonctionnement. Par contre, les écarts s'accroissent en s'éloignant du point de fonctionnement. 
 
 \begin{center}
-\includegraphics[width=.9\linewidth]{Maxpid_linearisation}
+\includegraphics[width=.9\linewidth]{images/Maxpid_linearisation}
 \end{center}
 
 
@@ -258,7 +311,7 @@ En régime saturé, au delà d'une certaine valeur d'entrée, le signal de sorti
 \hfill
 \begin{minipage}[c]{.18\linewidth}
 \begin{center}
-\includegraphics[width=3.5cm]{sat}
+\includegraphics[width=3.5cm]{images/sat}
 
 Paramètres : $s_{\text{max}}$ et $s_{\text{min}}$
 \end{center}
@@ -294,9 +347,9 @@ La conséquence peut ici être un ralentissement du système. En effet, le coura
 \hfill
 \begin{minipage}[c]{.48\linewidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{Modele_MCC}
+\includegraphics[width=.9\linewidth]{images/Modele_MCC}
 
-\includegraphics[width=.9\linewidth]{Modele_MCC_sat}
+\includegraphics[width=.9\linewidth]{images/Modele_MCC_sat}
 \end{center}
 \end{minipage}
 
@@ -314,7 +367,7 @@ Dans le cas d'une modélisation causale, on peut utiliser le seuil pour modélis
 \hfill
 \begin{minipage}[c]{.18\linewidth}
 \begin{center}
-\includegraphics[width=3.5cm]{seuil}
+\includegraphics[width=3.5cm]{images/seuil}
 Paramètres : valeur mini et valeur maxi
 \end{center}
 \end{minipage}
@@ -341,7 +394,7 @@ Paramètres : valeur mini et valeur maxi
 \hfill
 \begin{minipage}[c]{.18\linewidth}
 \begin{center}
-\includegraphics[width=3.5cm]{hysteresis}
+\includegraphics[width=3.5cm]{images/hysteresis}
 Paramètres : switch on point, switch off point, output when on, output when off
 \end{center}
 \end{minipage}
@@ -376,4 +429,8 @@ On verra dans un chapitre ultérieur que les systèmes que nous manipulons sont 
 %      \bibitem[5]{ref5} Ivan Liebgott, {\it Modélisation et Simulation des systèmes Multi-Physiques avec MATLAB--Simulink.}
 
 \end{thebibliography}
+
+\end{document}
+
+
 
