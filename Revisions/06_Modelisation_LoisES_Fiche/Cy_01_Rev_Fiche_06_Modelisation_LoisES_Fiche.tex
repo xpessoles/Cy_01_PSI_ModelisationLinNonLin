@@ -36,7 +36,7 @@
 \fi
 \setlength{\columnseprule}{.1pt}
 
-\vspace{2cm}
+\vspace{1.2cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
 
@@ -62,12 +62,25 @@ Pour réaliser une loi entrée -- sortie il est nécessaire de disposer d'un sch
 \item que les dimensions internes des pièces sont précisées. 
 \end{itemize}
 
-\begin{exemple}[Paramétrage d'une liaison pivot glissant]~\\
+\begin{exemple}[Paramétrage d'une liaison pivot glissant]~\\ Les paramètres $\theta$ et $\lambda$ sont des paramètres variables. $a$ est un paramètre constant. 
 \begin{center}
 \includegraphics[width=.8\linewidth]{fig_02}
 \end{center}
 \end{exemple}
 \section{Fermeture angulaire}
+\begin{minipage}[c]{.65\linewidth}
+\begin{methode}[Fermeture angulaire pour un mouvement plan]~\\
+Soient $n$ bases permettant de paramétrer $n$ pièces. Le mouvement est contenu dans le plan $\angl{x_1}{y_1}$. On note $\theta_{i,i+1}=\angl{x_i}{x_{i+1}}=\angl{y_i}{y_{i+1}}$ avec $i \in [1,n-1]$ et $\theta_{1,n}=\angl{x_1}{x_{n}}$. On a alors $\sum\limits_{i=1}^{n-1}\theta_{i,i+1}=\theta_{1,n}$.
+\end{methode}
+\end{minipage}\hfill
+\begin{minipage}[c]{.25\linewidth}
+\begin{center}
+\includegraphics[width=\linewidth]{fig_03}
+$\theta_{12}+\theta_{23}=\theta_{13}$
+
+\end{center}
+\end{minipage}
+
 \section{Fermeture géométrique}
 \section{Fermeture cinématique}
 
