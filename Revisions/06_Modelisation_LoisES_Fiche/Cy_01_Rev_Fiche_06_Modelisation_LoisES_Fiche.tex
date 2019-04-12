@@ -54,6 +54,64 @@ Les lois << entrée -- sortie >> permettent d'établir les relations géométriq
 \textit{Par exemple, pour un moteur thermique, la loi entrée-sortie permet de faire le lien entre la position angulaire du vilebrequin et la position axiale du piston, pour une plate forme hexapode, on peut déterminer la longueur des vérins et la position et l'orientation de la plate-forme \textit{etc.}}
 \end{defi}
 
+
+
+\begin{defi}
+Selon la forme du graphe de liaisons, on peut distinguer 3 cas :
+\begin{multicols}{3}
+\begin{center}
+\textbf{Les chaînes ouvertes} 
+\end{center}
+
+\begin{center}
+%\includegraphics[width=.6\linewidth]{images/ericc_01}
+
+%\vspace{.5cm}
+
+\includegraphics[width=.5\linewidth]{images/ericc_02}
+\end{center}
+
+
+\vfill\null
+\columnbreak
+
+\begin{center}
+\textbf{Les chaînes fermées} 
+\end{center}
+
+\begin{center}
+%\includegraphics[width=.8\linewidth]{images/sympact_01}
+
+%\vspace{.5cm}
+
+\includegraphics[width=.5\linewidth]{images/sympact_02}
+\end{center}
+
+\vfill\null
+\columnbreak
+
+\begin{center}
+\textbf{Les chaînes complexes} 
+\end{center}
+
+\begin{center}
+%\includegraphics[width=.95\linewidth]{images/haptique_01}
+
+\vspace{-.2cm}
+
+\includegraphics[width=.8\linewidth]{images/haptique_02}
+\end{center}
+
+\end{multicols}
+
+On appelle cycle, un chemin fermé ne passant pas deux fois par le même sommet.
+À partir d’un graphe des liaisons donné, il est possible de vérifier qu’il existe un nombre
+maximal de cycles indépendants. Ce nombre est appelé nombre cyclomatique. 
+
+%\textbf{En notant $L$ le nombre de liaisons et $S$ le nombre de solides, on note $\gamma$ le nombre cyclomatique et on a : $\gamma = L - S + 1$.}
+\end{defi}
+
+
 \section{Notions de paramétrage}
 Pour réaliser une loi entrée -- sortie il est nécessaire de disposer d'un schéma cinématique paramétré. Cela signifie donc :
 \begin{itemize}
@@ -68,7 +126,8 @@ Pour réaliser une loi entrée -- sortie il est nécessaire de disposer d'un sch
 \end{center}
 \end{exemple}
 \section{Fermeture angulaire}
-\begin{minipage}[c]{.65\linewidth}
+
+\noindent\begin{minipage}[c]{.65\linewidth}
 \begin{methode}[Fermeture angulaire pour un mouvement plan]~\\
 Soient $n$ bases permettant de paramétrer $n$ pièces. Le mouvement est contenu dans le plan $\angl{x_1}{y_1}$. On note $\theta_{i,i+1}=\angl{x_i}{x_{i+1}}=\angl{y_i}{y_{i+1}}$ avec $i \in [1,n-1]$ et $\theta_{1,n}=\angl{x_1}{x_{n}}$. On a alors $\sum\limits_{i=1}^{n-1}\theta_{i,i+1}=\theta_{1,n}$.
 \end{methode}
@@ -82,7 +141,25 @@ $\theta_{12}+\theta_{23}=\theta_{13}$
 \end{minipage}
 
 \section{Fermeture géométrique}
+\begin{methode}
+Réaliser une fermeture géométrique, pour une chaîne fermée, consiste en :
+\begin{itemize}
+\item écrire une chaîne vectorielle; 
+\item la projeter dans la base associée à une des pièces;
+\item éliminer les paramètres non souhaités. 
+\end{itemize}
+Pour écrire la chaîne vectorielle, on utilise souvent le centre des liaisons qui constituent la boucle fermée.
+\end{methode}
 \section{Fermeture cinématique}
+
+\begin{methode}
+Pour réaliser une fermeture de chaîne cinématique d'une chaîne fermée de $n$ pièces et $n$ liaisons, on réalise une fermeture torsorielle : 
+$$
+\torseurcin{V}{1}{n}= \sum\limits_{i=1}^{n-1}\torseurcin{V}{i}{i+1} \quad \text{soit} \quad 
+\torseurl{\vecto{1}{n}}{\vectv{P}{1}{n}}{P}=
+\torseurl{\sum\limits_{i=1}^{n-1}\vecto{i}{i+1}}{\sum\limits_{i=1}^{n-1}\vectv{P}{i}{i+1}}{P}
+$$ 
+\end{methode}
 
 
 %
