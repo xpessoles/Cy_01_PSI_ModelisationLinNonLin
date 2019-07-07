@@ -10,10 +10,10 @@
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\usepackage[top=2.5cm,bottom=2cm,left=2cm,right=2cm,headsep=40pt,a4paper]{geometry} % Page margins
+%\usepackage[top=2.5cm,bottom=2cm,left=2cm,right=2cm,headsep=40pt,a4paper]{geometry} % Page margins
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm,a4paper]{geometry} % Page margins
 
 \usepackage{graphicx} % Required for including pictures
-
 
 \usepackage{lipsum} % Inserts dummy text
 
@@ -35,11 +35,12 @@
 \usepackage{pifont} % Pour les dinglist
 \usepackage{multicol}
 \usepackage{array} % Centrage vertical dans les tableaux
+\usepackage{schemabloc}
 
 %----------------------------------------------------------------------------------------
 %	FONTS
 %----------------------------------------------------------------------------------------
-
+\usepackage{bm}
 \usepackage{multicol}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker = {,}}
@@ -168,10 +169,17 @@
 \pagestyle{fancy}
  \renewcommand{\headrulewidth}{0pt}
  \fancyhead{}
+ 
+ % ENTETES de page
  \fancyhead[L]{%
- \noindent\begin{minipage}[c]{2.6cm}%
- \includegraphics[width=2cm]{logo_lycee.png}%
- \end{minipage}}
+ \begin{tikzpicture}[overlay]
+\node(logo) at (1,0)
+    {\includegraphics[width=2cm]{logo_lycee.png}};
+\end{tikzpicture}
+ %\noindent\begin{minipage}[c]{2.6cm}%
+ %\includegraphics[width=2cm]{logo_lycee.png}%
+ %\end{minipage}
+}
 
 \fancyhead[C]{\rule{8cm}{.5pt}}
 
@@ -183,7 +191,8 @@
  \end{minipage}
 }
 
-
+ \fancyfoot{}
+ % PIEDS de page
 \fancyfoot[C]{\rule{12cm}{.5pt}}
 \renewcommand{\footrulewidth}{0.2pt}
 \fancyfoot[C]{\footnotesize{\bfseries \thepage}}
@@ -191,7 +200,6 @@
 \begin{minipage}[c]{.4\linewidth}
 \noindent\footnotesize{{\xxauteur}}
 \end{minipage}}
-
 
 \fancyfoot[R]{\footnotesize{\xxpied}
 \ifthenelse{\isodd{\value{page}}}{
@@ -207,31 +215,47 @@
 %{};
 \end{tikzpicture}}{}
 }
+
+
+
 %
 %
 %
 % Removes the header from odd empty pages at the end of chapters
 \makeatletter
-\renewcommand{\cleardoublepage}{
-\clearpage\ifodd\c@page\else
-\hbox{}
-\vspace*{\fill}
-\thispagestyle{empty}
-\newpage
-\fi}
+%\renewcommand{\cleardoublepage}{
+%\clearpage\ifodd\c@page\else
+%\hbox{}
+%\vspace*{\fill}
+%\thispagestyle{empty}
+%\newpage
+%\fi}
+
+%\fancypagestyle{plain}{%
+%\fancyhf{} % vide l’en-tête et le pied~de~page.
+%%\fancyfoot[C]{\bfseries \thepage} % numéro de la page en cours en gras
+%% et centré en pied~de~page.
+%\fancyfoot[R]{\footnotesize{\xxpied}}
+%\fancyfoot[C]{\rule{12cm}{.5pt}}
+%\renewcommand{\footrulewidth}{0.2pt}
+%\fancyfoot[C]{\footnotesize{\bfseries \thepage}}
+%\fancyfoot[L]{ 
+%\begin{minipage}[c]{.4\linewidth}
+%\noindent\footnotesize{{\xxauteur}}
+%\end{minipage}}}
 
 \fancypagestyle{plain}{%
 \fancyhf{} % vide l’en-tête et le pied~de~page.
-%\fancyfoot[C]{\bfseries \thepage} % numéro de la page en cours en gras
-% et centré en pied~de~page.
-\fancyfoot[R]{\footnotesize{\xxpied}}
 \fancyfoot[C]{\rule{12cm}{.5pt}}
 \renewcommand{\footrulewidth}{0.2pt}
 \fancyfoot[C]{\footnotesize{\bfseries \thepage}}
 \fancyfoot[L]{ 
 \begin{minipage}[c]{.4\linewidth}
 \noindent\footnotesize{{\xxauteur}}
-\end{minipage}}}
+\end{minipage}}
+\fancyfoot[R]{\footnotesize{\xxpied}}
+}
+
 
 
 
@@ -356,6 +380,8 @@
 \newtheorem{vocabulary}{Vocabulaire}[section]
 %\newtheorem{definitionT}{Definition}[section]
 \newtheorem{definitionT}{Définition}[section]
+\newtheorem{remarqueT}{Remarque}[section]
+\newtheorem{propT}{Propriété}[section]
 \newtheorem{rappelT}{Rappel}[section]
 \newtheorem{demoT}{Démonstration}[section]
 \newtheorem{corollaryT}[dummy]{Corollaire}
@@ -640,7 +666,9 @@ innerbottommargin=5pt]{sqlBox}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 \newenvironment{exercice}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 
-\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
+\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
+\newenvironment{remarque}{\begin{dBox}\begin{remarqueT}}{\end{remarqueT}\end{dBox}}
+\newenvironment{prop}{\begin{dBox}\begin{propT}}{\end{propT}\end{dBox}}	
 \newenvironment{rappel}{\begin{dBox}\begin{rappelT}}{\end{rappelT}\end{dBox}}	
 \newenvironment{defi}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{demo}{\begin{demoBox}\begin{demoT}}{\end{demoT}\end{demoBox}}	

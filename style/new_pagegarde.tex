@@ -3,6 +3,7 @@
 
 %%%%%%%% PAGE DE GARDE COURS
 \ifcours
+% ==== BANDEAU DES TITRES ==== 
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
@@ -27,8 +28,10 @@
  };
 \end{tikzpicture}};
 \end{tikzpicture}
+% ==== FIN BANDEAU DES TITRES ==== 
 
 
+% ==== ONGLET 
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -36,10 +39,12 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-	  minimum height = 3cm,] at (18cm,0) {};
+	  minimum height = 3cm,] at (18.3cm,0) {};
 \node at (17.7cm,0) {\rotatebox{90}{\textbf{\Large\color{ocre}{\classe}}}};
 %{};
 \end{tikzpicture}
+% ==== FIN ONGLET 
+
 
 \vspace{3.5cm}
 
@@ -74,6 +79,7 @@
 \end{minipage}\hfill
 \begin{minipage}[c]{.6\linewidth}
 \startcontents
+%\printcontents{}{1}{}
 \printcontents{}{1}{}
 \end{minipage}
 \end{flushright}
@@ -91,15 +97,16 @@
 \end{minipage}
  };
 \end{tikzpicture}
-\newpage
-\pagestyle{fancy}
 
 \newpage
 \pagestyle{fancy}
+
+%\newpage
+%\pagestyle{fancy}
 
 \else
 \fi
-
+%% FIN PAGE DE GARDE DES COURS
 
 %%%%%%%% PAGE DE GARDE TD
 \iftd
@@ -151,9 +158,10 @@
 %\end{minipage}  };
 %\end{tikzpicture}
 
-% Bandeau titre exo
+% BANDEAU EXO
+\iflivret % SI LIVRET
 \begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=west] (-2cm,-4cm) node {\huge\sffamily\bfseries\color{black} %
+\draw[anchor=west] (-2cm,-3.3cm) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{5cm}
 \begin{center}
 \LARGE\sffamily\color{ocre}\textbf{\textsc{\xxactivite}}
@@ -176,10 +184,39 @@
 \normalsize\normalfont
 \xxcompetences
 \end{titrechapitre}
-\end{minipage}  };
+\end{minipage}};
+\end{tikzpicture}
+\else % ELSE NOT LIVRET
+\begin{tikzpicture}[remember picture,overlay]
+\draw[anchor=west] (-2cm,-4.5cm) node {\huge\sffamily\bfseries\color{black} %
+\begin{minipage}{5cm}
+\begin{center}
+\LARGE\sffamily\color{ocre}\textbf{\textsc{\xxactivite}}
+
+\begin{center}
+\xxfigures
+\end{center}
+
+\end{center}
+\end{minipage} \hfill
+\begin{minipage}[c]{12cm}
+\begin{titrechapitre}
+\renewcommand{\baselinestretch}{1.1} 
+\large\sffamily\textbf{\textsc{\xxtitreexo}}
+
+\small\sffamily{\textbf{\textit{\color{black!70}\xxsourceexo}}}
+\vspace{.5cm}
+
+\renewcommand{\baselinestretch}{1} 
+\normalsize\normalfont
+\xxcompetences
+\end{titrechapitre}
+\end{minipage}};
 \end{tikzpicture}
 
-\else
+\fi
+
+\else   % FIN IF TD
 \fi
 
 
@@ -188,8 +225,8 @@
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=west] (-2cm,-3.25cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.6,inner sep=40pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (1cm,-3.25cm) node {\huge\sffamily\bfseries\color{black} %
+\draw[anchor=west] (-2cm,-2.25cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.6,inner sep=40pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (1cm,-2.25cm) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{1cm}
 \rotatebox{90}{\LARGE\sffamily\textsc{\color{ocre}\textbf{\xxnumpartie}}}
 \end{minipage} \hfill
@@ -213,7 +250,7 @@
 \end{tikzpicture}};
 \end{tikzpicture}
 
-
+\iflivret
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -221,13 +258,25 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-	  minimum height = 2.5cm,] at (18.5cm,0.5cm) {};
-%	  minimum height = 2.5cm,] at (18.5cm,0cm) {};
-\node at (17.7cm,0.5) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+	  minimum height = 2.5cm,] at (18.5cm,.7cm) {};
+\node at (17.9cm,.7cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+%{};
+\end{tikzpicture}
+\else
+\begin{tikzpicture}[overlay]
+\node[shape=rectangle, 
+      rounded corners = .25 cm,
+	  draw= ocre,
+	  line width=2pt, 
+	  fill = ocre!10,
+	  minimum width  = 2.5cm,
+%	  minimum height = 2.5cm,] at (18.5cm,1.1cm) {};
+	  minimum height = 2.5cm,] at (18.6cm,0cm) {};
+\node at (18cm,0cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
 
-
+\fi
 
 \else
 \fi
