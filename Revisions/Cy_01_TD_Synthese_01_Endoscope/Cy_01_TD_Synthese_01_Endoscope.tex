@@ -1,0 +1,404 @@
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{TD 01 \ifprof -- Corrigé \else \fi }
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Stabilité des systèmes}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.4cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod3.C2 : } pôles dominants et réduction de l’ordre du modèle : principe, justification
+%\item \textit{Res2.C4 : } stabilité des SLCI : définition entrée bornée -- sortie bornée (EB -- SB)	
+%\item \textit{Res2.C5 : } stabilité des SLCI : équation caractéristique	
+\item \textit{Res2.C6 : } stabilité des SLCI : position des pôles dans le plan complexe
+\item \textit{Res2.C7 : } stabilité des SLCI : marges de stabilité (de gain et de phase)
+\end{itemize}
+}}
+
+
+\def\xxfigures{
+\includegraphics[width=.9\linewidth]{fig_00}
+}%figues de la page de garde
+
+\def\xxtitreexo{Robot pour la chirurgie endoscopique}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{\textsl{Banque PT -- SIA -- 2005}}}
+
+
+\iflivret
+\input{../../style/new_pagegarde}
+\else
+\input{../../style/new_pagegarde}
+\fi
+\setlength{\columnseprule}{.1pt}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\vspace{4.5cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{multicols}{2}
+\setcounter{exo}{0}
+\section*{Présentation}
+On s’intéresse au robot de chirurgie endoscopique <<~Endoxirob~>>. Il est nécessaire de permettre à l’instrument chirurgical de se mouvoir avec des performances dynamiques comparables ou meilleures que celles réalisées par un chirurgien humain. 
+L’étude est effectuée uniquement pour l’axe « d’élévation » selon $\vect{z_1}$. 
+
+
+\begin{center}
+\begin{tabular}{|c|p{4.4cm}|p{1.7cm}|}
+\hline 
+Req. & Exigence & Niveaux \\ \hline
+1 & Vitesse de translation nominale & $>\SI{0,1}{m.s^{-1}}$ \\ \hline
+2 & Temps $t_1$ pour atteindre la vitesse nominale & $\SI{100}{ms}$ maximum \\ \hline
+3 & Précision -- Écart statique & $<\SI{0,2}{mm}$ \\ \hline
+4 & Précision --  Retard de traînage pour une rampe de$ \SI{0,1}{m.s^{-1}}$  & $<\SI{0,1}{s}$ \\ \hline
+5 & Stabilité -- Dépassement & Aucun \\ \hline
+6 & Stabilité -- Marge de phase & $45\degres$ \\ \hline
+7 & Rapidité -- Bande passante à \SI{-3}{dB} pour la partie mécanique & $\SI{4}{Hz}$ \\
+\hline
+\end{tabular}
+\end{center}
+La figure suivante présente le schéma-blocs de l'axe d’élévation (selon $\vect{Z_1}$) du dispositif de commande de l’instrument chirurgical. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_01}
+\end{center}
+
+La console permet de capter le déplacement de la main, de le coder, de le corriger éventuellement afin d’élaborer la consigne de position angulaire du rotor moteur. 
+La position angulaire est ensuite transformée en position linéaire de l’instrument par un mécanisme de transformation de mouvement à crémaillère.
+
+La figure suivante présente de façon simplifiée, la chaîne cinématique de l’axe d’élévation :
+\begin{itemize}
+\item l’actionneur est un moto-réducteur (1) à courant continu Gammatic n° RH-8D-6006;
+le premier étage de transmission du mouvement se fait par une courroie crantée (2) qui s’enroule sur des poulies de même diamètre pour entraîner l’arbre intermédiaire (3);
+\item une roue dentée (3’) de diamètre primitif $\Phi_1 = \SI{38,4}{mm}$ solidaire de l’arbre intermédiaire (3) engrène avec une crémaillère (4) solidaire de la partie supérieure mobile du robot;
+\item cette crémaillère est en liaison glissière d’axe $\vect{z_1}$ par rapport à la partie inférieure du robot considérée comme fixe dans cette partie du sujet, et notée « Bâti ».
+\end{itemize}
+
+Pour équilibrer le poids de la partie supérieure (coulisseau compris) de masse $M = \SI{5,5}{kg}$, les ingénieurs ont placé un contre-poids (7) de masse $2M = \SI{11}{kg}$ tiré par un câble qui s’enroule sur un tambour (3") de diamètre $\Phi_2 = \dfrac{\Phi}{2} = \SI{19,2}{mm}$ solidaire de  l’arbre intermédiaire (3).
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_02}
+\end{center}
+
+
+
+Le constructeur du moto-réducteur donne les caractéristiques mécaniques en sortie du réducteur  ce qui permet de considérer le moto-réducteur comme un « moteur qui tourne lentement avec un couple élevé » :
+\begin{itemize}
+\item puissance nominale en sortie du réducteur : $P_{\text{nom}} = \SI{8,6}{W}$;
+\item couple nominal en sortie du réducteur : $C_{\text{nom }} = \SI{1,4}{Nm}$;  
+\item couple de maintien en sortie du réducteur : $C_{\text{maint}} = \SI{1,5}{Nm}$;
+\item couple maxi en sortie du réducteur : $C_{\text{max}}	= \SI{2,7}{Nm}$;
+\item vitesse nominale en sortie du réducteur : $N_{\text{nom}} = \SI{60}{tr.min^{-1}}$;
+\item vitesse maxi en sortie du réducteur : $N_{\text{max}} = \SI{100}{tr.min^{-1}}$;
+\item moment d’inertie total ramené à l’arbre de sortie du réducteur : $J_1 = \SI{3,70e-3}{kg.m^2}$; 
+\item capteur de position : codeur 360 incréments par tour monté sur le rotor du moteur;
+\item rapport de réduction : 50 (n’interviendra que dans le calcul de la résolution du capteur).
+\end{itemize}
+
+\subsection*{Évaluation de la fonction de transfert du moto-réducteur}
+Le constructeur donne les caractéristiques électro-mécaniques exprimées à la sortie du réducteur.
+On rappelle les équations temporelles :
+$u(t) = R i(t) + L \dfrac{\dd i(t)}{\dd t} + e(t)$, $e(t) = k_e  \omega_{\text{réd}}(t)$, 
+$C_{\text{réd}} (t)= k_c  i(t)$, $C_{\text{réd}} (t) – C_r – f_v \omega_{\text{réd}}(t)= J_{\text{équ}} \dfrac{\dd \omega_{\text{réd}}(t)}{\dd t}$. 
+
+Avec :
+\begin{itemize}
+\item $u(t)$ tension appliquée aux bornes de l’induit 
+\item $i(t)$ intensité du courant traversant l’induit
+\item $e(t)$ force électromotrice induite par la rotation du moteur, évaluée à la  sortie du réducteur;
+\item $\omega_{\text{réd}}(t)$ vitesse de rotation à la sortie du réducteur;
+\item $C_{\text{réd}} (t)$ couple moteur ramené à la sortie du réducteur;
+\item $R = \SI{10}{W}$ : résistance de l’induit;
+\item $L = \SI{2,2}{mH}$ inductance de l’induit;
+\item $k_c = \SI{2,1}{N.m.A^{-1}}$ constante de couple évaluée à la sortie du réducteur;
+\item $k_e = \SI{2,1}{V.s.rad^{-1}}$ constante de f.e.m évaluée à la sortie du réducteur;
+\item $C_r = \SI{0,2}{N.m}$ couple résistant induit par les frottements secs, ramené à la sortie du réducteur 
+\item $f_v = \SI{0,04}{Nm.s.rad^{-1}}$ coefficient de frottement visqueux équivalent à toutes les pièces en mouvement, ramené à la sortie du réducteur 
+\item $J_{\text{équ}} = \SI{7e-3}{kg.m^2}$ moment d’inertie équivalent à toutes les pièces en mouvement, ramené à la sortie du réducteur. 
+\end{itemize}
+
+Les transformées de Laplace des fonctions $u(t)$, $i(t)$, $e(t)$, $\omega_{\text{réd}}(t)$,  $C_{\text{réd}}(t)$ sont respectivement $U(p)$, $I(p)$, $E(p)$, $\Omega_{\text{réd}}(p)$ et $C_{\text{réd}}(p)$. On considère toutes les conditions initiales nulles.
+
+\subparagraph{}\textit{Transformer les équations temporelles ci-dessus. 
+Remplir sous forme littérale les blocs du schéma suivant. Exprimer les grandeurs physiques entre chaque bloc. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_03}
+\end{center}
+
+
+\subparagraph{}\textit{Exprimer littéralement sous forme canonique la fonction de transfert du moto-réducteur $M(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Quel que soit le résultat obtenu à la question précédente, on utilisera l’expression de $M(p)$ suivante : $M_1(p)=\dfrac{0,436}{1+14,5\cdot 10^{-3}p+3,1\cdot 10^{-6}p^2}$. 
+
+Sur le système de levage non asservi c’est à dire avec le capteur de position angulaire déconnecté, on a pratiqué, un essai en charge, en donnant au moteur un échelon de tension $u(t) = \SI{24}{V}$. 
+Avec une génératrice tachymétrique dont le gain est de $\SI{0,166}{V.s.rad^{-1}}$ , on a tracé la courbe de tension image de $\omega_{\text{réd}}(t)$.  
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_04}
+\end{center}
+
+
+Remarque : la partie supérieure du robot est supposée rigide pendant cet essai.
+
+
+\subparagraph{}\textit{Après avoir analysé cette courbe, expliquer pourquoi on peut négliger l’inductance $L$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Justifier analytiquement la réponse précédente à partir de l’expression de $M_1(p)$ lorsque l’on envisage une étude fréquentielle : on précisera la valeur du pôle dominant, l’autre (faisant intervenir la valeur de $L$) étant rejeté.}
+*****
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\textbf{Dans la suite du problème, on néglige l’inductance $L$ du moteur.}
+
+\subparagraph{}\textit{Exprimer littéralement, sous forme canonique, la fonction de transfert du moto-réducteur  $M_2(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}=\dfrac{Gs}{1+Tp}$.  
+Donner les valeurs numériques de $Gs$ et de $T$ à partir de l’expression de $M_1(p)$ et des réponses apportées précédemment.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Déterminer les valeurs de $Gs$ et $T$, à partir de la courbe de tension image de $\omega_{\text{réd}}(t)$  (expliquer les démarches sous la figure et comparer avec les résultats obtenus précédemment). }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Respect du critère de marge de phase}
+La boucle d’asservissement de la position angulaire de l’arbre de sortie du réducteur est définie par le schéma-blocs figure suivante. 
+La consigne de position en incréments est élaborée par le  calculateur, à partir des informations envoyées par la console.
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_05}
+\end{center}
+
+
+Le convertisseur-amplificateur $K$ de gain $k$ variable élabore la commande du moteur.
+Le codeur incrémental $C$ placé sur le rotor du moteur a une résolution de 360 incréments par tour. Il est associé à un compteur -- décompteur qui élabore la mesure de position en incréments. 
+Le système est discret (non continu) mais on l’assimile à un système continu car le comptage est très rapide. 
+Le réducteur a un rapport de réduction de 50.
+ 
+\subparagraph{}\textit{Donner la fonction de transfert du bloc $B(p)$ et la valeur du coefficient du bloc $C$ en incr./rad.  
+Exprimer numériquement, en fonction de $k$, la fonction de transfert en boucle ouverte $H_O(p)$ .}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Tracer les diagrammes de Bode du système en boucle ouverte pour $k = 1$.
+Le système est-il stable en boucle fermée pour cette valeur de $k$ ? Justifier.
+} *****
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+********
+On a tracé sur le document réponses figure R28 le diagramme de Black du système en boucle ouverte pour k = 1 lorsque la valeur de $L$ n’est pas négligée.
+ 
+Question 28. : 
+Quelle est l’influence de la prise en compte de $L$ sur la stabilité en boucle fermée ? (répondre sur le document réponses sous la figure R28). L’hypothèse consistant à négliger $L$ est-elle vérifiée ?
+Déterminer, et expliquer à partir de constructions faites sur le diagramme de Black document réponses figure R28, la valeur $k_{45}$ de $k$ qui permet d’obtenir la marge de phase de 45\degres  spécifiée dans le cahier des charges.
+*********
+
+
+\subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{cons} \infty}$ en incréments lorsque la consigne est un échelon de position : $\text{Cons}(t) = 1\cdot u(t)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+Étant donné que la perturbation $Cr$ intervient entre deux blocs de $M(p)$, on adopte le schéma de la 
+figure suivante pour faciliter les calculs de la question suivante. 
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_06}
+\end{center}
+
+
+\subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{pert} \infty}$ en incréments entre la consigne et la mesure lorsque la perturbation est l’échelon de couple résistant $C_r u(t)$ induit par les frottements secs. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{La chaîne cinématique de transmission est telle qu’il faut 150 incréments pour que la crémaillère se déplace de $\SI{1}{mm}$, quelle est l’incidence de cet écart sur la position de l’instrument ? }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{Conclure par rapport aux exigences du cahier des charges.
+Proposer une modification du bloc $K$ qui annulerait cet écart.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Vérification des performances de la chaîne de positionnement de l'instrument}
+\subsubsection*{Modélisation par schéma-blocs}
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_07}
+\end{center}
+
+
+\subsubsection*{Analyse du déplacement en translation de la crémaillère}
+Lorsque la boucle d’asservissement est bien réglée, la fonction de transfert est : $H_1(p)=\dfrac{\Theta(p)}{\text{Cons}(p)} = \dfrac{0,00035}{1+0,014p+0,00017 p^2}$. 
+On rappelle que la courroie s’enroule sur des poulies de même diamètre et que la roue dentée qui engrène avec la crémaillère a un diamètre $\Phi_1 = \SI{38,4}{mm}$.
+
+
+\subparagraph{}\textit{Exprimer le coefficient du bloc $H_2$; préciser l’unité.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+En régime statique, la position de la crémaillère est l’image de la position de la main, aux écarts près. 
+
+\subparagraph{}\textit{Quelle relation doit vérifier le produit $P$ des gains des blocs $C_1$ , $H_1$ , $H_2$  ? Justifier.
+Exprimer le coefficient $c_1$ en incréments par mètre du bloc $C_1$ .
+}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Pour augmenter la précision de l’opération chirurgicale, on désire que la crémaillère se déplace 10 fois moins que la main. 
+
+
+
+
+\subparagraph{}\textit{Exprimer le nouveau coefficient $c_2$ du bloc $C_1$ ainsi que le nouveau produit  $P_1$ . }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsubsection*{Analyse du déplacement de l’instrument chirurgical par rapport à la crémaillère}
+
+La partie supérieure du robot est constituée par assemblage de tubes minces en fibres de carbone. 
+On modélise cette partie par deux solides : $S_0$ représentant la crémaillère et les solides qui y sont liés ;  et $S_1$ représentant l’instrument chirurgical. 
+Ces solides sont considérés en liaison glissière parfaite et reliés par un ressort de raideur $k_0$ et un amortisseur de coefficient $f_0$, montés en parallèle comme le montre le schéma.
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_09}
+\end{center}
+
+Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D_{\text{crem}}(p)}$ de cette partie, on a imposé à la crémaillère un échelon de déplacement $d_{\text{crém}}(t) = \SI{20e-3}{m}$ à partir de la position d’équilibre. On a tracé la courbe de déplacement $d_{\text{instrum}}(t)$ de l’instrument.
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_08}
+\end{center}
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}\textit{}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\end{multicols}
+%\end{document}
+%
+%\subparagraph{}\textit{}
+%
+%
+%\begin{center}
+%\includegraphics[width=\linewidth]{}
+%\end{center}
+%
+%\begin{center}
+%\includegraphics[width=\linewidth]{}
+%\textit{}
+%\end{center}
+%
