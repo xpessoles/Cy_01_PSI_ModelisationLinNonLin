@@ -330,7 +330,7 @@ On modélise cette partie par deux solides : $S_0$ représentant la crémaillèr
 Ces solides sont considérés en liaison glissière parfaite et reliés par un ressort de raideur $k_0$ et un amortisseur de coefficient $f_0$, montés en parallèle comme le montre le schéma.
 
 \begin{center}
-\includegraphics[width=\linewidth]{fig_09}
+\includegraphics[width=.7\linewidth]{fig_09}
 \end{center}
 
 Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D_{\text{crem}}(p)}$ de cette partie, on a imposé à la crémaillère un échelon de déplacement $d_{\text{crém}}(t) = \SI{20e-3}{m}$ à partir de la position d’équilibre. On a tracé la courbe de déplacement $d_{\text{instrum}}(t)$ de l’instrument.
@@ -339,8 +339,14 @@ Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D
 \includegraphics[width=\linewidth]{fig_08}
 \end{center}
 
+On donne sur la figure suivante les abaques des dépassements relatifs et des temps de réponse réduits d’un système du second ordre.
 
-\subparagraph{}\textit{}
+\begin{center}
+\includegraphics[width=\linewidth]{fig_10}
+\end{center}
+
+
+\subparagraph{}\textit{Établir, à partir de cette figure, l’expression de la fonction de transfert $H_3(p)$; déterminer les valeurs caractéristiques : gain statique, coefficient d’amortissement et pulsation propre.}
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -348,7 +354,7 @@ Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D
 \fi
 
 
-\subparagraph{}\textit{}
+\subparagraph{}\textit{Le critère de la bande passante de \SI{4}{Hz} à  \SI{-3}{dB} est-il satisfait ? répondre et justifier sur le document réponse.}
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -356,7 +362,48 @@ Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D
 \fi
 
 
-\subparagraph{}\textit{}
+
+Les questions suivantes vont permettre de déterminer l’expression analytique de $H_3(p)$, de façon à analyser l’influence du paramètre de raideur, pour respecter le critère de bande passante du cahier des charges.
+
+Soit $m_1$ la masse du solide $S_1$. L’axe du mouvement est vertical ascendant et noté $\vect{z}$. L’origine $O$ du mouvement de $S_1$ correspond à la position pour laquelle le ressort est à sa longueur libre.
+Soit $a_0$ l’allongement du ressort dans la position d’équilibre qui prend en compte l’action de la pesanteur. 
+Nota : $a_0$ est négatif car on considère qu’il y a allongement du ressort.
+
+L'équation du mouvement du ressort autour de la position d'équilibre est donné par : $m_1\dfrac{\dd^2 z(t)}{\dd t^2} + f_0 \dfrac{\dd z (t)}{\dd t}+k_0 z = 0$.
+
+\subparagraph{}\textit{Après avoir mis l’équation différentielle du mouvement sous forme canonique : $\ddot{z}(t)+B\dot{z}(t)+z(t)=0$, exprimer le coefficient d’amortissement $\xi_3$ et la pulsation propre $\omega_{03}$ du mouvement en fonction de $k_0$, $f_0$, $m_1$ .}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+On donne la valeur numérique de la masse de l’instrument chirurgical et de la plaque d’interface : $m_1 = \SI{1,6}{kg}$.
+
+
+\subparagraph{}\textit{Pour la valeur de $\omega_{03}$ calculée précédemment, déterminer la valeur minimale de la raideur $k_0$ (en N/m) qui permettrait de respecter le critère de la bande passante à $\SI{-3}{dB}$ de \SI{4}{Hz}.
+(On notera que $ \omega_{-\SI{3}{dB}}> \omega_{03}$).
+}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsubsection{Analyse du déplacement de l’instrument par rapport au déplacement de la main}
+
+On conserve la valeur $c_1$ du bloc $C_1$. La fonction de transfert du système est : $H(p)=\dfrac{D_{\text{instrum}}(p)}{D_{\text{main}}(p)}=\dfrac{1}{\left(1+0,014p+0,00017p^2 \right)\left( 1+0,015p+0,0014p^2\right)}$ .
+Le chirurgien impose avec sa main une rampe de déplacement  de \SI{100}{mm.s^{-1}}. On a tracé sur la figure suivante les les courbes de déplacement de la main et de l’instrument.
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_11}
+\end{center}
+
+
+\subparagraph{}\textit{Mettre en évidence et donner les valeurs numériques :
+de l’écart dynamique maximal; de l’écart de traînage (ou de vitesse) $\varepsilon_v$ en régime établi, du retard de traînage. Le cahier des charges est-il satisfait pour ce dernier critère ?
+}
 \ifprof
 \begin{corrige}
 \end{corrige}
@@ -364,28 +411,58 @@ Pour identifier la fonction de transfert $H_3(p)=\dfrac{D_{\text{instrum}}(p)}{D
 \fi
 
 
-\subparagraph{}\textit{}
+On donne, la courbe d’amplitude (gain) de $H(p)$ pour $p = j\omega$ dans le plan de Bode. 
+La main du chirurgien est prise d’un tremblement sensiblement sinusoïdal dont la période est de \SI{0,25}{s} et l’amplitude \SI{1}{mm}. 
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{fig_12}
+\end{center}
+
+\subparagraph{}\textit{Déterminer à partir de cette courbe, l’amplitude du mouvement pris par l’instrument. Quelle est la conséquence de ce mouvement sur la plaie chirurgicale ?}
 \ifprof
 \begin{corrige}
 \end{corrige}
 \else
 \fi
 
+\subsubsection*{Amélioration des performances dynamiques}
 
-\subparagraph{}\textit{}
+On souhaite limiter l’amplitude du mouvement de l’outil lors du tremblement de la main en  filtrant le signal traité par le capteur-codeur $C_1$ de sorte que les tremblements n’apparaissent plus sur le soustracteur. On propose trois filtres du premier ordre, de gains statiques égaux à 1 et de constantes de temps :	 $T_1 = \SI{0,04}{s}$ ; $T_2 = \SI{0,1}{s}$; $T_3 = \SI{0,5}{s}$.
+
+
+
+\subparagraph{}\textit{Tracer sur la figure précédente, les trois courbes asymptotiques d’amplitude de ces filtres avec des couleurs différentes. 
+Sachant que les mouvements dont la période est inférieure à \SI{1}{s} ne doivent pas être atténués de plus de \SI{1}{dB}, choisir le numéro 1, 2 ou 3 du filtre qui atténue de 8 à \SI{10}{dB} le tremblement de la main de période \SI{0,25}{s}. 
+Tracer sur cette figure, dans une autre couleur, l’allure de la courbe d’amplitude corrigée par ce filtre.
+Le niveau de \SI{4}{Hz}, de la bande passante à $-\SI{3}{dB}$ du critère de rapidité est-il toujours respecté ? 
+}
 \ifprof
 \begin{corrige}
 \end{corrige}
 \else
 \fi
-
-
-\subparagraph{}\textit{}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
+%
+%\subparagraph{}\textit{}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+%
+%\subparagraph{}\textit{}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+%
+%\subparagraph{}\textit{}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
 
 \end{multicols}
 %\end{document}
