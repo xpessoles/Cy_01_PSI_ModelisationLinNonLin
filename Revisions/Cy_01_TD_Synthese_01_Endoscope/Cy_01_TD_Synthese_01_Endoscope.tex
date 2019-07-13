@@ -112,7 +112,7 @@ Le constructeur du moto-réducteur donne les caractéristiques mécaniques en so
 Le constructeur donne les caractéristiques électro-mécaniques exprimées à la sortie du réducteur.
 On rappelle les équations temporelles :
 $u(t) = R i(t) + L \dfrac{\dd i(t)}{\dd t} + e(t)$, $e(t) = k_e  \omega_{\text{réd}}(t)$, 
-$C_{\text{réd}} (t)= k_c  i(t)$, $C_{\text{réd}} (t) – C_r – f_v \omega_{\text{réd}}(t)= J_{\text{équ}} \dfrac{\dd \omega_{\text{réd}}(t)}{\dd t}$. 
+$C_{\text{réd}} (t)= k_c  i(t)$, $C_{\text{réd}} (t) - C_r - f_v \omega_{\text{réd}}(t)= J_{\text{équ}} \dfrac{\dd \omega_{\text{réd}}(t)}{\dd t}$. 
 
 Avec :
 \begin{itemize}
@@ -136,7 +136,18 @@ Les transformées de Laplace des fonctions $u(t)$, $i(t)$, $e(t)$, $\omega_{\tex
 Remplir sous forme littérale les blocs du schéma suivant. Exprimer les grandeurs physiques entre chaque bloc. }
 \ifprof
 \begin{corrige}
+On a : 
+\begin{itemize}
+\item $U(p) = R I(p) + LpI(p)+ E(p)$;
+\item $E(p) = k_e  \Omega_{\text{réd}}(p)$;
+\item $C_{\text{réd}} (p)= k_c  I(p)$;
+\item $C_{\text{réd}} (p) - C_r(p) - f_v \Omega_{\text{réd}}(p)= J_{\text{équ}}  p \Omega_{\text{réd}}(p)$. 
+\end{itemize}
 \end{corrige}
+\begin{center}
+\includegraphics[width=\linewidth]{cor_01}
+\end{center}
+
 \else
 \fi
 
