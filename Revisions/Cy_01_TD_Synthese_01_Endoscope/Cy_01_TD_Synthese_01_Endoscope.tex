@@ -121,7 +121,7 @@ Avec :
 \item $e(t)$ force électromotrice induite par la rotation du moteur, évaluée à la  sortie du réducteur;
 \item $\omega_{\text{réd}}(t)$ vitesse de rotation à la sortie du réducteur;
 \item $C_{\text{réd}} (t)$ couple moteur ramené à la sortie du réducteur;
-\item $R = \SI{10}{W}$ : résistance de l’induit;
+\item $R = \SI{10}{\Omega}$ : résistance de l’induit;
 \item $L = \SI{2,2}{mH}$ inductance de l’induit;
 \item $k_c = \SI{2,1}{N.m.A^{-1}}$ constante de couple évaluée à la sortie du réducteur;
 \item $k_e = \SI{2,1}{V.s.rad^{-1}}$ constante de f.e.m évaluée à la sortie du réducteur;
@@ -156,9 +156,27 @@ On a :
 \end{center}
 
 
-\subparagraph{}\textit{Exprimer littéralement sous forme canonique la fonction de transfert du moto-réducteur $M(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}$.}
+\subparagraph{}\textit{Exprimer littéralement sous forme canonique la fonction de transfert du moto-réducteur $M(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}$ lorsque $C_r(p)=0$.}
 \ifprof
 \begin{corrige}
+En raisonnant à partir des équations, on a : 
+$U(p) = R I(p) + LpI(p)+ E(p)$ 
+$\Rightarrow U(p) = I(p) \left(R + Lp\right)+ k_e  \Omega_{\text{réd}}(p)$
+$\Rightarrow U(p) = \dfrac{C_{\text{réd}}}{k_c} \left(R + Lp\right)+ k_e  \Omega_{\text{réd}}(p)$
+$\Rightarrow U(p) = \dfrac{\left( J_{\text{équ}}  p +f_v\right)\Omega_{\text{réd}}(p)}{k_c} \left(R + Lp\right)+ k_e  \Omega_{\text{réd}}(p)$
+
+$\Rightarrow U(p) = \left(\dfrac{\left( J_{\text{équ}}  p +f_v\right)}{k_c} \left(R + Lp\right)+ k_e \right) \Omega_{\text{réd}}(p)$
+
+Au final, $M(p)=\dfrac{k_c}{ \left( J_{\text{équ}}  p +f_v\right) \left(R + Lp\right)+ k_e k_c}$.
+
+En mettant l'expression sous forme canonique, on a :
+$M(p)=\dfrac{k_c}{   J_{\text{équ}}   Lp^2 +\left( RJ_{\text{équ}}    +  L f_v\right) p + k_e k_c+Rf_v}$
+
+$\Rightarrow  M(p)=\dfrac{\dfrac{k_c}{k_e k_c+Rf_v}}{  \dfrac{ J_{\text{équ}}   L}{k_e k_c+Rf_v}p^2 +\dfrac{ RJ_{\text{équ}}    +  L f_v}{k_e k_c+Rf_v}p +1 }$.
+
+En réalisant l'application numérique, on a : 
+$M(p)=\dfrac{0,44}{  3,2\times 10^{-6} p^2 +14,6\times 10^{-3}p +1 }$.
+
 \end{corrige}
 \else
 \fi
@@ -179,34 +197,54 @@ Remarque : la partie supérieure du robot est supposée rigide pendant cet essai
 \subparagraph{}\textit{Après avoir analysé cette courbe, expliquer pourquoi on peut négliger l’inductance $L$.}
 \ifprof
 \begin{corrige}
+En observant cette courbe, l'absence de tangente horizontale à l'origine permet de modéliser le système comme un système d'ordre 1.  En négligeant $L$, le terme d'ordre 2 devient donc négligeable et $M(p)$ se modélise par une fonction d'ordre 1. 
 \end{corrige}
 \else
 \fi
 
 
 \subparagraph{}\textit{Justifier analytiquement la réponse précédente à partir de l’expression de $M_1(p)$ lorsque l’on envisage une étude fréquentielle : on précisera la valeur du pôle dominant, l’autre (faisant intervenir la valeur de $L$) étant rejeté.}
-*****
+\begin{remarque}
+Un pole est dit dominant par rapport à un autre quand sa partie réelle est grande devant l'autre.
+\end{remarque}
+
 \ifprof
 \begin{corrige}
+En utilisant la formulation de $M_1(p)$ donnée, on calcule le discriminant du dénominateur et on a : 
+$\Delta = \left(14,5\times 10^{-3}\right)^2 - 4\cdot 3,1 \times 10^{-6} = 0,00019785 $. 
+Au final, $p_1 = \dfrac{-14,5\times 10^{-3}-\sqrt{\Delta}}{2\cdot 3,1 \times 10^{-6}}\simeq -4607$ et $p_2 = \dfrac{-14,5\times 10^{-3}+\sqrt{\Delta}}{2\cdot 3,1 \times 10^{-6}}\simeq -70$. 
+Le dénominateur peut donc se factoriser sous la forme $ 3,1 \times 10^{-6}\left( p + 4607\right)\left(p+70\right)$.
+
+Le pole $p_2$ et donc dominant par rapport à $p_1$.
 \end{corrige}
 \else
 \fi
 
 \textbf{Dans la suite du problème, on néglige l’inductance $L$ du moteur.}
 
-\subparagraph{}\textit{Exprimer littéralement, sous forme canonique, la fonction de transfert du moto-réducteur  $M_2(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}=\dfrac{Gs}{1+Tp}$.  
-Donner les valeurs numériques de $Gs$ et de $T$ à partir de l’expression de $M_1(p)$ et des réponses apportées précédemment.}
+\subparagraph{}\textit{Exprimer littéralement, sous forme canonique, la fonction de transfert du moto-réducteur  $M_2(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}=\dfrac{G_s}{1+Tp}$.  
+Donner les valeurs numériques de $G_s$ et de $T$ à partir de l’expression de $M_1(p)$ et des réponses apportées précédemment.}
 \ifprof
 \begin{corrige}
+En utilisant l'expression établie initialement en en négligeant l'inductance, on a 
+$  M_2(p)=\dfrac{\dfrac{k_c}{k_e k_c+Rf_v}}{  \dfrac{ RJ_{\text{équ}}  }{k_e k_c+Rf_v}p +1 }$.
+En réalisant l'application numérique, $M_2(p)=\dfrac{0,437}{1+0,015p}$ 
+($G_s = \SI{0,437}{rad.s^{-1}.V^{-1}}$ 
+et $T=\SI{0,015}{s}$).
 \end{corrige}
 \else
 \fi
 
 
-\subparagraph{}\textit{Déterminer les valeurs de $Gs$ et $T$, à partir de la courbe de tension image de $\omega_{\text{réd}}(t)$  (expliquer les démarches sous la figure et comparer avec les résultats obtenus précédemment). }
+\subparagraph{}\textit{Déterminer les valeurs de $G_s$ et $T$, à partir de la courbe de tension image de $\omega_{\text{réd}}(t)$  (expliquer les démarches sous la figure et comparer avec les résultats obtenus précédemment). }
 \ifprof
 \begin{corrige}
+La tension de consigne étant de \SI{24}{V} et la vitesse de sortie est telle que  $24\cdot G_S \cdot K_{\text{tachy}}= \SI{1,75}{V}$ soit $G_S = \dfrac{1,75}{24\times 0,166} = \SI{0,439}{rad.s^{-1}.V^{-1}} $. En utilisant la méthode de 63\,\% de la valeur finale, on a $\tau = \SI{0,02}{s}$.
+On constate que les résultats sont relativement proches de ceux formulés par l'hypothèse <<~$L$ négligeable~>>.
 \end{corrige}
+\begin{center}
+\includegraphics[width=.9\linewidth]{cor_02}
+\end{center}
 \else
 \fi
 
@@ -228,6 +266,10 @@ Le réducteur a un rapport de réduction de 50.
 Exprimer numériquement, en fonction de $k$, la fonction de transfert en boucle ouverte $H_O(p)$ .}
 \ifprof
 \begin{corrige}
+$B$ assure la réduction de la fréquence de rotation et son intégration dans le but d'obtenir un angle; donc $B(p)=\dfrac{1}{50p}$.
+Par ailleurs $C=\dfrac{360}{2\pi}\text{ incr/rad} $. 
+
+On a donc $H_O(p)=\dfrac{1}{50p}\dfrac{360}{2\pi} \dfrac{kG_S}{1+Tp}$.
 \end{corrige}
 \else
 \fi
@@ -236,20 +278,25 @@ Exprimer numériquement, en fonction de $k$, la fonction de transfert en boucle 
 \subparagraph{}\textit{Tracer les diagrammes de Bode du système en boucle ouverte pour $k = 1$.
 Le système est-il stable en boucle fermée pour cette valeur de $k$ ? Justifier.
 } *****
+\begin{remarque}
+Au vu de l'exigence 6, le système est stable si, sur le tracé de Bode, lorsque le gain est nul, la phase est supérieure à $-180+45=-135\degres$. 
+\end{remarque}
+
 \ifprof
 \begin{corrige}
 \end{corrige}
 \else
 \fi
 
-********
-On a tracé sur le document réponses figure R28 le diagramme de Black du système en boucle ouverte pour k = 1 lorsque la valeur de $L$ n’est pas négligée.
- 
-Question 28. : 
-Quelle est l’influence de la prise en compte de $L$ sur la stabilité en boucle fermée ? (répondre sur le document réponses sous la figure R28). L’hypothèse consistant à négliger $L$ est-elle vérifiée ?
-Déterminer, et expliquer à partir de constructions faites sur le diagramme de Black document réponses figure R28, la valeur $k_{45}$ de $k$ qui permet d’obtenir la marge de phase de 45\degres  spécifiée dans le cahier des charges.
-*********
+%********
+%On a tracé sur le document réponses figure R28 le diagramme de Black du système en boucle ouverte pour k = 1 lorsque la valeur de $L$ n’est pas négligée.
+% 
+%Question 28. : 
+%Quelle est l’influence de la prise en compte de $L$ sur la stabilité en boucle fermée ? (répondre sur le document réponses sous la figure R28). L’hypothèse consistant à négliger $L$ est-elle vérifiée ?
+%Déterminer, et expliquer à partir de constructions faites sur le diagramme de Black document réponses figure R28, la valeur $k_{45}$ de $k$ qui permet d’obtenir la marge de phase de 45\degres  spécifiée dans le cahier des charges.
+%*********
 
+On admet que le système est stable pour $k_{45}=0,0767$.
 
 \subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{cons} \infty}$ en incréments lorsque la consigne est un échelon de position : $\text{Cons}(t) = 1\cdot u(t)$.}
 \ifprof
@@ -259,7 +306,7 @@ Déterminer, et expliquer à partir de constructions faites sur le diagramme de 
 \fi
 
 
-Étant donné que la perturbation $Cr$ intervient entre deux blocs de $M(p)$, on adopte le schéma de la 
+Étant donné que la perturbation $C_r$ intervient entre deux blocs de $M(p)$, on adopte le schéma de la 
 figure suivante pour faciliter les calculs de la question suivante. 
 
 \begin{center}
