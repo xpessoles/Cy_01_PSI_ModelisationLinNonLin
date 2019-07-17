@@ -277,13 +277,17 @@ On a donc $H_O(p)=\dfrac{1}{50p}\dfrac{360}{2\pi} \dfrac{kG_S}{1+Tp}$.
 
 \subparagraph{}\textit{Tracer les diagrammes de Bode du système en boucle ouverte pour $k = 1$.
 Le système est-il stable en boucle fermée pour cette valeur de $k$ ? Justifier.
-} *****
+} 
 \begin{remarque}
-Au vu de l'exigence 6, le système est stable si, sur le tracé de Bode, lorsque le gain est nul, la phase est supérieure à $-180+45=-135\degres$. 
+Au vu de l'exigence 6, on admet que le système est stable en boucle fermé si, sur le tracé de Bode de la boucle ouverte, lorsque le gain est nul, la phase est supérieure à $-180+45=-135\degres$. 
 \end{remarque}
 
 \ifprof
+\begin{center}
+\includegraphics[width=\linewidth]{Q8}
+\end{center}
 \begin{corrige}
+Au vu du tracé, la phase est supérieure à -135\degres lorsque le gain est nul. Le système est donc stable.
 \end{corrige}
 \else
 \fi
@@ -296,11 +300,29 @@ Au vu de l'exigence 6, le système est stable si, sur le tracé de Bode, lorsque
 %Déterminer, et expliquer à partir de constructions faites sur le diagramme de Black document réponses figure R28, la valeur $k_{45}$ de $k$ qui permet d’obtenir la marge de phase de 45\degres  spécifiée dans le cahier des charges.
 %*********
 
-On admet que le système est stable pour $k_{45}=0,0767$.
+%On admet que le système est stable pour $k_{45}=0,0767$.
 
-\subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{cons} \infty}$ en incréments lorsque la consigne est un échelon de position : $\text{Cons}(t) = 1\cdot u(t)$.}
+\subparagraph{}\textit{Calculer%, pour la valeur $k_{45}$ de $k$ établie précédemment, 
+l’écart statique $\varepsilon_{\text{cons} \infty}$ en incréments lorsque la consigne est un échelon de position : $\text{Cons}(t) = 1\cdot u(t)$.}
 \ifprof
 \begin{corrige}
+\textbf{Méthode 1 (à connaître après le cours sur la précision -- Cycle 2)}
+
+La boucle ouverte est de classe 1, l'entrée est un échelon et il n'y a pas de perturbation. L'écart statique est donc nul.
+
+
+\textbf{Méthode 2 (à savoir faire) -- Calcul de l'écart}
+On a $\varepsilon(p)=\dfrac{\text{Cons}(p)}{1+\text{FTBO}(p)}$. $\text{Cons}(p)=\dfrac{1}{p}$.
+On a alors 
+$\varepsilon_{\text{cons} \infty} $
+$= \lim\limits_{t\to+\infty} \varepsilon(t)$ 
+$ = \lim\limits_{p\to+0} p\varepsilon(p)$ 
+$ = \lim\limits_{p\to+0} p\dfrac{1}{p}\dfrac{1}{1+\text{FTBO}(p)}=0$.
+ 
+% \textbf{Méthode 3}
+
+
+
 \end{corrige}
 \else
 \fi
