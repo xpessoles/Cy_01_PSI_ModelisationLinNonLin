@@ -25,8 +25,11 @@ Révision 1 -- \xxactivite%
 \setcounter{secnumdepth}{5}
 %---------------------------------------------------------------------------
 
-
+\iflivret
+\input{../../style/new_pagegarde}
+\else
 \input{../style/new_pagegarde}
+\fi
 \vspace{.5cm}
 \pagestyle{fancy}
 \thispagestyle{plain}
