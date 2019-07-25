@@ -110,53 +110,6 @@
 
 %%%%%%%% PAGE DE GARDE TD
 \iftd
-%\begin{tikzpicture}[remember picture,overlay]
-%\node at (current page.north west)
-%{\begin{tikzpicture}[remember picture,overlay]
-%\draw[anchor=west] (-2cm,-3.25cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.6,inner sep=40pt]{\strut\makebox[22cm]{}};
-%\draw[anchor=west] (1cm,-3.25cm) node {\huge\sffamily\bfseries\color{black} %
-%\begin{minipage}{1cm}
-%\rotatebox{90}{\LARGE\sffamily\textsc{\color{ocre}\textbf{\xxnumpartie}}}
-%\end{minipage} \hfill
-%\begin{minipage}[c]{13.5cm}
-%\begin{titrepartie}
-%\begin{flushright}
-%\renewcommand{\baselinestretch}{1.1} 
-%\Large\sffamily\textsc{\textbf{\xxpartie}}
-%\renewcommand{\baselinestretch}{1} 
-%\end{flushright}
-%\end{titrepartie}
-%\end{minipage} \hfill
-%\begin{minipage}[c]{3.5cm}
-%{\large\sffamily\textsc{\textbf{\color{ocre} \discipline}}}
-%\end{minipage} 
-% };
-%\end{tikzpicture}};
-%\end{tikzpicture}
-
-%%%%%%%%%% PAGE DE GARDE TD %%%%%%%%%%%%%%%
-%\begin{tikzpicture}[overlay]
-%\node[shape=rectangle, 
-%      rounded corners = .25 cm,
-%	  draw= ocre,
-%	  line width=2pt, 
-%	  fill = ocre!10,
-%	  minimum width  = 2.5cm,
-%	  minimum height = 2.5cm,] at (18.5cm,0) {};
-%\node at (17.7cm,0) {\rotatebox{90}{\textbf{\Large\color{ocre}{\classe}}}};
-%%{};
-%\end{tikzpicture}
-
-% PARTIE ET CHAPITRE
-%\begin{tikzpicture}[remember picture,overlay]
-%\draw[anchor=west] (-1cm,-2.1cm) node {\large\sffamily\bfseries\color{black} %
-%\begin{minipage}[c]{15cm}
-%\begin{flushleft}
-%\xxnumchapitre \\
-%\xxchapitre
-%\end{flushleft}
-%\end{minipage}  };
-%\end{tikzpicture}
 
 % BANDEAU EXO
 \iflivret % SI LIVRET
@@ -188,7 +141,7 @@
 \end{tikzpicture}
 \else % ELSE NOT LIVRET
 \begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=west] (-2cm,-3.8cm) node {\huge\sffamily\bfseries\color{black} %
+\draw[anchor=west] (-2cm,-4.5cm) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{5cm}
 \begin{center}
 \LARGE\sffamily\color{ocre}\textbf{\textsc{\xxactivite}}
@@ -250,7 +203,7 @@
 \end{tikzpicture}};
 \end{tikzpicture}
 
-\iflivret
+\iflivret % SI LIVRET
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -258,11 +211,11 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-	  minimum height = 2.5cm,] at (18.5cm,.7cm) {};
-\node at (17.9cm,.7cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+	  minimum height = 2.5cm,] at (18.5cm,.5cm) {};
+\node at (17.9cm,.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
-\else
+\else  % SI PAS LIVRET
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -271,8 +224,8 @@
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
 %	  minimum height = 2.5cm,] at (18.5cm,1.1cm) {};
-	  minimum height = 2.5cm,] at (18.6cm,.9cm) {};
-\node at (18cm,.9cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+	  minimum height = 2.5cm,] at (18.6cm,0.5cm) {};
+\node at (18cm,0.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
 
