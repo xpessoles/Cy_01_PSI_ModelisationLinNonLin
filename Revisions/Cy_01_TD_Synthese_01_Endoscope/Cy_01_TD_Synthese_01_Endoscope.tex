@@ -283,11 +283,14 @@ Au vu de l'exigence 6, on admet que le système est stable en boucle fermé si, 
 \end{remarque}
 
 \ifprof
+
+
+
 \begin{center}
-\includegraphics[width=\linewidth]{Q8}
+\includegraphics[width=\linewidth]{Q8.png}
 \end{center}
 \begin{corrige}
-Au vu du tracé, la phase est supérieure à -135\degres lorsque le gain est nul. Le système est donc stable.
+Au vu du tracé, la phase est supérieure à $-135\degres$ lorsque le gain est nul. Le système est donc stable.
 \end{corrige}
 \else
 \fi
@@ -305,13 +308,14 @@ Au vu du tracé, la phase est supérieure à -135\degres lorsque le gain est nul
 \subparagraph{}\textit{Calculer%, pour la valeur $k_{45}$ de $k$ établie précédemment, 
 l’écart statique $\varepsilon_{\text{cons} \infty}$ en incréments lorsque la consigne est un échelon de position : $\text{Cons}(t) = 1\cdot u(t)$.}
 \ifprof
-\begin{corrige}
+\begin{corrige}~\\
 \textbf{Méthode 1 (à connaître après le cours sur la précision -- Cycle 2)}
 
 La boucle ouverte est de classe 1, l'entrée est un échelon et il n'y a pas de perturbation. L'écart statique est donc nul.
 
 
 \textbf{Méthode 2 (à savoir faire) -- Calcul de l'écart}
+
 On a $\varepsilon(p)=\dfrac{\text{Cons}(p)}{1+\text{FTBO}(p)}$. $\text{Cons}(p)=\dfrac{1}{p}$.
 On a alors 
 $\varepsilon_{\text{cons} \infty} $
@@ -339,6 +343,26 @@ figure suivante pour faciliter les calculs de la question suivante.
 \subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{pert} \infty}$ en incréments entre la consigne et la mesure lorsque la perturbation est l’échelon de couple résistant $C_r u(t)$ induit par les frottements secs. }
 \ifprof
 \begin{corrige}
+On  a $\varepsilon(p)=\text{Cons}(p)-B(p)C\Omega(p)$ $=\text{Cons}(p)-B(p)C\left( \varepsilon(p) K M(p)- C_r(p) \dfrac{M(p)R}{k_c} \right)$ $ \Leftrightarrow \varepsilon(p) \left(1+ B(p)C  K M(p)\right)=\text{Cons}(p) +B(p)C C_r(p) \dfrac{M(p)R}{k_c}  $
+$ \Leftrightarrow \varepsilon(p) =\text{Cons}(p)\dfrac{1}{1+ B(p)C  K M(p)}  $
+
+$+ C_r(p) \dfrac{M(p)R B(p)C}{k_c\left( 1+ B(p)C  K M(p) \right)}  $.
+
+$=\lim\limits_{p\to 0} p \varepsilon (p) = $
+$ =\lim\limits_{p\to 0}  \dfrac{1}{1+ B(p)C  K M(p)}  $
+
+$+ C_r \dfrac{M(p)R B(p)C}{k_c\left( 1+ B(p)C  K M(p) \right)}  $
+
+$ =\lim\limits_{p\to 0}  C_r \dfrac{\dfrac{G_S}{1+Tp}R \dfrac{1}{50p}C}{k_c\left( 1+ \dfrac{1}{50p}C  K \dfrac{G_S}{1+Tp} \right)}  $
+
+
+$ = \lim\limits_{p\to 0}  C_r \dfrac{G_S R C}{k_c\left( \left(1+Tp \right)50p+ C  K G_S \right)}  $
+
+$= C_r \dfrac{G_S R C}{k_c  C  K G_S }= C_r \dfrac{ R }{k_c   K }  $.
+
+On a donc  $\varepsilon_{\text{pert} \infty} = C_r \dfrac{ R }{k_c   K }  $.
+
+
 \end{corrige}
 \else
 \fi
