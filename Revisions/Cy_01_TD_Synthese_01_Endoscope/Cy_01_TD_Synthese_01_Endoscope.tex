@@ -62,7 +62,7 @@ Req. & Exigence & Niveaux \\ \hline
 1 & Vitesse de translation nominale & $>\SI{0,1}{m.s^{-1}}$ \\ \hline
 2 & Temps $t_1$ pour atteindre la vitesse nominale & $\SI{100}{ms}$ maximum \\ \hline
 3 & Précision -- Écart statique & $<\SI{0,2}{mm}$ \\ \hline
-4 & Précision --  Retard de traînage pour une rampe de$ \SI{0,1}{m.s^{-1}}$  & $<\SI{0,1}{s}$ \\ \hline
+4 & Précision --  Retard de traînage pour une rampe de $ \SI{0,1}{m.s^{-1}}$  & $<\SI{0,1}{s}$ \\ \hline
 5 & Stabilité -- Dépassement & Aucun \\ \hline
 6 & Stabilité -- Marge de phase & $45\degres$ \\ \hline
 7 & Rapidité -- Bande passante à \SI{-3}{dB} pour la partie mécanique & $\SI{4}{Hz}$ \\
@@ -360,7 +360,7 @@ $ = \lim\limits_{p\to 0}  C_r \dfrac{G_S R C}{k_c\left( \left(1+Tp \right)50p+ C
 
 $= C_r \dfrac{G_S R C}{k_c  C  K G_S }= C_r \dfrac{ R }{k_c   K }  $.
 
-On a donc  $\varepsilon_{\text{pert} \infty} = C_r \dfrac{ R }{k_c   K }  $.
+On a donc  $\varepsilon_{\text{pert} \infty} = C_r \dfrac{ R }{k_c   K }  $ soient $\varepsilon_{\text{pert} \infty} = 0,2 \dfrac{ 10}{2,1   1 } =\SI{0,95}{incr}$.
 
 
 \end{corrige}
@@ -368,21 +368,17 @@ On a donc  $\varepsilon_{\text{pert} \infty} = C_r \dfrac{ R }{k_c   K }  $.
 \fi
 
 
-\subparagraph{}\textit{La chaîne cinématique de transmission est telle qu’il faut 150 incréments pour que la crémaillère se déplace de $\SI{1}{mm}$, quelle est l’incidence de cet écart sur la position de l’instrument ? }
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-
-\subparagraph{}\textit{Conclure par rapport aux exigences du cahier des charges.
+\subparagraph{}\textit{La chaîne cinématique de transmission est telle qu’il faut 150 incréments pour que la crémaillère se déplace de $\SI{1}{mm}$, quelle est l’incidence de cet écart sur la position de l’instrument ? Conclure par rapport aux exigences du cahier des charges.
 Proposer une modification du bloc $K$ qui annulerait cet écart.}
 \ifprof
 \begin{corrige}
+Si on majore l'erreur précédente à 1 incrément, l'erreur sur la position de l’instrument est de \SI{0,007}{mm}.
+Cette erreur est inférieure à \SI{0,2}{mm} (exigence 3).  On peut conserver la valeur $k=1$.
 \end{corrige}
 \else
 \fi
+
+
 
 \subsection*{Vérification des performances de la chaîne de positionnement de l'instrument}
 \subsubsection*{Modélisation par schéma-blocs}
@@ -397,9 +393,10 @@ Lorsque la boucle d’asservissement est bien réglée, la fonction de transfert
 On rappelle que la courroie s’enroule sur des poulies de même diamètre et que la roue dentée qui engrène avec la crémaillère a un diamètre $\Phi_1 = \SI{38,4}{mm}$.
 
 
-\subparagraph{}\textit{Exprimer le coefficient du bloc $H_2$; préciser l’unité.}
+\subparagraph{}\textit{Exprimer le coefficient du bloc $H_2$ et préciser l’unité.}
 \ifprof
 \begin{corrige}
+En notant $x$ le déplacement en translation, on a $x=\dfrac{38,4}{2} \Theta$. On a donc $H_2 =\dfrac{x}{\Theta}=\SI{19,2}{mm.rad^{-1}}=\SI{0,0192}{m.rad^{-1}}$.   
 \end{corrige}
 \else
 \fi
@@ -411,6 +408,11 @@ Exprimer le coefficient $c_1$ en incréments par mètre du bloc $C_1$ .
 }
 \ifprof
 \begin{corrige}
+Dans le cas ou l'instrument doit réaliser les mêmes mouvements que la main, il est nécessaire que $P=1$. 
+
+On  a $G_{H_1}\cdot G_{H_2} = 0,0192 \times 0,00035 = 6,72\times 10^{-6}$.
+ 
+On a donc $c_1 = \SI{148 810}{incr.m^{-1}}$.
 \end{corrige}
 \else
 \fi
@@ -423,6 +425,7 @@ Pour augmenter la précision de l’opération chirurgicale, on désire que la c
 \subparagraph{}\textit{Exprimer le nouveau coefficient $c_2$ du bloc $C_1$ ainsi que le nouveau produit  $P_1$ . }
 \ifprof
 \begin{corrige}
+On souhaite maintenant que $P_1=\dfrac{1}{10}$ et $c_1 = \SI{148 81}{incr.m^{-1}}$.
 \end{corrige}
 \else
 \fi
