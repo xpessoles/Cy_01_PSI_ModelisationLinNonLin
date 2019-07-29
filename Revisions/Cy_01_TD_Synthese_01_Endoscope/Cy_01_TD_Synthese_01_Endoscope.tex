@@ -456,14 +456,26 @@ On donne sur la figure suivante les abaques des dépassements relatifs et des te
 \subparagraph{}\textit{Établir, à partir de cette figure, l’expression de la fonction de transfert $H_3(p)$; déterminer les valeurs caractéristiques : gain statique, coefficient d’amortissement et pulsation propre.}
 \ifprof
 \begin{corrige}
+Pour un échelon de $\SI{20}{mm}$, le déplacement est de $\SI{20}{mm}$. Le gain statique est donc de $K=1$. 
+
+Le premier dépassement absolu est d'environ $\SI{30}{mm}$ soit un dépassement de 50\, \% par rapport à la valeur finale. En utilisant l'abaque des temps de réponse, on trouve $\xi = 0,2$. 
+
+Le temps de réponse à 5\, \% est d'environ $\SI{0,55}{s}$. En utilisant l'abaque, on a $\omega_0 Tr = 15$. On a donc $\omega_0=\SI{27}{rad.s^{-1}}$.
+
+Au final, $H_3(p)=\dfrac{1}{1+\dfrac{2\cdot 0,2}{27}p+\dfrac{p^2}{27^2}}$.
 \end{corrige}
 \else
 \fi
 
 
-\subparagraph{}\textit{Le critère de la bande passante de \SI{4}{Hz} à  \SI{-3}{dB} est-il satisfait ? répondre et justifier sur le document réponse.}
+\subparagraph{}\textit{Le critère de la bande passante de \SI{4}{Hz} à  \SI{-3}{dB} est-il satisfait ?}
 \ifprof
 \begin{corrige}
+On trace le diagramme de Bode. La bande passante à  \SI{-3}{dB} est de \SI{4}{Hz}. Une marge de sécurité serait peut être préférable.
+
+\begin{center}
+\includegraphics[width=\linewidth]{Q16_2}
+\end{center}
 \end{corrige}
 \else
 \fi
@@ -478,9 +490,13 @@ Nota : $a_0$ est négatif car on considère qu’il y a allongement du ressort.
 
 L'équation du mouvement du ressort autour de la position d'équilibre est donné par : $m_1\dfrac{\dd^2 z(t)}{\dd t^2} + f_0 \dfrac{\dd z (t)}{\dd t}+k_0 z = 0$.
 
-\subparagraph{}\textit{Après avoir mis l’équation différentielle du mouvement sous forme canonique : $\ddot{z}(t)+B\dot{z}(t)+z(t)=0$, exprimer le coefficient d’amortissement $\xi_3$ et la pulsation propre $\omega_{03}$ du mouvement en fonction de $k_0$, $f_0$, $m_1$ .}
+\subparagraph{}\textit{Après avoir mis l’équation différentielle du mouvement sous forme canonique : $A\ddot{z}(t)+B\dot{z}(t)+z(t)=0$, exprimer le coefficient d’amortissement $\xi_3$ et la pulsation propre $\omega_{03}$ du mouvement en fonction de $k_0$, $f_0$, $m_1$ .}
 \ifprof
 \begin{corrige}
+On a  $m_1\dfrac{\dd^2 z(t)}{\dd t^2} + f_0 \dfrac{\dd z (t)}{\dd t}+k_0 z = 0$ 
+$\Leftrightarrow  \dfrac{\dd^2 z(t)}{\dd t^2} + \dfrac{f_0}{m_1} \dfrac{\dd z (t)}{\dd t}+\dfrac{k_0}{m_1} z = 0$. 
+
+On a donc $\omega_{03}^2=\dfrac{k_0}{m_1}$ et $\dfrac{2\xi_3}{\omega_{03}}=\dfrac{m_1}{f_0}$ et $\xi_3 =\dfrac{m_1}{2f_0}\sqrt {\dfrac{m_1}{k_0}}$.
 \end{corrige}
 \else
 \fi
@@ -497,7 +513,7 @@ On donne la valeur numérique de la masse de l’instrument chirurgical et de la
 \else
 \fi
 
-\subsubsection{Analyse du déplacement de l’instrument par rapport au déplacement de la main}
+\subsubsection*{Analyse du déplacement de l’instrument par rapport au déplacement de la main}
 
 On conserve la valeur $c_1$ du bloc $C_1$. La fonction de transfert du système est : $H(p)=\dfrac{D_{\text{instrum}}(p)}{D_{\text{main}}(p)}=\dfrac{1}{\left(1+0,014p+0,00017p^2 \right)\left( 1+0,015p+0,0014p^2\right)}$ .
 Le chirurgien impose avec sa main une rampe de déplacement  de \SI{100}{mm.s^{-1}}. On a tracé sur la figure suivante les les courbes de déplacement de la main et de l’instrument.
