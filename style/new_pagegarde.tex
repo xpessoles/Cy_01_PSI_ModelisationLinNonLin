@@ -216,6 +216,20 @@
 %{};
 \end{tikzpicture}
 \else  % SI PAS LIVRET
+\iftd %% SI TD et PAS LIVRET
+\begin{tikzpicture}[overlay]
+\node[shape=rectangle, 
+      rounded corners = .25 cm,
+	  draw= ocre,
+	  line width=2pt, 
+	  fill = ocre!10,
+	  minimum width  = 2.5cm,
+	  minimum height = 2.5cm,] at (18.6cm,0.9cm) {};
+\node at (18cm,0.9cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+%{};
+\end{tikzpicture}
+
+\else % FIN DU SI TD PAS LIVRET 
 \begin{tikzpicture}[overlay]
 \node[shape=rectangle, 
       rounded corners = .25 cm,
@@ -228,9 +242,8 @@
 \node at (18cm,0.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
-
 \fi
-
+\fi
 \else
 \fi
 

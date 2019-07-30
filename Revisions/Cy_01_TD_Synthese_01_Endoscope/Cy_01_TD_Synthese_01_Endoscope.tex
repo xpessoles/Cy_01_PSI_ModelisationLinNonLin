@@ -14,8 +14,8 @@
 %\item \textit{Mod3.C2 : } pôles dominants et réduction de l’ordre du modèle : principe, justification
 %\item \textit{Res2.C4 : } stabilité des SLCI : définition entrée bornée -- sortie bornée (EB -- SB)	
 %\item \textit{Res2.C5 : } stabilité des SLCI : équation caractéristique	
-\item \textit{Res2.C6 : } stabilité des SLCI : position des pôles dans le plan complexe
-\item \textit{Res2.C7 : } stabilité des SLCI : marges de stabilité (de gain et de phase)
+%\item \textit{Res2.C6 : } stabilité des SLCI : position des pôles dans le plan complexe
+\item ...%\textit{Res2.C7 : } stabilité des SLCI : marges de stabilité (de gain et de phase)
 \end{itemize}
 }}
 
@@ -51,6 +51,8 @@
 \begin{multicols}{2}
 \setcounter{exo}{0}
 \section*{Présentation}
+\ifprof
+\else
 On s’intéresse au robot de chirurgie endoscopique <<~Endoxirob~>>. Il est nécessaire de permettre à l’instrument chirurgical de se mouvoir avec des performances dynamiques comparables ou meilleures que celles réalisées par un chirurgien humain. 
 L’étude est effectuée uniquement pour l’axe « d’élévation » selon $\vect{z_1}$. 
 
@@ -107,8 +109,11 @@ Le constructeur du moto-réducteur donne les caractéristiques mécaniques en so
 \item capteur de position : codeur 360 incréments par tour monté sur le rotor du moteur;
 \item rapport de réduction : 50 (n’interviendra que dans le calcul de la résolution du capteur).
 \end{itemize}
+\fi
 
 \subsection*{Évaluation de la fonction de transfert du moto-réducteur}
+\ifprof
+\else
 Le constructeur donne les caractéristiques électro-mécaniques exprimées à la sortie du réducteur.
 On rappelle les équations temporelles :
 $u(t) = R i(t) + L \dfrac{\dd i(t)}{\dd t} + e(t)$, $e(t) = k_e  \omega_{\text{réd}}(t)$, 
@@ -132,6 +137,8 @@ Avec :
 
 Les transformées de Laplace des fonctions $u(t)$, $i(t)$, $e(t)$, $\omega_{\text{réd}}(t)$,  $C_{\text{réd}}(t)$ sont respectivement $U(p)$, $I(p)$, $E(p)$, $\Omega_{\text{réd}}(p)$ et $C_{\text{réd}}(p)$. On considère toutes les conditions initiales nulles.
 
+\fi
+
 \subparagraph{}\textit{Transformer les équations temporelles ci-dessus. 
 Remplir sous forme littérale les blocs du schéma suivant. Exprimer les grandeurs physiques entre chaque bloc. }
 \ifprof
@@ -150,11 +157,12 @@ On a :
 
 \else
 \fi
-
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=\linewidth]{fig_03}
 \end{center}
-
+\fi
 
 \subparagraph{}\textit{Exprimer littéralement sous forme canonique la fonction de transfert du moto-réducteur $M(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}$ lorsque $C_r(p)=0$.}
 \ifprof
@@ -181,6 +189,8 @@ $M(p)=\dfrac{0,44}{  3,2\times 10^{-6} p^2 +14,6\times 10^{-3}p +1 }$.
 \else
 \fi
 
+\ifprof
+\else
 Quel que soit le résultat obtenu à la question précédente, on utilisera l’expression de $M(p)$ suivante : $M_1(p)=\dfrac{0,436}{1+14,5\cdot 10^{-3}p+3,1\cdot 10^{-6}p^2}$. 
 
 Sur le système de levage non asservi c’est à dire avec le capteur de position angulaire déconnecté, on a pratiqué, un essai en charge, en donnant au moteur un échelon de tension $u(t) = \SI{24}{V}$. 
@@ -192,7 +202,7 @@ Avec une génératrice tachymétrique dont le gain est de $\SI{0,166}{V.s.rad^{-
 
 
 Remarque : la partie supérieure du robot est supposée rigide pendant cet essai.
-
+\fi
 
 \subparagraph{}\textit{Après avoir analysé cette courbe, expliquer pourquoi on peut négliger l’inductance $L$.}
 \ifprof
@@ -220,7 +230,10 @@ Le pole $p_2$ et donc dominant par rapport à $p_1$.
 \else
 \fi
 
+\ifprof
+\else
 \textbf{Dans la suite du problème, on néglige l’inductance $L$ du moteur.}
+\fi
 
 \subparagraph{}\textit{Exprimer littéralement, sous forme canonique, la fonction de transfert du moto-réducteur  $M_2(p)=\dfrac{\Omega_{\text{réd}}(p)}{U(p)}=\dfrac{G_s}{1+Tp}$.  
 Donner les valeurs numériques de $G_s$ et de $T$ à partir de l’expression de $M_1(p)$ et des réponses apportées précédemment.}
@@ -249,6 +262,8 @@ On constate que les résultats sont relativement proches de ceux formulés par l
 \fi
 
 \subsection*{Respect du critère de marge de phase}
+\ifprof
+\else
 La boucle d’asservissement de la position angulaire de l’arbre de sortie du réducteur est définie par le schéma-blocs figure suivante. 
 La consigne de position en incréments est élaborée par le  calculateur, à partir des informations envoyées par la console.
 
@@ -261,6 +276,8 @@ Le convertisseur-amplificateur $K$ de gain $k$ variable élabore la commande du 
 Le codeur incrémental $C$ placé sur le rotor du moteur a une résolution de 360 incréments par tour. Il est associé à un compteur -- décompteur qui élabore la mesure de position en incréments. 
 Le système est discret (non continu) mais on l’assimile à un système continu car le comptage est très rapide. 
 Le réducteur a un rapport de réduction de 50.
+ 
+ \fi
  
 \subparagraph{}\textit{Donner la fonction de transfert du bloc $B(p)$ et la valeur du coefficient du bloc $C$ en incr./rad.  
 Exprimer numériquement, en fonction de $k$, la fonction de transfert en boucle ouverte $H_O(p)$ .}
@@ -331,7 +348,8 @@ $ = \lim\limits_{p\to+0} p\dfrac{1}{p}\dfrac{1}{1+\text{FTBO}(p)}=0$.
 \else
 \fi
 
-
+\ifprof
+\else
 Étant donné que la perturbation $C_r$ intervient entre deux blocs de $M(p)$, on adopte le schéma de la 
 figure suivante pour faciliter les calculs de la question suivante. 
 
@@ -339,6 +357,13 @@ figure suivante pour faciliter les calculs de la question suivante.
 \includegraphics[width=\linewidth]{fig_06}
 \end{center}
 
+\fi
+
+
+\ifprof
+\newpage
+\else
+\fi
 
 \subparagraph{}\textit{Calculer, pour la valeur $k_{45}$ de $k$ établie précédemment, l’écart statique $\varepsilon_{\text{pert} \infty}$ en incréments entre la consigne et la mesure lorsque la perturbation est l’échelon de couple résistant $C_r u(t)$ induit par les frottements secs. }
 \ifprof
@@ -368,6 +393,8 @@ On a donc  $\varepsilon_{\text{pert} \infty} = C_r \dfrac{ R }{k_c   K }  $ soie
 \fi
 
 
+
+
 \subparagraph{}\textit{La chaîne cinématique de transmission est telle qu’il faut 150 incréments pour que la crémaillère se déplace de $\SI{1}{mm}$, quelle est l’incidence de cet écart sur la position de l’instrument ? Conclure par rapport aux exigences du cahier des charges.
 Proposer une modification du bloc $K$ qui annulerait cet écart.}
 \ifprof
@@ -382,16 +409,19 @@ Cette erreur est inférieure à \SI{0,2}{mm} (exigence 3).  On peut conserver la
 
 \subsection*{Vérification des performances de la chaîne de positionnement de l'instrument}
 \subsubsection*{Modélisation par schéma-blocs}
-
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=\linewidth]{fig_07}
 \end{center}
-
+\fi
 
 \subsubsection*{Analyse du déplacement en translation de la crémaillère}
+\ifprof
+\else
 Lorsque la boucle d’asservissement est bien réglée, la fonction de transfert est : $H_1(p)=\dfrac{\Theta(p)}{\text{Cons}(p)} = \dfrac{0,00035}{1+0,014p+0,00017 p^2}$. 
 On rappelle que la courroie s’enroule sur des poulies de même diamètre et que la roue dentée qui engrène avec la crémaillère a un diamètre $\Phi_1 = \SI{38,4}{mm}$.
-
+\fi
 
 \subparagraph{}\textit{Exprimer le coefficient du bloc $H_2$ et préciser l’unité.}
 \ifprof
@@ -431,7 +461,8 @@ On souhaite maintenant que $P_1=\dfrac{1}{10}$ et $c_1 = \SI{148 81}{incr.m^{-1}
 \fi
 
 \subsubsection*{Analyse du déplacement de l’instrument chirurgical par rapport à la crémaillère}
-
+\ifprof
+\else
 La partie supérieure du robot est constituée par assemblage de tubes minces en fibres de carbone. 
 On modélise cette partie par deux solides : $S_0$ représentant la crémaillère et les solides qui y sont liés ;  et $S_1$ représentant l’instrument chirurgical. 
 Ces solides sont considérés en liaison glissière parfaite et reliés par un ressort de raideur $k_0$ et un amortisseur de coefficient $f_0$, montés en parallèle comme le montre le schéma.
@@ -452,6 +483,7 @@ On donne sur la figure suivante les abaques des dépassements relatifs et des te
 \includegraphics[width=\linewidth]{fig_10}
 \end{center}
 
+\fi
 
 \subparagraph{}\textit{Établir, à partir de cette figure, l’expression de la fonction de transfert $H_3(p)$; déterminer les valeurs caractéristiques : gain statique, coefficient d’amortissement et pulsation propre.}
 \ifprof
@@ -494,9 +526,9 @@ L'équation du mouvement du ressort autour de la position d'équilibre est donn�
 \ifprof
 \begin{corrige}
 On a  $m_1\dfrac{\dd^2 z(t)}{\dd t^2} + f_0 \dfrac{\dd z (t)}{\dd t}+k_0 z = 0$ 
-$\Leftrightarrow  \dfrac{\dd^2 z(t)}{\dd t^2} + \dfrac{f_0}{m_1} \dfrac{\dd z (t)}{\dd t}+\dfrac{k_0}{m_1} z = 0$. 
+$\Leftrightarrow  \dfrac{m_1}{k_0}\dfrac{\dd^2 z(t)}{\dd t^2} + \dfrac{f_0}{k_0} \dfrac{\dd z (t)}{\dd t}+ z = 0$. 
 
-On a donc $\omega_{03}^2=\dfrac{k_0}{m_1}$ et $\dfrac{2\xi_3}{\omega_{03}}=\dfrac{m_1}{f_0}$ et $\xi_3 =\dfrac{m_1}{2f_0}\sqrt {\dfrac{m_1}{k_0}}$.
+On a donc $\omega_{03}^2=\dfrac{k_0}{m_1}$ et $\dfrac{2\xi_3}{\omega_{03}}=\dfrac{f_0}{k_0}$ et $\xi_3 =\dfrac{f_0}{2k_0}\sqrt {\dfrac{k_0}{m_1}}$ $=\dfrac{f_0}{2}\sqrt {\dfrac{1}{k_0m_1}}$.
 \end{corrige}
 \else
 \fi
@@ -509,26 +541,39 @@ On donne la valeur numérique de la masse de l’instrument chirurgical et de la
 }
 \ifprof
 \begin{corrige}
+On a $ \omega_{-\SI{3}{dB}}> \omega_{03}$ or $\omega_{03}^2=\dfrac{k_0}{m_1}$ $\Rightarrow k_0= m_1 \omega_{03}^2$; donc nécessairement, $ \omega_{-\SI{3}{dB}}>\sqrt{\dfrac{k_0}{m_1}}$ $\Rightarrow k_0 <\omega_{-\SI{3}{dB}} ^2 m_1 $ $\Rightarrow k_0 <2^2 4^2 \pi^2 \times 1,6 $ $k<\SI{1010}{N.m^{-1}}$.
 \end{corrige}
 \else
 \fi
 
 \subsubsection*{Analyse du déplacement de l’instrument par rapport au déplacement de la main}
-
+\ifprof
+\else
 On conserve la valeur $c_1$ du bloc $C_1$. La fonction de transfert du système est : $H(p)=\dfrac{D_{\text{instrum}}(p)}{D_{\text{main}}(p)}=\dfrac{1}{\left(1+0,014p+0,00017p^2 \right)\left( 1+0,015p+0,0014p^2\right)}$ .
 Le chirurgien impose avec sa main une rampe de déplacement  de \SI{100}{mm.s^{-1}}. On a tracé sur la figure suivante les les courbes de déplacement de la main et de l’instrument.
 
 
 \begin{center}
-\includegraphics[width=\linewidth]{fig_11}
+\includegraphics[width=\linewidth]{Q19}
 \end{center}
+\fi
 
 
 \subparagraph{}\textit{Mettre en évidence et donner les valeurs numériques :
 de l’écart dynamique maximal; de l’écart de traînage (ou de vitesse) $\varepsilon_v$ en régime établi, du retard de traînage. Le cahier des charges est-il satisfait pour ce dernier critère ?
 }
 \ifprof
-\begin{corrige}
+
+\begin{center}
+\includegraphics[width=\linewidth]{Q19_cor}
+\end{center}
+
+\begin{corrige}~\\
+\begin{itemize}
+\item Écart dynamique maximal : $\SI{5}{mm}$.
+\item Écart de traînage (ou de vitesse) $\varepsilon_v$ en régime établi : $\SI{4}{mm}$.
+\item Retard de traînage : $\SI{0,02}{s}$ -- cahier des charges validé -- Req 4.
+\end{itemize}
 \end{corrige}
 \else
 \fi
@@ -545,14 +590,17 @@ La main du chirurgien est prise d’un tremblement sensiblement sinusoïdal dont
 \subparagraph{}\textit{Déterminer à partir de cette courbe, l’amplitude du mouvement pris par l’instrument. Quelle est la conséquence de ce mouvement sur la plaie chirurgicale ?}
 \ifprof
 \begin{corrige}
+Pour une sinusoïde de période $\SI{0,25}{s}$, la pulsation est de $\dfrac{2\pi}{0,25} = \SI{25}{rad.s^{-1}}$.
+À cette pulsation, le gain est de \SI{8}{dB}. Le rapport $S/E$ est donc de $10^{8/20} = 2,5$ ainsi l'amplitude du robot sera de $\SI{2,5}{mm}$. Il faudrait régler l'asservissement pour que ces vibrations soient atténuées/filtrées (plutôt qu'amplifiées).
 \end{corrige}
 \else
 \fi
 
 \subsubsection*{Amélioration des performances dynamiques}
-
+\ifprof
+\else
 On souhaite limiter l’amplitude du mouvement de l’outil lors du tremblement de la main en  filtrant le signal traité par le capteur-codeur $C_1$ de sorte que les tremblements n’apparaissent plus sur le soustracteur. On propose trois filtres du premier ordre, de gains statiques égaux à 1 et de constantes de temps :	 $T_1 = \SI{0,04}{s}$ ; $T_2 = \SI{0,1}{s}$; $T_3 = \SI{0,5}{s}$.
-
+\fi
 
 
 \subparagraph{}\textit{Tracer sur la figure précédente, les trois courbes asymptotiques d’amplitude de ces filtres avec des couleurs différentes. 
@@ -561,7 +609,11 @@ Tracer sur cette figure, dans une autre couleur, l’allure de la courbe d’amp
 Le niveau de \SI{4}{Hz}, de la bande passante à $-\SI{3}{dB}$ du critère de rapidité est-il toujours respecté ? 
 }
 \ifprof
+\begin{center}
+\includegraphics[width=\linewidth]{Q20_cor}
+\end{center}
 \begin{corrige}
+Le filtre $T_2 = \SI{0,1}{s}$ permet d'atténuer le gain à une pulsation de $\SI{25}{rad.s^{-1}}$ sans trop atténuer le gain à des pulsation inférieures à $\SI{6,3}{rad.s^{-1}}$.
 \end{corrige}
 \else
 \fi
