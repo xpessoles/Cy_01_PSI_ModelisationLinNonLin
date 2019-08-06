@@ -112,7 +112,7 @@
 \iftd
 
 % BANDEAU EXO
-\iflivret % SI LIVRET
+\iflivret % SI LIVRET ET TD
 \begin{tikzpicture}[remember picture,overlay]
 \draw[anchor=west] (-2cm,-3.3cm) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{5cm}
@@ -211,8 +211,8 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-	  minimum height = 2.5cm,] at (18.5cm,.5cm) {};
-\node at (17.9cm,.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+	  minimum height = 2.5cm,] at (18.5cm,\xxYongletGarde) {};
+\node at (17.9cm,\xxYongletGarde) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
 \else  % SI PAS LIVRET
