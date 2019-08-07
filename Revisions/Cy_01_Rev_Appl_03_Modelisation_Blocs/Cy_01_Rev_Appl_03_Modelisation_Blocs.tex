@@ -1,0 +1,209 @@
+%%%% Paramétrage du TD %%%%
+\def\xxactivite{Application 01 \ifprof -- Corrigé \else \fi }
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+
+\def\xxnumchapitre{Chapitre 1 \vspace{.2cm}}
+\def\xxchapitre{\hspace{.12cm} Stabilité des systèmes}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+\vspace{-.4cm}
+\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Mod3.C2 : } pôles dominants et réduction de l’ordre du modèle : principe, justification
+%\item \textit{Res2.C4 : } stabilité des SLCI : définition entrée bornée -- sortie bornée (EB -- SB)	
+%\item \textit{Res2.C5 : } stabilité des SLCI : équation caractéristique	
+%\item \textit{Res2.C6 : } stabilité des SLCI : position des pôles dans le plan complexe
+\item ...%\textit{Res2.C7 : } stabilité des SLCI : marges de stabilité (de gain et de phase)
+\end{itemize}
+}}
+
+
+\def\xxfigures{
+%\includegraphics[width=.9\linewidth]{fig_00}
+}%figures de la page de garde
+
+\def\xxtitreexo{Application}
+\def\xxsourceexo{}
+
+\iflivret
+\input{../../style/new_pagegarde}
+\else
+\input{../../style/new_pagegarde}
+\fi
+\setlength{\columnseprule}{.1pt}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+
+\vspace{4.5cm}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{multicols}{2}
+\section*{Modélisation par schéma-blocs}
+
+\begin{methode}
+Dans le cas où vous ne savez pas comment démarrer, vous pouvez suivre la méthode suivante.
+\begin{enumerate}
+\item Identifier la grandeur physique d'entrée et la grandeur physique de sortie.
+\item Lorsqu'une équation lie deux grandeurs physiques, réaliser le schéma-blocs associé à l'équation. 
+\item Lorsqu'une équation lie trois grandeurs physiques, réaliser le schéma-blocs associé à l'équation en utilisant un comparateur.
+\item Relier les blocs en commençant par l'entrée. Inverser les blocs si nécessaire.
+\end{enumerate}
+\end{methode}
+\subsection*{Modélisation du moteur à courant continu}
+On donne les équations du moteur à courant continu :
+\begin{itemize}
+\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
+\item $e(t)=K\omega(t)$;
+\item $c(t)=Ki(t)$;
+\item $c(t)-c_r(t) - f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
+\end{itemize}
+\subparagraph{}
+\textit{Réaliser le schéma-blocs.}
+
+\ifprof
+\begin{corrige}
+\begin{center}
+\includegraphics[width=.9\linewidth]{cor_01}
+\end{center}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Exprimer $\Omega(p)$ sous la forme  $\Omega(p)=F_1(p)U(p) + F_2(p) C_r(p)$. Les fonctions de transfert $F_1$ $F_2$ seront exprimées sous forme canonique. Les constantes du système du second ordre seront explicitées.}
+\ifprof
+\begin{corrige}
+Par superposition, on a : 
+$\Omega_1(p)/U(p)=\dfrac{K\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}{1+K^2\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}$
+$=\dfrac{K}{\left(Jp+f\right)\left(Lp+R\right)+K^2}$.
+
+Par ailleurs, $\Omega_2(p)/C_r(p)=\dfrac{\dfrac{1}{Jp+f}}{1+K^2\dfrac{1}{R+Lp}\dfrac{1}{Jp+f}}$
+$=\dfrac{Lp+R}{\left(Jp+f\right)\left(Lp+R\right)+K^2}$.
+
+
+Au final, $\Omega(p)=\dfrac{K}{\left(Jp+f\right)\left(Lp+R\right)+K^2} U(p) + \dfrac{Lp+R}{\left(Jp+f\right)\left(Lp+R\right)+K^2} C_r(p)$. 
+
+On peut alors mettre $F_1$ sous forme canonique : 
+$$
+K_0 =\dfrac{K}{fR+K^2}
+\quad 
+\dfrac{2\xi}{\omega_0} = \dfrac{RJ+Lf}{fR+K^2}
+\quad
+\dfrac{1}{\omega_0^2} =  \dfrac{LJ}{fR+K^2}.
+$$
+\end{corrige}
+\else
+\fi
+
+
+\subsection*{Modélisation d'une servo-commande}
+
+\setcounter{exo}{0}
+\begin{center}
+\includegraphics[width=.9\linewidth]{img5}
+\end{center}
+
+Les différentes équations temporelles qui modélisent le fonctionnement d'une servocommande sont :
+\begin{itemize}
+\item un amplificateur différentiel défini par : $u_c(t)=\dfrac{i(t)}{K_a}+u_s(t)$;
+\item débit dans le vérin dans le cas d'une hypothèse de fluide incompressible $q(t)=S\cdot\dfrac{dx(t)}{dt}$;
+\item capteur de position : $u_s(t)=K_c\cdot x(t)$;
+\item le servo-distributeur est un composant de la chaîne de commande conçu pour fournir un débit hydraulique $q(t)$ proportionnel au courant de commande $i(t)$. (Attention, valable uniquement en régime permanent.) Le constructeur fournit sa fonction de transfert :
+$$
+F(p)=\dfrac{Q(p)}{I(p)}=\dfrac{K_d}{1+Tp}
+$$
+où $K_d$ est le gain du servo-distributeur et $T$ sa constante de temps.
+\end{itemize}
+
+\subparagraph{}
+\textit{Réaliser le schéma-blocs.}
+
+\subparagraph{}
+\textit{Déterminer la fonction de transfert en boucle fermée.}
+
+\ifprof
+
+\begin{corrige}
+On a :
+\begin{itemize}
+\item $U_c(p)=\dfrac{1}{K_a}I(p)+U_s(p)$
+\item $Q(p)=SpX(p)$
+\item $U_S(p)=K_C\cdot X(p)$
+\item $F(p)=\dfrac{Q(p)}{I(p)}=\dfrac{K_d}{1+Tp}$
+\end{itemize}
+
+
+\begin{minipage}[c]{.23\linewidth}
+\begin{center}
+\includegraphics[width=.95\textwidth]{bloc1}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.23\linewidth}
+\begin{center}
+\includegraphics[width=.95\textwidth]{bloc2}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.23\linewidth}
+\begin{center}
+\includegraphics[width=.95\textwidth]{bloc3}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.23\linewidth}
+\begin{center}
+\includegraphics[width=.95\textwidth]{bloc4}
+\end{center}
+\end{minipage}
+
+
+
+\begin{center}
+\includegraphics[width=.8\textwidth]{schema_bloc}
+\end{center}
+\end{corrige}
+\else 
+\fi
+
+
+
+
+\section*{Réduction de schéma-blocs}
+\textit{D'après ressources de V. Reydellet.}
+\subparagraph*{}
+\textit{Réduire les schéma-blocs suivants.}
+\begin{center}
+\includegraphics[scale=.2]{sb_01}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=.2]{sb_02}
+\end{center}
+
+\section*{Transformation de schéma-blocs}
+\subparagraph*{}
+\textit{Transformer le schéma-bloc suivant pour obtenir un schéma-blocs à retour unitaire.}
+\begin{center}
+\includegraphics[scale=.2]{sb_03}
+\end{center}
+
+\subparagraph*{}
+\textit{Modifier le schéma-blocs suivant pour obtenir la forme proposée. Déterminer ensuite l'expression de $S(p)$ en fonction de $E(p)$ et $P(p)$.}
+\begin{center}
+\includegraphics[scale=.2]{sb_04}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=.2]{sb_05}
+\end{center}
+
+\end{multicols}
+
