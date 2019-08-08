@@ -141,7 +141,7 @@
 \end{tikzpicture}
 \else % ELSE NOT LIVRET
 \begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=west] (-2cm,-4.5cm) node {\huge\sffamily\bfseries\color{black} %
+\draw[anchor=west] (-2cm,-3.5cm) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{5cm}
 \begin{center}
 \LARGE\sffamily\color{ocre}\textbf{\textsc{\xxactivite}}
@@ -178,8 +178,8 @@
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\draw[anchor=west] (-2cm,-2.25cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.6,inner sep=40pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (1cm,-2.25cm) node {\huge\sffamily\bfseries\color{black} %
+\draw[anchor=west] (-2cm,\xxYCartouche) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.6,inner sep=40pt]{\strut\makebox[22cm]{}};
+\draw[anchor=west] (1cm,\xxYCartouche) node {\huge\sffamily\bfseries\color{black} %
 \begin{minipage}{1cm}
 \rotatebox{90}{\LARGE\sffamily\textsc{\color{ocre}\textbf{\xxnumpartie}}}
 \end{minipage} \hfill
@@ -224,8 +224,8 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-	  minimum height = 2.5cm,] at (18.6cm,0.9cm) {};
-\node at (18cm,0.9cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+	  minimum height = 2.5cm,] at (18.6cm,\xxYOnget) {}; %% 0.9 par défaut
+\node at (18cm,\xxYOnget) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
 
@@ -237,9 +237,9 @@
 	  line width=2pt, 
 	  fill = ocre!10,
 	  minimum width  = 2.5cm,
-%	  minimum height = 2.5cm,] at (18.5cm,1.1cm) {};
-	  minimum height = 2.5cm,] at (18.6cm,0.5cm) {};
-\node at (18cm,0.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
+%	  minimum height = 2.5cm,] at (18.5cm,1.1cm) {}; % \xxYOnget 0.5
+	  minimum height = 2.5cm,] at (18.6cm,.5cm) {};
+\node at (18cm,.5cm) {\rotatebox{90}{\textsf{\textbf{\large\color{ocre}{\classe}}}}};
 %{};
 \end{tikzpicture}
 \fi
