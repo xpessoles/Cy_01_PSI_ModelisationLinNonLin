@@ -11,8 +11,9 @@
 \usepackage{bodegraph}
 
 \livrettrue
-
-
+\newif\iflivcor
+\livcortrue
+%\livcorfalse
 \begin{document}
 \def\xxYCartouche{-2.25cm}
 %\def\xxYOnget{.9cm}
@@ -21,28 +22,46 @@
 \newcommand{\td}{TD}
 \newcommand{\chap}{01_Modelisation_Perf_Fiche}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/Cy_01_Rev_Fiche_01_Modelisation_Perf.tex}
-
+\iflivcor
+\else
+\def\xxYCartouche{-2.25cm}
 \def\xxYongletGarde{.7cm}
+\def\xxYOnget{.9cm}
+\input{../../Revisions/\chap/Cy_01_Rev_Fiche_01_Modelisation_Perf.tex}
+\fi
+
+
 \newpage\setcounter{page}{1}
 \renewcommand{\chap}{02_Modelisation_Laplace_Fiche}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/Cy_01_Rev_Fiche_02_Modelisation_Laplace.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/Cy_01_Rev_Fiche_02_Modelisation_Laplace.tex}
+\fi
 
 \newpage\setcounter{page}{1}
 \renewcommand{\chap}{03_Modelisation_Blocs_Fiche}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/Cy_01_Rev_Fiche_03_Modelisation_Blocs.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/Cy_01_Rev_Fiche_03_Modelisation_Blocs.tex}
+\fi
 
 \newpage\setcounter{page}{1}
 \renewcommand{\chap}{04_Modelisation_Ordre12_Fiche}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/Cy_01_Rev_Fiche_04_Modelisation_Ordre12.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/Cy_01_Rev_Fiche_04_Modelisation_Ordre12.tex}
+\fi
 
 \newpage\setcounter{page}{1}
 \renewcommand{\chap}{05_Modelisation_Bode_Fiche}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/Cy_01_Rev_Fiche_05_Modelisation_Bode_Fiche.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/Cy_01_Rev_Fiche_05_Modelisation_Bode_Fiche.tex}
+\fi
 
 
 \newpage\setcounter{page}{1}
@@ -53,8 +72,10 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_Appl_02_BancEssai_BTP}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
+\else
 \input{../../Revisions/\chap/\chap.tex}
-
+\fi
 
 
 %\newpage\setcounter{page}{1}
@@ -66,15 +87,21 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_Appl_03_Modelisation_Blocs}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
-
+\iflivcor
+\else
+\input{../../Revisions/\chap/\chap.tex}
+\fi
 
 % Corrigé
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_Appl_03_Modelisation_Blocs}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
 \input{../../Revisions/\chap/\chap.tex}
+\else
+\fi
+
 
 
 % TD Exosquelette
@@ -83,13 +110,21 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_TD_0123_Exosquelette}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/\chap.tex}
+\fi
+
 
 % Corrigé
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
 \input{../../Revisions/\chap/\chap.tex}
+\else
+\fi
+
 
 
 % TD Ordre 1 Maraichage
@@ -97,13 +132,21 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_04_Ordre12_Appl_01_Maraichage}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
+\else
 \input{../../Revisions/\chap/\chap.tex}
+\fi
+
 
 % Corrigé TODO
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
+\iflivcor
+\input{../../Revisions/\chap/\chap.tex}
+\else
+\fi
+
 
 
 % TD Ordre 2 freinage TGV
@@ -111,13 +154,21 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_04_Ordre12_Appl_02_Freinage}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/\chap.tex}
+\fi
+
 
 % Corrigé
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
 \input{../../Revisions/\chap/\chap.tex}
+\else
+\fi
+
 
 % Applications Bode
 % Sujet Schémas blocs
@@ -125,13 +176,21 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_05_Bode_Appl_01}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/\chap.tex}
+\fi
+
 
 % Corrigé
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
+\else
 \input{../../Revisions/\chap/\chap.tex}
+\fi
+
 
 % Applications Freinage TGV
 % Sujet Schémas blocs
@@ -139,13 +198,19 @@
 \fichetrue \proffalse \tdtrue \coursfalse
 \renewcommand{\chap}{Cy_01_Rev_05_Bode_Appl_02_FreinageTGV}
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
-%\input{../../Revisions/\chap/\chap.tex}
+\iflivcor
+\else
+\input{../../Revisions/\chap/\chap.tex}
+\fi
 
 % Corrigé
 \newpage
 \fichetrue \proftrue \tdtrue \coursfalse
 \graphicspath{{../../style/png/}{../../Revisions/\chap/images/}}
+\iflivcor
 \input{../../Revisions/\chap/\chap.tex}
+\else
+\fi
 
 
 
