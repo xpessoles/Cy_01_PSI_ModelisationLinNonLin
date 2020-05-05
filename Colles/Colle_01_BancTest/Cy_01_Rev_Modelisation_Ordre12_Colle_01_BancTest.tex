@@ -90,6 +90,8 @@ Modéliser le comportement des systèmes multiphysiques\\
 
 \begin{multicols}{2}
 \subsection*{Présentation}
+\ifprof
+\else
 \footnotesize{\textit{
 Vallourec \& Mannesmann Tubes (V\&M Tubes), entreprise du groupe Vallourec, est le leader mondial dans la production de tubes en acier sans soudure laminés à chaud. %L’entreprise exploite des tuberies équipées des installations les plus modernes : quatre en France, quatre en Allemagne, trois  aux USA et au Brésil et une ligne de finition en Chine.
 %Les tubes sans soudure en acier produits par V\&M Tubes couvrent une très large gamme tant sur le plan dimensionnel que dans la nature des matériaux.
@@ -105,17 +107,20 @@ Vallourec \& Mannesmann Tubes (V\&M Tubes), entreprise du groupe Vallourec, est 
 Afin de valider la caractéristique de tenue en pression des tubes, ceux-ci sont soumis à une pression hydraulique donnée durant un temps spécifié. Ces paramètres dépendent de la taille des tubes et de leur future utilisation.
 }}
 
+\fi
 \subsection*{Analyse de la fonction technique << mettre le tube sous pression >>.}
 
 %La finalité de la mise sous pression est de vérifier la résistance du tube pour une pression maximale imposée par le client. Le cahier des charges impose un écart statique en pression inférieur à 5\% et aucun dépassement. 
 %Les objectifs de cette partie sont de modéliser le système de mise sous pression afin de vérifier le respect de ce cahier des charges et au besoin de proposer des modifications de la commande pour pallier les écarts observés.
 
+\ifprof
+\else
 Un schéma hydraulique simplifié est donné figure suivante :
 \begin{center}
 \includegraphics[width=\linewidth]{images_02/fig_01}
 %\textit{Schéma d'asservissement de la vitesse des vis $3_k$.}
 \end{center}
-
+\fi
 %
 %\begin{itemize}
 %\item Le fluide injecté dans le tube est de l’eau sous pression.
@@ -186,6 +191,12 @@ M\ddot{z}(t)=S_hp_h(t)-S_ep_e(t)-Mg-f\dot{z}(t).
 $$
 \subparagraph{}
 \textit{Déduire de la relation précédente l’équation reliant $Z(p)$, $P_e(p)$, $P_h(p)$, et $\text{Poids}(p)=Mg/p$, transformées de Laplace de $z(t)$, $P_e(t)$, $P_h(t)$ et du poids perçu comme une perturbation. Les conditions initiales sont supposées nulles.}
+\ifprof
+\begin{corrige}
+$Mp^2 Z(p))=S_hP_h(p)-S_eP_e(pt)-\dfrac{Mg}{p}-fpZ(p)$
+\end{corrige}
+\else
+\fi
 
 \subsection*{Modélisation du chariot avant}
 %Le chariot avant comporte :
@@ -195,7 +206,8 @@ $$
 %\end{itemize}
 
 
-
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=.95\linewidth]{images_02/fig_03}
 %\textit{Schéma d'asservissement de la vitesse des vis $3_k$.}
@@ -232,24 +244,56 @@ $$
 m\ddot{L}(t)=-rL(t)+\left(S_a-S_b \right)p_e(t)-f'\dot{L}(t).
 $$
 
+\fi
 \subparagraph{}
 \textit{En déduire, en tenant compte de l’équation du débit, deux équations liant $L(p)$, $P_e(p)$ et $Q_e(p)$, transformées de Laplace de $L(t)$, $P_e(t)$ et $Q_e(t)$. }
-
+\ifprof
+\begin{corrige}
+	$Q_e (p)=(S_a-S_b )p L(p)+\dfrac{V_t}{B_e}  p P_e(p)$
+\end{corrige}
+\else
+\fi
 Les conditions initiales sont supposées nulles.
 
 \subparagraph{}
-\textit{Compléter le schéma bloc (au verso) de l’ensemble (sans le distributeur hydraulique), l’entrée étant la pression d’huile régulée $P_r(p)$ et la sortie la pression d’épreuve dans le tube $P_e(p)$.}
+\textit{Compléter le schéma-blocs (au verso) de l’ensemble (sans le distributeur hydraulique), l’entrée étant la pression d’huile régulée $P_r(p)$ et la sortie la pression d’épreuve dans le tube $P_e(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
-
-
+\ifprof
+\else
 La figure suivante représente la réponse de l’ensemble de mise sous pression pour un échelon de 250 bars : $P_r$ est la pression d’huile en sortie du régulateur, $P_h$ la pression d’huile dans le distributeur et $P_e$ la pression d’eau dans le tube.
 
 \begin{center}
 \includegraphics[width=\linewidth]{images_02/fig_04}
 \end{center}
+\fi
 
 \subparagraph{}
 \textit{À partir de ces réponses temporelles, proposer une expression numérique des fonctions de transfert $P_h(p)/P_r(p)$, $P_e(p)/P_r(p)$. Justifier vos valeurs numériques.}
+\ifprof
+\begin{corrige}
+Le système se comporte comme un premier ordre (pas de tangente horizontale, pas de dépassement). 
+
+Pour identifier le gain, on a $K=\dfrac{s(\infty)}{e(\infty)}$.  Ainsi, $K_h =\dfrac{250}{250}=1$ et $K_e =\dfrac{800}{250}=3,2$ (pas d'unité, rapport de pression). 
+
+Pour déterminre la constant de temps, 3 méthodes : 
+\begin{itemize}
+\item $3\tau$ à 95\% de la valeur finale;
+\item $\tau$ à 63\% de la valeur finale;
+\item $\tau$ à l'intersection de la tangente à l'origine et de l'asymptote quand $t$ tend vers l'infini.
+\end{itemize}
+
+En utilisant le temps à 95\% de la valeur finale, on a $\tau_h \simeq \tau_e \simeq \SI{9,4}{s}$.
+
+Au final, $\dfrac{P_h(p)}{P_r(p)}=\dfrac{1}{1+9,4 p}$ et $\dfrac{P_e(p)}{P_r(p)}=\dfrac{3,2}{1+9,4 p}$.
+
+\end{corrige}
+\else
+\fi
 %
 %\vspace{.25cm}
 %
@@ -263,7 +307,11 @@ La figure suivante représente la réponse de l’ensemble de mise sous pression
 %\subparagraph{}
 %\textit{À partir de ces réponses temporelles, proposer une expression numérique de la fonction de transfert en régulation $\dfrac{P_e(p)}{\Delta Q_e(p)}$.}
 
-\subsection*{Mise en place d'un asservissement de pression.}
+\subsection*{Mise en place d'un asservissement de pression}
+
+
+\ifprof
+\else
 Pour limiter l’erreur statique due aux fuites, on envisage d’asservir la pression d’eau dans le tube. L’objectif est ici de proposer un réglage du correcteur pour répondre aux critères du cahier des charges.
 La pression d’eau à l’intérieur du tube est mesurée par un capteur de pression. Le schéma-blocs de l’asservissement est défini ci-dessous.
 
@@ -319,16 +367,37 @@ Amortissement :&	pas de dépassement \\ \hline
 
 On envisage tout d’abord un correcteur de type proportionnel : $C(p)=K_p$. 
 
+\fi
 
 \subparagraph{}
 \textit{Modifier le schéma-blocs pour obtenir un schéma-blocs à retour unitaire.}
+\ifprof
+\begin{corrige}~\\
 
+\begin{center}
+\includegraphics[width=\linewidth]{images_02/cor_02}
+\end{center}
+
+\end{corrige}
+\else
+\fi
 \subparagraph{}
-\textit{Déterminer, en fonction de $K_p$ , $\varepsilon_{con}$ définie comme l’erreur statique pour une entrée consigne $P_{con}$ de type échelon, dans le cas où le débit de fuite est nul.}
-
+\textit{Déterminer, en fonction de $K_p$ , $\varepsilon_{\text{con}}$ définie comme l’erreur statique pour une entrée consigne $P_{\text{con}}$ de type échelon, dans le cas où le débit de fuite est nul.}
+\ifprof
+\begin{corrige}
+On a un système de classe 1. L'entrée est un échelon et il n'y a pas de perturbation. L'erreur statique est donc de la forme
+ $\varepsilon_{\text{con}} = \dfrac{1}{1+K_{\text{BO}}} = \dfrac{1}{1+K_m K_{\text{pom}}K_{\text{cap}}K_P}$
+\end{corrige}
+\else
+\fi
 \subparagraph{}
-\textit{Proposer un réglage de $K_p$ pour limiter $\varepsilon_{con}$ à la valeur spécifiée dans le  cahier des charges.}
-
+\textit{Proposer un réglage de $K_p$ pour limiter $\varepsilon_{\text{con}}$ à la valeur spécifiée dans le  cahier des charges.}
+\ifprof
+\begin{corrige}
+ $\varepsilon_{\text{con}} <5\% \Rightarrow K_P > 19$. 
+\end{corrige}
+\else
+\fi
 \subparagraph{}
 \textit{Dans le cas où la consigne de pression est nulle,  déterminer en fonction de $K_p$ la fonction de transfert en régulation définie par :
 $H_{\text{pert}} (p)=\dfrac{P_e (p)}{\Delta Q_e (p)}$.
@@ -336,14 +405,37 @@ En déduire, en fonction de $K_p$ , $\varepsilon_{\text{pert}}$ définie comme l
 
 \subparagraph{}
 \textit{Proposer un réglage de $K_p$ pour limiter $\varepsilon_{\text{pert}}$ à la valeur spécifiée au cahier des charges.}
+\ifprof
+\begin{corrige}
+Il faut refaire le calcul de $\varepsilon_{\text{pert}}$. On montre que $\varepsilon_{\text{pert}}= \dfrac{\Delta Q_e K_f}{1+K_{\text{BO}}}$.
 
+$\varepsilon_{\text{pert}}<40 \Rightarrow K_P >2,19$.
+\end{corrige}
+\else
+\fi
 
 
 \subparagraph{}
 \textit{Déterminer la fonction de transfert $\dfrac{P_e(p)}{P_{\text{con}}(p)}$ en faisant l'hypothèse que $\Delta Q_e(p)$=0. Mettre la fonction de transfert sous forme canonique.}
+\ifprof
+\begin{corrige}
+Du calcul....
+$\xi_{BF}=\dfrac{T_1+T_2}{2\sqrt{T_1 T\left( 1+K_P K_m K_{pom}K_{cap}\right)}}$.
+$\omega_{BF}=\sqrt{\dfrac{1+K_PK_m K_{pom}K_{cap2}}{T_1 T}}$
+\end{corrige}
+\else
+\fi
 
 \subparagraph{}
-\textit{Proposer un réglage de $K_p$ pour vérifier le critère d’amortissement. \'A partir des résultats des questions précédentes, conclure quant au choix d’un correcteur proportionnel.}
+\textit{Proposer un réglage de $K_p$ pour vérifier le critère d’amortissement. \`A partir des résultats des questions précédentes, conclure quant au choix d’un correcteur proportionnel.}
+\ifprof
+\begin{corrige}
+$ \xi > 1 \Rightarrow K_P<0,125$.
+
+Les conditions sont incompatibles entre elles. Un correcteur proportionnel n'est pas satisfaisant.
+\end{corrige}
+\else
+\fi
 
 %On se propose de corriger le système avec le correcteur défini sur le schéma-blocs ci-dessous :
 %\begin{center}
@@ -385,14 +477,23 @@ On donne ensuite la réponse temporelle du système corrigé avec et sans débit
 
 \subparagraph{}
 \textit{La réponse du système est-elle satisfaisante au regard du cahier des charges ? Justifier.}
-
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
 
 \end{multicols}
 
-
+\ifprof
+\begin{center}
+\includegraphics[width=\linewidth]{images_02/cor_01}
+\end{center}
+\else
 \begin{center}
 \includegraphics[width=\linewidth]{images_02/fig_10}
 \end{center}
+\fi
 \end{document}
 
 \subparagraph{}
