@@ -1,5 +1,5 @@
 %%%% Paramétrage du TD %%%%
-\def\xxactivite{\ifcolle Colle \else Application 03 \fi \ifprof -- Corrigé \else \fi }
+\def\xxactivite{\ifcolle Colle \else Application 01 \fi \ifprof -- Corrigé \else \fi }
 \def\xxauteur{\textsl{Xavier Pessoles}}
 
 
@@ -70,12 +70,14 @@ La variable $y(t)$ correspond à la distance d’un point particulier du robot p
 
 
 \subsection*{Détermination de la fonction de transfert H 1 (p) du groupe propulsion}
-
+\ifprof
+\else
 On donne dans un premier temps le modèle de connaissance du groupe propulsion gauche. On supposera que toutes les conditions initiales sont nulles et que  $J$,  $R_m$ , $r$, $K_i$, $K_e$ sont des coefficients constants.
 
 \begin{center}
 \includegraphics[width=\linewidth]{fig_04.png}
 \end{center}
+\fi
 
 \subparagraph{}
 \textit{Appliquer la transformée de Laplace sur les différentes équations du modèle de connaissance.}
@@ -106,6 +108,8 @@ constantes à déterminer. Donner les unités de $K$ et $\tau$.
 \end{corrige}
 \else
 \fi
+\ifprof
+\else
 Pour faire pivoter le robot d’un angle $\varphi(t)$ autour de l’axe vertical ascendant, il est nécessaire de faire tourner les roues droites et gauches avec 2 vitesses angulaires différentes de façon à reproduire finalement un comportement de type « chenilles ». 
 
 \textbf{Notations}
@@ -121,6 +125,7 @@ et $U_d (t)=U_m (t)+\Delta U(t)/2$.
 \item Transformées de Laplace des tensions : $U_g (p)$, $U_d (p)$ et $\Delta U(p)$. 
 \item Transformées de Laplace des vitesses de rotation : $\Omega_g (p)$, $\Omega_d (p)$ et $\Delta \Omega(p)$. 
 \end{itemize}
+\fi
 
 
 \subparagraph{}
@@ -133,6 +138,8 @@ Montrer que cette fonction de transfert peut se mettre sous la forme d’un syst
 \else
 \fi
 
+\ifprof
+\else
 On donne les tracés de la réponse à un échelon des chaînes de propulsion gauche et droite.  
 
 \begin{center}
@@ -142,6 +149,7 @@ On donne les tracés de la réponse à un échelon des chaînes de propulsion ga
 \begin{center}
 \includegraphics[width=\linewidth]{fig_05b.png}
 \end{center}
+\fi
 
 
 \subparagraph{}
@@ -156,6 +164,8 @@ $H_d(p) = \dfrac{\Omega_d(p)}{U_d(p)}$.  Donner les valeurs numériques des coef
 
 \subsection*{Détermination de la fonction de transfert $H_2 (p)$ du suivi de la trajectoire}
 
+\ifprof
+\else
 La modélisation par schéma bloc du suivi de la trajectoire est ci-dessous. La position du robot est repérée dans le plan $\left(O,\vect{x},\vect{y}\right)$ par ses coordonnées $x(t)$ et $y(t)$ ainsi que par l’angle du robot avec la ligne moyenne $\varphi(t)$. 
 
 \begin{center}
@@ -169,6 +179,7 @@ On donne le modèle de connaissance du suivi de trajectoire obtenu à l’aide d
 \includegraphics[width=\linewidth]{fig_06.png}
 \end{center}
 
+\fi
 
 \subparagraph{}
 \textit{Appliquer la transformée de Laplace sur les 2 relations cinématiques proposées. }
@@ -188,7 +199,8 @@ On donne le modèle de connaissance du suivi de trajectoire obtenu à l’aide d
 \fi
 
  \subsection*{Détermination de la fonction de transfert $H_3 (p)$ correspondant au « capteur de distance » }
-
+\ifprof
+\else
 Les 5 capteurs utilisés pour le guidage dans le  rang de culture sont installés sur un demi-cercle à l’avant du robot : 
 \begin{itemize}
 \item capteur avant pour la détection des obstacles;
@@ -211,6 +223,8 @@ La fonction de transfert $H_3(p) = \dfrac{U_{\text{mes}}(p)}{Y(p)}$ du bloc « c
 \begin{center}
 \includegraphics[width=\linewidth]{fig_08.png}
 \end{center}
+
+\fi
 
 \subparagraph{}
 \textit{Réaliser un schéma en vue de dessus permettant de visualiser le robot positionné dans l’allée avec ses 2 capteurs latéraux. Indiquer sur ce schéma les distances entre les capteurs et les rangées de culture.}
@@ -266,7 +280,8 @@ Donner la classe et l’ordre de cette fonction de transfert. }
 \fi
 
 \subsection*{Analyse des performances obtenues.}
-
+\ifprof
+\else
 On donne ci-dessous la courbe donnant l’évolution du paramètre $y(t)$ sur une allée de \SI{100}{m} pour un premier réglage de correcteur. On donne d’autre part la réponse du véhicule en vitesse de translation pour une consigne échelon de \SI{0,2}{m/s}. 
 
 \begin{center}
@@ -278,6 +293,8 @@ On donne ci-dessous la courbe donnant l’évolution du paramètre $y(t)$ sur un
 \includegraphics[width=\linewidth]{fig_10.png}
 \end{center}
 
+\fi
+
 \subparagraph{}
 \textit{Déterminer si ce réglage semble adapté vis-à-vis des exigences du cahier des charges. Justifier la réponse en laissant notamment apparaître les tracés utiles sur les courbes. }
 \ifprof
@@ -288,6 +305,9 @@ On donne ci-dessous la courbe donnant l’évolution du paramètre $y(t)$ sur un
 
 \end{multicols}
 
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=\linewidth]{fig_01.png}
 \end{center}
+\fi
