@@ -1,0 +1,56 @@
+<Systeme>
+  <FT_H type_FT="0">
+    <lstPolyN />
+    <lstPolyD>
+      <poly1>
+        <param T="0.5" id="1" />
+      </poly1>
+      <poly1>
+        <param T="10" id="2" />
+      </poly1>
+    </lstPolyD>
+    <Gain_Classe classe="1" gain="1" retard="0" />
+  </FT_H>
+  <FT_C>
+    <param K="[0.15]" T="[1.0]" a="[2.0]" classe="0" t="P" />
+  </FT_C>
+  <Format>
+    <H couleur="#000000" epaisseur="2" style="-" />
+    <C couleur="#FF0000" epaisseur="2" style="-" />
+    <HC couleur="#0000FF" epaisseur="2" style="-" />
+    <FTBF couleur="#00FF00" epaisseur="2" style="-" />
+    <SomH couleur="#282828" epaisseur="2" style="-" />
+    <Cons couleur="#0A0A96" epaisseur="2" style="-" />
+    <Rep couleur="#FA0A0A" epaisseur="2" style="-" />
+    <RepNc couleur="#0AF00A" epaisseur="2" style="-" />
+    <H0 couleur="#FF0000" epaisseur="2" style="-" />
+    <H1 couleur="#28D728" epaisseur="2" style="-" />
+    <H2 couleur="#0000AF" epaisseur="2" style="-" />
+  </Format>
+  <PositionExpressions>
+    <H_Bode x="0.5" y="0.5" />
+    <H_Black x="0.5" y="0.5" />
+    <H_Nyquist x="0.5" y="0.5" />
+    <C_Bode x="0.5" y="0.5" />
+    <C_Black x="0.5" y="0.5" />
+    <C_Nyquist x="0.5" y="0.5" />
+    <HC_Bode x="0.5" y="0.5" />
+    <HC_Black x="0.5" y="0.5" />
+    <HC_Nyquist x="0.5" y="0.5" />
+    <FTBF_Bode x="0.5" y="0.5" />
+    <FTBF_Black x="0.5" y="0.5" />
+    <FTBF_Nyquist x="0.5" y="0.5" />
+    <SomH_Bode x="0.5" y="0.5" />
+    <SomH_Black x="0.5" y="0.5" />
+    <SomH_Nyquist x="0.5" y="0.5" />
+    <H0_Bode x="0.5" y="0.5" />
+    <H0_Black x="0.5" y="0.5" />
+    <H0_Nyquist x="0.5" y="0.5" />
+    <H1_Bode x="0.5" y="0.5" />
+    <H1_Black x="0.5" y="0.5" />
+    <H1_Nyquist x="0.5" y="0.5" />
+    <H2_Bode x="0.5" y="0.5" />
+    <H2_Black x="0.5" y="0.5" />
+    <H2_Nyquist x="0.5" y="0.5" />
+  </PositionExpressions>
+</Systeme>
