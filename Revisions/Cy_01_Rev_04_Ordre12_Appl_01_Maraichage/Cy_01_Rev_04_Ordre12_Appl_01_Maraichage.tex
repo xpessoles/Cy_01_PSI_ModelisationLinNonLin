@@ -115,10 +115,10 @@ Pour faire pivoter le robot d’un angle $\varphi(t)$ autour de l’axe vertical
 \textbf{Notations}
 \begin{itemize}
 \item Vitesse angulaire moyenne de rotation des roues : $\omega_r (t)$. 
-\item Différence de vitesse de rotation angulaire entre roues droites et roues gauches : $\Delta\omega(t) = \omega_d (t) – \omega_g (t)$.
+\item Différence de vitesse de rotation angulaire entre roues droites et roues gauches : $\Delta\omega(t) = \omega_d (t) - \omega_g (t)$.
 \item Vitesse de rotation des roues gauches et droites : $\omega_g (t)$ et $\omega_d (t)$ avec $\omega_g (t)  = \omega_r (t)  - \Delta \omega(t)/2$  et $\omega_d (t)  = \omega_r (t)  + \Delta\omega(t)/2$. 
 \item La différence de vitesse de rotation entre roues droites et roues gauches, représentée par $\Delta \omega(t)$, permet de contrôler l’orientation du robot, alors que la vitesse moyenne de rotation des roues $\omega_r (t)$  permet de contrôler la vitesse $V(t)$ de déplacement en translation du robot. 
-\item Tension de consigne utile pour la rotation : $\Delta U(t)  = U_d (t)  – U_g (t)$. 
+\item Tension de consigne utile pour la rotation : $\Delta U(t)  = U_d (t)  - U_g (t)$. 
 \item Tension de consigne des moteurs gauches et droits :
 $U_g(t)=U_m (t)-\Delta U(t)/2$
 et $U_d (t)=U_m (t)+\Delta U(t)/2$. 
@@ -127,16 +127,6 @@ et $U_d (t)=U_m (t)+\Delta U(t)/2$.
 \end{itemize}
 \fi
 
-
-\subparagraph{}
-\textit{A l’aide des relations ci-dessus, déterminer la fonction de transfert en boucle fermée du groupe propulsion 
-$H_1(p)=\dfrac{\Delta\Omega(p)}{\Delta U(p)}$. 
-Montrer que cette fonction de transfert peut se mettre sous la forme d’un système du premier ordre.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
 
 \ifprof
 \else
@@ -160,6 +150,17 @@ $H_d(p) = \dfrac{\Omega_d(p)}{U_d(p)}$.  Donner les valeurs numériques des coef
 \end{corrige}
 \else
 \fi
+
+\subparagraph{}
+\textit{À l’aide des relations ci-dessus, déterminer la fonction de transfert en boucle fermée du groupe propulsion 
+$H_1(p)=\dfrac{\Delta\Omega(p)}{\Delta U(p)}$. 
+Montrer que cette fonction de transfert peut se mettre sous la forme d’un système du premier ordre.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
 
 
 \subsection*{Détermination de la fonction de transfert $H_2 (p)$ du suivi de la trajectoire}

@@ -21,7 +21,7 @@
 
 
 \def\xxfigures{
-%\includegraphics[width=.9\linewidth]{fig_00}
+%\includegraphics\left[width=.9\linewidth\right]{fig_00}
 }%figures de la page de garde
 
 \def\xxtitreexo{Application}
@@ -44,44 +44,58 @@
 \setlength{\columnseprule}{0.4pt} 
 
 %%%%%%%%%%%%%%%%%%%%%%%
+
+\ifprof
+\else
 \begin{multicols}{2}
+\fi
 
 
+\setcounter{exo}{0}
 
 \section*{Mise en situation}
+\ifprof
+\else
 Airbus Helicopters commercialise des hélicoptères civils et militaires. Le déplacement des hélicoptères est assuré par un rotor principal permettant la sustentation et la translation de l'appareil. Un rotor arrière permet de compenser le couple de réaction engendré par le rotor principal et de contrôler les mouvements de lacet de l'appareil (figure 1).
 La puissance est délivrée par deux turboréacteurs (certains hélicoptères ne sont équipés que d'un turboréacteur). Ces turboréacteurs entraînent en rotation une boîte de transmission principale (BTP) qui elle-même entraîne d'une part le rotor principal et d'autre part le rotor arrière, par l'intermédiaire d'un arbre de transmission et d'une boîte de transmission arrière (BTA). La BTP assure aussi l'entraînement d'une série d'accessoires permettant le fonctionnement de l'appareil (alternateur, pompe hydraulique …).
 Pour chaque association hélicoptère - turboréacteur, un banc d'essai permet de vérifier que la BTP répond au cahier des charges. La figure 2 présente la structure du banc d'essai.
+
+\fi
 
 \begin{obj}
 	Valider Req 1.1.1.
 \end{obj}
 
+\ifprof
+\else
 
 \begin{center}
-\includegraphics[width=.5\linewidth]{fig_02_bis}
+\includegraphics\left[width=.5\linewidth\right]{fig_02_bis}
 
 \end{center}
 
 \begin{center}
-\includegraphics[width=.8\linewidth]{fig_03}
+\includegraphics\left[width=.8\linewidth\right]{fig_03}
 
 \textit{Figure 1 -- Hélicoptère.}
 \end{center}
 
 
 \begin{center}
-\includegraphics[width=.8\linewidth]{fig_04}
+\includegraphics\left[width=.8\linewidth\right]{fig_04}
 
 \textit{Figure 2 -- Structure du banc d'essai.}
 \end{center}
+\fi
 
 \section*{Le moteur à courant continu}
+\ifprof
+\else
 Le banc d'essai est équipé d'un dispositif permettant de générer un couple résistant sur le rotor de sortie de la BTP. Cela permet de simuler les actions aérodynamiques sur les pales. Il faut donc évaluer l'impact de ce couple sur la vitesse du moteur. 
 La modélisation adoptée pour le moteur à courant continu est celle de la figure 3.
  
 \begin{center}
-\includegraphics[width=.8\linewidth]{fig_05}
+\includegraphics\left[width=.8\linewidth\right]{fig_05}
 
 \textit{Figure 3 -- Schéma équivalent du moteur à courant continu.}
 \end{center}
@@ -112,6 +126,8 @@ Hypothèses :
 \item on note $p$ la variable de Laplace. La transformée de Laplace d'une fonction temporelle $f(t)$ sera notée $F(p)$ (la transformée de $\omega(t)$ sera notée $\Omega(p)$).
 \end{itemize}
 
+\fi
+
 %\subparagraph{}\textit{En justifiant, donner la relation électrique entre $e(t)$, $i(t)$ et $u(t)$.}
 %
 %On se réfère au schéma cinématique présenté figure 2. On note $I_i$ le moment d'inertie du 
@@ -136,49 +152,202 @@ Hypothèses :
 
 %\subparagraph{}\textit{Donner la fonction de transfert du moteur et la mettre sous forme canonique en donnant l'expression littérale de chacune des constantes.}
 \section*{Modélisation de l'asservissement en vitesse}
+
+\ifprof
+\else
+
 Hypothèses :
 \begin{itemize}
 \item on néglige l'inductance du moteur à courant continu ainsi que l'effet du coefficient de frottement ;
 \item on fait l'hypothèse que $K_c=K_e =K$;
 \item pour simplifier l'étude, la boucle de courant n'a pas été modélisée.
 \end{itemize}
-Le schéma bloc de l'asservissement en vitesse du moteur à courant continu est donné sur la figure 10.
+Le schéma-blocs de l'asservissement en vitesse du moteur à courant continu est donné sur la figure 10.
  
 
 \begin{center}
-\includegraphics[width=\linewidth]{fig_06}
+\includegraphics\left[width=\linewidth\right]{fig_06}
 
 \textit{Figure 10 -- Régulation en vitesse du banc d'essai.}
 \end{center}
+\fi
 
 \subparagraph{}\textit{Quelle solution technologique peut-on utiliser pour le capteur situé en boucle de retour ? Comment déterminer la valeur du gain $K_{\text{Adapt}}$ ?}
+
+\ifprof
+\begin{corrige}
+Il s'agit de réaliser un asservissement en fréquence de rotation. On pourrait utiliser une génératrice tachymétrique. 
+
+Afin d'avoir un asservissement précis ($\varepsilon(p)=0$ lorsque $\Omega_c(p)=\Omega(p)$), on prend $K_{\text{Adapt}}=K_{\text{Capt}}$.
+\end{corrige}
+\else
+\fi
+
 
 \subsection*{Hypothèse 1 : on considère que $C_r (p)=0$ et $\Omega_c (p)\neq 0$.}
 \subparagraph{}\textit{Déterminer la fonction de transfert en boucle fermée $H_m (p)=(\Omega_m (p))/U(p)$ puis la fonction de transfert en boucle fermée $H_1 (p)=(\Omega_m (p))/(\Omega_C (p))$. On considère que $C(p)=K_P$, $K_P$ étant constant. Mettre $H_1 (p)$ sous la forme $K_1/(1+\tau_1 p)$ où on explicitera les valeurs de $K_1$ et $\tau_1$.}
 
+\ifprof
+\begin{corrige}
+~\\
+
+$H_m (p)=\dfrac{\Omega_m (p)}{U(p)} $
+$= \dfrac{\dfrac{K}{RI_{\text{eq}}p}}{1+\dfrac{K^2}{ RI_{\text{eq}}p}}$
+$=\dfrac{K}{R I_{\text{eq}} p+K^2  }=\dfrac{1/K}{1+\dfrac{RI_{\text{eq}}}{K^2}p}$
+
+
+$H_1 (p)=\dfrac{\Omega_m (p)}{\Omega_c (p)} $
+$=K_{\text{Adapt}} \dfrac{\dfrac{K}{R I_{\text{eq}} p+K^2 } C(p)}{%
+1+\dfrac{K}{R I_{\text{eq}} p+K^2 } C(p) K_{\text{Capt}} }$
+$=\dfrac{K_{\text{Adapt}} K C(p)}{R I_{\text{eq}} p+K^2+K C(p) K_{\text{Capt}} }$
+
+
+$H_1 (p)=\dfrac{K_{\text{Adapt}} K K_P}{R I_{\text{eq}} p+K^2+K K_P K_{\text{Capt}}}$
+$=\dfrac{\dfrac{K_{\text{Adapt}} K_P}{K+K_p K_{\text{Capt}}}}{\dfrac{R I_{\text{eq}}}{K^2+K K_P K_{\text{Capt}}} p+1}$
+$=\dfrac{K_1}{1+\tau_1 p}$
+
+
+Soit par identification : $K_1=\dfrac{K_{\text{Adapt}} K_P}{K+K_P K_{\text{Capt}}}$	et	$\tau_1=\dfrac{R I_{\text{eq}}}{K^2+K K_P K_{\text{Capt}}}$.
+
+
+
+
+\end{corrige}
+\else
+
+\fi
+
+
+
+
+
+
 \subsection*{Hypothèse 2 : on considère que $\Omega_C (p)=0$ et que $C_r (p)\neq0$.}
 \subparagraph{}\textit{Retracer sur la copie le schéma bloc en tenant compte de ces hypothèses.}
+\ifprof
+\begin{corrige}
+~\\
+
+\begin{center}
+\includegraphics[width=.5\linewidth]{cor_01}
+\end{center}
+\end{corrige}
+\else
+\fi
+
 
 \subparagraph{}\textit{Déterminer la fonction de transfert en boucle fermée $H_2 (p)=(\Omega_m (p))/(C_r (p))$. On considère que $C(p)=K_P$, $K_P$ étant constante. Mettre $H_2 (p)$ sous la forme $-K_2/(1+\tau_2 p)$ où on explicitera les valeurs de $K_2$ et $\tau_2$.}
+\ifprof
+\begin{corrige}
+~\\
+
+\begin{center}
+\includegraphics[width=.5\linewidth]{cor_02}
+\end{center}
+\begin{center}
+\includegraphics[width=.5\linewidth]{cor_03}
+\end{center}
+On a donc :	
+$H_2 (p)=\dfrac{\Omega_m (p)}{C_r (p)}$
+$=-\dfrac{1}{\dfrac{K}{R} \left(K+K_P K_{\text{Capt}} \right)+I_{\text{eq}} p}$
+$=-\dfrac{\dfrac{R}{K \left(K+K_P  K_{\text{Capt}} \right) }}{1+\dfrac{R I_{\text{eq}}}{K \left(K+K_P K_{\text{Capt}} \right) } p}$
+$=-\dfrac{K_2}{1+\tau_2 p}$
+Soit par identification : $K_2=\dfrac{R}{K \left(K+K_P  K_{\text{Capt}} \right) }$	et	$\tau_2=\tau_1=\dfrac{R I_{\text{eq}}}{K (K+K_P K_{\text{Capt}} ) }$.
+
+
+
+
+
+\end{corrige}
+\else
+\fi
+
 
 \subsection*{Hypothèse 3 : on considère maintenant que  $\Omega_C (p)\neq 0$ et que $C_r (p)\neq 0$.}
 \subparagraph{}\textit{En utilisant le théorème de superposition, exprimer $\Omega_m (p)$ en fonction de $H_1 (p)$, $H_2 (p)$, $\Omega_c (p)$ et $C_r (p)$.}
+\ifprof
+\begin{corrige}
+
+Par superposition on a : $\Omega_m (p)=H_1 (p) \Omega_c (p)+H_2 (p) C_r (p)$.
+\end{corrige}
+\else
+\fi
+
 
 À une fréquence de rotation de $\SI{350}{min^{-1}}$ en sortie de BTP correspond une consigne de fréquence de rotation du moteur de $\SI{1 928}{min^{-1}}$ soit environ $\SI{202}{rad/s}$. Le couple résistant ramené à l'arbre moteur est évalué à $\SI{990}{Nm}$. On soumet donc le système à un échelon de consigne d'amplitude $\SI{202}{rad/s}$ et à un couple résistant de $\SI{990}{Nm}$.
 
 \subparagraph{}\textit{Après avoir exprimé la consigne  $\Omega_c (p)$ puis le couple résistant $C_r (p)$, calculer sous forme littérale l'écart statique du système. Conclure vis-à-vis du cahier des charges.}
+\ifprof
+\begin{corrige}
+
+On a, pour des échelons de consignes :
+$\Omega_c (p)=\dfrac{\Omega_{c0}}{p}$	avec $\Omega_{c0}=\SI{202}{rad/s}$	et	$C_r (p)=\dfrac{C_{r0}}{p}$	avec $C_{r0}=\SI{990}{N m}$.
+
+L’écart statique $\varepsilon_S$  s’écrit en sortie du comparateur :
+
+$\varepsilon_S= \lim\limits_{t\to \infty} \varepsilon(t)$  
+$=\lim\limits_{p\to 0} p \varepsilon(p)$
+$=\lim\limits_{p\to0} p (K_{\text{Adapt}}\Omega_c (p)-K_{\text{Capt}} \Omega_m (p))$
+$=\lim\limits_{p\to 0}  \left(p (K_{\text{Adapt}} \Omega_c (p)-K_{\text{Capt}} H_1 (p) \Omega_c (p)-K_{\text{Capt}} H_2 (p) C_r (p))\right)$
+
+$\varepsilon_S=\lim_{p\to 0}  p \left(K_{\text{Adapt}} \dfrac{\Omega_{c0}}{p}-K_{\text{Capt}} K_1 \dfrac{\Omega_{c0}}{p}+K_{\text{Capt}} K_2 \dfrac{C_{r0}}{p}\right)$
+
+$\varepsilon_S=\left(K_{\text{Adapt}}-K_{\text{Capt}} K_1 \right)\Omega_{c0}+ K_{\text{Capt}} K_2C_{r0}$
+
+L’écart statique ne pourra pas être nul (exigence 1.1.1 du cahier des charges non vérifiée).
+
+
+\end{corrige}
+\else
+\fi
+
+
 \subparagraph{}\textit{Quel intérêt peut présenter l'utilisation d'un correcteur intégral de gain $K_I$ de la forme $C(p)=K_I/p$ ?}
+\ifprof
+\begin{corrige}
+En choisissant $K_{\text{Adapt}}=K_{\text{Capt}}$, l’écart statique pourra être réduit à condition d’avoir un gain $K_P$ important $K_1\to 1$ et $K_2\to 0$, mais pas trop pour ne pas rendre le système instable.
+Avec un correcteur intégral, le système devient de classe 1 et l’écart statique est annulé.
+\end{corrige}
+\else
+\fi
+
+
 \subparagraph{}\textit{En conclusion, en utilisant le correcteur précédent, l'asservissement proposé permet-il de tenir la consigne de vitesse lorsqu'un couple résistant est appliqué à l'arbre de sortie de la BTP ? L'exigence 1.1.1 est-elle vérifiée ?}
 
-\begin{rem}
-On verra ultérieurement qu'un correcteur intégral pur ne permet pas forcément de garantir la stabilité d'un système.
-\end{rem}
-\section*{Partie supplémentaire}
-\subparagraph{}\textit{Tracer le diagramme de Bode de $C(p)\cdot F(p)$ avec $F(p)=118/(1+0,5 p)$ du système lorsque : 
-\begin{itemize}
-\item $C(p)=1$;
-\item $C(p)=20$ ;
-\item $C(p)=30/p$.
-\end{itemize}}
 
+\ifprof
+\begin{corrige}
+
+
+En reprenant le raisonnement de la question **, et en remplaçant $C(p)$ par $K_I/p$ dans les expressions de $H_1 (p)$ et $H_2 (p)$ :
+$\lim\limits_{p\to 0}  H_1 (p)=\lim\limits_{p\to 0}  K_{\text{Adapt}} \dfrac{\dfrac{K}{R I_{\text{eq}} p+K^2}\dfrac{ K_I}{p}}{1+\dfrac{K}{R I_{\text{eq}} p+K^2 } \dfrac{K_I}{p} K_{\text{Capt}} }$
+$=\dfrac{K_{\text{Adapt}}}{K_{\text{Capt}}}$.
+
+$\lim\limits_{p\to 0}  H_2 (p)=\lim\limits_{p\to 0}  -\dfrac{1}{\dfrac{K}{R} \left(K+\dfrac{K_I}{p} K_{\text{Capt}} \right)+I_{\text{eq}} p}=0$
+
+$\varepsilon_S=\lim\limits_{p\to 0}  p \left(K_{\text{Adapt}} \Omega_c (p)-K_{\text{Capt}} H_1 (p) \Omega_c (p)-K_{\text{Capt}} H_2 (p) C_r (p)\right) $
+
+$\varepsilon_S=\lim\limits_{p\to 0} K_{\text{Adapt}} \Omega_{c0}-K_{\text{Capt}} K_{\text{Adapt}}/K_{\text{Capt}}  \Omega_{c0}-K_{\text{Capt}} 0 C_r0 =0$
+
+Dans ce cas, l’application d’un couple perturbateur n’a donc pas d’influence sur l’écart statique. La fréquence de rotation du rotor peut être temporairement impactée, mais au bout d’un laps de temps, l’écart statique tend vers 0. L’exigence 1.1.1 est donc vérifiée.
+
+\end{corrige}
+\else
+\fi
+
+
+%\begin{rem}
+%On verra ultérieurement qu'un correcteur intégral pur ne permet pas forcément de garantir la stabilité d'un système.
+%\end{rem}
+%\section*{Partie supplémentaire}
+%\subparagraph{}\textit{Tracer le diagramme de Bode de $C(p)\cdot F(p)$ avec $F(p)=118/(1+0,5 p)$ du système lorsque : 
+%\begin{itemize}
+%\item $C(p)=1$;
+%\item $C(p)=20$ ;
+%\item $C(p)=30/p$.
+%\end{itemize}}
+
+\ifprof
+\else
 \end{multicols}
+\fi
