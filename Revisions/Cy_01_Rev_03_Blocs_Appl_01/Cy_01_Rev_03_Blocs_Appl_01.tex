@@ -46,8 +46,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+\ifprof
+\else
 \begin{multicols}{2}
+\fi
 \section*{Modélisation par schéma-blocs}
 
 \begin{methode}
@@ -60,6 +62,9 @@ Dans le cas où vous ne savez pas comment démarrer, vous pouvez suivre la méth
 \end{enumerate}
 \end{methode}
 \subsection*{Modélisation du moteur à courant continu}
+
+\ifprof
+\else
 On donne les équations du moteur à courant continu :
 \begin{itemize}
 \item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
@@ -67,13 +72,15 @@ On donne les équations du moteur à courant continu :
 \item $c(t)=Ki(t)$;
 \item $c(t)-c_r(t) - f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
 \end{itemize}
+\fi
+
 \subparagraph{}
 \textit{Réaliser le schéma-blocs.}
 
 \ifprof
-\begin{corrige}
+\begin{corrige}~\\
 \begin{center}
-\includegraphics[width=.9\linewidth]{cor_01}
+\includegraphics[width=.7\linewidth]{cor_01}
 \end{center}
 \end{corrige}
 \else
@@ -109,6 +116,10 @@ $$
 \subsection*{Modélisation d'une servo-commande}
 
 \setcounter{exo}{0}
+
+\ifprof
+\else
+
 \begin{center}
 \includegraphics[width=.9\linewidth]{img5}
 \end{center}
@@ -124,6 +135,7 @@ F(p)=\dfrac{Q(p)}{I(p)}=\dfrac{K_d}{1+Tp}
 $$
 où $K_d$ est le gain du servo-distributeur et $T$ sa constante de temps.
 \end{itemize}
+\fi
 
 \subparagraph{}
 \textit{Réaliser le schéma-blocs.}
@@ -184,9 +196,32 @@ On a :
 \includegraphics[scale=.2]{sb_01}
 \end{center}
 
+\ifprof
+\begin{corrige}
+~\\
+\begin{itemize}
+\item Boucle intérieure : $\dfrac{H_1H_2}{1+H_1H_2H_3}$.
+\item $H(p)=\dfrac{S(p)}{E(p)}=H_4(p)+\dfrac{H_1(p)H_2(p)}{1+H_1(p)H_2(p)H_3(p)}$.
+\end{itemize}
+\end{corrige}
+\else
+\fi
+
 \begin{center}
 \includegraphics[scale=.2]{sb_02}
 \end{center}
+
+\ifprof
+\begin{corrige}
+~\\
+\begin{itemize}
+\item On décale le point de prélèvement de droite vers la gauche (ce qui nécessite alors d'ajouter un bloc $C$ dans la boucle de retour supérieure). La boucle intérieure peut donc être mise sous la forme : $\dfrac{B}{1+BCE}$.
+\item Réduction de la boucle totale : $C \dfrac{A\dfrac{B}{1+BCE}}{1+AD\dfrac{B}{1+BCE}}$ $ =\dfrac{ABC}{1+BCE+ABD}$.
+\end{itemize}
+\end{corrige}
+\else
+\fi
+
 
 \section*{Transformation de schéma-blocs}
 \subparagraph*{}
@@ -194,6 +229,22 @@ On a :
 \begin{center}
 \includegraphics[scale=.2]{sb_03}
 \end{center}
+
+
+
+\ifprof
+\begin{corrige}
+~\\
+D'une part, on a $\dfrac{S(p)}{E(p)}=\dfrac{H_1(p)}{1+H_1(p)H_2(p)}$.
+
+D'autre part, on prend un bloc $X_1(p)$ en série avec $X_2(p)$ << possédant >> un retour unitaire. On a donc 
+$\dfrac{S(p)}{E(p)}=X_1(p)\dfrac{X_2(p)}{1+X_2(p)}$. 
+
+On a donc $H_1=X_1X_2$ et $X_2=H_1H_2$; donc $X_1  = \dfrac{H_1}{X_2}=\dfrac{H_1}{H_1H_2}=\dfrac{1}{H_2}$.
+\end{corrige}
+\else
+\fi
+
 
 \subparagraph*{}
 \textit{Modifier le schéma-blocs suivant pour obtenir la forme proposée. Déterminer ensuite l'expression de $S(p)$ en fonction de $E(p)$ et $P(p)$.}
@@ -205,5 +256,27 @@ On a :
 \includegraphics[scale=.2]{sb_05}
 \end{center}
 
-\end{multicols}
 
+
+%
+%\ifprof
+%\begin{corrige}
+%~\\
+%D'une part, on a $S(p)=\left(\varepsilon(p)A(p)+P(p)\right)B(p)C(p)$ et
+%$\varepsilon(p)=E(p)-\left(\varepsilon(p)A(p)+P(p)\right)B(p)$
+%$\Leftrightarrow \varepsilon(p)=E(p)-\varepsilon(p)A(p)B(p)+P(p)B(p)$
+%$\Leftrightarrow \varepsilon(p)\left(1+A(p)B(p)\right)=E(p)+P(p)B(p)$.
+%
+%Au final, $\varepsilon(p)=\dfrac{1}{1+A(p)B(p)}E(p)+P(p)\dfrac{B(p)}{1+A(p)B(p)}$ et 
+% $S(p)=\left(\left(\dfrac{E(p)}{1+A(p)B(p)}+\dfrac{P(p)B(p)}{1+A(p)B(p)}\right)A(p)+P(p)\right)B(p)C(p)$
+% 
+%  $S(p)=\left(\left(\dfrac{A(p)E(p)}{1+A(p)B(p)}+\dfrac{P(p)A(p)B(p)}{1+A(p)B(p)}\right)+P(p)\right)B(p)C(p)$
+%\end{corrige}
+%\else
+%\fi
+
+
+\ifprof
+\else
+ \end{multicols}
+\fi
