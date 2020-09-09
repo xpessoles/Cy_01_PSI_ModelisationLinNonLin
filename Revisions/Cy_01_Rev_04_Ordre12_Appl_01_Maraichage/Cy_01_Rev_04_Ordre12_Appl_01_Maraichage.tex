@@ -83,6 +83,11 @@ On donne dans un premier temps le modèle de connaissance du groupe propulsion g
 \textit{Appliquer la transformée de Laplace sur les différentes équations du modèle de connaissance.}
 \ifprof
 \begin{corrige}
+$\Omega_g(p)=r\Omega_m(p)$, 
+$E_m(p)=K_e\Omega_m(p)$, 
+$Jp\Omega_m(p)=C_m(p)$,
+$U_g(p)=R_m I_m(p) + E_m(p)$,
+$C_m(p)=K_i I_m(p)$. 
 \end{corrige}
 \else
 \fi
@@ -92,6 +97,9 @@ On donne dans un premier temps le modèle de connaissance du groupe propulsion g
 \textit{Déduire des questions précédentes le schéma-bloc correspondant au groupe propulsion gauche seul. }
 \ifprof
 \begin{corrige}
+\begin{center}
+\includegraphics[width=\linewidth]{cor_01.png}
+\end{center}
 \end{corrige}
 \else
 \fi
@@ -99,12 +107,18 @@ On donne dans un premier temps le modèle de connaissance du groupe propulsion g
 \subparagraph{}
 \textit{Déterminer l’expression de la fonction de transfert du système en boucle fermée du groupe propulsion gauche 
 $H_g (p) =\dfrac{\Omega_g(p)}{U_g(p)}$ en fonction de $r$, $K_i$, $K_e$, $J$ et $R_m$. Montrer que cette fonction de
-transfert peut se mettre sous la forme d’un système du premier ordre $H_g(p)=\dfrac{K}{1+\tau p}$  où $K$ et $\tau$ sont 2
-constantes à déterminer. Donner les unités de $K$ et $\tau$. 
-} 
+transfert peut se mettre sous la forme d’un système du premier ordre $H_g(p)=\dfrac{K}{1+\tau p}$  où $K$ et $\tau$ 
+sont 2 constantes à déterminer. Donner les unités de $K$ et $\tau$. } 
 
 \ifprof
-\begin{corrige}
+\begin{corrige} ~\\
+
+$H_g (p) =\dfrac{\Omega_g(p)}{U_g(p)}$
+$= r \dfrac{\dfrac{K_i}{R_mJp}}{1+\dfrac{K_iK_e}{R_mJp}}$
+$= r \dfrac{K_i}{R_mJp+{K_iK_e}}$
+$=  \dfrac{\dfrac{r}{K_e}}{\dfrac{R_mJ}{K_iK_e}p+1}$.
+
+On a donc $K=\dfrac{r}{K_e} $  en $\SI{}{rad.s^{-1}V^{-1}}$ et $\tau=\dfrac{R_mJ}{K_iK_e}$ en s.
 \end{corrige}
 \else
 \fi
@@ -147,6 +161,7 @@ On donne les tracés de la réponse à un échelon des chaînes de propulsion ga
 $H_d(p) = \dfrac{\Omega_d(p)}{U_d(p)}$.  Donner les valeurs numériques des coefficients de ces fonctions de transfert. }
 \ifprof
 \begin{corrige}
+Par identification, on obtient $H_g(p)=H_d(p)=\dfrac{6,4}{1+0,3p}$.
 \end{corrige}
 \else
 \fi
@@ -157,6 +172,9 @@ $H_1(p)=\dfrac{\Delta\Omega(p)}{\Delta U(p)}$.
 Montrer que cette fonction de transfert peut se mettre sous la forme d’un système du premier ordre.}
 \ifprof
 \begin{corrige}
+On a $\Delta\Omega(p) = \Omega_d (p) - \Omega_g (p)$
+$ = H_d(p) U_d(p)-H_g(p) U_g(p)$ avec $H_g(p)=H_d(p)$ on a 
+$\Delta\Omega(p)  = H_d(p)\Delta U(p) = \dfrac{K}{1+\tau p}$.
 \end{corrige}
 \else
 \fi
@@ -186,6 +204,7 @@ On donne le modèle de connaissance du suivi de trajectoire obtenu à l’aide d
 \textit{Appliquer la transformée de Laplace sur les 2 relations cinématiques proposées. }
 \ifprof
 \begin{corrige}
+On a $R\Delta \Omega(p)=2e p \Phi(p)$ et $pY(p)=V\Phi(p)$.
 \end{corrige}
 \else
 \fi
@@ -195,6 +214,8 @@ On donne le modèle de connaissance du suivi de trajectoire obtenu à l’aide d
 \textit{ En déduire l’expression des  fonctions de transfert $H_{21} (p)$, $H_{22} (p)$ puis $H_2 (p)$.  }
 \ifprof
 \begin{corrige}
+On a donc $H_{21}(p)=\dfrac{\Phi(p)}{\Delta \Omega(p)} = \dfrac{R}{2ep}$ et $H_{22}(p)=\dfrac{Y(p)}{\Phi(p)}=\dfrac{V}{p}$ et $H_2(p)=\dfrac{RV}{2ep^2}$.
+
 \end{corrige}
 \else
 \fi
@@ -240,6 +261,9 @@ La fonction de transfert $H_3(p) = \dfrac{U_{\text{mes}}(p)}{Y(p)}$ du bloc « c
 \textit{Quelle est la valeur de la tension $u$ à \SI{0,1}{V} près ? Quelle est la tension $u_{\text{capt droit}}$ lorsque le robot est décalé de $y = +\SI{5}{cm}$ suivant l’axe $\vect{y}$ entre ces 2 rangs de culture ? Quelle est la tension $u_{\text{capt gauche}}$ à ce même instant ? }
 \ifprof
 \begin{corrige}
+La largeur du rang étant de \SI{70}{cm} et les capteurs étant positionnés sur un rayon de \SI{10}{cm}, on a \SI{25}{cm} entre le rang et le capteur. En lisant la courbe cela correspond à une tension mesurée de $\SI{1,1}{V}$ environ.
+
+Si le robot est décalé vers la droite de \SI{5}{cm}, le capteur de droite sera \SI{20}{cm} et celui de gauche à \SI{30}{cm}. Les grandeurs mesurées seront donc de \SI{1,25}{V} et \SI{0,9}{V}.  
 \end{corrige}
 \else
 \fi
@@ -249,6 +273,7 @@ La fonction de transfert $H_3(p) = \dfrac{U_{\text{mes}}(p)}{Y(p)}$ du bloc « c
 \textit{En déduire le gain $K_c$ du bloc « capteur de distance » autour de ce point de fonctionnement et préciser son unité.}
 \ifprof
 \begin{corrige}
+Autour de ce point de fonctionnement, on a $K_c = \dfrac{1,25-0,9}{5\times 10^{-2}}=\SI{7}{V.m^{-1}}$.
 \end{corrige}
 \else
 \fi
@@ -264,6 +289,7 @@ Le bloc d’adaptation est un gain proportionnel noté $K_a$ qui permet de conve
 \textit{Comment choisir le gain d’adaptation $K_a$ pour que la position $y(t)$ en sortie de l’asservissement soit correctement asservie sur la position de consigne $y_{\text{consigne}} (t)$ (on cherche dans ce cas à obtenir un écart $\varepsilon(p)$ nul lorsque la consigne et la sortie sont égales).}
 \ifprof
 \begin{corrige}
+On prend $K_a = K_c$. 
 \end{corrige}
 \else
 \fi
@@ -276,6 +302,7 @@ On considère dans un premier temps que le correcteur est un correcteur proporti
 Donner la classe et l’ordre de cette fonction de transfert. }
 \ifprof
 \begin{corrige}
+La FTBO est donnée par $\text{FTBO}(p) = K_c \dfrac{RV}{2ep^2} \dfrac{K}{1+\tau p}$ qui est une fonction transfert d'ordre 3 et de classe 2. 
 \end{corrige}
 \else
 \fi
@@ -300,6 +327,7 @@ On donne ci-dessous la courbe donnant l’évolution du paramètre $y(t)$ sur un
 \textit{Déterminer si ce réglage semble adapté vis-à-vis des exigences du cahier des charges. Justifier la réponse en laissant notamment apparaître les tracés utiles sur les courbes. }
 \ifprof
 \begin{corrige}
+La seule exigence est sur le temps de réponse (1s). L'exigence est satisfaite. (Tracer à faire). 
 \end{corrige}
 \else
 \fi
