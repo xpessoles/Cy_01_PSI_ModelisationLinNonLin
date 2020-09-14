@@ -42,7 +42,11 @@
 \setlength{\columnseprule}{0.4pt} 
 
 %%%%%%%%%%%%%%%%%%%%%%%
+\ifprof
+\else
 \begin{multicols}{2}
+\fi
+
 \section*{Présentation du système}
 \ifprof
 \else
@@ -359,18 +363,16 @@ $$
 \ifprof
 \begin{corrige}
 Par identification, on déduit de la question précédente : 
-$$
+
+$
 K_{SV} = K_1 K_2 K_3 K_4
 \dfrac{S_t}{k_t}
-$$
-
-$$
+$, $
 \omega_0 = \sqrt{\dfrac{2k_t}{m_t}}
-$$
-
-$$
+$,
+$
 \xi = \dfrac{c_t}{2\sqrt{2k_t m_t}}
-$$
+$.
 
 \end{corrige}
 \else
@@ -413,18 +415,20 @@ $S_v(p)$ est nul. En conséquence ce dénominateur possède une racine double. E
 utilisant la formulation proposée, cette racine est égale à
 $\dfrac{-1}{T_{sv}}$. En développant la fonction proposée, on peut donc
 identifier $T_sv$ :
-$$
+$
 \left( 1+T_{sv} p\right)^2  = 1+\dfrac{2
 p}{\omega_0}+\dfrac{p^2}{\omega_0^2}  \Leftrightarrow 1 + 2 T_{sv} p +T_{sv}^2
-p^2 = 1+\dfrac{2
+p^2 $
+$= 1+\dfrac{2
 p}{\omega_0}+\dfrac{p^2}{\omega_0^2}   
-$$
+$
 
 On a donc : 
-$$
-T_{sv}=\dfrac{1}{\omega_0} = \sqrt{\dfrac{m_t}{2k_t}} = \sqrt{\dfrac{m_t}{2
-\dfrac{c_t^2}{8 m_t}}} = 2\dfrac{m_t}{c_t}
-$$
+$
+T_{sv}=\dfrac{1}{\omega_0} $ 
+$= \sqrt{\dfrac{m_t}{2k_t}} $
+$ = \sqrt{\dfrac{m_t}{2\dfrac{c_t^2}{8 m_t}}} $
+$= 2\dfrac{m_t}{c_t} $
 \end{corrige}
 \else
 \fi
@@ -438,21 +442,14 @@ On rappelle que $\mathcal{L}\left(te^{-at}u(t)\right)=\dfrac{1}{\left(p+a\right)
 \ifprof
 \begin{corrige}
 
-On soumet le système à une entre échelon. En conséquence, on a : 
-$$
-I(p)=\dfrac{i_0}{p}
-$$
+On soumet le système à une entre échelon. En conséquence, on a : $
+I(p)=\dfrac{i_0}{p}$.
 
-On a alors :
-$$
-P_h(p)=\dfrac{i_0}{p}\dfrac{K_{sv}}{\left(1+T_{sv}p\right)^2}
-$$
+On a alors $P_h(p)=\dfrac{i_0}{p}\dfrac{K_{sv}}{\left(1+T_{sv}p\right)^2}$.
 
-En réalisant la décomposition en éléments simples, on a : 
-$$
+En réalisant la décomposition en éléments simples, on a : $
 P_h(p)=\dfrac{\alpha}{p}+\dfrac{\beta}{1+T_{sv}p}+\dfrac{\gamma}{\left(1+T_{sv}
-p\right)^2}
-$$
+p\right)^2}$.
 
 En calculant $P_h(p)p$ et en posant $p=0$, on obtient $\alpha = K_{sv}i_0$.
 
@@ -464,26 +461,27 @@ Enfin, en calculant $\lim\limits_{p\to +\infty} p P_h(p)$ on obtient $\beta =
 -K_{sv} T_{sv} i_0$.
 
 Au final, on obtient : 
-$$
+$
 P_h(p) = K_{sv} i_0 \left( \dfrac{1}{p} - \dfrac{T_{sv}}{1+T_{sv}p} -
 \dfrac{T_{sv}}{\left(1+T_{sv}p\right)^2} \right) 
-=
+$
+$=
 K_{sv} i_0
 \left( 
 \dfrac{1}{p}
 -\dfrac{1}{\dfrac{1}{T_{sv}}+p}
 -\dfrac{\dfrac{1}{T_{sv}}}{\left(\dfrac{1}{T_{sv}}+p\right)^2}
 \right) 
-$$
+$
 
 
 En repassant dans le domaine temporel, on obtient :
-$$
+$
 P_h(t) = K_{sv} i_0 \left( 
 1-e^{-\dfrac{-t}{T_{sv}}}
 -\dfrac{t}{T_{sv}}e^{-\dfrac{-t}{T_{sv}}}
 \right) u(t)
-$$
+$
 \end{corrige}
 \else
 \fi
@@ -565,29 +563,14 @@ a_m(t) = K_{CAN} u_a (t)
 \begin{corrige}
 
 On obtient directement : 
-$$
-\varepsilon(p)=X_1(p)-X_2(p)
-$$
-
-$$
-A(p)=p^2 X_1(p)
-$$
-
-$$
-m_a p^2 X_2(p)=c_a \left( pX_1(p) - pX_2(p)\right)+k_a\left( X_1(p)
--X_2(p) \right)
-$$
-
-$$
-U_a(p)=K_p \varepsilon(p)
-$$
-
-$$
-A_m(p)=K_{CAN} U_a(p)
-$$
+$ \varepsilon(p)=X_1(p)-X_2(p)$, 
+$ A(p)=p^2 X_1(p) $, 
+$m_a p^2 X_2(p)=c_a \left( pX_1(p) - pX_2(p)\right)+k_a\left( X_1(p) -X_2(p) \right)$,
+$U_a(p)=K_p \varepsilon(p)$, 
+$A_m(p)=K_{CAN} U_a(p)$.
 \end{corrige}
 
-\newpage
+
 
 \else
 \fi
@@ -597,27 +580,23 @@ $$
 \ifprof
 \begin{corrige}
 On a : 
-$$
-G_1(p) = \dfrac{X_1(p)}{A(p)}=\dfrac{1}{p^2}
-$$
+$G_1(p) = \dfrac{X_1(p)}{A(p)}=\dfrac{1}{p^2}$.
 
 D'après la troisième relation, on a :
-
-$$
+$
 X_2(p)\left( m_a p^2 +c_a p + k_a \right) = X_1(p) \left( c_a p + k_a  \right)
-$$
+$
  et donc 
-$$
+$
 G_2(p) = \dfrac{X_2(p)}{X_1(p)} = \dfrac{c_a p + k_a}{m_a p^2 +c_a p + k_a}
-$$
-
-$$
+$,
+$
 G_3(p) = \dfrac{U_a(p)}{\varepsilon(p)} = K_p
-$$
-
-$$
+$
+et
+$
 G_4(p) = \dfrac{A_m(p)}{U_a(p)} = K_{CAN}
-$$
+$.
 
 \end{corrige}
 \else
@@ -644,30 +623,23 @@ $$
 $$
 
 D'où 
-$$
+$
  \dfrac{A_m(p)}{A(p)} = \dfrac{1}{p^2} \left( 1- \dfrac{c_a p + k_a}{m_a p^2
-+c_a p + k_a} \right)  K_p K_{CAN} =
-\dfrac{K_p K_{CAN} m_a}{m_a p^2 +c_a p + k_a}
-$$
++c_a p + k_a} \right)  K_p K_{CAN} $
+$=\dfrac{K_p K_{CAN} m_a}{m_a p^2 +c_a p + k_a}
+$
 
 En mettant la fonction cette fonction de transfert sous la forme canonique :
-$$
+$
 \dfrac{A_m(p)}{A(p)} = \dfrac{\dfrac{K_p K_{CAN} m_a}{k_a}}{\dfrac{m_a}{k_a}p^2
 + \dfrac{c_a}{k_a}p+1}
-$$
+$.
 
-Au final : 
-$$
-K_{acc} = \dfrac{K_p K_{CAN} m_a}{k_a}
-$$
-
-$$
-\xi_a = \dfrac{c_a}{2\sqrt{k_a m_a}}
-$$
-
-$$
+Au final : $K_{acc} = \dfrac{K_p K_{CAN} m_a}{k_a}$, 
+$ \xi_a = \dfrac{c_a}{2\sqrt{k_a m_a}}$
+et $
 \omega_a = \sqrt{\dfrac{k_a}{m_a}}
-$$
+$.
 \end{corrige}
 \else
 \fi
@@ -728,19 +700,19 @@ $H_{BSCU}(p)=K_c$.
 
 \subparagraph{}
 \textit{Exprimer sous forme canonique la fonction de transfert en boucle ouverte. En déduire
-l’ordre, la classe et le gain de la $\text{FTBO}(p)$.}
+l’ordre, la classe et le gain de la $\text{\text{FTBO}}(p)$.}
 \ifprof
 \begin{corrige}
-Par définition, la FTBO s'exprime par la relation :
+Par définition, la \text{FTBO} s'exprime par la relation :
 $
-\text{FTBO}(p)=H_{BSCU} \cdot H_{SC}(p) \cdot H_f(p) \cdot H_{acc}(p) $ $=
+\text{\text{FTBO}}(p)=H_{BSCU} \cdot H_{SC}(p) \cdot H_f(p) \cdot H_{acc}(p) $ $=
 \dfrac{K_cK_{SV}K_fK_{acc}}{\left( 1+T_{sv}p
 \right)^2\left(1+\dfrac{2\xi_a}{\omega_a}p+\dfrac{p^2}{\omega_a^2}\right)}
 $
 
-Le gain de la FTBO est donné par le numérateur : $K_cK_{SV}K_fK_{acc}$. 
+Le gain de la \text{FTBO} est donné par le numérateur : $K_cK_{SV}K_fK_{acc}$. 
 
-L'ordre de la FTBO est donné par le monôme de plus haut degré : l'ordre est
+L'ordre de la \text{FTBO} est donné par le monôme de plus haut degré : l'ordre est
 donc de 4 (lorsqu'on développe le système).
 
 La classe du système est donné par le nombre d'intégrateur présent au
@@ -753,19 +725,18 @@ classe est donc de 0.
 \fi
 
 \subparagraph{}
-\textit{Exprimer l'écart $\varepsilon(p)$ en fonction de $a_c(p)$ et de la $FTBO(p)$.}
+\textit{Exprimer l'écart $\varepsilon(p)$ en fonction de $a_c(p)$ et de la $\text{FTBO}(p)$.}
 \ifprof
 \begin{corrige}
 D'après le schéma bloc, on a : 
-$$
-\varepsilon(p) = A_c(p)-A_m(p) =A_c(p)-\varepsilon(p)\cdot FTBO(p)
-\Leftrightarrow
-\varepsilon(p) \left( 1-FTBO(p)\right) = A_c(p)
-$$
+$\varepsilon(p) = A_c(p)-A_m(p) =A_c(p)-\varepsilon(p)\cdot \text{FTBO}(p)$
+ $\Leftrightarrow
+\varepsilon(p) \left( 1-\text{FTBO}(p)\right) = A_c(p)
+$
 
 On a donc :
 $$
-\varepsilon(p)  = \dfrac{A_c(p)}{\left( 1-FTBO(p)\right)}
+\varepsilon(p)  = \dfrac{A_c(p)}{\left( 1-\text{FTBO}(p)\right)}
 $$
 
 \end{corrige}
@@ -784,28 +755,24 @@ la valeur finale on a donc :
 $$
 \lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0}
 p\varepsilon(p) =  \lim\limits_{p\to 0} \dfrac{p A_c(p)}{\left(
-1-FTBO(p)\right)}
+1-\text{FTBO}(p)\right)}
 $$
 
 
-L'entrée est un échelon d'accélération d'amplitude $a_c$. En conséquence : 
-$$A_c (p)=\dfrac{a_c}{p}$$
-
-$$
+L'entrée est un échelon d'accélération d'amplitude $a_c$. En conséquence : $A_c (p)=\dfrac{a_c}{p}$ et
+$
 \lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0}
-\dfrac{a_c}{p} \dfrac{p}{1+FTBO(p)}
-$$
+\dfrac{a_c}{p} \dfrac{p}{1+\text{FTBO}(p)}
+$.
 
-Or, 
-$$
- \lim\limits_{p\to 0} FTBO(p) = K_cK_{SV}K_fK_{acc}
-$$
+Or, $
+ \lim\limits_{p\to 0} \text{FTBO}(p) = K_cK_{SV}K_fK_{acc}
+$.
 
 En conséquence, 
-
-$$
+$
 \lim\limits_{t\to +\infty} \varepsilon(t) = \dfrac{a_c}{1+K_cK_{SV}K_fK_{acc}}
-$$
+$.
 
 L'écart statique de ce système n'étant pas nul, le système n'est donc pas
 précis.
@@ -822,12 +789,12 @@ $H_{BSCU}(p)=K_i\dfrac{1+T_i p}{p}$, déterminer à nouveau l'écart en régime 
 \begin{corrige}
 
 Il suffit dans un premier temps de calculer la limite quand $p$ vers 0 
-de la nouvelle FTBO. 
+de la nouvelle \text{FTBO}. 
 
-Cette FTBO vaut :
+Cette \text{FTBO} vaut :
 
 $$
-FTBO(p)=
+\text{FTBO}(p)=
 \dfrac{K_cK_{SV}K_fK_{acc}}{\left( 1+T_{sv}p
 \right)^2\left(1+\dfrac{2\xi_a}{\omega_a}p+\dfrac{p^2}{\omega_a^2}\right)}
 \dfrac{K_i\left(1+T_i p\right)}{p}
@@ -835,7 +802,7 @@ $$
 
 On a alors :
 $$
-\lim\limits_{p\to+\infty}FTBO(p)=+\infty
+\lim\limits_{p\to+\infty}\text{FTBO}(p)=+\infty
 $$
 En conséquence, 
 $$
@@ -875,4 +842,7 @@ L'écart statique étant nul, le système est donc précis.
 %\end{center}
 
 
+\ifprof
+\else
 \end{multicols}
+\fi
