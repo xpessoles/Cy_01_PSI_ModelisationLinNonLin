@@ -32,12 +32,12 @@
 \def\xxtete{Sciences Industrielles de l'Ingénieur}
 
 \def\classe{PSI$\star$}
-\def\xxnumpartie{{DS 1}}%\textsf{\textsf{Cy. 4, 6 \& 7}}}
-\def\xxpartie{Devoir Surveillé 1}
+\def\xxnumpartie{{Num Partie}}%\textsf{\textsf{Cy. 4, 6 \& 7}}}
+\def\xxpartie{Partie}
 
 
 \def\xxnumchapitre{21 septembre 2020 \vspace{.2cm}}
-\def\xxchapitre{\hspace{.12cm} Performances des systèmes asservis -- Résolution en utilisant le PFS}
+\def\xxchapitre{\hspace{.12cm} Chapitre}
 
 
 \def\xxtitreexo{\noindent Bateau support de ROV}
@@ -48,9 +48,9 @@
 \def\xxposonglettext{1.45}
 \def\xxposonglety{20}
 %\def\xxonglet{Part. 1 -- Ch. 3}
-\def\xxonglet{\textsf{DS 1}}%\textsf{\textsf{Cy. 4, 6 \& 7}}}
+\def\xxonglet{\textsf{TD **}}%\textsf{\textsf{Cy. 4, 6 \& 7}}}
 
-\def\xxactivite{\textsf{DS 1}}
+\def\xxactivite{\textsf{TD ***}}
 \def\xxauteur{\textsl{Xavier Pessoles}}
 
 \def\xxcompetences{%
@@ -70,7 +70,7 @@
 }}
 
 \def\xxfigures{
-%\includegraphics[width=.9\linewidth]{images/fig_00}
+\includegraphics[width=.4\linewidth]{images/fig_00}
 }%figues de la page de garde
 
 
@@ -776,7 +776,7 @@ $$\boxed{K_1=\dfrac{SrP_{G0}}{V_{G0}}$ et $\tau=\dfrac{V_{G0}}{rP_{G0}C_{qR}}.}$
 
 \subparagraph{}\textit{ Appliquer les transformées de Laplace, en considérant les conditions initiales nulles à l’équation (3) et à l’équation (4). Donner la fonction de transfert :
 $H(p) =\dfrac{Y_{\text{ROV}}(p)}{Y_h(p)}=\dfrac{1+\tau p}{1+\dfrac{2\zeta}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}.$
-Exprimer $\omega_0$, $\zeta$ et $\tau$ en fonction de $\alpha$, $\beta$, $\gamma$, $K_1$ et $\tau_1$.}
+Exprimer $\omega_0$, $\zeta$ et $\tau$ en fonction des constantes définies précédemment.}% $\alpha$, $\beta$, $\gamma$, $K_1$ et $\tau_1$.}
 \ifprof
 \begin{corrige}
 %\textbf{Q14}   
@@ -866,7 +866,7 @@ On utilisera dans toute la suite la relation $\tau \omega_0= 2\zeta$.\\
 
 
 \subparagraph{}\textit{Tracer en vert le diagramme asymptotique du gain de la fonction de transfert du compensateur PHC, $H(p)=\dfrac{Y_{\text{ROV}}(p)}{Y_h(p)}$, en faisant apparaître ses caractéristiques. Tracer
-en bleu, sur la même Figure, l’allure du gain réel du compensateur. Préciser la valeur du gain maximal.}
+en bleu, sur la même figure, l’allure du gain réel du compensateur. Préciser la valeur du gain maximal.}
 \ifprof
 \begin{corrige}
 %\textbf{Q16}  
@@ -899,7 +899,7 @@ $\phi$ &0 & $90^\circ$ & $-90^\circ$ \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{Q16}
+\includegraphics[width=\linewidth]{Q16}
 \end{figure}
 
 
@@ -911,8 +911,7 @@ La valeur du gain maxi est de $+3$ dB (due au premier ordre au numérateur, l’
 
 
 
-\subparagraph{}\textit{ Exprimer la fonction de transfert de l’ensemble \{bateau support + ROV + PHC\}, $G(p) = \dfrac{Y_{\text{ROV}}(p)}{Y_{\text{vague}}(p)}$ en fonction de $H(p)$ et $B(p)$. Tracer en rouge l'allure du gain du diagramme de Bode de $G(p)$ sur la Figure C.
-Répondre entièrement à cette question sur le document réponse.}
+\subparagraph{}\textit{ Exprimer la fonction de transfert de l’ensemble \{bateau support + ROV + PHC\}, $G(p) = \dfrac{Y_{\text{ROV}}(p)}{Y_{\text{vague}}(p)}$ en fonction de $H(p)$ et $B(p)$. Tracer en rouge l'allure du gain du diagramme de Bode de $G(p)$.}
 \ifprof
 \begin{corrige}
 %\textbf{Q17}  
