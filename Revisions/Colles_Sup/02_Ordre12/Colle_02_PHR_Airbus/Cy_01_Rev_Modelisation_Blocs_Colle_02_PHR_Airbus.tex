@@ -1,0 +1,464 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={Modélisation SLCI : Rapidité des systèmes},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+    
+\input{style/new_style}
+\input{style/macros_SII}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{picins}
+\fichetrue
+%\fichefalse
+
+\proftrue
+\proffalse
+
+\tdtrue
+%\tdfalse
+
+\courstrue
+\coursfalse
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PTSI}
+\def\xxnumpartie{Colles}
+\def\xxpartie{Modéliser les systèmes asservis dans le but de prévoir leur comportement}
+
+
+\def\xxnumchapitre{}
+\def\xxchapitre{\hspace{.12cm} }
+
+
+\def\xxtitreexo{Plan Horizontal Réglable}
+\def\xxsourceexo{\hspace{.2cm} \footnotesize{D'après ressources de F. Mathurin.}}
+
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+%\def\xxonglet{Part. 1 -- Ch. 3}
+\def\xxonglet{Cycle 02}
+
+\def\xxactivite{Colle 2}
+\def\xxauteur{\textsl{X. Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+\textbf{Savoirs et compétences :}\\
+%Les sources sont associées par un \emph{hacheur série}. La détermination des grandeurs électriques associées à ce montage permet de conclure vis à vis du cahier des charges.
+%\noindent \textbf{Résoudre :} à partir des modèles retenus :
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item choisir une méthode de résolution analytique, graphique, numérique;
+%\item mettre en \oe{}uvre une méthode de résolution.
+%\end{itemize}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item \textit{Rés -- C1.1 :} Loi entrée sortie géométrique et cinématique -- Fermeture géométrique.
+%\end{itemize}
+%
+%\noindent \textit{Mod2 -- C4.1 :} Représentation par schéma bloc.
+}}
+
+\def\xxfigures{
+\includegraphics[width=.6\linewidth]{images/img1}
+}%figues de la page de garde
+
+
+\def\xxpied{%
+Modéliser le comportement des systèmes multiphysiques\\
+\xxactivite%
+}
+
+\setcounter{secnumdepth}{5} 
+%---------------------------------------------------------------------------
+
+\usepackage{pgfplots}
+\begin{document}
+
+%\chapterimage{images/Fond_Cin}
+\input{style/new_pagegarde}
+\vspace{5cm}
+\pagestyle{fancy}
+\thispagestyle{plain}
+
+\def\columnseprulecolor{\color{ocre}}
+\setlength{\columnseprule}{0.4pt} 
+
+\def\pathfig{images}
+
+\begin{multicols}{2}
+\subsection*{Modélisation d'une servocommande d'avion}
+
+\ifprof \else 
+Pour piloter un avion, il est nécessaire de pouvoir contrôler en permanence ses évolutions dans l'espace suivant trois directions ou axes : 
+\begin{itemize}
+\item l'axe de lacet (vertical);
+\item l'axe de roulis (horizontal et dans la direction de la marche);
+\item l'axe de tangage (horizontal et perpendiculaire à la marche).
+\end{itemize}
+
+
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/img2}
+\end{center}
+
+Les gouvernes de profondeur et le plan horizontal réglable (PHR) permettent la commande du tangage. L'airbus A380 est équipé de quatre gouvernes de profondeur disposées symétriquement sur le plan horizontal réglable (PHR) de l'avion. Chaque gouverne de profondeur est reliée au PHR par des charnières et est mis en rotation par une unité de commande constituée de deux actionneurs :
+\begin{itemize}
+\item une servocommande (SC), actionneur principal relié au circuit hydraulique de l'avion;
+\item un EHA (Electro Hydraulic Actuator : actionneur électro-hydrostatique), utilisé comme organe de sécurité en cas de défaillance de la servocommande ou du circuit hydraulique principal.
+\end{itemize}
+
+Ces unités de commande sont identiques pour les quatre gouvernes de profondeur.
+
+%
+%\begin{center}
+%\includegraphics[width=.9\linewidth]{images/img3}
+%\end{center}
+
+Les consignes émises par le pilote à l'aide du joystick ou par le pilote automatique sont transmises aux ordinateurs de commande de vol. Ces derniers déterminent, en fonction de lois de pilotage prenant compte un certain nombre de paramètres (altitude, vitesse, etc.), les mouvements des gouvernes limitant éventuellement les évolutions de l'avion à son enveloppe de vol, c'est-à-dire aux régimes et altitudes sûrs.
+
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/img4}
+\end{center}
+
+%Le système peut être représenté par la chaîne topo fonctionnelle suivante : 
+%\begin{center}
+%\includegraphics[width=\linewidth]{images/chaine}
+%\end{center}
+\fi
+
+%On donne un diagramme des exigences partiel.
+%\begin{center}
+%\includegraphics[width=\linewidth]{images/MaitriseAltitude}
+%\end{center}
+
+\begin{obj}
+L'objectif de ce TD est de vérifier que :
+\begin{itemize}
+\item l'écart statique du système de maintien de l'altitude est nul;
+\item aucun dépassement;
+\item temps de réponse à 5\% inférieur à \SI{0,2}{s}.
+\end{itemize}
+
+%\begin{center}
+%\includegraphics[width=\linewidth]{images/cdc}
+%\end{center}
+
+\end{obj}
+
+\subsection*{Étude de la servocommande}
+\ifprof \else
+
+\begin{center}
+\includegraphics[width=.7\linewidth]{images/img5}
+\end{center}
+
+Les différentes équations temporelles qui modélisent le fonctionnement du système sont :
+\begin{itemize}
+\item un amplificateur différentiel défini par : $u_c(t)=\dfrac{i(t)}{K_a}+u_s(t)$;
+\item débit dans le vérin dans le cas d'une hypothèse de fluide incompressible $q(t)=S\cdot\dfrac{\text{d}x(t)}{\text{d}t}$;
+\item capteur de position : $u_s(t)=K_c\cdot x(t)$;
+\item le servo-distributeur est un composant de la chaîne de commande conçu pour fournir un débit hydraulique $q(t)$ proportionnel au courant de commande $i(t)$. (Attention, valable uniquement en régime permanent.) Le constructeur fournit sa fonction de transfert :
+$$
+F(p)=\dfrac{Q(p)}{I(p)}=\dfrac{K_d}{1+Tp}
+$$
+où $K_d$ est le gain du servo-distributeur et $T$ sa constante de temps.
+\end{itemize}
+
+
+\fi
+
+
+
+\subsection*{Modélisation dans l'hypothèse de fluide incompressible}
+%\subparagraph{}
+%\textit{Écrire les équations du modèle sous forme symbolique (transformée de Laplace) en considérant que toutes les conditions initiales sont nulles.}
+%
+%\ifprof
+%\begin{corrige}
+%On a :
+%\begin{itemize}
+%\item $U_c(p)=\dfrac{1}{K_a}I(p)+U_s(p)$
+%\item $Q(p)=SpX(p)$
+%\item $U_S(p)=K_C\cdot X(p)$
+%\item $F(p)=\dfrac{Q(p)}{I(p)}=\dfrac{K_d}{1+Tp}$
+%\end{itemize}
+%\end{corrige}
+%\else \fi
+%
+%\subparagraph{}
+%\textit{Représenter chacune de ces relations sous forme de schéma bloc partiel.}
+%\ifprof
+%\begin{corrige}
+%
+%\begin{minipage}[c]{.23\linewidth}
+%\begin{center}
+%\includegraphics[width=.95\linewidth]{images/bloc1}
+%\end{center}
+%\end{minipage}\hfill
+%\begin{minipage}[c]{.23\linewidth}
+%\begin{center}
+%\includegraphics[width=.95\linewidth]{images/bloc2}
+%\end{center}
+%\end{minipage}\hfill
+%\begin{minipage}[c]{.23\linewidth}
+%\begin{center}
+%\includegraphics[width=.95\linewidth]{images/bloc3}
+%\end{center}
+%\end{minipage}\hfill
+%\begin{minipage}[c]{.23\linewidth}
+%\begin{center}
+%\includegraphics[width=.95\linewidth]{images/bloc4}
+%\end{center}
+%\end{minipage}
+%
+%
+%\end{corrige}
+%\else \fi
+%
+%\subparagraph{}
+%\textit{Regrouper les schémas blocs partiels afin de représenter le schéma bloc correspondant au comportement de la servocommande.}
+%\ifprof
+%\begin{corrige}
+%\begin{center}
+%\includegraphics[width=.8\linewidth]{images/schema_bloc}
+%\end{center}
+%\end{corrige}
+%\else \fi
+
+Le schéma-blocs est donné par la figure suivante. 
+\begin{center}
+\includegraphics[width=\linewidth]{images/schema_bloc}
+\end{center}
+
+\subparagraph{}
+\textit{Calculer les fonctions de transfert en boucle fermée du système : $H(p)=\dfrac{X(p)}{U_c(p)}$.}
+\ifprof
+\begin{corrige}
+Fonction de transfert du vérin non asservi : 
+$$A_1(p)=\dfrac{X(p)}{Q(p)} = \dfrac{1}{Sp}$$
+$A_1(p)$ est d'ordre 1 et de classe 1.
+
+Fonction de transfert de la chaîne directe : 
+$$C(p)=\dfrac{X(p)}{\varepsilon(p)}= \dfrac{K_a\cdot K_d }{Sp\left( 1+Tp\right)}$$
+$C(p)$ est d'ordre 2 et de classe 1.
+
+Fonction de transfert boucle ouverte du système : 
+$$G(p)=\dfrac{U_s(p)}{\varepsilon(p)}= \dfrac{K_a\cdot K_d \cdot K_C }{Sp\left( 1+Tp\right)}$$
+$G(p)$ est d'ordre 2 et de classe 1.
+
+Fonction de transfert en boucle fermée du système : 
+$$H(p)=\dfrac{X(p)}{U_c(p)}
+=\dfrac{\dfrac{K_a\cdot K_d }{Sp\left( 1+Tp\right)}}{1+\dfrac{K_a\cdot K_d \cdot K_C }{Sp\left( 1+Tp\right)}}
+=\dfrac{K_a\cdot K_d }{Sp\left( 1+Tp\right)+K_a\cdot K_d \cdot K_C }
+=\dfrac{\dfrac{K_a\cdot K_d}{K_a\cdot K_d \cdot K_C}}{\dfrac{Sp}{K_a\cdot K_d \cdot K_C}\left( 1+Tp\right)+1 }
+$$
+$H(p)$ est d'ordre 2 et de classe 0.
+\end{corrige}
+\else \fi
+%
+%\subparagraph{}
+%\textit{Le système étant régi par sa fonction transfert en boucle fermée, déterminer, dans le domaine temporel, la réponse indicielle du système.}
+%\ifprof
+%\begin{corrige}
+%
+%\end{corrige}
+%\else \fi
+
+\subparagraph{}
+\textit{Mettre la fonction de transfert sous forme canonique et expliciter les paramètres caractéristiques.}
+
+
+\subparagraph{}
+\textit{Dans le cas d'une sollicitation par une entrée échelon, donner la valeur initiale, la valeur finale et la pente à l'origine de la sortie.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Déterminer l'écart statique.}
+\ifprof
+\begin{corrige}
+Dans la configuration, donnée, l'entrée et la sortie du système ne sont pas les mêmes grandeurs physiques. En conséquence, l'écart statique peut être défini par : 
+$$
+\varepsilon_S 
+= \lim\limits_{t\to+\infty} \varepsilon(t)
+= \lim\limits_{p\to 0} p\varepsilon(p)
+= \lim\limits_{p\to 0} p\dfrac{E(p)}{1+C(p)}
+$$
+
+$E(p)$ étant une entrée indicielle, l'entrée est un échelon d'amplitude 1; donc $E(p)=\dfrac{1}{p}$.
+$$
+\varepsilon_S 
+= \lim\limits_{p\to 0} p\dfrac{1}{p}\dfrac{1}{1+\dfrac{K_a\cdot K_d }{Sp\left( 1+Tp\right)}}
+= \lim\limits_{p\to 0} \dfrac{Sp\left( 1+Tp\right)}{Sp\left( 1+Tp\right)+K_a\cdot K_d}
+= 0
+$$
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Conclure quant à la validité du cahier des charges dans le cas où le fluide est incompressible.}
+\ifprof
+\begin{corrige}
+Dans le cas où on fait l'hypothèse que le fluide n'est pas compressible, l'écart statique est nul. Le cahier des charges est donc vérifié.
+\end{corrige}
+\else \fi
+
+
+\subsection*{Modélisation dans l'hypothèse du fluide compressible}
+Dans cette hypothèse, le modèle de connaissance du système est modifié : 
+\begin{itemize}
+\item l'équation de débit dans le vérin devient : $q(t)=S\cdot\dfrac{\text{d}x(t)}{\text{d}t}+\dfrac{V}{2B}\dfrac{\text{d}\Delta p(t)}{\text{d}t}$ où $\Delta p(t)$ représente la différence de pression entre les 2 chambres du vérin, $V$ est le volume total de fluide dans le vérin ($V$ est constant) et $B$ le coefficient de compressibilité du fluide hydraulique (pour un fluide incompressible $B\rightarrow \infty$);
+\item effort moteur sur le piston : $F_m(t)=S\cdot \Delta p(t)$;
+\item principal fondamental de la dynamique appliqué sur la tige de vérin :
+$F_m(t)-F_r(t)-f\dfrac{\text{d}x(t)}{\text{d}t}=m\cdot\dfrac{\text{d}^2x(t)}{\text{d}t^2}$ où $F_r(t)$ représente l'effort résistant sur la tige du vérin, effort qui sera considéré comme une perturbation et $f$ représente le frottement visqueux.
+\end{itemize}
+
+\subparagraph{}
+\textit{Écrire les équation du modèle sous forme symbolique (transformée de Laplace) en considérant que toutes les conditions initiales sont nulles.}
+\ifprof
+\begin{corrige}
+On a :
+\begin{itemize}
+\item $Q(p)=S\cdot pX(p)+\dfrac{V}{2B}p \Delta P(p)$;
+\item $F_m(p)=S\cdot \Delta P(p)$;
+\item $F_m(p)-F_r(p)-fpX(p)=m\cdot p^2 X(p)$.
+\end{itemize}
+
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Représenter chacune de ces relations sous forme de schéma bloc partiel.}
+\ifprof
+\begin{corrige}
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/bloc5}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/bloc6}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\includegraphics[width=.95\linewidth]{images/bloc7}
+\end{center}
+\end{minipage}
+
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Regrouper les schémas-blocs partiels afin de représenter le comportement du vérin non asservi (grandeur d'entrée $Q(p)$, grandeur de sortie $X(p)$). Le schéma bloc contiendra un retour et une perturbation.}
+\ifprof
+\begin{corrige}
+\begin{center}
+\includegraphics[width=.8\linewidth]{images/schema_bloc_2}
+\end{center}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Calculer la nouvelle fonction de transfert du vérin non asservi : $A_2(p)=\dfrac{X(p)}{Q(p)}$, en supposant que la perturbation $F_r(t)$ est nulle. Donner à chaque fois la classe et l'ordre de $A_2(p)$.}
+\ifprof
+\begin{corrige}
+On a : 
+$$A_2(p)
+=\dfrac{X(p)}{Q(p)}
+=\dfrac{\dfrac{2B}{Vp}\cdot S\cdot\dfrac{1}{mp^2+fp}}{1+\dfrac{2B}{Vp}\cdot S\cdot\dfrac{1}{mp^2+fp}\cdot Sp}
+=\dfrac{2BS}{mVp^3+fVp^2+2BS^2p}
+$$
+
+$$A_2(p)
+=\dfrac{1}{p}\cdot\dfrac{2BS}{mVp^2+fVp+2BS^2}
+$$
+
+Cette fonction de transfert est d'ordre 3 et de classe 1.
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Donner la fonction de transfert du système complet dans le cas où $Q(p)$ est non nulle et $F_r(p)$  est nulle.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Quelle est la modification apportée par le modèle du fluide incompressible.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else \fi
+
+\subparagraph{}
+\textit{Calculer l'écart statique et conclure quant à la validité du cahier des charges dans le cas où le fluide est considéré comme compressible et que $F_r(p)$ est nulle.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else 
+
+\section*{Conclusion}
+
+La figure ci-dessus illustre la réponse du modèle suite à une entrée échelon de \SI{20}{mm}.
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_05}
+\end{center}
+
+\subparagraph{}\textit{Les exigences du cahier des charges sont-elles respectées ?}
+
+
+%
+%\subparagraph{}
+%\textit{Exprimer $X(p)$ en fonction de $U_C(p)$ et $F_r(p)$.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else \fi
+%
+%\subparagraph{}
+%\textit{Le cahier des charges est-il vérifié lorsque les deux entrées sont des échelons d'amplitude 1 ?}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else \fi
+
+\end{multicols}
+\end{document}
+
+
+\subparagraph{}
+\textit{Conclure sur la validité du cahier des charges.}
+
+\ifprof
+\begin{corrige}
+On observe que le système a un écart statique nul : la consigne était de $1\; rad$ et l'angle atteint par l'axe de lacet est de $1\; rad$. Le critère d'écart statique est donc vérifié. 
+
+En revanche, on observe un léger dépassement de la consigne. En conséquence, le critère de dépassement nul n'est pas vérifié. 
+\end{corrige}
+\else \fi
+\end{multicols}
+\end{document}
+
+\subparagraph{}\textit{}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{images/fig_06}
+%\textit{}
+\end{center}
+\begin{center}
+\includegraphics[width=\linewidth]{images/img_04}
+%\textit{}
+\end{center}
+
+
