@@ -1,0 +1,258 @@
+% !TeX encoding = utf8
+%%--------------DOCUMENT--------------------------------------------------------
+
+                 % Type de document
+
+\usepackage{etex}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{fontspec}
+
+\usepackage{mathpazo}
+%\setmainfont
+%     [ BoldFont       = texgyrepagella-bold.otf ,
+%       ItalicFont     = texgyrepagella-italic.otf ,
+%       BoldItalicFont = texgyrepagella-bolditalic.otf ]
+%     {texgyrepagella-regular.otf}
+
+\setmainfont{Times New Roman}
+
+\usepackage[french]{babel} 
+
+%-------------PACKAGES---------------------------------------------------------
+
+
+\usepackage{geometry}
+\geometry{% siehe geometry.pdf (Figure 1)
+	bottom=20mm,
+	showframe=false, % For debugging: try true and see the layout frames
+	margin=20mm,
+	marginparsep=3mm,
+	marginparwidth=20mm
+}
+
+
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage[usenames,dvipsnames,table]{xcolor}
+%\usepackage{charter}
+\usepackage{xltxtra}
+
+\definecolor{mybluei}{RGB}{28,138,207}
+\definecolor{myblueii}{RGB}{131,197,231}
+
+\addtokomafont{disposition}{\selectfont\color{BlueViolet}}
+
+\addtokomafont{chapter}{\fontsize{30pt}{30pt}\selectfont}
+\newkomafont{chapternumber}{\fontsize{40}{100}\selectfont\color{black}}
+\newkomafont{chaptername}{\itshape\rmfamily\small\color{black}}
+
+\addtokomafont{section}{\fontsize{14pt}{14pt}\selectfont}
+\newkomafont{sectionnumber}{\fontsize{18pt}{18pt}\selectfont\rmfamily\color{black}}
+
+\addtokomafont{subsection}{\fontsize{12pt}{12pt}\selectfont}
+\newkomafont{subsectionnumber}{\fontsize{16pt}{16pt}\selectfont\rmfamily\color{black}}
+
+\renewcommand\chapterformat{%
+  \raisebox{-6pt}{\colorbox{white!70!BlueViolet}{%
+    \parbox[b][50pt]{45pt}{\centering%
+      {\usekomafont{chaptername}{\chaptername}}%
+      \vfill{\usekomafont{chapternumber}{\thechapter\autodot}}%
+      \vspace{6pt}%
+}}}\enskip}
+
+\renewcommand\sectionformat{%
+  \setlength\fboxsep{5pt}%
+  \raisebox{-4pt}{\colorbox{white!70!BlueViolet}{%
+    \enskip\usekomafont{sectionnumber}{\thesection\autodot}\enskip}%
+  \quad%
+}}
+
+\renewcommand\subsectionformat{%
+  \setlength\fboxsep{5pt}%
+  \raisebox{-4pt}{\colorbox{white!70!BlueViolet}{%
+    \enskip\usekomafont{subsectionnumber}{\thesubsection\autodot}\enskip}%
+  \quad%
+}}
+
+\makeatletter
+\renewcommand\sectionlinesformat[4]{%
+  \makebox[0pt][l]{\rule[-5pt]{\textwidth}{1pt}}%
+  \@hangfrom{#3}{#4}%
+}
+\makeatother
+
+\usepackage{float} 
+
+%\usepackage{fancyhdr}                       % entete et pied de pages
+\usepackage[outerbars]{changebar}           % positionnement barre en marge externe
+\usepackage{makeidx}                       % Indexation du document
+
+
+\usepackage{ntheorem}
+\theoremstyle{nonumberplain}
+\newtheorem{enonce}{Énoncé}
+
+\usepackage{xspace}
+\usepackage{relsize}
+\usepackage{array} 
+\usepackage{mdframed}
+\usepackage{etoolbox}
+
+
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{subfig}
+%\usepackage{epic,bez123}
+\usepackage{floatflt}% package for floatingfigure environment
+\usepackage{wrapfig}% package for wrapfigure environment
+%\usepackage{picins}
+\usepackage{placeins}
+
+%\usepackage{csvsimple}
+\usepackage[figuresright]{rotating}
+
+\usepackage[french,ruled,linesnumbered,boxed]{algorithm2e}
+
+\usepackage{autoaligne}
+\usepackage{paralist}
+\usepackage{supertabular}
+\usepackage{longtable}
+
+\usepackage{xfrac}
+
+
+%\usepackage{currfile}
+
+\usepackage{systeme}
+
+
+%\usepackage{ccicons}
+\usepackage{accents}
+
+\usepackage[euler-digits]{eulervm}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-minimum-digits=4,abbreviations, 
+%math-micro=\mu,text-micro=\mu, 
+ math-ohm=\Omega,
+  text-ohm=\ensuremath{\Omega},}
+
+\setcounter{MaxMatrixCols}{20} 
+
+
+\usepackage{atbegshi} 
+\usepackage{tikz}
+\usetikzlibrary{fit,chains,matrix,3d,arrows,backgrounds }
+\usetikzlibrary{calc,intersections,through,spy}
+\usepgflibrary{shapes.geometric,shapes.multipart}
+\usepackage{tikz-timing}
+\usetikzlibrary{circuits.ee.IEC}
+\usepackage[europeanresistors,europeaninductors,europeancurrents,siunitx]{circuitikz}
+%\usetikzlibrary{circuits.logic.IEC,circuits.ee.IEC,circuits.logic.US}
+
+
+
+
+%\usepackage{tkz-2d}
+\usepackage{tikz-3dplot}
+
+
+%\usepackage{supertabular}
+\usepackage{longtable}
+
+\newcommand{\nlignes}{\Acompleter}
+
+\newcommand{\FeuilleTD}[1][]{\section{Feuille de travaux dirigés n°\thechapter #1}}
+
+\newcommand{\Correction}[1][]{\subsection{Corrigés n°\thechapter#1}}
+
+
+%-------------PACKAGES PERSO---------------------------------------------------------
+
+\usepackage{packagesRP/schemabloc}
+\usepackage{packagesRP/grafcet}
+\usepackage{packagesRP/bodegraph}
+\usepackage{packagesRP/rpcinematik}
+\usepackage{packagesRP/ppnmacro}
+\usepackage{packagesRP/rp-sysml}
+
+\usepackage{packagesRP/MyExo}
+
+\usepackage{ifpdf}
+
+  \usepackage{graphicx}
+
+  \DeclareGraphicsExtensions{.png,.pdf,.mps,.eps,.tpx}
+
+
+\newcommand{\licence}{\includegraphics[height=1.5em]{licence-by-sa.png}}
+
+
+\newcommand{\NP}{ }
+\DeclareMathOperator{\sgn}{sgn}
+
+
+
+
+%-------------ENTETE-ET-PIED-DE-PAGE-------------------------------------------
+\usepackage[automark]{scrlayer-scrpage}
+
+\automark[section]{chapter}
+\clearpairofpagestyles
+\ihead{\headmark}
+%\ohead{\pagemark}
+
+%\clearpairofpagestyles
+\cfoot[\pagemark]{\pagemark}
+%\ihead{\leftmark}
+\ohead{}
+\ifoot{}
+\ofoot{\thepage}
+\cfoot{}
+\chead{}
+
+\pagestyle{scrheadings}
+
+
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}~)}
+\makeindex
+
+% divers
+
+\newdimen\oldparindent
+
+%-------------PAGE-DE-GARDE----------------------------------------------------
+
+\title{Manuel de Sciences Industrielles de l'Ingénieur}                                    % Titre
+
+\author{Papanicola Robert\\
+Professeur de chaire supérieure \\
+au  Lycée Charlemagne-Paris}                                   % Auteur(s)
+\date{}     
+
+\usepackage{relsize}
+
+\usepackage{lastpage}
+\usepackage{nameref}
+\usepackage[francais]{varioref}
+\usepackage[plainpages=false,unicode,psdextra]{hyperref}
+
+\usepackage{karnaugh-map}
+
+%------------- commande A5 ---A4 
+%
+
+\ifdim\paperheight<150mm%
+\let\Acinqclearpage\clearpage
+\let \Aquatreclearpage\relax \else%
+\let\Acinqclearpage\relax
+\let\Aquatreclearpage\clearpage \fi 
+
+
+%------------------
+
+
