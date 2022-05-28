@@ -1,3 +1,0 @@
-Changer la cordeuse (pas de non linéarité en tension courant). 
-Changer le modele du controlX (les saturations sont déja présentes dans le hacheur). 
-Revoir le modele du maxpid.
